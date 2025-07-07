@@ -484,7 +484,7 @@
                     USB devices (recognized or not recognized).<h:br/><h:br/>
                     Perform this test for an unauthorized device presenting itself as a composite device, a USB camera, a USB
                     audio headset, a USB printer, a USB keyboard, a USB wireless dongle, and any device listed on the PSD UA
-                    blacklist.<h:br/><h:br/>
+                    denylist.<h:br/><h:br/>
                     Repeat this for each user authentication TOE peripheral interface.<h:ol>
                       <h:li>Ensure the TOE is powered off and connected to a computer. Run USB analyzer software and open
                         the real‐time hardware console on the connected computer, and connect a USB sniffer to the
@@ -504,7 +504,7 @@
                     This test verifies that the TOE ports do not reject authorized devices and devices with authorized protocols
                     as per the Peripheral Device Connection Policy.<h:br/><h:br/>
                     Perform this test for a USB device identified as User Authentication and any device listed on the PSD UA
-                    whitelist:
+                    allowlist:
                     <h:ol>
                       <h:li>Ensure the TOE is powered off.</h:li>
                       <h:li>Connect the authorized device to the TOE peripheral interface.</h:li>
@@ -637,10 +637,10 @@
           </consistecny-rationale>
           
           <comp-lev>requires the TSF to specify the method of device filtering used for
-            peripheral interfaces and defines requirements for handling whitelists and blacklists.</comp-lev>
+            peripheral interfaces and defines requirements for handling allowlists and denylists.</comp-lev>
           <management>The following actions could be considered for the management functions in
             FMT:<h:ul>
-              <h:li>Ability to configure whitelist/blacklist members</h:li>
+              <h:li>Ability to configure allowlist and denylist members</h:li>
             </h:ul>
           </management>
           <audit>The following actions should be auditable if FAU_GEN Security audit data generation
@@ -715,13 +715,13 @@
                 The evaluator shall examine the TSS and verify that it describes whether the PSD has configurable or fixed
                 device filtering.<h:br/><h:br/>
                 [Conditional – If “configurable” is selected in FDP_FIL_EXT.1.1/UA, then:] The evaluator shall examine the
-                TSS and verify that it describes the process of configuring the TOE for whitelisting and blacklisting UA
+                TSS and verify that it describes the process of configuring the TOE for allowlisting and denylisting UA
                 peripheral devices, including information on how this function is restricted to administrators.
               </TSS>
               <Guidance>
                 [Conditional – If “configurable” is selected in FDP_FIL_EXT.1.1/UA, then:] the evaluator shall examine the
-                guidance documentation and verify that it describes the process of configuring the TOE for whitelisting
-                and blacklisting UA peripheral devices and the administrative privileges required to do this.
+                guidance documentation and verify that it describes the process of configuring the TOE for allowlisting
+                and denylisting UA peripheral devices and the administrative privileges required to do this.
               </Guidance>
               <Tests>
                 <testlist>
@@ -734,12 +734,12 @@
                     [Conditional: Perform this only if “configurable” is selected in FDP_FIL_EXT.1.1/UA]<h:br/><h:br/>
                     In the following steps the evaluator shall verify that allowlisted and denylisted devices are treated
                     correctly.<h:ol>
-                      <h:li>Configure the TOE UA CDF to whitelist an authorized user authentication device, connect it to the
+                      <h:li>Configure the TOE UA CDF to allowlist an authorized user authentication device, connect it to the
                         TOE UA peripheral device interface, and verify that the device is accepted through real‐time device
                         console and USB sniffer capture.</h:li>                    
-                      <h:li>Configure the TOE UA CDF to blacklist the device and verify that the device is rejected through
+                      <h:li>Configure the TOE UA CDF to denylist the device and verify that the device is rejected through
                         real‐time device console and USB sniffer capture.</h:li>
-                      <h:li>Attempt to configure the TOE UA CDF to both whitelist and blacklist the device and verify that the
+                      <h:li>Attempt to configure the TOE UA CDF to both allowlist and denylist the device and verify that the
                         device is rejected through real‐time device console and USB sniffer capture.</h:li>                      
                     </h:ol>                  
                   </test>
@@ -1163,16 +1163,17 @@
     </section>
     
     <section title="Unauthorized Peripheral Devices">
-      The following are unauthorized devices and device classes:<h:ul>
-        <h:li>USB audio input device connected to a KM peripheral interface</h:li>
-        <h:li>USB audio output device connected to a KM peripheral interface</h:li>
+      The following are unauthorized devices:<h:ul>
+        <h:li>USB device that is denylisted</h:li>
+        <h:li>USB audio input device connected to a user authentication peripheral interface</h:li>
+        <h:li>USB audio output device connected to a user authentication peripheral interface</h:li>
         <h:li>USB camera</h:li>
+        <h:li>USB keyboard connected to a user authentication peripheral interface</h:li>
         <h:li>USB printer</h:li>
-        <h:li>USB user authentication device connected to a TOE keyboard/mouse peripheral interface</h:li>
         <h:li>USB wireless LAN dongle</h:li>
-        <h:li>Non‐HID device classes of a composite device connected to a TOE KM peripheral interface</h:li>
-        <h:li>Any other device not specifically authorized</h:li>
-        <h:li>Any other device class not specifically authorized</h:li>
+        <h:li>Any unauthorized device that presents itself to the PSD as a composite device and is
+          connected to a user authentication peripheral interface</h:li>
+        <h:li>Any device not specifically authorized</h:li>
       </h:ul>     
     </section>
     
@@ -1183,13 +1184,9 @@
     </section>
     <section title="Authorized Peripheral Devices">
       The following are authorized devices and functions:<h:ul>
-        <h:li>Barcode reader</h:li>
-        <h:li>Keyboard or keypad</h:li>
-        <h:li>Mouse, touchscreen, trackball, or trackpad</h:li>
-        <h:li>PS/2 to USB adapter</h:li>
-        <h:li>USB device identified as HID class</h:li>
-        <h:li>USB hub</h:li>
-        <h:li>HID functions of a composite device connected to a TOE KM peripheral interface</h:li>
+        <h:li>USB device identified as User Authentication</h:li>
+        <h:li>USB device that is allowlisted</h:li>
+        <h:li>Internal authentication device</h:li>
       </h:ul>
     </section>
     
@@ -1208,38 +1205,34 @@
       per FDP_PDC_EXT.1.<h:br/><h:br/>
       Authorized devices identified in both PP‐Modules are considered authorized devices for the TOE as per
       the claimed iterations of FDP_PDC_EXT.2.<h:br/><h:br/>
-      Power events at a KM interface for one connected computer cannot impact power events at an analog
-      audio output interface for another connected computer and vice versa, as per FDP_APC_EXT.1. This
-      evaluation activity is tested in Test 3‐AO in the Supporting Document for Audio Output.<h:br/><h:br/>
+      Power events at a user authentication interface for one connected computer cannot impact power events
+      at an analog audio output interface for another connected computer and vice versa, as per
+      FDP_APC_EXT.1. This evaluation activity is tested in Test 3‐AO in the Supporting Document for Audio
+      Output.<h:br/><h:br/>
       Both PP‐Modules modify the Base‐PP SFR FDP_APC_EXT.1 in ways that are specific to their respective
-      peripheral types. The ST author should make two iterations of this SFR, FDP_APC_EXT.1/KM and
+      peripheral types. The ST author should make two iterations of this SFR, FDP_APC_EXT.1/UA and
       FDP_APC_EXT.1/AO, to show the different modifications made for each specific peripheral type.
     </section>
-    <section title="PP-Module for User Authentication Devices">
+    <section title="PP-Module for Keyboard/Mouse Devices">
       Unauthorized devices identified in both PP‐Modules are considered unauthorized devices for the TOE as
       per FDP_PDC_EXT.1.<h:br/><h:br/>
       Authorized devices identified in both PP‐Modules are considered authorized devices for the TOE as per
       the claimed iterations of FDP_PDC_EXT.2.<h:br/><h:br/>
-      KM functionality must be isolated from user authentication functionality and vice versa as per
+      User authentication functionality must be isolated from KM functionality and vice versa as per
       FDP_UAI_EXT.1.<h:br/><h:br/>
       Both PP‐Modules modify the Base‐PP SFR FDP_APC_EXT.1 in ways that are specific to their respective
-      peripheral types. The ST author should make two iterations of this SFR, FDP_APC_EXT.1/KM and
-      FDP_APC_EXT.1/UA, to show the different modifications made for each specific peripheral type.
+      peripheral types. The ST author should make two iterations of this SFR, FDP_APC_EXT.1/UA and
+      FDP_APC_EXT.1/KM, to show the different modifications made for each specific peripheral type.
     </section>
     <section title="PP-Module for Video/Display Devices">
       Unauthorized devices identified in both PP‐Modules are considered unauthorized devices for the TOE as
       per FDP_PDC_EXT.1.<h:br/><h:br/>
       Authorized devices identified in both PP‐Modules are considered authorized devices for the TOE as per
       the claimed iterations of FDP_PDC_EXT.2.<h:br/><h:br/>
-      Video devices with an interface for USB Type‐C with DisplayPort as alternate function may not be
-      connected to a KM interface, and KM devices may not be connected to a video interface for USB Type‐C
-      with DisplayPort as alternate function, even though both devices are authorized devices.<h:br/><h:br/>
-      Video devices with an interface for USB Type‐C with DisplayPort as alternate function may not be used in
-      conjunction with a touchscreen peripheral device, as per FDP_PDC_EXT.2/KM and FDP_PDC_EXT.3.1/Vid.<h:br/><h:br/>
-      KM devices may be used with a guard in conjunction with multiple video devices, as per FDP_CDS_EXT.1
-      and FDP_SWI_EXT.2.<h:br/><h:br/>
+      Any USB‐C functionality that is supported by the TOE must be isolated from user authentication
+      functionality and vice versa as per FDP_UAI_EXT.1.<h:br/><h:br/>      
       Both PP‐Modules modify the Base‐PP SFR FDP_APC_EXT.1 in ways that are specific to their respective
-      peripheral types. The ST author should make two iterations of this SFR, FDP_APC_EXT.1/KM and
+      peripheral types. The ST author should make two iterations of this SFR, FDP_APC_EXT.1/UA and
       FDP_APC_EXT.1/VI, to show the different modifications made for each specific peripheral type.
     </section>
   </appendix>    
