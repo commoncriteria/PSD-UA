@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../transforms/pp2html.xsl"?>
+<?xml-stylesheet type="text/xsl" href="..\transforms\module2html.xsl"?>
+<?xml-model href="../transforms/schemas/CCModule.rng" type="application/xml"?>
 
-<PP xmlns="https://niap-ccevs.org/cc/v1"
-    xmlns:sec="https://niap-ccevs.org/cc/v1/section"
-    xmlns:h="http://www.w3.org/1999/xhtml" boilerplate="yes">  
+<Module
+  name="User Authentication Devices"
+  xmlns="https://niap-ccevs.org/cc/v1"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:sec="https://niap-ccevs.org/cc/v1/section"
+  target-product="User Authentication Device"
+  target-products="User Authentication Devices"
+  boilerplate="yes"
+  short="UA">  
   <!-- <inline-comment color='green'>Initial PSD-UA Template on 5/8.</inline-comment> -->
   <!-- <inline-comment color='blue' linebreak='yes'> Hello World QQQQ </inline-comment> -->
  
   <PPReference>
-    <ReferenceTable>
-      <PPTitle>PP-Module for User Authentication Devices</PPTitle>
+    <ReferenceTable>      
       <PPVersion>2.0</PPVersion>
       <PPAuthor>National Information Assurance Partnership</PPAuthor>
       <PPPubDate>2025-07-11</PPPubDate>
@@ -25,9 +31,11 @@
     </entry>
   </RevisionHistory>
   <RevisionHistory>
-    <version>2.0</version>
-    <date>2025-07-11</date>
-    <subject>Updates for CC:2022</subject>
+    <entry>
+      <version>2.0</version>
+      <date>2025-07-11</date>
+      <subject>Updates for CC:2022</subject>
+    </entry>
   </RevisionHistory>
 
   <sec:Introduction>
@@ -149,7 +157,7 @@
     </CClaimsInfo>
   </section>
   
-  <sec:spd title="Security Problem Description">    
+  <sec:Security_Problem_Definition>    
     The security problem is described in terms of the threats that the TOE is expected to address, assumptions
     about its operational environment, and any organizational security policies that the TOE is expected to
     enforce.<h:br/><h:br/>
@@ -205,17 +213,14 @@
             session termination when the authentication element is removed.</rationale>
           <addressed-by>FDP_UAI_EXT.1</addressed-by><rationale>Mitigates this threat by isolating
             the user authentication function from other USB functions.</rationale>
-          <addressed-by>FDP_TER_EXT.2 (selection-based)</addressed-by>Mitigates this
-          threat by requiring session termination when the authentication device is removed.<rationale></rationale>
+          <addressed-by>FDP_TER_EXT.2 (selection-based)</addressed-by><rationale>Mitigates this
+          threat by requiring session termination when the authentication device is removed.</rationale>
           <addressed-by>FDP_TER_EXT.3 (selection-based)</addressed-by><rationale>Mitigates this
             threat by requiring session termination when switching to a different computer and 
             resetting the power.</rationale>
         </threat>
         <threat name="T.UNAUTHORIZED_DEVICES">
           <from base="bpp-psd"/>      
-          The use of an unauthorized peripheral device with a specific PSD peripheral port may allow
-          unauthorized data flows between connected devices or enable an attack on the PSD or its connected
-          computers.
           <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>          
           <addressed-by>FDP_APC_EXT.1 (modified)</addressed-by><rationale>Mitigates this threat by
             requiring only user-selected data to be routed and ensuring no data or electrical
@@ -234,31 +239,36 @@
       </threats> 
     </sec:Threats>
     
-    <section title="Assumptions" id="assumptions"/>
+    <sec:Assumptions>
+      <assumptions/>
+    </sec:Assumptions>
       
-    <sec:Organizational_Security_Polcies>
+    <sec:Organizational_Security_Policies>
       <OSPs/>
-    </sec:Organizational_Security_Polcies>
-  </sec:spd>
+    </sec:Organizational_Security_Policies>
+  </sec:Security_Problem_Definition>
 
   <sec:Security_Objectives>
-    <section title="Security Objectives for the TOE" id="SecurityObjectivesTOE"/>
+    <sec:Security_Objectives_for_the_TOE>
+      <SOs/>
+    </sec:Security_Objectives_for_the_TOE>
     
-    <section title="Security Objectives for the Operational Environment" id="SecurityObjectivesTOEorEnvironment">
+    <sec:Security_Objectives_for_the_Operational_Environment>
       Because this PP‐Module does not define any additional assumptions or organizational security policies,
       there are no additional security objectives for the Operational Environment to satisfy.
-      </section>    
+    </sec:Security_Objectives_for_the_Operational_Environment> 
+    
     <section title="Security Objectives Rationale" id="SOR"/>
   </sec:Security_Objectives>
 
   <sec:Security_Requirements>
-    
+    <comment>Need to add URLs once created</comment>
     <base-pp id="bpp-psd" name="Peripheral Sharing Device" product="Device" short="PSD" version="5.0">
       <git>
-        <url><comment>Need to add URL once created</comment></url>
+        <url>https://github.com/commoncriteria/ua</url>
         <branch>release-5.0</branch>
       </git>
-      <url><comment>Need to add URL once created</comment></url>
+      <url>https://github.com/commoncriteria/psd</url>
       
       <sec-func-req-dir>
         When a TOE claims conformance to this PP‐Module, it is necessary to make claims in the Base‐PP
@@ -269,11 +279,14 @@
       
       <modified-sfrs>
         <sec:mod_fau title="Security Audit (FAU)">
-          <f-component cc-id="fau_gen.1" name="Audit Data Generation">            
+          <f-component cc-id="fau_gen.1" name="Audit Data Generation">
+            <consistency-rationale/>
+            <description>
             This SFR is unchanged when the TOE claim includes this PP‐Module. However, this SFR is an optional
             requirement in the PSD PP. This PP‐Module defines functionality that would require this SFR to be claimed
             if a certain selection is made. Therefore, this PP‐Module re‐categorizes this optional
             SFR as selection-based. It shall be included in the TSF if ‘configurable’ is selected in FDP_FIL_EXT.1.1/UA.
+          </description>
           </f-component>
         </sec:mod_fau>
         
@@ -283,12 +296,12 @@
               This SFR adds a requirement to block electrical signals that strengthens but
               does not conflict with the requirement in the PSD PP.
             </consistency-rationale>
-            <f-element id="fdp-apc-ext.1e1">
+            <f-element id="fdp-apc-ext-1e1">
               <title> The TSF shall route user data only to <h:s>or from</h:s> the interfaces selected by the
                 user. 
               </title>
             </f-element>
-            <f-element id="fdp-apc-ext.1e2">
+            <f-element id="fdp-apc-ext-1e2">
               <title>The TSF shall ensure that no data <h:b>or electrical signals</h:b>flow between connected computers whether the
                 TOE is powered on or powered off.
               </title>
@@ -305,9 +318,10 @@
                 must be included in this iteration, not just the ones that are modified by this PPModule.                
               </note>              
               <aactivity>                
-                <Isolation/>                  
+                                  
                 <TSS/>                  
                 <Guidance/>
+                <CustomEA name="Isolation"/>
                 <Tests>
                   For tests that use the USB sniffer or USB analyzer software, the evaluator verifies whether traffic is sent
                   or not sent by inspection of the passing USB transactions and ensuring they do not contain USB data
@@ -451,8 +465,16 @@
           </f-component>
           
           <f-component cc-id="fdp_pdc_ext.1" name="Peripheral Device Connection">
-            Because of additions to the Peripheral Device Connections Policy, there is an additional application note
-            and additional evaluation activities for this SFR.<h:br/><h:br/>
+            <consistency-rationale>
+              This SFR is not modified by the PP‐Module. It adds user authentication
+              devices to the set of authorized peripherals, which are specific types of
+              peripherals not specified in the PSD PP.
+            </consistency-rationale>
+            <description>Because of additions to the Peripheral Device Connections Policy, there is an additional application note
+            and additional evaluation activities for this SFR.</description>
+            <f-element>
+              <title/>
+            
             <note role="application">
               The TSF may elect to enforce rejection of unauthorized devices connected to the
               PSD through a USB hub by considering USB hubs as unauthorized devices, even
@@ -460,19 +482,16 @@
               in FDP_PDC_EXT.4.1/UA, then the TSF does not have to support USB as an authorized
               interface unless the KM PP‐Module is also claimed by the ST author.
             </note>            
-            <consistency-rational>
-              This SFR is not modified by the PP‐Module. It adds user authentication
-              devices to the set of authorized peripherals, which are specific types of
-              peripherals not specified in the PSD PP.
-            </consistency-rational>
+            
             <aactivity>
-              <Isolation/>
+              
               <TSS/>                
               <Guidance>
                 The evaluator shall verify that the operational user guidance describes devices
                 authorized for use with the TOE in accordance with the authorized peripheral device
                 connections.
               </Guidance>                
+              <CustomEA name="Isolation"/>
               <Tests>
                 <testlist>
                   <test>
@@ -526,6 +545,7 @@
                 </testlist>
               </Tests>
             </aactivity>
+            </f-element>
           </f-component> 
           <f-component cc-id="fdp_swi_ext.2" name="PSD Switching">
             <consistency-rationale>
@@ -533,64 +553,71 @@
               are specific to this technology type but does not alter anything that the
               Base‐PP requires.
             </consistency-rationale>
-            There is no modification to this SFR in this PP‐Module. However, there are additional Evaluation Activities
+            <description>There is no modification to this SFR in this PP‐Module. However, there are additional Evaluation Activities
             defined in FDP_APC_EXT.1 in the Supporting Document Mandatory Technical Document PP‐Module for
-            User Authentication Devices.
+            User Authentication Devices.</description>
+            <f-element>
+              <title/>            
             <aactivity>
-              <Isolation/>
-              <TSS/>
-              <Guidance/>
-                
-              <Tests>
-                Test performed in FDP_APC_EXT.1 above.
-              </Tests>
+              <no-tests>Test performed in FDP_APC_EXT.1 above.</no-tests>
             </aactivity>
+            </f-element>
           </f-component>
         </sec:mod_fdp>
         
         <sec:mod_fia title="Identification and Authentication (FIA)">
           <f-component cc-id="fia_uau.2" name="User Authentication Before Any Action">            
-            There are no changes to the EAs for this SFR. MOD_UA_V1.0 changes this requirement from optional to
-            selection‐based, but otherwise makes no changes to it.
+            <consistency-rationale/>
+            <description>There are no changes to the EAs for this SFR. MOD_UA_V1.0 changes this requirement from optional to
+            selection‐based, but otherwise makes no changes to it.</description>
           </f-component>
           
-          <f-component cc-id="fia_uid.2" name="User Identification Before Any Action">            
-            There are no changes to the EAs for this SFR. MOD_UA_V1.0 changes this requirement from optional to
-            selection‐based, but otherwise makes no changes to it.
+          <f-component cc-id="fia_uid.2" name="User Identification Before Any Action">
+            <consistency-rationale/>            
+            <description>There are no changes to the EAs for this SFR. MOD_UA_V1.0 changes this requirement from optional to
+            selection‐based, but otherwise makes no changes to it.</description>
           </f-component>
         </sec:mod_fia>
         
         <sec:mod_fmt title="Security Management (FMT)">
-          <f-component cc-id="fmt_mof.1" name="Management of Security Functions Behavior">        
-        This SFR is unchanged when the TOE claim includes this PP‐Module. However, this SFR is an optional
+          <f-component cc-id="fmt_mof.1" name="Management of Security Functions Behavior"> 
+            <consistency-rationale/>
+        <description>This SFR is unchanged when the TOE claim includes this PP‐Module. However, this SFR is an optional
         requirement in the PSD PP. This PP‐Module defines functionality that would require this SFR to be claimed
         if a certain selection is made. Therefore, this PP‐Module re‐categorizes this optional SFR
-        as selection-based.
-        It shall be included in the TSF if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.
+        as selection-based.<h:br/><h:br/>
+        It shall be included in the TSF if ‘configurable’ is selected in
+        FDP_FIL_EXT.1.1/KM.</description>
       </f-component>
           <f-component cc-id="fmt_smf.1" name="Specification of Management Functions">
+            <consistency-rationale/>
+            <description>
             This SFR is unchanged when the TOE claim includes this PP‐Module. However, this SFR is an optional
             requirement in the PSD PP. This PP‐Module defines functionality that would require this SFR to be claimed
             if a certain selection is made. Therefore, this PP‐Module re‐categorizes this optional
-            SFR as selection-based.
-            It shall be included in the TSF if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.
+            SFR as selection-based.<h:br/><h:br/>
+            It shall be included in the TSF if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.</description>
           </f-component>
           <f-component cc-id="fmt_smr.1" name="Security Roles">
+            <consistency-rationale/>
+            <description>
             This SFR is unchanged when the TOE claim includes this PP‐Module. However, this SFR is an optional
             requirement in the PSD PP. This PP‐Module defines functionality that would require this SFR to be claimed
             if a certain selection is made. Therefore, this PP‐Module re‐categorizes this optional
-            SFR as selection-based.
-            It shall be included in the TSF if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.
+            SFR as selection-based.<h:br/><h:br/>
+            It shall be included in the TSF if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.</description>
           </f-component>
           </sec:mod_fmt>
         
         <sec:mod_fpt title="Protection of the TSF (FPT)">
           <f-component cc-id="fpt_stm.1" name="Reliable Time Stamps">
+            <consistency-rationale/>
+            <description>
             This SFR is unchanged when the TOE claim includes this PP‐Module. However, this SFR is an optional
             requirement in the PSD PP. This PP‐Module defines functionality that would require this SFR to be claimed
             if a certain selection is made. Therefore, this PP‐Module re‐categorizes this optional
-            SFR as selection-based.
-            It shall be included in the TSF if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.
+            SFR as selection-based.<h:br/><h:br/>
+            It shall be included in the TSF if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.</description>
           </f-component>
         </sec:mod_fpt>
       </modified-sfrs>
@@ -631,15 +658,15 @@
           <fam-behavior>Components in this family define the requirements for device powering.</fam-behavior>
         </ext-comp-def>
                 
-        <ext-comp-def fam-id="FDP_TER_EXT.1" title="Session Termination">
+        <ext-comp-def fam-id="FDP_TER_EXT" title="Session Termination">
           <fam-behavior>Components in this family define the requirements for termination of open sessions.</fam-behavior>
         </ext-comp-def>
         
         <f-component cc-id="fdp_fil_ext.1" name="Device Filtering (User Authentication Devices)"
           iteration="UA" id="fdp-fil-ext-1-ua">
-          <consistecny-rationale>This SFR defines device filtering specific to this PP‐Module. This does not
+          <consistency-rationale>This SFR defines device filtering specific to this PP‐Module. This does not
             prevent the enforcement of any PSD PP SFRs.
-          </consistecny-rationale>
+          </consistency-rationale>
           
           <comp-lev>requires the TSF to specify the method of device filtering used for
             peripheral interfaces and defines requirements for handling allowlists and denylists.</comp-lev>
@@ -682,11 +709,6 @@
               </selectables> [<h:i>user authentication device</h:i>] interfaces in peripheral device connections.
             </title>
             
-            <note role="application">
-              The ST author must make the selection for the device which the TOE has: configurable,
-              fixed, or both.
-            </note>
-            
             <ext-comp-def-title>
               <title>
                 The TSF shall consider all <assignable>denylist name</assignable> denylisted devices as
@@ -694,6 +716,12 @@
                 interfaces in peripheral device connections.
               </title>
             </ext-comp-def-title>
+            
+            <note role="application">
+              The ST author must make the selection for the device which the TOE has: configurable,
+              fixed, or both.
+            </note>           
+            
           </f-element>
           
           <f-element id="fdp-fil-ext-1e3-ua">
@@ -715,7 +743,7 @@
               Note: if “configurable” is selected in FDP_FIL_EXT.1.1/UA, the evaluator shall perform these activities in
               conjunction with the FMT_MOF.1 and FMT_SMF.1 evaluation activities specified in the PSD PP because
               configuring the device filtration rules involves use of the TOE’s management functionality.
-              <Isolation/>
+              
               <TSS>
                 The evaluator shall examine the TSS and verify that it describes whether the PSD has configurable or fixed
                 device filtering.<h:br/><h:br/>
@@ -728,6 +756,7 @@
                 guidance documentation and verify that it describes the process of configuring the TOE for allowlisting
                 and denylisting UA peripheral devices and the administrative privileges required to do this.
               </Guidance>
+              <CustomEA name="Isolation"/>
               <Tests>
                 <testlist>
                   <test>
@@ -761,13 +790,13 @@
         </f-component>
         
         <f-component cc-id="fdp_pdc_ext.2" name="Authorized Devices (User Authentication Devices)"
-          iteration="/UA" id="fdp-pdc-ext-2-ua">
-          <consistecny-rationale>
+          iteration="UA" id="fdp-pdc-ext-2-ua">
+          <consistency-rationale>
             This SFR defines the devices that are authorized by this PP‐Module. This is
             dependent on the other PP‐Modules that are claimed in the TOE’s ST. The
             Base‐PP is written specifically not to discuss the supported device types,
             instead leaving it to the various PP‐Modules to define what they support.
-          </consistecny-rationale>
+          </consistency-rationale>
           
           <comp-lev>defines the types of physical devices that the TSF will permit to
             connect to it.</comp-lev>
@@ -830,7 +859,7 @@
               interfaces supported by the TOE.
             </note>            
             <aactivity>
-              The EAs for this SFR are performed as part of activities for FDP_PDC_EXT.1 above.
+              <no-tests>The EAs for this SFR are performed as part of activities for FDP_PDC_EXT.1 above.</no-tests>
             </aactivity>
           </f-element>          
         </f-component>
@@ -862,7 +891,7 @@
               external, or both.
             </note>
             <aactivity>
-              <Isolation/>
+              
               <TSS>
                 The evaluator shall examine the TSS and verify that it describes whether the PSD has internal or external
                 authentication devices.<h:br/><h:br/>
@@ -870,7 +899,8 @@
                 FDP_PDC_EXT.1 in PSD PP.
               </TSS>
               <Guidance/>
-              <Test/>
+              <CustomEA name="Isolation"/>
+              <Tests/>
             </aactivity>            
           </f-element>          
         </f-component>
@@ -888,17 +918,18 @@
           <audit>There are no auditable events foreseen.</audit>
           <dependencies>No dependencies</dependencies>  
           
-          <f-element id="fdp-pwr-ext.1e1">
+          <f-element id="fdp-pwr-ext-1e1">
             <title>
               The TSF shall not be powered by a connected computer.
             </title>
             <aactivity>
-              <Isolation/>                
+                              
               <TSS>
                 The evaluator shall examine the TSS and verify that the connected computer does not
                 power the TOE.
               </TSS>
               <Guidance/>
+              <CustomEA name="Isolation"/>
               <Tests>
                 The evaluator shall perform the following test for each connected computer:<h:ol>
                   <h:li>Ensure the power source is disconnected from the TOE.</h:li>
@@ -923,12 +954,12 @@
           <audit>There are no auditable events foreseen.</audit>
           <dependencies>No dependencies</dependencies>  
           
-          <f-element id="fdp-ter-ext.1e1">
+          <f-element id="fdp-ter-ext-1e1">
             <title>
               The TSF shall terminate an open session upon removal of the authentication element.
             </title>
             <aactivity>
-              <Isolation/>
+              
               <TSS>
                 The evaluator shall examine the TSS and verify that the TOE terminates an open
                 session upon removal of the authentication element.
@@ -937,6 +968,7 @@
                 The evaluator shall examine the guidance documentation and verify that the TOE
                 terminates an open session upon removal of the authentication element.
               </Guidance>
+              <CustomEA name="Isolation"/>
               <Tests>
                 Testing for this component is performed as part of FDP_APc_EXT.1 test 2-UA.
               </Tests>
@@ -956,7 +988,7 @@
           <audit>There are no auditable events foreseen.</audit>
           <dependencies>No dependencies</dependencies>  
           
-          <f-element id="fdp-uai-ext.1e1">
+          <f-element id="fdp-uai-ext-1e1">
             <title>
               The TSF shall isolate the user authentication function from all other TOE USB
               functions.
@@ -966,10 +998,6 @@
               Assessment. Refer to Appendix D for this information/
             </note>
             <aactivity>
-              <Isolation>
-                The evaluator shall examine the Isolation Documentation and verify that it describes how the TOE
-                enforces user authentication isolation from other TOE USB functions.
-              </Isolation>
               <TSS>
                 The evaluator shall examine the TSS and verify that it states that the TOE has separate USB connections
                 for user authentication functions and any other USB functions.
@@ -978,6 +1006,10 @@
                 The evaluator shall examine the guidance and verify that it states that the TOE has separate USB
                 connections for user authentication functions and any other USB functions.
               </Guidance>
+              <CustomEA name="Isolation">
+                The evaluator shall examine the Isolation Documentation and verify that it describes how the TOE
+                enforces user authentication isolation from other TOE USB functions.
+              </CustomEA>
               <Tests>
                 <testlist>
                   <test>
@@ -1046,11 +1078,9 @@
       </section>      
     </man-sfrs>  
     <opt-sfrs/>
-    <obj-sfrs/>
-    <impl-dep-sfrs/>    
     <sel-sfrs>
       <section title="User Data Protection (FDP)">
-        <f-component cc-id="fdp_ter-ext.2" name="Session Termination of Removed Devices">
+        <f-component cc-id="fdp_ter_ext.2" name="Session Termination of Removed Devices">
           <consistency-rationale>
             This SFR defines specific handling for user authentication devices. This does
             not prevent the enforcement of any PSD PP SFRs.
@@ -1070,7 +1100,7 @@
             This SFR must be claimed if "external" is selected in FDP_PDC_EXT.4.1/UA.
           </note>
           <aactivity>
-            <Isolation/>
+            
             <TSS>
               The evaluator shall examine the TSS and verify that the TOE terminates an open session upon removal of
               the authentication device.
@@ -1079,6 +1109,7 @@
               The evaluator shall examine the guidance documentation and verify that the TOE terminates an open
               session upon removal of the authentication device.
             </Guidance>
+            <CustomEA name="Isolation"/>
             <Tests>
               Testing for this component performed as part of FDP_APC_EXT.1 test 2‐UA.
             </Tests>
@@ -1098,12 +1129,12 @@
           <audit>There are no auditable events foreseen.</audit>
           <dependencies>FDP_SWI_EXT.1 PSD Switching</dependencies>
           
-          <f-element id="fdp-ter-ext.3e1">
+          <f-element id="fdp-ter-ext-3e1">
             <title>
               The TSF shall terminate an open session upon switching to a different computer.
             </title>
           </f-element>
-          <f-element id="fdp-ter-ext.3e2">
+          <f-element id="fdp-ter-ext-3e2">
             <title>
               The TSF shall reset the power to the user authentication device for at least one
               second upon switching to a different computer.
@@ -1113,10 +1144,7 @@
               action” is selected in FDP_SWI_EXT.1.1 in the PSD‐PP.
             </note>
             <aactivity>
-              <Isolation>
-                The evaluator shall examine the isolation document and verify that it describes how power is reset to the
-                user authentication device upon switching.
-              </Isolation>
+              
               <TSS>
                 The evaluator shall examine the TSS and verify that the TOE terminates an open session upon switching
                 to a different computer.
@@ -1125,6 +1153,10 @@
                 The evaluator shall examine the guidance documentation and verify that the TOE terminates an open
                 session upon switching to a different computer.
               </Guidance>
+              <CustomEA name="Isolation">
+                The evaluator shall examine the isolation document and verify that it describes how power is reset to the
+                user authentication device upon switching.
+              </CustomEA>
               <Tests>
                 Testing for this component is performed as part of FDP_APC_EXT.1 test 2‐UA.
               </Tests>
@@ -1132,7 +1164,10 @@
           </f-element>
         </f-component>
       </section>
-    </sel-sfrs>    
+    </sel-sfrs>
+    <obj-sfrs/>
+    <impl-dep-sfrs/>    
+        
   </sec:Security_Requirements>
     
   <appendix title="Isolation Documentation and Assessment" id="iso-doc-assess">
@@ -1161,7 +1196,7 @@
     </section>
   </appendix>
   
-  <appendix title="Peripheral Device Connections">
+  <appendix title="Peripheral Device Connections" id="perdevcon">
     <section title="General">
       This appendix expands the PSD PP Peripheral Device Connections appendix, and offers additional direction
       on peripheral devices and interface protocols with TOEs claiming compliance with this PP‐Module. This
@@ -1203,7 +1238,7 @@
     </section>
   </appendix> 
   
-  <appendix title="Interactions between PP-Modules">
+  <appendix title="Interactions between PP-Modules" id="interbetmod">
     This appendix provides any additional guidance required to address interactions between multiple PPModules
     when they are both contained within a PP‐Configuration.
     <section title="PP-Module for Audio Output Devices">
@@ -1244,9 +1279,10 @@
   </appendix>    
   
   <bibliography>    
-    <entry>
+    <entry id="base-pp">
       <tag>PP_PSD_V5.0 or PSD PP</tag>
-      <h:a href=""><comment>Need to add URL once published.</comment>Protection Profile for Peripheral Sharing Device, Version 5.0, 2025-07-11</h:a>
+      <description><h:a href=""><comment>Need to add URL once published.</comment>Protection Profile for Peripheral Sharing Device, Version 5.0, 2025-07-11</h:a>
+      </description>    
     </entry>
   </bibliography>
-    </PP>
+</Module>
