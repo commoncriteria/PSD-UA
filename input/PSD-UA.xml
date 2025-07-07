@@ -169,12 +169,14 @@
             by ensuring device filtering for peripheral interfaces.</rationale>
           <addressed-by>FDP_PDC_EXT.2/UA</addressed-by><rationale>Mitigates this threat by only
             allowing authorized device connections with authorized interface protocols.</rationale>
-          <addressed-by>FDP_PDC_EXT.4</addressed-by><rationale>Mitigates this threat by requiring
+          <addressed-by>FDP_PDC_EXT.4/UA</addressed-by><rationale>Mitigates this threat by requiring
             the TSF to have an authentication device.</rationale>
           <addressed-by>FDP_PWR_EXT.1</addressed-by><rationale>Mitigates this threat by not allowing
           the TSF to be powered by a connecting computer.</rationale>
           <addressed-by>FDP_TER_EXT.1</addressed-by><rationale>Mitigates this threat by requiring
             session termination when the authentication element is removed.</rationale>
+          <addressed-by>FDP_UAI_EXT.1</addressed-by><rationale>Mitigates this threat by isolating
+            the user authentication function from other USB functions.</rationale>
           <addressed-by>FDP_TER_EXT.2 (selection-based)</addressed-by><rationale>Mitigates this
             threat by requiring session termination when the authentication device is removed.</rationale>
           <addressed-by>FDP_TER_EXT.3 (selection-based)</addressed-by><rationale>Mitigates this
@@ -195,12 +197,14 @@
             interfaces.</rationale>
           <addressed-by>FDP_PDC_EXT.2/UA</addressed-by><rationale>Mitigates this threat by only
             allowing authorized device connections with authorized interface protocols.</rationale>
-          <addressed-by>FDP_PDC_EXT.4</addressed-by><rationale>Mitigates this threat by requiring
+          <addressed-by>FDP_PDC_EXT.4/UA</addressed-by><rationale>Mitigates this threat by requiring
             the TSF to have an authentication device.</rationale>
           <addressed-by>FDP_PWR_EXT.1</addressed-by><rationale>Mitigates this threat by not allowing
             the TSF to be powered by a connecting computer.</rationale>
           <addressed-by>FDP_TER_EXT.1</addressed-by><rationale>Mitigates this threat by requiring
             session termination when the authentication element is removed.</rationale>
+          <addressed-by>FDP_UAI_EXT.1</addressed-by><rationale>Mitigates this threat by isolating
+            the user authentication function from other USB functions.</rationale>
           <addressed-by>FDP_TER_EXT.2 (selection-based)</addressed-by>Mitigates this
           threat by requiring session termination when the authentication device is removed.<rationale></rationale>
           <addressed-by>FDP_TER_EXT.3 (selection-based)</addressed-by><rationale>Mitigates this
@@ -319,7 +323,7 @@
                     connected computer.</h:li>
                     <h:li>Ensure the user authentication application and driver for the authorized user authentication
                     device used for testing is installed.</h:li>
-                    <h:li>[Conditional: if “external” is selected in FDP_PDC_EXT.4.1, then:] connect an authorized user
+                    <h:li>[Conditional: if “external” is selected in FDP_PDC_EXT.4.1/UA, then:] connect an authorized user
                     authentication device with a power LED and a connected DVM to each PSD UA peripheral device
                     interface.</h:li>
                   </h:ul>
@@ -332,16 +336,17 @@
                       While performing this test, ensure that switching is always initiated through express user action.<h:ol>
                         <h:li>Turn on the TOE and ensure computer #1 is selected.</h:li>
                         <h:li>Verify that the real‐time hardware information console on computer #1 indicates the presence of
-                          the user authentication device. [Conditional: if “external” is selected in FDP_PDC_EXT.4.1, then:] verify
+                          the user authentication device. [Conditional: if “external” is selected in
+                          FDP_PDC_EXT.4.1/UA, then:] verify
                           the UA device power LED is illuminated and the DVM reads between 4.75 and 5.25 VDC.</h:li>
                         <h:li>Perform steps 4‐6 for each connected computer.</h:li>
                         <h:li>For each switching method selected in FDP_SWI_EXT.2.2, switch selected computers in accordance
                           with the operational guidance.</h:li>
-                        <h:li>[Conditional: if “external” is selected in FDP_PDC_EXT.4.1, then:] verify that the LED for the UA
+                        <h:li>[Conditional: if “external” is selected in FDP_PDC_EXT.4.1/UA, then:] verify that the LED for the UA
                           device is not illuminated for at least one second while the DVM reads 0.5 VDC or less for at least one
                           second.</h:li>
                         <h:li>Verify that the real‐time hardware console on the newly selected computer indicates the presence
-                          of the user authentication device. [Conditional: if “external” is selected in FDP_PDC_EXT.4.1, then:] verify
+                          of the user authentication device. [Conditional: if “external” is selected in FDP_PDC_EXT.4.1/UA, then:] verify
                           the UA device power LED is illuminated and the DVM reads between 4.75 and 5.25 VDC.</h:li>                                                
                       </h:ol>                      
                     </test>
@@ -359,7 +364,7 @@
                           connected on the selected computer and that the expected traffic is sent and captured using the USB
                           analyzer
                           </h:li>
-                        [Conditional: Perform steps 5‐6 if “external” is selected in FDP_PDC_EXT.4.1.]
+                        [Conditional: Perform steps 5‐6 if “external” is selected in FDP_PDC_EXT.4.1/UA.]
                         <h:li>Disconnect the UA device and verify the session is terminated on the selected computer and that
                           the real‐time hardware console does not show the device and that no traffic is sent on the USB analyzer.</h:li>
                         <h:li>Reconnect the UA device. Reconnect an authentication session, verify that the session is connected
@@ -407,7 +412,7 @@
                           Type‐B plug. Modulate the 5 volt supply manually at various speeds from approximately one cycle per five
                           seconds to one cycle per second. Verify that no new USB traffic is captured on the non‐selected USB
                           analyzers.</h:li>
-                        [Conditional: Perform steps 2‐4 if “external” is selected in FDP_PDC_EXT.4.1.]
+                        [Conditional: Perform steps 2‐4 if “external” is selected in FDP_PDC_EXT.4.1/UA.]
                         <h:li>Disconnect the power supply and replace it with the computer.</h:li>
                         <h:li>Connect the USB dummy load into the TOE UA peripheral device interface. Examine the USB
                           analyzers on all non‐selected computers and verify that no new USB traffic is captured.</h:li>
@@ -452,7 +457,7 @@
               The TSF may elect to enforce rejection of unauthorized devices connected to the
               PSD through a USB hub by considering USB hubs as unauthorized devices, even
               though USB hubs are authorized devices. If “internal” is the only selection made
-              in FDP_PDC_EXT.4.1, then the TSF does not have to support USB as an authorized
+              in FDP_PDC_EXT.4.1/UA, then the TSF does not have to support USB as an authorized
               interface unless the KM PP‐Module is also claimed by the ST author.
             </note>            
             <consistency-rational>
@@ -472,7 +477,7 @@
                 <testlist>
                   <test>
                     <h:b>Unauthorized Device Rejection</h:b><h:br/><h:br/>
-                    [Conditional: Perform this test if “external” is selected in FDP_PDC_EXT.4.1]<h:br/><h:br/>
+                    [Conditional: Perform this test if “external” is selected in FDP_PDC_EXT.4.1/UA]<h:br/><h:br/>
                     This test verifies that the TOE ports properly reject unauthorized devices and devices with unauthorized
                     protocols as per the unauthorized peripheral device connections.<h:br/><h:br/>
                     For this test, verify device rejection through TOE user indication in accordance with the operational user
@@ -500,7 +505,7 @@
                   </test>
                   <test>
                     <h:b>Authorized Device Acceptance</h:b><h:br/><h:br/>
-                    [Conditional: Perform this test if “external” is selected in FDP_PDC_EXT.4.1]<h:br/><h:br/>
+                    [Conditional: Perform this test if “external” is selected in FDP_PDC_EXT.4.1/UA]<h:br/><h:br/>
                     This test verifies that the TOE ports do not reject authorized devices and devices with authorized protocols
                     as per the Peripheral Device Connection Policy.<h:br/><h:br/>
                     Perform this test for a USB device identified as User Authentication and any device listed on the PSD UA
@@ -830,7 +835,8 @@
           </f-element>          
         </f-component>
         
-        <f-component cc-id="fdp_pdc_ext.4" name="Supported Authentication Device">
+        <f-component cc-id="fdp_pdc_ext.4" name="Supported Authentication Device" iteration="UA"
+          id="fdp-pdc-ext-4-ua">
           <consistency-rationale>
             This SFR further defines whether the TOE includes an internal or external
             authentication device. This does not prevent the enforcement of any PSD PP
@@ -844,7 +850,7 @@
           <dependencies>FDP_PDC_EXT.1 Peripheral Device Connection<h:br/><h:br/>
           FDP_PDC_EXT.2 Authorized Devices</dependencies>
           
-          <f-element id="fdp-pdc-ext-4e1">
+          <f-element id="fdp-pdc-ext-4e1-ua">
             <title>
               The TSF shall have an <selectables>
                   <selectable>internal</selectable>
@@ -1004,7 +1010,7 @@
                       <h:li>Connect a USB sniffer to the TOE UA computer interface.</h:li>
                       <h:li>Exercise the functions of the peripheral device type(s) selected in FDP_PDC_EXT.3.1/KM in
                         MOD_KM_V1.0 and verify that no traffic is sent and captured on the USB sniffer.</h:li><h:br/><h:br/>
-                      [Conditional: Perform steps 4‐5 only if “external” is selected in FDP_PDC_EXT.4.1]
+                      [Conditional: Perform steps 4‐5 only if “external” is selected in FDP_PDC_EXT.4.1/UA]
                       <h:li>Disconnect the USB sniffer and connect it to the TOE UA peripheral device interface.</h:li>
                       <h:li>Exercise the functions of the peripheral device type(s) selected in FDP_PDC_EXT.3.1/KM in
                         MOD_KM_V1.0 and verify that no traffic is sent and captured on the USB sniffer.</h:li>
@@ -1023,7 +1029,7 @@
                         sent and captured on the USB sniffer.</h:li>
                       <h:li>Play a video on the selected computer and verify that no traffic is sent and captured on the USB
                         sniffer.</h:li><h:br/><h:br/>
-                      [Conditional: Perform steps 4‐7 only if “external” is selected in FDP_PDC_EXT.4.1]
+                      [Conditional: Perform steps 4‐7 only if “external” is selected in FDP_PDC_EXT.4.1/UA]
                       <h:li>Disconnect the monitor.</h:li>
                       <h:li>Disconnect the USB sniffer and connect it to the TOE UA peripheral device interface.</h:li>
                       <h:li>Reconnect the monitor to the TOE USB type-C video peripheral interface
@@ -1061,7 +1067,7 @@
             The TSF shall terminate an open session upon removal of the user authentication device.
           </title>
           <note role="application">
-            This SFR must be claimed if "external" is selected in FDP_PDC_EXT.4.1.
+            This SFR must be claimed if "external" is selected in FDP_PDC_EXT.4.1/UA.
           </note>
           <aactivity>
             <Isolation/>
