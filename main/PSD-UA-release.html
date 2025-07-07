@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html><head><meta content="text/html;charset=utf-8" http-equiv="Content-Type"></meta><meta content="utf-8" http-equiv="encoding"></meta><title>PP-Module for User Authentication Devices</title><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script><script type="text/x-mathjax-config">
+<html><head><meta content="text/html;charset=utf-8" http-equiv="Content-Type"></meta><meta content="utf-8" http-equiv="encoding"></meta><title>PP-Module for User Authentication Device</title><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script><script type="text/x-mathjax-config">
             MathJax.Hub.Config({
             extensions: ["tex2jax.js"],
             jax: ["input/TeX", "output/HTML-CSS"],
@@ -629,16 +629,26 @@ function showTarget(id){
 	            img[src="images/collapsed.png"] { display:none;}
 
           }
-    </style></head><body onLoad="init()"><div id="commmentbox-"><a href="#Comment-1-">Comment: Comment-1-</a><br/><a href="#Comment-2-">Comment: Comment-2-</a><br/><a href="#Comment-3-">Comment: Comment-3-</a><br/></div><h1 class="title" style="page-break-before:auto;">PP-Module for User Authentication Devices</h1><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><div class="center"><img src="images/niaplogo.png" alt="NIAP Logo"></img><br/>
+    </style></head><body onLoad="init()"><div id="commmentbox-"><a href="#Comment-1-">Comment: Comment-1-</a><br/><a href="#Comment-2-">Comment: Comment-2-</a><br/></div><h1 class="title" style="page-break-before:auto;">PP-Module for User Authentication Device</h1><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><div class="center"><img src="images/niaplogo.png" alt="NIAP Logo"></img><br/>
       Version: 2.0<br/>2025-07-11<br/><b>National Information Assurance Partnership</b><br/></div><h2 style="page-break-before:always;">Revision History</h2><table><tr class="header"><th>Version</th><th>Date</th><th>Comment</th></tr><tr><td>1.0</td><td>2019-07-19</td><td>Initial draft</td></tr>
-</table><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#ppoverview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#TOEdescription" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#TOEboundary" style="text-indent:10px">1.4<span>TOE Boundary</span></a><a href="#usecases" style="text-indent:10px">1.5<span>Use Cases</span></a><a href="#sec-cclaims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#spd" style="text-indent:0px">3<span>Security Problem Description</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#Organizational_Security_Polcies" style="text-indent:10px">3.3<span>Organizational Security Polcies</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#SecurityObjectivesTOE" style="text-indent:10px">4.1<span>Security Objectives for the TOE</span></a><a href="#SecurityObjectivesTOEorEnvironment" style="text-indent:10px">4.2<span>Security Objectives for the Operational Environment</span></a><a href="#SOR" style="text-indent:10px">4.3<span>Security Objectives Rationale</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#secreq-bpp-psd" style="text-indent:10px">5.1<span>
+<tr><td>2.0</td><td>2025-07-11</td><td>Updates for <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022</td></tr>
+</table><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#ppoverview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#TOEdescription" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#TOEboundary" style="text-indent:10px">1.4<span>TOE Boundary</span></a><a href="#usecases" style="text-indent:10px">1.5<span>Use Cases</span></a><a href="#sec-cclaims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#Security_Problem_Definition" style="text-indent:0px">3<span>Security Problem Definition</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#Assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#Organizational_Security_Policies" style="text-indent:10px">3.3<span>Organizational Security Policies</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#Security_Objectives_for_the_TOE" style="text-indent:10px">4.1<span>Security Objectives for the TOE</span></a><a href="#Security_Objectives_for_the_Operational_Environment" style="text-indent:10px">4.2<span>Security Objectives for the Operational Environment</span></a><a href="#SOR" style="text-indent:10px">4.3<span>Security Objectives Rationale</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#secreq-bpp-psd" style="text-indent:10px">5.1<span>
     Protection Profile for Peripheral Sharing Device
        Security Functional Requirements Direction
-    </span></a><a href="#modsfr-bpp-psd" style="text-indent:20px">5.1.1<span> Modified SFRs </span></a><a href="#mod_fau" style="text-indent:30px">5.1.1.1<span>Security Audit (FAU)</span></a><a href="#mod_fdp" style="text-indent:30px">5.1.1.2<span>User Data Protection (FDP)</span></a><a href="#mod_fia" style="text-indent:30px">5.1.1.3<span>Identification and Authentication (FIA)</span></a><a href="#mod_fmt" style="text-indent:30px">5.1.1.4<span>Security Management (FMT)</span></a><a href="#mod_fpt" style="text-indent:30px">5.1.1.5<span>Protection of the TSF (FPT)</span></a><a href="#FDP" style="text-indent:20px">5.1.2<span>User Data Protection (FDP)</span></a><a href="#" style="text-indent:20px">5.1.3<span>User Data Protection (FDP)</span></a><a href="#opt-app" style="text-indent:0px">Appendix A - <span>Optional Requirements</span></a><a href="#optional-reqs" style="text-indent:10px">A.1<span>Strictly Optional  Requirements
-    </span></a><a href="#objective-reqs" style="text-indent:10px">A.2<span>Objective  Requirements
-    </span></a><a href="#feat-based-reqs" style="text-indent:10px">A.3<span>Implementation-dependent  Requirements
-    </span></a><a href="#sel-based-reqs" style="text-indent:0px">Appendix B - <span>Selection-based  Requirements
-    </span></a><a href="#ext-comp-defs" style="text-indent:0px">Appendix C - <span>Extended Component Definitions</span></a><a href="#ext-comp-defs-bg" style="text-indent:10px">C.1<span>Extended Components Table</span></a><a href="#ext-comp-defs-bg" style="text-indent:10px">C.2<span>Extended Component Definitions</span></a><a href="#ext-comp-FDP" style="text-indent:20px">C.2.1<span>User Data Protection (FDP)</span></a><a href="#ext-comp-FDP_FIL_EXT" style="text-indent:30px">C.2.1.1<span>FDP_FIL_EXT Device Filtering</span></a><a href="#ext-comp-FDP_PDC_EXT" style="text-indent:30px">C.2.1.2<span>FDP_PDC_EXT Peripheral Device Connection</span></a><a href="#ext-comp-FDP_PWR_EXT" style="text-indent:30px">C.2.1.3<span>FDP_PWR_EXT Powered by Computer</span></a><a href="#ext-comp-FDP_TER_EXT.1" style="text-indent:30px">C.2.1.4<span>FDP_TER_EXT.1 Session Termination</span></a><a href="#iso-doc-assess" style="text-indent:0px">Appendix D - <span>Isolation Documentation and Assessment</span></a><a href="#_sec_12" style="text-indent:10px">D.1<span>General</span></a><a href="#_sec_13" style="text-indent:10px">D.2<span>Design Description</span></a><a href="#_sec_14" style="text-indent:10px">D.3<span>Isolation Means Justification</span></a><a href="#_sec_15" style="text-indent:10px">D.4<span>Firmware Dependencies</span></a><a href="#" style="text-indent:0px">Appendix E - <span>Peripheral Device Connections</span></a><a href="#_sec_16" style="text-indent:10px">E.1<span>General</span></a><a href="#_sec_17" style="text-indent:10px">E.2<span>Unauthorized Peripheral Devices</span></a><a href="#_sec_18" style="text-indent:10px">E.3<span>Unauthorized Interface Protocols</span></a><a href="#_sec_19" style="text-indent:10px">E.4<span>Authorized Peripheral Devices</span></a><a href="#_sec_20" style="text-indent:10px">E.5<span>Authorized Interface Protocols</span></a><a href="#" style="text-indent:0px">Appendix F - <span>Interactions between PP-Modules</span></a><a href="#_sec_21" style="text-indent:10px">F.1<span>PP-Module for Audio Output Devices</span></a><a href="#_sec_22" style="text-indent:10px">F.2<span>PP-Module for Keyboard/Mouse Devices</span></a><a href="#_sec_23" style="text-indent:10px">F.3<span>PP-Module for Video/Display Devices</span></a><a href="#acronyms" style="text-indent:0px">Appendix G - <span>Acronyms</span></a><a href="#appendix-bibliography" style="text-indent:0px">Appendix H - <span>Bibliography</span></a></div><h1 class="indexable" data-level="1" id="Introduction">1 Introduction</h1>
+    </span></a><a href="#modsfr-bpp-psd" style="text-indent:20px">5.1.1<span> Modified SFRs </span></a><a href="#mod_fau" style="text-indent:30px">5.1.1.1<span>Security Audit (FAU)</span></a><a href="#mod_fdp" style="text-indent:30px">5.1.1.2<span>User Data Protection (FDP)</span></a><a href="#mod_fia" style="text-indent:30px">5.1.1.3<span>Identification and Authentication (FIA)</span></a><a href="#mod_fmt" style="text-indent:30px">5.1.1.4<span>Security Management (FMT)</span></a><a href="#mod_fpt" style="text-indent:30px">5.1.1.5<span>Protection of the TSF (FPT)</span></a><a href="#man-sfrs" style="text-indent:10px">5.2<span>TOE Security Functional Requirements</span></a><a href="#FDP" style="text-indent:20px">5.2.1<span>User Data Protection (FDP)</span></a><a href="#obj-req-map" style="text-indent:10px">5.3<span>TOE Security Functional Requirements Rationale</span></a><a href="#mod-conrat" style="text-indent:0px">6<span>Consistency Rationale</span></a><a href="#conrat-bpp-psd" style="text-indent:10px">6.1<span>
+    Protection Profile for Peripheral Sharing Device</span></a><a href="#contoe-bpp-psd" style="text-indent:20px">6.1.1<span>
+	Consistency of TOE Type
+      </span></a><a href="#consecprob-bpp-psd" style="text-indent:20px">6.1.2<span>
+	Consistency of Security Problem Definition
+      </span></a><a href="#conobj-bpp-psd" style="text-indent:20px">6.1.3<span>
+			Consistency of OE Objectives
+		</span></a><a href="#conreq-bpp-psd" style="text-indent:20px">6.1.4<span>
+	Consistency of Requirements
+      </span></a><a href="#opt-sfrs" style="text-indent:0px">Appendix A - <span>Optional SFRs</span></a><a href="#opt-sfrs" style="text-indent:10px">A.1<span>Strictly Optional Requirements
+    </span></a><a href="#obj-sfrs" style="text-indent:10px">A.2<span>Objective Requirements
+    </span></a><a href="#impl-dep-sfrs" style="text-indent:10px">A.3<span>Implementation-dependent Requirements
+    </span></a><a href="#sel-sfrs" style="text-indent:0px">Appendix B - <span>Selection-based Requirements
+    </span></a><a href="#" style="text-indent:10px">B.1<span>User Data Protection (FDP)</span></a><a href="#ext-comp-defs" style="text-indent:0px">Appendix C - <span>Extended Component Definitions</span></a><a href="#ext-comp-defs-bg" style="text-indent:10px">C.1<span>Extended Components Table</span></a><a href="#ext-comp-defs-bg" style="text-indent:10px">C.2<span>Extended Component Definitions</span></a><a href="#ext-comp-FDP" style="text-indent:20px">C.2.1<span>User Data Protection (FDP)</span></a><a href="#ext-comp-FDP_FIL_EXT" style="text-indent:30px">C.2.1.1<span>FDP_FIL_EXT Device Filtering</span></a><a href="#ext-comp-FDP_PDC_EXT" style="text-indent:30px">C.2.1.2<span>FDP_PDC_EXT Peripheral Device Connection</span></a><a href="#ext-comp-FDP_PWR_EXT" style="text-indent:30px">C.2.1.3<span>FDP_PWR_EXT Powered by Computer</span></a><a href="#ext-comp-FDP_TER_EXT" style="text-indent:30px">C.2.1.4<span>FDP_TER_EXT Session Termination</span></a><a href="#iso-doc-assess" style="text-indent:0px">Appendix D - <span>Isolation Documentation and Assessment</span></a><a href="#_sec_9" style="text-indent:10px">D.1<span>General</span></a><a href="#_sec_10" style="text-indent:10px">D.2<span>Design Description</span></a><a href="#_sec_11" style="text-indent:10px">D.3<span>Isolation Means Justification</span></a><a href="#_sec_12" style="text-indent:10px">D.4<span>Firmware Dependencies</span></a><a href="#perdevcon" style="text-indent:0px">Appendix E - <span>Peripheral Device Connections</span></a><a href="#_sec_13" style="text-indent:10px">E.1<span>General</span></a><a href="#_sec_14" style="text-indent:10px">E.2<span>Unauthorized Peripheral Devices</span></a><a href="#_sec_15" style="text-indent:10px">E.3<span>Unauthorized Interface Protocols</span></a><a href="#_sec_16" style="text-indent:10px">E.4<span>Authorized Peripheral Devices</span></a><a href="#_sec_17" style="text-indent:10px">E.5<span>Authorized Interface Protocols</span></a><a href="#interbetmod" style="text-indent:0px">Appendix F - <span>Interactions between PP-Modules</span></a><a href="#_sec_18" style="text-indent:10px">F.1<span>PP-Module for Audio Output Devices</span></a><a href="#_sec_19" style="text-indent:10px">F.2<span>PP-Module for Keyboard/Mouse Devices</span></a><a href="#_sec_20" style="text-indent:10px">F.3<span>PP-Module for Video/Display Devices</span></a><a href="#acronyms" style="text-indent:0px">Appendix G - <span>Acronyms</span></a><a href="#appendix-bibliography" style="text-indent:0px">Appendix H - <span>Bibliography</span></a></div><h1 class="indexable" data-level="1" id="Introduction">1 Introduction</h1>
     <h2 class="indexable" data-level="2" id="ppoverview">1.1 Overview</h2>
       The scope of this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module is to describe the security functionality of a specific type of Peripheral Sharing
       Device (<abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr>) product in terms of [<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>] and to define functional and assurance requirements for such
@@ -765,13 +775,13 @@ The following sections list Common Criteria and technology terms used in this do
         
   <h1 class="indexable" data-level="1" id="sec-cclaims">2 Conformance Claims</h1>
     <dl><dt>Conformance Statement</dt><p></p><dd>An <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> must claim exact conformance 
-		 to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.</dd><p></p><dd>The evaluation methods used for evaluating the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> are a combination of the workunits 
+		 to this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.</dd><p></p><dd>The evaluation methods used for evaluating the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> are a combination of the workunits 
 			defined in <a href="#bibCEM">[CEM]</a> as well as the Evaluation Activities for ensuring that individual <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> 
 			and <abbr class="dyn-abbr"><a href="#abbr_SAR">SARs</a></abbr> have a sufficient level of supporting evidence in the Security Target and guidance 
 			documentation and have been sufficiently tested by the laboratory as part of completing 
 			ATE_IND.1. Any functional packages this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> claims similarly contain their own Evaluation 
 			Activities that are used in this same manner.
-			</dd><dt>CC Conformance Claims</dt><p></p><dd>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> is conformant to 
+			</dd><dt>CC Conformance Claims</dt><p></p><dd>This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> is conformant to 
 			Part 2 (extended) 
 			
 			
@@ -779,13 +789,13 @@ The following sections list Common Criteria and technology terms used in this do
 			
 				of Common Criteria <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1.
 			</dd><dt>PP Claim</dt><p></p><dd>
-					This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not claim conformance to 
+					This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not claim conformance to 
 					any Protection Profile.
 				</dd><p></p><dd>The following <abbr class="dyn-abbr"><a href="#abbr_PP">PPs</a></abbr> and <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>-Modules are allowed to be specified in a 
-					<abbr class="dyn-abbr"><a href="#abbr_PP-Configuration">PP-Configuration</a></abbr> with this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>:
-					<ul><li>Protection Profile for Peripheral Sharing Device, Version 5.0</li><li><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> for Analog Audio Output Devices, Version 2.0</li><li><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> for Keyboard/Mouse Devices, Version 2.0</li><li><abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>-MOdule for Video/Display Devices, Version 2.0</li></ul></dd><dt>Package Claim</dt><p></p><dd>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> is not conformant to any 
+					<abbr class="dyn-abbr"><a href="#abbr_PP-Configuration">PP-Configuration</a></abbr> with this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>:
+					<ul><li>Protection Profile for Peripheral Sharing Device, Version 5.0</li><li><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> for Analog Audio Output Devices, Version 2.0</li><li><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> for Keyboard/Mouse Devices, Version 2.0</li><li><abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>-MOdule for Video/Display Devices, Version 2.0</li></ul></dd><dt>Package Claim</dt><p></p><dd>This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> is not conformant to any 
 						Functional or Assurance Packages.</dd></dl>
-  <h1 class="indexable" data-level="1" id="spd">3 Security Problem Description</h1>    
+  <h1 class="indexable" data-level="1" id="Security_Problem_Definition">3 Security Problem Definition</h1>    
     The security problem is described in terms of the threats that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is expected to address, assumptions
     about its operational environment, and any organizational security policies that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is expected to
     enforce.<br/><br/>
@@ -802,25 +812,36 @@ The following sections list Common Criteria and technology terms used in this do
 	</dt><dd><span class="description">This threat from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> also applies to the functionality defined in this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.</span></dd></dl> 
     
     
-    <h2 class="indexable" data-level="2" id="assumptions">3.2 Assumptions</h2>
+    <h2 class="indexable" data-level="2" id="Assumptions">3.2 Assumptions</h2>
       
-    <h2 class="indexable" data-level="2" id="Organizational_Security_Polcies">3.3 Organizational Security Polcies</h2>
+      This document does not define any additional assumptions.
+    
+    
+      
+    <h2 class="indexable" data-level="2" id="Organizational_Security_Policies">3.3 Organizational Security Policies</h2><p>An organization deploying the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is
+      expected to satisfy the organizational security policy listed below in addition to all
+      organizational security policies defined by the claimed <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr>. </p>
       
       This document does not define any additional OSPs.
     
     
   <h1 class="indexable" data-level="1" id="Security_Objectives">4 Security Objectives</h1>
-    <h2 class="indexable" data-level="2" id="SecurityObjectivesTOE">4.1 Security Objectives for the TOE</h2>
+    <h2 class="indexable" data-level="2" id="Security_Objectives_for_the_TOE">4.1 Security Objectives for the TOE</h2>
+      
+      This document does not define any additional SOs.
     
-    <h2 class="indexable" data-level="2" id="SecurityObjectivesTOEorEnvironment">4.2 Security Objectives for the Operational Environment</h2>
+    
+    
+    <h2 class="indexable" data-level="2" id="Security_Objectives_for_the_Operational_Environment">4.2 Security Objectives for the Operational Environment</h2>
       Because this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module does not define any additional assumptions or organizational security policies,
       there are no additional security objectives for the Operational Environment to satisfy.
-          
+     
+    
     <h2 id="SOR" class="indexable,h2" data-level="2">4.3 Security Objectives Rationale</h2>   
 		This section describes how the assumptions and organizational 
 		security policies map to operational environment security objectives.
 	<table><caption><span class="ctr" data-myid="t-sec-obj-rat" data-counter-type="ct-Table" id="t-sec-obj-rat">Table <span class="counter">1</span></span>: Security Objectives Rationale</caption><tr class="header"><td>Assumption or <abbr class="dyn-abbr"><a href="#abbr_OSP">OSP</a></abbr></td><td>Security Objectives</td><td>Rationale</td></tr></table>
-  <h1 class="indexable" data-level="1" id="Security_Requirements">5 Security Requirements</h1>
+  <h1 id="Security_Requirements" class="indexable" data-level="1">5 Security Requirements</h1>
       This chapter describes the security requirements which have to be fulfilled by the product under evaluation.
      Those requirements comprise functional components from Part 2 and assurance components from Part 3 of 
        <a href="#bibCC">[CC]</a>.
@@ -844,9 +865,7 @@ The following sections list Common Criteria and technology terms used in this do
             suggesting the purpose of the operation, e.g. "/EXAMPLE1."
        </li>
      </ul>
-   
-    
-    <h2 id="secreq-bpp-psd" class="indexable" data-level="2">5.1 
+   <h2 id="secreq-bpp-psd" class="indexable" data-level="2">5.1 
     Protection Profile for Peripheral Sharing Device
        Security Functional Requirements Direction
     </h2>
@@ -860,11 +879,14 @@ The following sections list Common Criteria and technology terms used in this do
 		relevant to the secure operation of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.
 		
         <h4 id="mod_fau" class="indexable" data-level="4">5.1.1.1 Security Audit (FAU)</h4>
-          <div class="comp" id="FAU_GEN.1"><h4>FAU_GEN.1 Audit Data Generation</h4>            
+          <div class="comp" id="FAU_GEN.1"><h4>FAU_GEN.1 Audit Data Generation</h4>
+            
+            <span class="description">
             This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is unchanged when the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> claim includes this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module. However, this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is an optional
             requirement in the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>. This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module defines functionality that would require this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> to be claimed
             if a certain selection is made. Therefore, this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module re‐categorizes this optional
             <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> as selection-based. It shall be included in the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> if ‘configurable’ is selected in <a href="#FDP_FIL_EXT.1.1/UA">FDP_FIL_EXT.1.1/UA</a>.
+          </span>
           </div>
         
         
@@ -890,160 +912,13 @@ The following sections list Common Criteria and technology terms used in this do
                 “<a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a>/UA” for uniqueness. Note that all elements of <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a>
                 must be included in this iteration, not just the ones that are modified by this PPModule.                
               </span></div></div></div>
-          <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a></div>                
-                                  
-                                  
-                
-                
-              <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">
-			There are no additional <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> evaluation activities for this component.<br/></div><div class="eacategory">Guidance</div><div class="ea">
-			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                  For tests that use the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer or <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> analyzer software, the evaluator verifies whether traffic is sent
-                  or not sent by inspection of the passing <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> transactions and ensuring they do not contain <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> data
-                  payloads other than any expected traffic, as well as <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> NAK transactions or system messages. To avoid
-                  clutter during <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> traffic capture, the evaluator may filter NAK transactions and system messages.
-                  <b>Test Setup</b><br/><br/>
-                  For each of the below tests, the evalutor shall perform the following test set
-                  up:<ul>
-                    <li>Configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and the operational environment in accordance with the operational guidance.</li>
-                    <li>Connect a computer to each <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA computer interface and a display to each connected
-                    computer.</li>
-                    <li>Open a real‐time hardware information console and <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> protocol analyzer software on each
-                    connected computer.</li>
-                    <li>Ensure the user authentication application and driver for the authorized user authentication
-                    device used for testing is installed.</li>
-                    <li>[Conditional: if “external” is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>, then:] connect an authorized user
-                    authentication device with a power LED and a connected DVM to each <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> UA peripheral device
-                    interface.</li>
-                  </ul>
-                  <span class="testlist-"><ul>
-                    <li class="test-"><a id="_t_1" class="defined" href="#_t_1">Test FDP_APC_EXT.1:1</a>:
-      
-                      <b>UA Switching Methods</b><br/><br/>
-                      [Conditional: Perform this test if “switching can be initiated only through express user action” is selected
-                      in FDP_SWI_EXT.1.1 in the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>]<br/><br/>
-                      This test verifies the functionality of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s UA switching methods.<br/><br/>
-                      While performing this test, ensure that switching is always initiated through express user action.<ol>
-                        <li>Turn on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and ensure computer #1 is selected.</li>
-                        <li>Verify that the real‐time hardware information console on computer #1 indicates the presence of
-                          the user authentication device. [Conditional: if “external” is selected in
-                          <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>, then:] verify
-                          the UA device power LED is illuminated and the DVM reads between 4.75 and 5.25 VDC.</li>
-                        <li>Perform steps 4‐6 for each connected computer.</li>
-                        <li>For each switching method selected in <a href="#FDP_SWI_EXT.2">FDP_SWI_EXT.2</a>.2, switch selected computers in accordance
-                          with the operational guidance.</li>
-                        <li>[Conditional: if “external” is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>, then:] verify that the LED for the UA
-                          device is not illuminated for at least one second while the DVM reads 0.5 VDC or less for at least one
-                          second.</li>
-                        <li>Verify that the real‐time hardware console on the newly selected computer indicates the presence
-                          of the user authentication device. [Conditional: if “external” is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>, then:] verify
-                          the UA device power LED is illuminated and the DVM reads between 4.75 and 5.25 VDC.</li>                                                
-                      </ol>                      
-                    </li>
-                    
-                    <li class="test-"><a id="_t_2" class="defined" href="#_t_2">Test FDP_APC_EXT.1:2</a>:
-      
-                      <b>Positive and Negative Keyboard and Mouse Data Flow Rules Testing</b><br/><br/>                      
-                      This test verifies correct data flows of a UA device during different power states of the selected computer.
-                      <ol>
-                        <li>For each connected computer, connect a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer between it and the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> or ensure the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
-                          analyzer software is opened. Perform steps 2‐14 with each connected computer as the selected computer.</li>
-                        <li>Connect an authentication session and verify that the session is connected on the selected
-                          computer and that the expected traffic is sent and captured using the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> analyzer.</li>
-                        <li>Remove the authentication element and verify the session is terminated on the selected computer.</li>
-                        <li>Insert the authentication element. Reconnect an authentication session, verify that the session is
-                          connected on the selected computer and that the expected traffic is sent and captured using the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
-                          analyzer
-                          </li>
-                        [Conditional: Perform steps 5‐6 if “external” is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>.]
-                        <li>Disconnect the UA device and verify the session is terminated on the selected computer and that
-                          the real‐time hardware console does not show the device and that no traffic is sent on the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> analyzer.</li>
-                        <li>Reconnect the UA device. Reconnect an authentication session, verify that the session is connected
-                          on the selected computer and that the expected traffic is sent and captured using the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> analyzer.
-                          </li>
-                        [Conditional: Perform steps 7‐14 if “switching can be initiated only through express user action” is selected
-                          in FDP_SWI_EXT.1.1 in the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.]
-                        <li>Verify that the real‐time hardware console on each of the non‐selected computers does not show
-                          the UA device and that no traffic is sent on the other <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> analyzers.</li>
-                        <li>Switch to another connected computer. Verify that the authentication session on the previously
-                          selected computer is terminated, the real‐time hardware console on each non‐selected computer does
-                          not show the UA device, and that no traffic is sent on the other <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> analyzers.</li>
-                        <li>Connect an authentication session and verify that the session is connected on the selected
-                          computer, the expected traffic is sent and captured using the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> analyzer, and no traffic is sent on the
-                          other <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> analyzers.</li>
-                        <li>Switch to the originally selected computer. Verify the authentication session is still terminated,
-                          and reconnect an authentication session. Verify that no traffic is sent on the other <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> analyzers.</li>
-                        <li>Disconnect and reconnect the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> interface cables connected to the selected computer. Examine
-                          the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> analyzers on each of the non‐selected computers and verify that no traffic is sent.</li>
-                        <li>Reconnect an authentication session and verify that no traffic is sent on the other <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> analyzers.
-                          Reboot the selected computer. Examine the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> analyzers on each of the non‐selected computers and
-                          verify that no traffic is sent.</li>
-                        <li>Reconnect an authentication session and verify that no traffic is sent on the other <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> analyzers.
-                          Enter sleep or suspend mode in the selected computer. Examine the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> analyzers on each of the nonselected
-                          computers and verify that no traffic is sent.</li>
-                        <li>Exit sleep or suspend mode in the selected computer. Examine the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> analyzers on each of the
-                          non‐selected computers and verify that no traffic is sent.</li>
-                        <li>Perform steps 16‐17 when the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is off and then in a failure state.</li>
-                        <li>Verify that for each connected computer, no real‐time hardware console shows the device and
-                          no traffic is sent on the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> analyzer.</li>
-                        <li>Verify the authentication session is terminated on the selected computer.</li>                        
-                      </ol>
-                    </li>
-                    
-                    <li class="test-"><a id="_t_3" class="defined" href="#_t_3">Test FDP_APC_EXT.1:3</a>:
-      
-                      <b>No Electrical Flow between Computer Interfaces</b><br/><br/>
-                      [Conditional: Perform this test if “switching can be initiated only through express user action” is selected
-                      in FDP_SWI_EXT.1.1 in the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>]<br/><br/>
-                      This test verifies no electrical signals flow between connected computers when the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is powered on or
-                      off.<br/><br/>
-                      Perform this test for each <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA computer interface. Perform this test when the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is powered on and
-                      off.
-                      <ol>
-                        <li>Disconnect the first computer and replace it with a switchable 5 volt power supply with a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
-                          Type‐B plug. Modulate the 5 volt supply manually at various speeds from approximately one cycle per five
-                          seconds to one cycle per second. Verify that no new <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> traffic is captured on the non‐selected <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
-                          analyzers.</li>
-                        [Conditional: Perform steps 2‐4 if “external” is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>.]
-                        <li>Disconnect the power supply and replace it with the computer.</li>
-                        <li>Connect the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> dummy load into the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA peripheral device interface. Examine the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
-                          analyzers on all non‐selected computers and verify that no new <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> traffic is captured.</li>
-                        <li>Disconnect the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> dummy load and replace it with a switchable 5 volt power supply with a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
-                          Type‐B plug. Modulate the 5 volt supply manually at various speeds from approximately one cycle per five
-                          seconds to one cycle per second. Verify that no new <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> traffic is captured on the non‐selected <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
-                          analyzers.</li>                        
-                      </ol>
-                    </li>
-                    
-                    <li class="test-"><a id="_t_4" class="defined" href="#_t_4">Test FDP_APC_EXT.1:4</a>:
-      
-                      <b>No Flow between Computer Computers over Time</b><br/><br/>
-                      This test verifies that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> does not send data to different computers connected to the same interface
-                      at different times. Repeat this test for each <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA computer port.<br/><br/>
-                      Note that instead of the session ID, the evaluator may substitute authentication element or other unique
-                      session identification characteristic detectable by the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> analyzer.
-                          
-                      <ol>
-                        <li>Ensure only one computer is connected to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and it is selected.</li>
-                        <li>Connect an authentication session and record the authentication session ID using the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
-                          analyzer.</li>
-                        <li>Disconnect the first computer, connect the second computer to the same port, connect an
-                          authentication session, and record the authentication session ID in less time than the authentication
-                          device timeout.</li>
-                        <li>Verify that the authentication session ID is different.</li>
-                        <li>Disconnect the second computer, connect the first computer to the same port, reconnect the
-                          authentication session, and record the authentication session ID in less time than the authentication
-                          device timeout.</li>
-                        <li>Verify that the authentication session ID is different from the first two.</li>                                               
-                      </ol>
-                    </li>
-                  </ul></span>
-                </div></div></div></div></div>
+          </div>
           
           <div class="comp" id="FDP_PDC_EXT.1"><h4>FDP_PDC_EXT.1 Peripheral Device Connection</h4>
-            Because of additions to the Peripheral Device Connections Policy, there is an additional application note
-            and additional evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>.<br/><br/>
-            <div class="appnote"><span class="note-header">Application
+            
+            <span class="description">Because of additions to the Peripheral Device Connections Policy, there is an additional application note
+            and additional evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>.</span>
+            <div class="element"><div class="reqid" id="FDP_PDC_EXT.1.1"><a href="#FDP_PDC_EXT.1.1" class="abbr">FDP_PDC_EXT.1.1</a></div><div class="reqdesc"><div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> may elect to enforce rejection of unauthorized devices connected to the
@@ -1051,215 +926,77 @@ The following sections list Common Criteria and technology terms used in this do
               though <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> hubs are authorized devices. If “internal” is the only selection made
               in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>, then the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> does not have to support <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> as an authorized
               interface unless the KM <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module is also claimed by the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author.
-            </span></div>            
-            
-              This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is not modified by the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module. It adds user authentication
-              devices to the set of authorized peripherals, which are specific types of
-              peripherals not specified in the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.
-            
-            
-              
-                              
-              
-                The evaluator shall verify that the operational user guidance describes devices
-                authorized for use with the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> in accordance with the authorized peripheral device
-                connections.
-                              
-              
-                <span class="testlist-"><ul>
-                  <li class="test-"><a id="_t_5" class="defined" href="#_t_5"></a>:
-      
-                    <b>Unauthorized Device Rejection</b><br/><br/>
-                    [Conditional: Perform this test if “external” is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>]<br/><br/>
-                    This test verifies that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> ports properly reject unauthorized devices and devices with unauthorized
-                    protocols as per the unauthorized peripheral device connections.<br/><br/>
-                    For this test, verify device rejection through <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> user indication in accordance with the operational user
-                    guidance, an immediate cessation of traffic following device detection or enumeration, no traffic captured
-                    on the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer or analyzer software other than NAK transactions or system messages, or
-                    incompatibility of the device interface with the peripheral interface. Also verify device rejection through
-                    examination of the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer or analyzer software for no traffic captured other than NAK transactions
-                    or system messages and through examination of the real‐time hardware console for no display of new
-                    <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> devices (recognized or not recognized).<br/><br/>
-                    Perform this test for an unauthorized device presenting itself as a composite device, a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> camera, a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
-                    audio headset, a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> printer, a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> keyboard, a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> wireless dongle, and any device listed on the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> UA
-                    denylist.<br/><br/>
-                    Repeat this for each user authentication <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> peripheral interface.<ol>
-                      <li>Ensure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is powered off and connected to a computer. Run <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> analyzer software and open
-                        the real‐time hardware console on the connected computer, and connect a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer to the
-                        unauthorized device.</li>
-                      <li>Attempt to connect the unauthorized device via the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA peripheral interface.</li>
-                      <li>Power on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. Verify the device is rejected.</li>
-                      <li>Ensure the unauthorized device is disconnected from the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA peripheral interface, then
-                        attempt to connect it again.</li>
-                      <li>Verify the device is rejected.</li>
-                      <li>Repeat steps 1‐5 with a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> hub connected between the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> device and the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer and
-                        observe that the results are identical.</li>
-                    </ol>
-                  </li>
-                  <li class="test-"><a id="_t_6" class="defined" href="#_t_6"></a>:
-      
-                    <b>Authorized Device Acceptance</b><br/><br/>
-                    [Conditional: Perform this test if “external” is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>]<br/><br/>
-                    This test verifies that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> ports do not reject authorized devices and devices with authorized protocols
-                    as per the Peripheral Device Connection Policy.<br/><br/>
-                    Perform this test for a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> device identified as User Authentication and any device listed on the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> UA
-                    allowlist:
-                    <ol>
-                      <li>Ensure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is powered off.</li>
-                      <li>Connect the authorized device to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> peripheral interface.</li>
-                      <li>Power on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. Verify the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> user indication described in the
-                        operational user guidance is not present.</li>
-                      <li>Ensure the connected computer is selected and attempt to connect an authentication session.
-                        Verify that the authentication session is successfully connected on the connected computer.</li>
-                      <li>Disconnect the authorized device, then reconnect it to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> peripheral interface.</li>
-                      <li>Verify the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> user indication described in the operational user guidance is not present.</li>
-                      <li>Attempt to start an authentication session. Verify that the authentication session begins on the
-                        connected computer.</li>
-                    </ol>
-                  </li>                  
-                </ul></span>
-              
-            
-          <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FDP_PDC_EXT.1">FDP_PDC_EXT.1</a></div>
-              
-                              
-                              
-              
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">
-			There are no additional <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> evaluation activities for this component.<br/></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
-                The evaluator shall verify that the operational user guidance describes devices
-                authorized for use with the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> in accordance with the authorized peripheral device
-                connections.
-              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <span class="testlist-"><ul>
-                  <li class="test-"><a id="_t_5" class="defined" href="#_t_5">Test FDP_PDC_EXT.1:1</a>:
-      
-                    <b>Unauthorized Device Rejection</b><br/><br/>
-                    [Conditional: Perform this test if “external” is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>]<br/><br/>
-                    This test verifies that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> ports properly reject unauthorized devices and devices with unauthorized
-                    protocols as per the unauthorized peripheral device connections.<br/><br/>
-                    For this test, verify device rejection through <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> user indication in accordance with the operational user
-                    guidance, an immediate cessation of traffic following device detection or enumeration, no traffic captured
-                    on the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer or analyzer software other than NAK transactions or system messages, or
-                    incompatibility of the device interface with the peripheral interface. Also verify device rejection through
-                    examination of the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer or analyzer software for no traffic captured other than NAK transactions
-                    or system messages and through examination of the real‐time hardware console for no display of new
-                    <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> devices (recognized or not recognized).<br/><br/>
-                    Perform this test for an unauthorized device presenting itself as a composite device, a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> camera, a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
-                    audio headset, a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> printer, a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> keyboard, a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> wireless dongle, and any device listed on the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> UA
-                    denylist.<br/><br/>
-                    Repeat this for each user authentication <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> peripheral interface.<ol>
-                      <li>Ensure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is powered off and connected to a computer. Run <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> analyzer software and open
-                        the real‐time hardware console on the connected computer, and connect a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer to the
-                        unauthorized device.</li>
-                      <li>Attempt to connect the unauthorized device via the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA peripheral interface.</li>
-                      <li>Power on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. Verify the device is rejected.</li>
-                      <li>Ensure the unauthorized device is disconnected from the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA peripheral interface, then
-                        attempt to connect it again.</li>
-                      <li>Verify the device is rejected.</li>
-                      <li>Repeat steps 1‐5 with a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> hub connected between the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> device and the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer and
-                        observe that the results are identical.</li>
-                    </ol>
-                  </li>
-                  <li class="test-"><a id="_t_6" class="defined" href="#_t_6">Test FDP_PDC_EXT.1:2</a>:
-      
-                    <b>Authorized Device Acceptance</b><br/><br/>
-                    [Conditional: Perform this test if “external” is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>]<br/><br/>
-                    This test verifies that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> ports do not reject authorized devices and devices with authorized protocols
-                    as per the Peripheral Device Connection Policy.<br/><br/>
-                    Perform this test for a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> device identified as User Authentication and any device listed on the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> UA
-                    allowlist:
-                    <ol>
-                      <li>Ensure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is powered off.</li>
-                      <li>Connect the authorized device to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> peripheral interface.</li>
-                      <li>Power on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. Verify the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> user indication described in the
-                        operational user guidance is not present.</li>
-                      <li>Ensure the connected computer is selected and attempt to connect an authentication session.
-                        Verify that the authentication session is successfully connected on the connected computer.</li>
-                      <li>Disconnect the authorized device, then reconnect it to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> peripheral interface.</li>
-                      <li>Verify the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> user indication described in the operational user guidance is not present.</li>
-                      <li>Attempt to start an authentication session. Verify that the authentication session begins on the
-                        connected computer.</li>
-                    </ol>
-                  </li>                  
-                </ul></span>
-              </div></div></div></div></div> 
+            </span></div></div></div>
+          </div> 
           <div class="comp" id="FDP_SWI_EXT.2"><h4>FDP_SWI_EXT.2 PSD Switching</h4>
             
-            There is no modification to this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> in this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module. However, there are additional Evaluation Activities
+            <span class="description">There is no modification to this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> in this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module. However, there are additional Evaluation Activities
             defined in <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a> in the Supporting Document Mandatory Technical Document <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module for
-            User Authentication Devices.
-            
-              
-              
-              
-                
-              
-                Test performed in <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a> above.
-              
-            
-          <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FDP_SWI_EXT.2">FDP_SWI_EXT.2</a></div>
-              
-              
-              
-                
-              
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">
-			There are no additional <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> evaluation activities for this component.<br/></div><div class="eacategory">Guidance</div><div class="ea">
-			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                Test performed in <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a> above.
-              </div></div></div></div></div>
+            User Authentication Devices.</span>
+            <div class="element"><div class="reqid" id="FDP_SWI_EXT.2.1"><a href="#FDP_SWI_EXT.2.1" class="abbr">FDP_SWI_EXT.2.1</a></div><div class="reqdesc"></div></div>
+          </div>
         
         
         <h4 id="mod_fia" class="indexable" data-level="4">5.1.1.3 Identification and Authentication (FIA)</h4>
           <div class="comp" id="FIA_UAU.2"><h4>FIA_UAU.2 User Authentication Before Any Action</h4>            
-            There are no changes to the EAs for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. MOD_UA_V1.0 changes this requirement from optional to
-            selection‐based, but otherwise makes no changes to it.
+            
+            <span class="description">There are no changes to the EAs for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. MOD_UA_V1.0 changes this requirement from optional to
+            selection‐based, but otherwise makes no changes to it.</span>
           </div>
           
-          <div class="comp" id="FIA_UID.2"><h4>FIA_UID.2 User Identification Before Any Action</h4>            
-            There are no changes to the EAs for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. MOD_UA_V1.0 changes this requirement from optional to
-            selection‐based, but otherwise makes no changes to it.
+          <div class="comp" id="FIA_UID.2"><h4>FIA_UID.2 User Identification Before Any Action</h4>
+                        
+            <span class="description">There are no changes to the EAs for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. MOD_UA_V1.0 changes this requirement from optional to
+            selection‐based, but otherwise makes no changes to it.</span>
           </div>
         
         
         <h4 id="mod_fmt" class="indexable" data-level="4">5.1.1.4 Security Management (FMT)</h4>
-          <div class="comp" id="FMT_MOF.1"><h4>FMT_MOF.1 Management of Security Functions Behavior</h4>        
-        This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is unchanged when the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> claim includes this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module. However, this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is an optional
+          <div class="comp" id="FMT_MOF.1"><h4>FMT_MOF.1 Management of Security Functions Behavior</h4> 
+            
+        <span class="description">This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is unchanged when the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> claim includes this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module. However, this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is an optional
         requirement in the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>. This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module defines functionality that would require this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> to be claimed
         if a certain selection is made. Therefore, this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module re‐categorizes this optional <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>
-        as selection-based.
-        It shall be included in the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.
+        as selection-based.<br/><br/>
+        It shall be included in the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> if ‘configurable’ is selected in
+        FDP_FIL_EXT.1.1/KM.</span>
       </div>
           <div class="comp" id="FMT_SMF.1"><h4>FMT_SMF.1 Specification of Management Functions</h4>
+            
+            <span class="description">
             This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is unchanged when the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> claim includes this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module. However, this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is an optional
             requirement in the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>. This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module defines functionality that would require this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> to be claimed
             if a certain selection is made. Therefore, this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module re‐categorizes this optional
-            <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> as selection-based.
-            It shall be included in the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.
+            <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> as selection-based.<br/><br/>
+            It shall be included in the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.</span>
           </div>
           <div class="comp" id="FMT_SMR.1"><h4>FMT_SMR.1 Security Roles</h4>
+            
+            <span class="description">
             This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is unchanged when the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> claim includes this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module. However, this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is an optional
             requirement in the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>. This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module defines functionality that would require this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> to be claimed
             if a certain selection is made. Therefore, this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module re‐categorizes this optional
-            <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> as selection-based.
-            It shall be included in the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.
+            <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> as selection-based.<br/><br/>
+            It shall be included in the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.</span>
           </div>
           
         
         <h4 id="mod_fpt" class="indexable" data-level="4">5.1.1.5 Protection of the TSF (FPT)</h4>
           <div class="comp" id="FPT_STM.1"><h4>FPT_STM.1 Reliable Time Stamps</h4>
+            
+            <span class="description">
             This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is unchanged when the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> claim includes this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module. However, this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is an optional
             requirement in the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>. This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module defines functionality that would require this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> to be claimed
             if a certain selection is made. Therefore, this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module re‐categorizes this optional
-            <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> as selection-based.
-            It shall be included in the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.
+            <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> as selection-based.<br/><br/>
+            It shall be included in the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.</span>
           </div>
         
-      
-    
-    
-      <h3 id="FDP" class="indexable" data-level="3">5.1.2 User Data Protection (FDP)</h3>
+      <h2 id="man-sfrs" class="indexable" data-level="2">5.2 TOE Security Functional Requirements</h2>
+	The following section describes the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> that must be satisfied by any <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> that claims conformance to this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.
+	These <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> must be claimed regardless of which <abbr class="dyn-abbr"><a href="#abbr_PP-Configuration">PP-Configuration</a></abbr> is used to define the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.
+        
+      <h3 id="FDP" class="indexable" data-level="3">5.2.1 User Data Protection (FDP)</h3>
         
         
         
@@ -1269,8 +1006,6 @@ The following sections list Common Criteria and technology terms used in this do
         
         
         <div class="comp" id="FDP_FIL_EXT.1/UA"><h4>FDP_FIL_EXT.1/UA Device Filtering (User Authentication Devices)</h4>
-          This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> defines device filtering specific to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module. This does not
-            prevent the enforcement of any <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>.
           
           
           
@@ -1297,62 +1032,9 @@ The following sections list Common Criteria and technology terms used in this do
               authorized devices for [<i>user authentication device</i>] interfaces in peripheral
               device connections only if they are not on the [<i><abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> UA</i>] denylist or otherwise unauthorized.
             </div></div>
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FDP_FIL_EXT.1/UA">FDP_FIL_EXT.1/UA</a></div>
-              Note: if “configurable” is selected in <a href="#FDP_FIL_EXT.1.1/UA">FDP_FIL_EXT.1.1/UA</a>, the evaluator shall perform these activities in
-              conjunction with the <a href="#FMT_MOF.1">FMT_MOF.1</a> and <a href="#FMT_SMF.1">FMT_SMF.1</a> evaluation activities specified in the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> because
-              configuring the device filtration rules involves use of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s management functionality.
-              
-              
-              
-              
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
-                The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> and verify that it describes whether the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> has configurable or fixed
-                device filtering.<br/><br/>
-                [Conditional – If “configurable” is selected in <a href="#FDP_FIL_EXT.1.1/UA">FDP_FIL_EXT.1.1/UA</a>, then:] The evaluator shall examine the
-                <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> and verify that it describes the process of configuring the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> for allowlisting and denylisting UA
-                peripheral devices, including information on how this function is restricted to administrators.
-              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
-                [Conditional – If “configurable” is selected in <a href="#FDP_FIL_EXT.1.1/UA">FDP_FIL_EXT.1.1/UA</a>, then:] the evaluator shall examine the
-                guidance documentation and verify that it describes the process of configuring the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> for allowlisting
-                and denylisting UA peripheral devices and the administrative privileges required to do this.
-              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <span class="testlist-"><ul>
-                  <li class="test-"><a id="_t_7" class="defined" href="#_t_7">Test FDP_FIL_EXT.1/UA:1</a>:
-      
-                    Perform the test steps in <a href="#FDP_PDC_EXT.1">FDP_PDC_EXT.1</a> with all devices on the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> UA denylist and verify that they are
-                    rejected as expected.
-                  </li>
-                  
-                  <li class="test-"><a id="_t_8" class="defined" href="#_t_8">Test FDP_FIL_EXT.1/UA:2</a>:
-      
-                    [Conditional: Perform this only if “configurable” is selected in <a href="#FDP_FIL_EXT.1.1/UA">FDP_FIL_EXT.1.1/UA</a>]<br/><br/>
-                    In the following steps the evaluator shall verify that allowlisted and denylisted devices are treated
-                    correctly.<ol>
-                      <li>Configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA <abbr class="dyn-abbr"><a href="#abbr_CDF">CDF</a></abbr> to allowlist an authorized user authentication device, connect it to the
-                        <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA peripheral device interface, and verify that the device is accepted through real‐time device
-                        console and <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer capture.</li>                    
-                      <li>Configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA <abbr class="dyn-abbr"><a href="#abbr_CDF">CDF</a></abbr> to denylist the device and verify that the device is rejected through
-                        real‐time device console and <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer capture.</li>
-                      <li>Attempt to configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA <abbr class="dyn-abbr"><a href="#abbr_CDF">CDF</a></abbr> to both allowlist and denylist the device and verify that the
-                        device is rejected through real‐time device console and <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer capture.</li>                      
-                    </ol>                  
-                  </li>
-                  <li class="test-"><a id="_t_9" class="defined" href="#_t_9">Test FDP_FIL_EXT.1/UA:3</a>:
-      
-                    [Conditional - Perform this only if "fixed" is selected in
-                    <a href="#FDP_FIL_EXT.1.1/UA">FDP_FIL_EXT.1.1/UA</a>]<br/><br/>
-                    The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> UA allowlist and verify that all devices are
-                    authorized devices.
-                  </li>
-                </ul></span>
-              </div></div></div></div></div>
+        </div>
         
-        <div class="comp" id="FDP_PDC_EXT.2//UA"><h4>FDP_PDC_EXT.2//UA Authorized Devices (User Authentication Devices)</h4>
-          
-            This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> defines the devices that are authorized by this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module. This is
-            dependent on the other <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Modules that are claimed in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>. The
-            Base‐<abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> is written specifically not to discuss the supported device types,
-            instead leaving it to the various <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Modules to define what they support.
+        <div class="comp" id="FDP_PDC_EXT.2/UA"><h4>FDP_PDC_EXT.2/UA Authorized Devices (User Authentication Devices)</h4>
           
           
           
@@ -1360,14 +1042,14 @@ The following sections list Common Criteria and technology terms used in this do
           
           
           
-          <div class="element"><div class="reqid" id="FDP_PDC_EXT.2.1//UA"><a href="#FDP_PDC_EXT.2.1//UA" class="abbr">FDP_PDC_EXT.2.1//UA</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall allow connections with authorized devices as defined
+          <div class="element"><div class="reqid" id="FDP_PDC_EXT.2.1/UA"><a href="#FDP_PDC_EXT.2.1/UA" class="abbr">FDP_PDC_EXT.2.1/UA</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall allow connections with authorized devices as defined
               in [<i>Appendix E</i>] and [<b>selection</b>: <span class="selectable-content" id="_s_7">authorized devices as defined in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module for Keyboard/Mouse Devices,</span>, <span class="selectable-content" id="_s_8">authorized devices as defined in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module for Audio Output
                   Devices,</span>, <span class="selectable-content" id="_s_9">authorized devices as defined in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module for Video/Display
                   Devices,</span>, <span class="selectable-content" id="_s_10">no other devices</span>]
               upon <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> power up and connection of a peripheral device to a powered-on <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.          
             </div></div>
           
-          <div class="element"><div class="reqid" id="FDP_PDC_EXT.2.2//UA"><a href="#FDP_PDC_EXT.2.2//UA" class="abbr">FDP_PDC_EXT.2.2//UA</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall allow connections with authorized devices presenting authorized
+          <div class="element"><div class="reqid" id="FDP_PDC_EXT.2.2/UA"><a href="#FDP_PDC_EXT.2.2/UA" class="abbr">FDP_PDC_EXT.2.2/UA</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall allow connections with authorized devices presenting authorized
               interface protocols as defined in [<i>Appendix E</i>] and [<b>selection</b>: <span class="selectable-content" id="_s_11">authorized devices presenting authorized interface protocols as defined
                   in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module for Keyboard/Mouse Devices,</span>, <span class="selectable-content" id="_s_12">authorized devices presenting authorized interface protocols as defined
                   in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module for Audio Output Devices,</span>, <span class="selectable-content" id="_s_13">authorized devices presenting authorized interface protocols as defined
@@ -1380,9 +1062,7 @@ The following sections list Common Criteria and technology terms used in this do
               contained in any selections. The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author should select all devices and
               interfaces supported by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.
             </span></div></div></div>          
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FDP_PDC_EXT.2//UA">FDP_PDC_EXT.2//UA</a></div>
-              The EAs for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> are performed as part of activities for <a href="#FDP_PDC_EXT.1">FDP_PDC_EXT.1</a> above.
-            </div></div></div>
+        </div>
         
         <div class="comp" id="FDP_PDC_EXT.4/UA"><h4>FDP_PDC_EXT.4/UA Supported Authentication Device</h4>
           
@@ -1400,18 +1080,7 @@ The following sections list Common Criteria and technology terms used in this do
               The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author must make the selection for the device, whether the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> has internal,
               external, or both.
             </span></div></div></div>          
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FDP_PDC_EXT.4/UA">FDP_PDC_EXT.4/UA</a></div>
-              
-              
-              
-              
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
-                The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> and verify that it describes whether the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> has internal or external
-                authentication devices.<br/><br/>
-                Additional evaluation activities for <abbr class="dyn-abbr"><a href="#abbr_ST">STs</a></abbr> that include the selection “external” are performed under
-                <a href="#FDP_PDC_EXT.1">FDP_PDC_EXT.1</a> in <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.
-              </div></div><div class="eacategory">Guidance</div><div class="ea">
-			There are no additional Guidance evaluation activities for this component.<br/></div></div></div></div>
+        </div>
         
         <div class="comp" id="FDP_PWR_EXT.1"><h4>FDP_PWR_EXT.1 Powered By Computer</h4>
           
@@ -1424,23 +1093,7 @@ The following sections list Common Criteria and technology terms used in this do
           <div class="element"><div class="reqid" id="FDP_PWR_EXT.1.1"><a href="#FDP_PWR_EXT.1.1" class="abbr">FDP_PWR_EXT.1.1</a></div><div class="reqdesc">
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall not be powered by a connected computer.
             </div></div>  
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FDP_PWR_EXT.1">FDP_PWR_EXT.1</a></div>
-                              
-              
-              
-              
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
-                The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> and verify that the connected computer does not
-                power the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.
-              </div></div><div class="eacategory">Guidance</div><div class="ea">
-			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                The evaluator shall perform the following test for each connected computer:<ol>
-                  <li>Ensure the power source is disconnected from the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.</li>
-                  <li>Connect a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer between a <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA computer interface and its computer, attempt to turn on
-                    the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, and verify the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is not powered on, the user authentication device is not present in the real
-                    time hardware console, and no traffic is captured in the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer.</li>
-                </ol>          
-              </div></div></div></div></div>
+        </div>
 
         <div class="comp" id="FDP_TER_EXT.1"><h4>FDP_TER_EXT.1 Session Termination</h4>
           
@@ -1453,20 +1106,7 @@ The following sections list Common Criteria and technology terms used in this do
           <div class="element"><div class="reqid" id="FDP_TER_EXT.1.1"><a href="#FDP_TER_EXT.1.1" class="abbr">FDP_TER_EXT.1.1</a></div><div class="reqdesc">
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall terminate an open session upon removal of the authentication element.
             </div></div>
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FDP_TER_EXT.1">FDP_TER_EXT.1</a></div>
-              
-              
-              
-              
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
-                The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> and verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> terminates an open
-                session upon removal of the authentication element.
-              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
-                The evaluator shall examine the guidance documentation and verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>
-                terminates an open session upon removal of the authentication element.
-              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                Testing for this component is performed as part of FDP_APc_EXT.1 test 2-UA.
-              </div></div></div></div></div>
+        </div>
         
         <div class="comp" id="FDP_UAI_EXT.1"><h4>FDP_UAI_EXT.1 User Authentication Isolation</h4>
           
@@ -1485,93 +1125,164 @@ The following sections list Common Criteria and technology terms used in this do
               This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> requires additional information for the Isolation Documentation and
               Assessment. Refer to Appendix D for this information/
             </span></div></div></div>
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FDP_UAI_EXT.1">FDP_UAI_EXT.1</a></div>
-              
-                The evaluator shall examine the Isolation Documentation and verify that it describes how the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>
-                enforces user authentication isolation from other <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> functions.
-              
-              
-              
-              
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
-                The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> and verify that it states that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> has separate <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> connections
-                for user authentication functions and any other <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> functions.
-              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
-                The evaluator shall examine the guidance and verify that it states that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> has separate <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
-                connections for user authentication functions and any other <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> functions.
-              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <span class="testlist-"><ul>
-                  <li class="test-"><a id="_t_10" class="defined" href="#_t_10">Test FDP_UAI_EXT.1:1</a>:
-      
-                This test verifies that UA functionality is not sent to other <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
-                interfaces.<br/><br/>
-                Perform this test for each computer interface.<ol>
-                  <li>Configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and the Operational Environment in accordance with the operational guidance.
-                    Connect a display directly to each connected computer. Run <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> protocol analyzer software and open a
-                    real‐time hardware information console and a text editor on each connected computer. Ensure an
-                    authorized user authentication device is connected.</li><br/><br/>
-                  Perform steps 2-4 for each <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> peripheral interface other than UA.
-                  <li>Connect a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> peripheral interface.</li>
-                  <li>Connect an authentication session and verify no traffic is captured on the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer.</li>
-                  <li>Disconnect the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer and the authentication session.</li><br/><br/>
-                  Perform steps 5‐7 for each <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> computer interface other than UA.
-                  <li>Connect a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> computer interface and ensure that computer is selected.</li>
-                  <li>Connect an authentication session and verify no traffic is captured on the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer.</li>
-                  <li>Disconnect the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer and the authentication session.</li>
-                  <li>Power down the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.</li>
-                  <li>For each <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> interface (peripheral device and computer) other than UA, connect the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
-                    sniffer and verify no traffic is captured.</li>                  
-                </ol>
-                  </li>
-                  <li class="test-"><a id="_t_11" class="defined" href="#_t_11">Test FDP_UAI_EXT.1:2</a>:
-      
-                    [Conditional: Perform this test only if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> supports KM functionality.]<br/><br/>
-                    This test verifies that KM functionality is not sent to UA interfaces.<br/><br/>
-                    Perform this test while the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is powered on and powered off.<ol>
-                      <li>Connect a KM device to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> KM peripheral interface.</li><br/><br/>
-                      Perform steps 2‐3 for each <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA computer interface.
-                      <li>Connect a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA computer interface.</li>
-                      <li>Exercise the functions of the peripheral device type(s) selected in FDP_PDC_EXT.3.1/KM in
-                        MOD_KM_V1.0 and verify that no traffic is sent and captured on the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer.</li><br/><br/>
-                      [Conditional: Perform steps 4‐5 only if “external” is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>]
-                      <li>Disconnect the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer and connect it to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA peripheral device interface.</li>
-                      <li>Exercise the functions of the peripheral device type(s) selected in FDP_PDC_EXT.3.1/KM in
-                        MOD_KM_V1.0 and verify that no traffic is sent and captured on the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer.</li>
-                    </ol>
-                  </li>
-                  <li class="test-"><a id="_t_12" class="defined" href="#_t_12">Test FDP_UAI_EXT.1:3</a>:
-      
-                    [Conditional: Perform this test only if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> supports video functionality and “<abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> Type‐C with
-                    DisplayPort as alternate function” is selected in FDP_PDC_EXT.3.1/VI in MOD_VI_V1.0.]<br/><br/>
-                    This test verifies that <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> video functionality is not sent to UA interfaces.<br/><br/>
-                    Perform this test while the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is powered on and powered off.<br/><br/>
-                    Perform steps 1-3 for each <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA computer interface and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> type-C video
-                    peripheral interface.
-                    <ol>
-                      <li>Connect a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA computer interface.</li>
-                      <li>Connect a monitor to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> type‐C video peripheral interface and verify that no traffic is
-                        sent and captured on the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer.</li>
-                      <li>Play a video on the selected computer and verify that no traffic is sent and captured on the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
-                        sniffer.</li><br/><br/>
-                      [Conditional: Perform steps 4‐7 only if “external” is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>]
-                      <li>Disconnect the monitor.</li>
-                      <li>Disconnect the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer and connect it to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA peripheral device interface.</li>
-                      <li>Reconnect the monitor to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> type-C video peripheral interface
-                        and verify that no traffic is sent and captured on the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer.</li>
-                      <li>Play a video on the selected computer and verify that no traffic is sent
-                      and captured on the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer.</li>
-                    </ol>
-                  </li>
-                </ul></span>                
-              </div></div></div></div></div>
+        </div>
             
+    <h2 id="obj-req-map" class="indexable" data-level="2">5.3 TOE Security Functional Requirements Rationale</h2><p>The following rationale provides justification for each <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, 
+    showing that the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are suitable to address the specified threats:<br/><table><caption><span class="ctr" data-myid="t-obj_map" data-counter-type="ct-Table" id="t-obj_map">Table <span class="counter">2</span></span>: <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> Rationale</caption><tr><th>Threat</th><th>Addressed by</th><th>Rationale</th></tr><tr class="major-row"><td rowspan="10"><a href="#T.DATA_LEAK">T.DATA_​LEAK</a>
+		(from <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)
+	</td><td><a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a> (modified)</td><td>Mitigates this threat by
+            ensuring only user-selected data is routed to an interface.</td></tr>
+<tr><td><a href="#FDP_PDC_EXT.1">FDP_PDC_EXT.1</a> (modified)</td><td>Mitigates this threat by
+            specifying authorized <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> devices and adding testing for those devices.</td></tr>
+<tr><td><a href="#FDP_FIL_EXT.1/UA">FDP_FIL_EXT.1/UA</a></td><td>Mitigates this threat
+            by ensuring device filtering for peripheral interfaces.</td></tr>
+<tr><td><a href="#FDP_PDC_EXT.2/UA">FDP_PDC_EXT.2/UA</a></td><td>Mitigates this threat by only
+            allowing authorized device connections with authorized interface protocols.</td></tr>
+<tr><td><a href="#FDP_PDC_EXT.4/UA">FDP_PDC_EXT.4/UA</a></td><td>Mitigates this threat by requiring
+            the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to have an authentication device.</td></tr>
+<tr><td><a href="#FDP_PWR_EXT.1">FDP_PWR_EXT.1</a></td><td>Mitigates this threat by not allowing
+          the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to be powered by a connecting computer.</td></tr>
+<tr><td><a href="#FDP_TER_EXT.1">FDP_TER_EXT.1</a></td><td>Mitigates this threat by requiring
+            session termination when the authentication element is removed.</td></tr>
+<tr><td><a href="#FDP_UAI_EXT.1">FDP_UAI_EXT.1</a></td><td>Mitigates this threat by isolating
+            the user authentication function from other <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> functions.</td></tr>
+<tr><td><a href="#FDP_TER_EXT.2">FDP_TER_EXT.2</a> (selection-based)</td><td>Mitigates this
+            threat by requiring session termination when the authentication device is removed.</td></tr>
+<tr><td><a href="#FDP_TER_EXT.3">FDP_TER_EXT.3</a> (selection-based)</td><td>Mitigates this
+            threat by requiring session termination when switching to a different computer and 
+            resetting the power.</td></tr>
+<tr class="major-row"><td rowspan="10"><a href="#T.SIGNAL_LEAK">T.SIGNAL_​LEAK</a>
+		(from <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)
+	</td><td><a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a> (modified)</td><td>Mitigates this threat by
+            requiring only user-selected data to be routed and ensuring no data or electrical
+            signals flow.</td></tr>
+<tr><td><a href="#FDP_PDC_EXT.1">FDP_PDC_EXT.1</a> (modified)</td><td>Mitigates this threat by
+            ensuring only authorized peripheral devices are connected during power up and when a new
+          peripheral devices is connected.</td></tr>
+<tr><td><a href="#FDP_FIL_EXT.1/UA">FDP_FIL_EXT.1/UA</a></td><td>Mitigates this threat
+            by requiring device filtering and only allowing authorized device for peripheral
+            interfaces.</td></tr>
+<tr><td><a href="#FDP_PDC_EXT.2/UA">FDP_PDC_EXT.2/UA</a></td><td>Mitigates this threat by only
+            allowing authorized device connections with authorized interface protocols.</td></tr>
+<tr><td><a href="#FDP_PDC_EXT.4/UA">FDP_PDC_EXT.4/UA</a></td><td>Mitigates this threat by requiring
+            the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to have an authentication device.</td></tr>
+<tr><td><a href="#FDP_PWR_EXT.1">FDP_PWR_EXT.1</a></td><td>Mitigates this threat by not allowing
+            the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to be powered by a connecting computer.</td></tr>
+<tr><td><a href="#FDP_TER_EXT.1">FDP_TER_EXT.1</a></td><td>Mitigates this threat by requiring
+            session termination when the authentication element is removed.</td></tr>
+<tr><td><a href="#FDP_UAI_EXT.1">FDP_UAI_EXT.1</a></td><td>Mitigates this threat by isolating
+            the user authentication function from other <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> functions.</td></tr>
+<tr><td><a href="#FDP_TER_EXT.2">FDP_TER_EXT.2</a> (selection-based)</td><td>Mitigates this
+          threat by requiring session termination when the authentication device is removed.</td></tr>
+<tr><td><a href="#FDP_TER_EXT.3">FDP_TER_EXT.3</a> (selection-based)</td><td>Mitigates this
+            threat by requiring session termination when switching to a different computer and 
+            resetting the power.</td></tr>
+<tr class="major-row"><td rowspan="5"><a href="#T.UNAUTHORIZED_DEVICES">T.UNAUTHORIZED_​DEVICES</a>
+		(from <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)
+	</td><td><a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a> (modified)</td><td>Mitigates this threat by
+            requiring only user-selected data to be routed and ensuring no data or electrical
+            signals flow.</td></tr>
+<tr><td><a href="#FDP_PDC_EXT.1">FDP_PDC_EXT.1</a> (modified)</td><td>Mitigates this threat by
+            ensuring only authorized peripheral devices are connected during power up and when a new
+            peripheral devices is connected.</td></tr>
+<tr><td><a href="#FDP_FIL_EXT.1/UA">FDP_FIL_EXT.1/UA</a></td><td>Mitigates this threat
+            by requiring device filtering and only allowing authorized device for peripheral
+            interfaces.</td></tr>
+<tr><td><a href="#FDP_PDC_EXT.2/UA">FDP_PDC_EXT.2/UA</a></td><td>Mitigates this threat by only
+            allowing authorized device connections with authorized interface protocols.</td></tr>
+<tr><td>FDP_PDC_EXT.4</td><td>Mitigates this threat by requiring
+            the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to have an authentication device.</td></tr>
+</table></p><h1 id="mod-conrat" class="indexable" data-level="1">6 Consistency Rationale</h1><h2 id="conrat-bpp-psd" class="indexable" data-level="2">6.1 
+    Protection Profile for Peripheral Sharing Device</h2><h3 id="contoe-bpp-psd" class="indexable" data-level="3">6.1.1 
+	Consistency of TOE Type
+      </h3>
+        The <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines the boundaries of a <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> – a device that offers a mechanism for securely connecting a
+        set of peripherals to one or more attached computers. This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module builds on this by defining functional
+        capabilities specific to user authentication devices. One of the functions of the device must be the ability
+        for it to support user authentication devices. The requirements of this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module do not prevent a
+        conformant <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> from implementing mandatory requirements of the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.
+      <h3 id="consecprob-bpp-psd" class="indexable" data-level="3">6.1.2 
+	Consistency of Security Problem Definition
+      </h3>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module does not define additional threats beyond those the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines. Therefore, there is
+        no inconsistency between this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module and the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> with respect to the security problem definition.<table><caption><span class="ctr" data-myid="t-con-sec-prob-def" data-counter-type="ct-Table" id="t-con-sec-prob-def">Table <span class="counter">3</span></span>: Consistency of Security Problem Definition (<abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> base)
+		</caption><tr><th><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> Threat, Assumption, <abbr class="dyn-abbr"><a href="#abbr_OSP">OSP</a></abbr></th><th>Consistency Rationale</th></tr><tr><td><a href="#T.DATA_LEAK">T.DATA_LEAK</a></td><td></td></tr><tr><td><a href="#T.SIGNAL_LEAK">T.SIGNAL_LEAK</a></td><td></td></tr><tr><td><a href="#T.UNAUTHORIZED_DEVICES">T.UNAUTHORIZED_DEVICES</a></td><td></td></tr></table><h3 id="conobj-bpp-psd" class="indexable" data-level="3">6.1.3 
+			Consistency of OE Objectives
+		</h3><p></p><h3 id="conreq-bpp-psd" class="indexable" data-level="3">6.1.4 
+	Consistency of Requirements
+      </h3>
+      This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> identifies several <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> from the
+      <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> that are needed to support
+      User Authentication Device functionality.
+      This is considered to be consistent because the functionality provided by the
+      <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> is being used for its intended purpose.
       
-    
-    
+          The <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> also identifies a number of modified <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> from the
+          <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>
+          that are used entirely to provide functionality for
+	  User Authentication Device.
         
-    
-      <h3 id="" class="indexable" data-level="3">5.1.3 User Data Protection (FDP)</h3>
-        <div class="comp" id="FDP_TER-EXT.2"><h4>FDP_TER-EXT.2 Session Termination of Removed Devices</h4><div class="statustag"></div>
+          The rationale for why this does not conflict with the claims
+      defined by the
+      <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> are as follows:
+      <table><caption><span class="ctr" data-myid="t-con-reqs" data-counter-type="ct-Table" id="t-con-reqs">Table <span class="counter">4</span></span>: Consistency of Requirements (<abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> base)
+		</caption><tr><th><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> Requirement</th><th>Consistency Rationale</th></tr><tr><th colspan="2"> Modified <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th></tr><tr><td><a href="#FAU_GEN.1">FAU_GEN.1</a></td><td></td></tr><tr><td><a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a></td><td>
+              This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> adds a requirement to block electrical signals that strengthens but
+              does not conflict with the requirement in the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.
+            </td></tr><tr><td><a href="#FDP_PDC_EXT.1">FDP_PDC_EXT.1</a></td><td>
+              This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is not modified by the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module. It adds user authentication
+              devices to the set of authorized peripherals, which are specific types of
+              peripherals not specified in the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.
+            </td></tr><tr><td><a href="#FDP_SWI_EXT.2">FDP_SWI_EXT.2</a></td><td>
+              This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is not modified by the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module. It adds evaluation activities that
+              are specific to this technology type but does not alter anything that the
+              Base‐<abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> requires.
+            </td></tr><tr><td><a href="#FIA_UAU.2">FIA_UAU.2</a></td><td></td></tr><tr><td><a href="#FIA_UID.2">FIA_UID.2</a></td><td></td></tr><tr><td><a href="#FMT_MOF.1">FMT_MOF.1</a></td><td></td></tr><tr><td><a href="#FMT_SMF.1">FMT_SMF.1</a></td><td></td></tr><tr><td><a href="#FMT_SMR.1">FMT_SMR.1</a></td><td></td></tr><tr><td><a href="#FPT_STM.1">FPT_STM.1</a></td><td></td></tr><tr><th colspan="2"> Additional <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th></tr><tr><td colspan="2" style="text-align:center">
+	      This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not add any requirements when the
+	      <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> is the base.
+	    </td></tr><tr><th colspan="2"> Mandatory <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th><tr><td><a href="#FDP_FIL_EXT.1/UA">FDP_FIL_EXT.1/UA</a></td><td>This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> defines device filtering specific to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module. This does not
+            prevent the enforcement of any <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>.
+          </td></tr><tr><td><a href="#FDP_PDC_EXT.2/UA">FDP_PDC_EXT.2/UA</a></td><td>
+            This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> defines the devices that are authorized by this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module. This is
+            dependent on the other <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Modules that are claimed in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>. The
+            Base‐<abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> is written specifically not to discuss the supported device types,
+            instead leaving it to the various <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Modules to define what they support.
+          </td></tr><tr><td><a href="#FDP_PDC_EXT.4/UA">FDP_PDC_EXT.4/UA</a></td><td>
+            This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> further defines whether the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> includes an internal or external
+            authentication device. This does not prevent the enforcement of any <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>
+            <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>.
+          </td></tr><tr><td><a href="#FDP_PWR_EXT.1">FDP_PWR_EXT.1</a></td><td>
+            This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> requires the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> not be powered by a connected computer. The
+            Base‐<abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not have any requirements for the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to be powered by a
+            connected computer and therefore does not prevent the enforcement of
+            any <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>.
+          </td></tr><tr><td><a href="#FDP_TER_EXT.1">FDP_TER_EXT.1</a></td><td>
+            This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> defines specific handling for user authentication peripheral devices.
+            This does not prevent the enforcement of any <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>.
+          </td></tr><tr><td><a href="#FDP_UAI_EXT.1">FDP_UAI_EXT.1</a></td><td>
+            This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> defines specific handling for user authentication peripheral devices.
+            This does not prevent the enforcement of any <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>.
+          </td></tr></tr><tr><th colspan="2"> Optional <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th><tr><td colspan="2" style="text-align:center">
+	      This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not define any Optional requirements.
+	    </td></tr></tr><tr><th colspan="2"> Objective <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th><tr><td colspan="2" style="text-align:center">
+	      This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not define any Objective requirements.
+	    </td></tr></tr><tr><th colspan="2"> Implementation-dependent <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th><tr><td colspan="2" style="text-align:center">
+	      This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not define any Implementation-dependent requirements.
+	    </td></tr></tr><tr><th colspan="2"> Selection-based <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th><tr><td><a href="#FDP_TER_EXT.2">FDP_TER_EXT.2</a></td><td>
+            This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> defines specific handling for user authentication devices. This does
+            not prevent the enforcement of any <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>.
+          </td></tr><tr><td><a href="#FDP_TER_EXT.3">FDP_TER_EXT.3</a></td><td>
+            This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> defines specific handling for user authentication peripheral devices.
+            This does not prevent the enforcement of any <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>.
+          </td></tr></tr></table><h1 id="opt-sfrs" class="indexable" data-level="A">Appendix A -  Optional SFRs</h1><h2 id="opt-sfrs" class="indexable" data-level="2">A.1 Strictly Optional Requirements
+    </h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not define any 
+       Strictly Optional        <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> or <abbr class="dyn-abbr"><a href="#abbr_SAR">SARs</a></abbr>.</p><h2 id="obj-sfrs" class="indexable" data-level="2">A.2 Objective Requirements
+    </h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not define any 
+       Objective       <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>.</p><h2 id="impl-dep-sfrs" class="indexable" data-level="2">A.3 Implementation-dependent Requirements
+    </h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not define any 
+       Implementation-dependent       <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>.</p><h1 id="sel-sfrs" class="indexable" data-level="1">Appendix B -  Selection-based Requirements
+    </h1>
+      <h2 id="" class="indexable" data-level="2">B.1 User Data Protection (FDP)</h2>
+        <div class="comp" id="FDP_TER_EXT.2"><h4>FDP_TER_EXT.2 Session Termination of Removed Devices</h4><div class="statustag"></div>
           
           
           
@@ -1579,27 +1290,14 @@ The following sections list Common Criteria and technology terms used in this do
           
           
           
-          <div class="element"><div class="reqid" id="FDP_TER-EXT.2.1"><a href="#FDP_TER-EXT.2.1" class="abbr">FDP_TER-EXT.2.1</a></div><div class="reqdesc">
+          <div class="element"><div class="reqid" id="FDP_TER_EXT.2.1"><a href="#FDP_TER_EXT.2.1" class="abbr">FDP_TER_EXT.2.1</a></div><div class="reqdesc">
             The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall terminate an open session upon removal of the user authentication device.
           <div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
             This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> must be claimed if "external" is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>.
           </span></div></div></div>
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FDP_TER-EXT.2">FDP_TER-EXT.2</a></div>
-            
-            
-            
-            
-          <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
-              The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> and verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> terminates an open session upon removal of
-              the authentication device.
-            </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
-              The evaluator shall examine the guidance documentation and verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> terminates an open
-              session upon removal of the authentication device.
-            </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-              Testing for this component performed as part of <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a> test 2‐UA.
-            </div></div></div></div></div>
+        </div>
         <div class="comp" id="FDP_TER_EXT.3"><h4>FDP_TER_EXT.3 Session Termination Upon Switching</h4><div class="statustag"></div>
           
           
@@ -1620,68 +1318,16 @@ The following sections list Common Criteria and technology terms used in this do
               This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> must be claimed if “switching can be initiated only through express user
               action” is selected in FDP_SWI_EXT.1.1 in the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr>‐<abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.
             </span></div></div></div>
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FDP_TER_EXT.3">FDP_TER_EXT.3</a></div>
-              
-                The evaluator shall examine the isolation document and verify that it describes how power is reset to the
-                user authentication device upon switching.
-              
-              
-              
-              
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
-                The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> and verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> terminates an open session upon switching
-                to a different computer.
-              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
-                The evaluator shall examine the guidance documentation and verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> terminates an open
-                session upon switching to a different computer.
-              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                Testing for this component is performed as part of <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a> test 2‐UA.
-              </div></div></div></div></div>
+        </div>
       
-        
-  <h1 id="opt-app" class="indexable" data-level="A">Appendix A -  Optional Requirements</h1>
-    As indicated in the introduction to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, the baseline requirements (those that must be
-	  performed by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>) are contained in the body of this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.
-    This appendix contains three other types of optional requirements:<br/><br/>
-
-   The first type, defined in Appendix <a href="#optional-reqs" class="dynref">A.1 Strictly Optional  Requirements</a>, are strictly optional requirements.
-   If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> meets any of these requirements the vendor is encouraged to claim the associated <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>
-	  in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, but doing so is not required in order to conform to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.<br/><br/>
-
-  The second type, defined in Appendix <a href="#objective-reqs" class="dynref">A.2 Objective  Requirements</a>, are objective requirements. These describe security functionality that is not yet 
-	  widely available in commercial technology. 
-   Objective requirements are not currently mandated by this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, but will be mandated in
-	  the future. Adoption by vendors is encouraged, but claiming these <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> is not required in order to conform to this
-	  <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.<br/><br/>
-
-  The third type, defined in Appendix <a href="#feat-based-reqs" class="dynref">A.3 Implementation-dependent  Requirements</a>, are Implementation-dependent requirements.
-	If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements the product features associated with the listed <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>, either the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> must be claimed
-	or the product features must be disabled in the evaluated configuration. 
-  <h2 id="optional-reqs" class="indexable" data-level="2">A.1 Strictly Optional  Requirements
-    </h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not define any 
-            Strictly Optional requirements.</p><h2 id="objective-reqs" class="indexable" data-level="2">A.2 Objective  Requirements
-    </h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not define any 
-            Objective requirements.</p><h2 id="feat-based-reqs" class="indexable" data-level="2">A.3 Implementation-dependent  Requirements
-    </h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not define any 
-            Implementation-dependent requirements.</p><h1 id="sel-based-reqs" class="indexable" data-level="A">Appendix B -  Selection-based  Requirements
-    </h1><span class="description">
-	<p>As indicated in the introduction to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>,
-        the baseline requirements
-        (those that must be performed by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> or its underlying platform)
-        are contained in the body of this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.
-        There are additional requirements based on selections in the body of 
-        the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>:
-        if certain selections are made, then additional requirements below must be included.
- 	</p>
-		 </span><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not define any 
-            Selection-based requirements.</p><h1 id="ext-comp-defs" class="indexable" data-level="A">Appendix C -  Extended Component Definitions</h1>
-	This appendix contains the definitions for all extended requirements specified in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.
+    <h1 id="ext-comp-defs" class="indexable" data-level="A">Appendix C -  Extended Component Definitions</h1>
+	This appendix contains the definitions for all extended requirements specified in the <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.
 
     <h2 id="ext-comp-defs-bg" class="indexable" data-level="2">C.1 Extended Components Table</h2>
 
-	All extended components specified in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> are listed in this table:
+	All extended components specified in the <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> are listed in this table:
 
-<table class="sort_kids_"><caption data-sortkey="#0"><b><span class="ctr" data-myid="" data-counter-type="ct-Table" id="">Table <span class="counter">2</span></span>: Extended Component Definitions</b></caption><tr data-sortkey="#1"><th>Functional Class</th><th>Functional Components</th></tr><tr data-sortkey="User Data Protection (FDP)"><td>User Data Protection (FDP)</td><td>FDP_FIL_EXT Device Filtering<br/>FDP_PDC_EXT Peripheral Device Connection<br/>FDP_PWR_EXT Powered by Computer<br/><a href="#FDP_TER_EXT.1">FDP_TER_EXT.1</a> Session Termination<br/></td></tr></table><h2 id="ext-comp-defs-bg" class="indexable" data-level="2">C.2 Extended Component Definitions</h2><span class="sort_kids_"><span data-sortkey="User Data Protection (FDP)"><h3 id="ext-comp-FDP" class="indexable" data-level="3">C.2.1 User Data Protection (FDP)</h3>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines the following extended components as part of the
+<table class="sort_kids_"><caption data-sortkey="#0"><b><span class="ctr" data-myid="" data-counter-type="ct-Table" id="">Table <span class="counter">5</span></span>: Extended Component Definitions</b></caption><tr data-sortkey="#1"><th>Functional Class</th><th>Functional Components</th></tr><tr data-sortkey="User Data Protection (FDP)"><td>User Data Protection (FDP)</td><td>FDP_FIL_EXT Device Filtering<br/>FDP_PDC_EXT Peripheral Device Connection<br/>FDP_PWR_EXT Powered by Computer<br/>FDP_TER_EXT Session Termination<br/></td></tr></table><h2 id="ext-comp-defs-bg" class="indexable" data-level="2">C.2 Extended Component Definitions</h2><span class="sort_kids_"><span data-sortkey="User Data Protection (FDP)"><h3 id="ext-comp-FDP" class="indexable" data-level="3">C.2.1 User Data Protection (FDP)</h3>This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> defines the following extended components as part of the
 	 FDP class originally defined by <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr> Part 2:
 	<h3 id="ext-comp-FDP_FIL_EXT" class="indexable" data-level="4">C.2.1.1 FDP_FIL_EXT Device Filtering</h3><div style="margin-left: 1em;"><h4>Family Behavior</h4><div>Components in this family define the requirements for device filtering.</div><h4>Component Leveling</h4><svg style="max-height: 30px;"><text x="4" fill="black" font-size="15" y="24">FDP_FIL_EXT</text><rect x="2" y="11" width="150" height="16" fill="none" stroke="black"></rect><text x="234" fill="black" font-size="15" y="24">1/UA</text><rect x="232" y="11" width="48" height="16" fill="none" stroke="black"></rect><line x1="152" y1="17" x2="231" y2="17" stroke="black"></line></svg><p><a href="#FDP_FIL_EXT.1/UA">FDP_FIL_EXT.1/UA</a>,
              Device Filtering (User Authentication Devices),
@@ -1712,13 +1358,13 @@ The following sections list Common Criteria and technology terms used in this do
               </div></div><h3 id="ext-comp-FDP_PDC_EXT" class="indexable" data-level="4">C.2.1.2 FDP_PDC_EXT Peripheral Device Connection</h3><div style="margin-left: 1em;"><h4>Family Behavior</h4><div>This family is defined in the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>. This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module augments the extended family by adding two
             additional components, FDP_PDC_EXT.2 and FDP_PDC_EXT.4. The new components and their impact on
             the extended family’s component leveling are shown below; reference the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> for all other definitions
-            for this family.</div><h4>Component Leveling</h4><svg style="max-height: 50px;"><text x="4" fill="black" font-size="15" y="44">FDP_PDC_EXT</text><rect x="2" y="31" width="150" height="16" fill="none" stroke="black"></rect><text x="234" fill="black" font-size="15" y="24">2//UA</text><rect x="232" y="11" width="60" height="16" fill="none" stroke="black"></rect><line x1="152" y1="37" x2="231" y2="17" stroke="black"></line><text x="234" fill="black" font-size="15" y="44">4/UA</text><rect x="232" y="31" width="48" height="16" fill="none" stroke="black"></rect><line x1="152" y1="37" x2="231" y2="37" stroke="black"></line></svg><p><a href="#FDP_PDC_EXT.2//UA">FDP_PDC_EXT.2//UA</a>,
+            for this family.</div><h4>Component Leveling</h4><svg style="max-height: 50px;"><text x="4" fill="black" font-size="15" y="44">FDP_PDC_EXT</text><rect x="2" y="31" width="150" height="16" fill="none" stroke="black"></rect><text x="234" fill="black" font-size="15" y="24">2/UA</text><rect x="232" y="11" width="48" height="16" fill="none" stroke="black"></rect><line x1="152" y1="37" x2="231" y2="17" stroke="black"></line><text x="234" fill="black" font-size="15" y="44">4/UA</text><rect x="232" y="31" width="48" height="16" fill="none" stroke="black"></rect><line x1="152" y1="37" x2="231" y2="37" stroke="black"></line></svg><p><a href="#FDP_PDC_EXT.2/UA">FDP_PDC_EXT.2/UA</a>,
              Authorized Devices (User Authentication Devices),
              defines the types of physical devices that the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> will permit to
             connect to it.</p><p><a href="#FDP_PDC_EXT.4/UA">FDP_PDC_EXT.4/UA</a>,
              Supported Authentication Device,
              defines whether the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> includes an internal or
-            external authentication device.</p><h4>Management: FDP_PDC_EXT.2//UA</h4><p>No specific management functions are identified.</p><h4>Audit: FDP_PDC_EXT.2//UA</h4><p>There are no auditable events foreseen.</p><h4>FDP_PDC_EXT.2//UA Authorized Devices (User Authentication Devices)</h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components.</td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td><a href="#FDP_PDC_EXT.1">FDP_PDC_EXT.1</a> Peripheral Device Connection</td></tr></table><h4 id="ext-comp-FDP_PDC_EXT.2.1//UA">FDP_PDC_EXT.2.1//UA</h4>
+            external authentication device.</p><h4>Management: FDP_PDC_EXT.2/UA</h4><p>No specific management functions are identified.</p><h4>Audit: FDP_PDC_EXT.2/UA</h4><p>There are no auditable events foreseen.</p><h4>FDP_PDC_EXT.2/UA Authorized Devices (User Authentication Devices)</h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components.</td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td><a href="#FDP_PDC_EXT.1">FDP_PDC_EXT.1</a> Peripheral Device Connection</td></tr></table><h4 id="ext-comp-FDP_PDC_EXT.2.1/UA">FDP_PDC_EXT.2.1/UA</h4>
                 The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall allow connections with authorized devices as defined in
                 [<b>assignment</b>: 
      <span class="assignable-content"> devices specified in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> or <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module in which this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is defined</span>]
@@ -1726,7 +1372,7 @@ The following sections list Common Criteria and technology terms used in this do
      <span class="assignable-content"> devices specified in another <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> or <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module that shares a <abbr class="dyn-abbr"><a href="#abbr_PP-Configuration">PP-Configuration</a></abbr>
                   with the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> or <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module in which this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is defined</span>] upon <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>
                 power up and connection of a peripheral device to a powered‐on <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.
-              <h4 id="ext-comp-FDP_PDC_EXT.2.2//UA">FDP_PDC_EXT.2.2//UA</h4>
+              <h4 id="ext-comp-FDP_PDC_EXT.2.2/UA">FDP_PDC_EXT.2.2/UA</h4>
                 The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall allow connections with authorized devices presenting authorized
                 interface protocols as defined in [<b>assignment</b>: 
      <span class="assignable-content">devices specified in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> or <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>
@@ -1742,43 +1388,57 @@ The following sections list Common Criteria and technology terms used in this do
              Powered By Computer,
              requires the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to not be powered by a connected computer.</p><h4>Management: FDP_PWR_EXT.1</h4><p>No specific management functions are identified.</p><h4>Audit: FDP_PWR_EXT.1</h4><p>There are no auditable events foreseen.</p><h4>FDP_PWR_EXT.1 Powered By Computer</h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components.</td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td>No dependencies</td></tr></table><h4 id="ext-comp-FDP_PWR_EXT.1.1">FDP_PWR_EXT.1.1</h4>
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall not be powered by a connected computer.
-            </div></div><h3 id="ext-comp-FDP_TER_EXT.1" class="indexable" data-level="4">C.2.1.4 FDP_TER_EXT.1 Session Termination</h3><div style="margin-left: 1em;"><h4>Family Behavior</h4><div>Components in this family define the requirements for termination of open sessions.</div><h4>Component Leveling</h4><svg style="max-height: 30px;"><text x="4" fill="black" font-size="15" y="24">FDP_TER_EXT.1</text><rect x="2" y="11" width="150" height="16" fill="none" stroke="black"></rect><text x="234" fill="black" font-size="15" y="24">1</text><rect x="232" y="11" width="12" height="16" fill="none" stroke="black"></rect><line x1="152" y1="17" x2="231" y2="17" stroke="black"></line></svg><p><a href="#FDP_TER_EXT.1">FDP_TER_EXT.1</a>,
+            </div></div><h3 id="ext-comp-FDP_TER_EXT" class="indexable" data-level="4">C.2.1.4 FDP_TER_EXT Session Termination</h3><div style="margin-left: 1em;"><h4>Family Behavior</h4><div>Components in this family define the requirements for termination of open sessions.</div><h4>Component Leveling</h4><svg style="max-height: 70px;"><text x="4" fill="black" font-size="15" y="44">FDP_TER_EXT</text><rect x="2" y="31" width="150" height="16" fill="none" stroke="black"></rect><text x="234" fill="black" font-size="15" y="24">1</text><rect x="232" y="11" width="12" height="16" fill="none" stroke="black"></rect><line x1="152" y1="37" x2="231" y2="17" stroke="black"></line><text x="234" fill="black" font-size="15" y="44">2</text><rect x="232" y="31" width="12" height="16" fill="none" stroke="black"></rect><line x1="152" y1="37" x2="231" y2="37" stroke="black"></line><text x="234" fill="black" font-size="15" y="64">3</text><rect x="232" y="51" width="12" height="16" fill="none" stroke="black"></rect><line x1="152" y1="37" x2="231" y2="57" stroke="black"></line></svg><p><a href="#FDP_TER_EXT.1">FDP_TER_EXT.1</a>,
              Session Termination,
              requires the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to terminate an open session upon removal of the
-            authentication element.</p><h4>Management: FDP_TER_EXT.1</h4><p>No specific management functions are identified.</p><h4>Audit: FDP_TER_EXT.1</h4><p>There are no auditable events foreseen.</p><h4>FDP_TER_EXT.1 Session Termination</h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components.</td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td>No dependencies</td></tr></table><h4 id="ext-comp-FDP_TER_EXT.1.1">FDP_TER_EXT.1.1</h4>
+            authentication element.</p><p><a href="#FDP_TER_EXT.2">FDP_TER_EXT.2</a>,
+             Session Termination of Removed Devices,
+             requires the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to terminate an open session
+            upon removal of the user authentication device.</p><p><a href="#FDP_TER_EXT.3">FDP_TER_EXT.3</a>,
+             Session Termination Upon Switching,
+             requires the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to terminate an open session upon
+            switching to a different computer; and reset the power to the user authentication device for at least one
+            second upon switching to a different computer.</p><h4>Management: FDP_TER_EXT.1</h4><p>No specific management functions are identified.</p><h4>Audit: FDP_TER_EXT.1</h4><p>There are no auditable events foreseen.</p><h4>FDP_TER_EXT.1 Session Termination</h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components.</td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td>No dependencies</td></tr></table><h4 id="ext-comp-FDP_TER_EXT.1.1">FDP_TER_EXT.1.1</h4>
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall terminate an open session upon removal of the authentication element.
+            </div><h4>Management: FDP_TER_EXT.2</h4><p>No specific management functions are identified.</p><h4>Audit: FDP_TER_EXT.2</h4><p>There are no auditable events foreseen.</p><h4>FDP_TER_EXT.2 Session Termination of Removed Devices</h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components.</td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td>FDP_PDC_EXT.2 Authorized Devices</td></tr></table><h4 id="ext-comp-FDP_TER_EXT.2.1">FDP_TER_EXT.2.1</h4>
+            The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall terminate an open session upon removal of the user authentication device.
+          </div><h4>Management: FDP_TER_EXT.3</h4><p>No specific management functions are identified.</p><h4>Audit: FDP_TER_EXT.3</h4><p>There are no auditable events foreseen.</p><h4>FDP_TER_EXT.3 Session Termination Upon Switching</h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components.</td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td>FDP_SWI_EXT.1 <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> Switching</td></tr></table><h4 id="ext-comp-FDP_TER_EXT.3.1">FDP_TER_EXT.3.1</h4>
+              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall terminate an open session upon switching to a different computer.
+            <h4 id="ext-comp-FDP_TER_EXT.3.2">FDP_TER_EXT.3.2</h4>
+              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall reset the power to the user authentication device for at least one
+              second upon switching to a different computer.
             </div></div></span></span><h1 id="iso-doc-assess" class="indexable" data-level="A">Appendix D -  Isolation Documentation and Assessment</h1>
     The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> requires additional supplementary information to describe its isolation concepts beyond the
     requirements outlined in the ‘Isolation Documentation and Assessment’ sections in Appendix D of the
     Base‐<abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>. As with other Base‐<abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> requirements, the isolation documentation also applies to the specific
     isolation and data flow <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> in this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐module in addition to the functionality required by the Base‐<abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.
     The following additions are included in the sections below.
-    <h2 class="indexable" data-level="2" id="_sec_12">D.1 General</h2>
+    <h2 class="indexable" data-level="2" id="_sec_9">D.1 General</h2>
       The documentation of the isolation should be detailed enough that, after reading, the evaluator will
       thoroughly understand the isolation concepts and implementation in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and why it can be relied
       upon to provide proper isolation of the user authentication function from all other <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> functions.
       The isolation documentation must be especially detailed for any internal user authentication devices.
     
-    <h2 class="indexable" data-level="2" id="_sec_13">D.2 Design Description</h2>
+    <h2 class="indexable" data-level="2" id="_sec_10">D.2 Design Description</h2>
       In addition to user authentication isolation from other <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> functions, if <a href="#FDP_TER_EXT.3">FDP_TER_EXT.3</a> is claimed by
       the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, then when describing how power source or power loading may affect isolation between data
       paths, the documentation shall describe how power is reset to the user authentication device upon
       switching.
     
-    <h2 class="indexable" data-level="2" id="_sec_14">D.3 Isolation Means Justification</h2>
+    <h2 class="indexable" data-level="2" id="_sec_11">D.3 Isolation Means Justification</h2>
       No change.
     
-    <h2 class="indexable" data-level="2" id="_sec_15">D.4 Firmware Dependencies</h2>
+    <h2 class="indexable" data-level="2" id="_sec_12">D.4 Firmware Dependencies</h2>
       No change.
     
-  <h1 id="" class="indexable" data-level="A">Appendix E -  Peripheral Device Connections</h1>
-    <h2 class="indexable" data-level="2" id="_sec_16">E.1 General</h2>
+  <h1 id="perdevcon" class="indexable" data-level="A">Appendix E -  Peripheral Device Connections</h1>
+    <h2 class="indexable" data-level="2" id="_sec_13">E.1 General</h2>
       This appendix expands the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> Peripheral Device Connections appendix, and offers additional direction
       on peripheral devices and interface protocols with <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr> claiming compliance with this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module. This
       appendix is in conjunction with the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>’s appendix and does not replace it.
     
     
-    <h2 class="indexable" data-level="2" id="_sec_17">E.2 Unauthorized Peripheral Devices</h2>
+    <h2 class="indexable" data-level="2" id="_sec_14">E.2 Unauthorized Peripheral Devices</h2>
       The following are unauthorized devices:<ul>
         <li><abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> device that is denylisted</li>
         <li><abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> audio input device connected to a user authentication peripheral interface</li>
@@ -1793,12 +1453,12 @@ The following sections list Common Criteria and technology terms used in this do
       </ul>     
     
     
-    <h2 class="indexable" data-level="2" id="_sec_18">E.3 Unauthorized Interface Protocols</h2>
+    <h2 class="indexable" data-level="2" id="_sec_15">E.3 Unauthorized Interface Protocols</h2>
       The following are unauthorized interface protocols:<ul>
         <li>Any interface protocol not specifically authorized</li>        
       </ul>
     
-    <h2 class="indexable" data-level="2" id="_sec_19">E.4 Authorized Peripheral Devices</h2>
+    <h2 class="indexable" data-level="2" id="_sec_16">E.4 Authorized Peripheral Devices</h2>
       The following are authorized devices and functions:<ul>
         <li><abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> device identified as User Authentication</li>
         <li><abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> device that is allowlisted</li>
@@ -1806,15 +1466,15 @@ The following sections list Common Criteria and technology terms used in this do
       </ul>
     
     
-    <h2 class="indexable" data-level="2" id="_sec_20">E.5 Authorized Interface Protocols</h2>
+    <h2 class="indexable" data-level="2" id="_sec_17">E.5 Authorized Interface Protocols</h2>
       The following are authorized interface protocols:<ul>
         <li><abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr></li>
       </ul>
     
-  <h1 id="" class="indexable" data-level="A">Appendix F -  Interactions between PP-Modules</h1>
+  <h1 id="interbetmod" class="indexable" data-level="A">Appendix F -  Interactions between PP-Modules</h1>
     This appendix provides any additional guidance required to address interactions between multiple PPModules
     when they are both contained within a <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Configuration.
-    <h2 class="indexable" data-level="2" id="_sec_21">F.1 PP-Module for Audio Output Devices</h2>
+    <h2 class="indexable" data-level="2" id="_sec_18">F.1 PP-Module for Audio Output Devices</h2>
       Unauthorized devices identified in both <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Modules are considered unauthorized devices for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> as
       per <a href="#FDP_PDC_EXT.1">FDP_PDC_EXT.1</a>.<br/><br/>
       Authorized devices identified in both <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Modules are considered authorized devices for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> as per
@@ -1827,7 +1487,7 @@ The following sections list Common Criteria and technology terms used in this do
       peripheral types. The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author should make two iterations of this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>, <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a>/UA and
       <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a>/AO, to show the different modifications made for each specific peripheral type.
     
-    <h2 class="indexable" data-level="2" id="_sec_22">F.2 PP-Module for Keyboard/Mouse Devices</h2>
+    <h2 class="indexable" data-level="2" id="_sec_19">F.2 PP-Module for Keyboard/Mouse Devices</h2>
       Unauthorized devices identified in both <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Modules are considered unauthorized devices for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> as
       per <a href="#FDP_PDC_EXT.1">FDP_PDC_EXT.1</a>.<br/><br/>
       Authorized devices identified in both <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Modules are considered authorized devices for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> as per
@@ -1838,7 +1498,7 @@ The following sections list Common Criteria and technology terms used in this do
       peripheral types. The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author should make two iterations of this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>, <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a>/UA and
       <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a>/KM, to show the different modifications made for each specific peripheral type.
     
-    <h2 class="indexable" data-level="2" id="_sec_23">F.3 PP-Module for Video/Display Devices</h2>
+    <h2 class="indexable" data-level="2" id="_sec_20">F.3 PP-Module for Video/Display Devices</h2>
       Unauthorized devices identified in both <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Modules are considered unauthorized devices for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> as
       per <a href="#FDP_PDC_EXT.1">FDP_PDC_EXT.1</a>.<br/><br/>
       Authorized devices identified in both <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Modules are considered authorized devices for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> as per
@@ -1849,7 +1509,7 @@ The following sections list Common Criteria and technology terms used in this do
       peripheral types. The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author should make two iterations of this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>, <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a>/UA and
       <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a>/VI, to show the different modifications made for each specific peripheral type.
     
-  <h1 id="acronyms" class="indexable" data-level="A">Appendix G -  Acronyms</h1><table><caption><span class="ctr" data-myid="t-acronyms" data-counter-type="ct-Table" id="t-acronyms">Table <span class="counter">3</span></span>: Acronyms
+  <h1 id="acronyms" class="indexable" data-level="A">Appendix G -  Acronyms</h1><table><caption><span class="ctr" data-myid="t-acronyms" data-counter-type="ct-Table" id="t-acronyms">Table <span class="counter">6</span></span>: Acronyms
 		</caption><tr class="header"><th>Acronym</th><th>Meaning</th></tr><tr><td><span class="term" id="abbr_Base-PP" data-plural="Base-PPs"><abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr></span></td><td><span id="long_abbr_Base-PP">Base Protection Profile</span></td></tr>
 <tr><td><span class="term" id="abbr_CC"><abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr></span></td><td><span id="long_abbr_CC">Common Criteria</span></td></tr>
 <tr><td><span class="term" id="abbr_CDF"><abbr class="dyn-abbr"><a href="#abbr_CDF">CDF</a></abbr></span></td><td><span id="long_abbr_CDF">Configurable Device Filtration (<abbr class="dyn-abbr"><a href="#abbr_CDF">CDF</a></abbr>)</span></td></tr>
@@ -1874,7 +1534,7 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><span class="term" id="abbr_TSFI" data-plural="TSFIs"><abbr class="dyn-abbr"><a href="#abbr_TSFI">TSFI</a></abbr></span></td><td><span id="long_abbr_TSFI"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> Interface</span></td></tr>
 <tr><td><span class="term" id="abbr_TSS"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></span></td><td><span id="long_abbr_TSS"><abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> Summary Specification</span></td></tr>
 <tr><td><span class="term" id="abbr_USB"><abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr></span></td><td><span id="long_abbr_USB">Universal Serial Bus</span></td></tr>
-</table><h1 id="appendix-bibliography" class="indexable" data-level="A">Appendix H -  Bibliography</h1><table><caption><span class="ctr" data-myid="t-biblio" data-counter-type="ct-Table" id="t-biblio">Table <span class="counter">4</span></span>: Bibliography</caption><tr class="header"><th>Identifier</th><th>Title</th></tr><tr><td><span id="bibCC">[<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>]</span></td><td><span class="description">Common Criteria for Information Technology Security Evaluation - <ul>
+</table><h1 id="appendix-bibliography" class="indexable" data-level="A">Appendix H -  Bibliography</h1><table><caption><span class="ctr" data-myid="t-biblio" data-counter-type="ct-Table" id="t-biblio">Table <span class="counter">7</span></span>: Bibliography</caption><tr class="header"><th>Identifier</th><th>Title</th></tr><tr><td><span id="bibCC">[<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>]</span></td><td><span class="description">Common Criteria for Information Technology Security Evaluation - <ul>
             <li><a href="https://www.commoncriteriaportal.org/files/ccfiles/CC2022PART1R1.pdf">Part 1: 
 				Introduction and general model</a>, CCMB-2022-11-001, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022.</li>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART2R1.pdf">Part 2: 
@@ -1888,4 +1548,5 @@ The following sections list Common Criteria and technology terms used in this do
           </ul></span></td></tr><tr><td><span id="bibCEM">[<abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr>]</span></td><td><span class="description">Common Methodology for Information Technology Security Evaluation - <ul>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CEM2022R1.pdf">
                  Evaluation methodology</a>, CCMB-2022-11-006, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022.</li>
-          </ul></span></td></tr><tr><td><span id="">[PP_PSD_V5.0 or <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>]</span></td><td></td></tr></table></body></html>
+          </ul></span></td></tr><tr><td><span id="base-pp">[PP_PSD_V5.0 or <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>]</span></td><td><span class="description"><a href=""><span style="" class="comment " id="Comment-2-">Need to add URL once published.</span>Protection Profile for Peripheral Sharing Device, Version 5.0, 2025-07-11</a>
+      </span></td></tr></table></body></html>
