@@ -610,7 +610,7 @@ The following sections list Common Criteria and technology terms used in this do
                     USB devices (recognized or not recognized).<br/><br/>
                     Perform this test for an unauthorized device presenting itself as a composite device, a USB camera, a USB
                     audio headset, a USB printer, a USB keyboard, a USB wireless dongle, and any device listed on the PSD UA
-                    blacklist.<br/><br/>
+                    denylist.<br/><br/>
                     Repeat this for each user authentication TOE peripheral interface.<ol>
                       <li>Ensure the TOE is powered off and connected to a computer. Run USB analyzer software and open
                         the real‐time hardware console on the connected computer, and connect a USB sniffer to the
@@ -631,7 +631,7 @@ The following sections list Common Criteria and technology terms used in this do
                     This test verifies that the TOE ports do not reject authorized devices and devices with authorized protocols
                     as per the Peripheral Device Connection Policy.<br/><br/>
                     Perform this test for a USB device identified as User Authentication and any device listed on the PSD UA
-                    whitelist:
+                    allowlist:
                     <ol>
                       <li>Ensure the TOE is powered off.</li>
                       <li>Connect the authorized device to the TOE peripheral interface.</li>
@@ -851,7 +851,7 @@ The following sections list Common Criteria and technology terms used in this do
                     USB devices (recognized or not recognized).<br/><br/>
                     Perform this test for an unauthorized device presenting itself as a composite device, a USB camera, a USB
                     audio headset, a USB printer, a USB keyboard, a USB wireless dongle, and any device listed on the PSD UA
-                    blacklist.<br/><br/>
+                    denylist.<br/><br/>
                     Repeat this for each user authentication TOE peripheral interface.<ol>
                       <li>Ensure the TOE is powered off and connected to a computer. Run USB analyzer software and open
                         the real‐time hardware console on the connected computer, and connect a USB sniffer to the
@@ -872,7 +872,7 @@ The following sections list Common Criteria and technology terms used in this do
                     This test verifies that the TOE ports do not reject authorized devices and devices with authorized protocols
                     as per the Peripheral Device Connection Policy.<br/><br/>
                     Perform this test for a USB device identified as User Authentication and any device listed on the PSD UA
-                    whitelist:
+                    allowlist:
                     <ol>
                       <li>Ensure the TOE is powered off.</li>
                       <li>Connect the authorized device to the TOE peripheral interface.</li>
@@ -921,12 +921,12 @@ The following sections list Common Criteria and technology terms used in this do
                 The evaluator shall examine the TSS and verify that it describes whether the PSD has configurable or fixed
                 device filtering.<br/><br/>
                 [Conditional – If “configurable” is selected in FDP_FIL_EXT.1.1/UA, then:] The evaluator shall examine the
-                TSS and verify that it describes the process of configuring the TOE for whitelisting and blacklisting UA
+                TSS and verify that it describes the process of configuring the TOE for allowlisting and denylisting UA
                 peripheral devices, including information on how this function is restricted to administrators.
               </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
                 [Conditional – If “configurable” is selected in FDP_FIL_EXT.1.1/UA, then:] the evaluator shall examine the
-                guidance documentation and verify that it describes the process of configuring the TOE for whitelisting
-                and blacklisting UA peripheral devices and the administrative privileges required to do this.
+                guidance documentation and verify that it describes the process of configuring the TOE for allowlisting
+                and denylisting UA peripheral devices and the administrative privileges required to do this.
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <span class="testlist-"><ul>
                   <li class="test-"><a id="_t_7" class="defined" href="#_t_7">Test FDP_FIL_EXT.1/UA:1</a>:
@@ -940,12 +940,12 @@ The following sections list Common Criteria and technology terms used in this do
                     [Conditional: Perform this only if “configurable” is selected in FDP_FIL_EXT.1.1/UA]<br/><br/>
                     In the following steps the evaluator shall verify that allowlisted and denylisted devices are treated
                     correctly.<ol>
-                      <li>Configure the TOE UA CDF to whitelist an authorized user authentication device, connect it to the
+                      <li>Configure the TOE UA CDF to allowlist an authorized user authentication device, connect it to the
                         TOE UA peripheral device interface, and verify that the device is accepted through real‐time device
                         console and USB sniffer capture.</li>                    
-                      <li>Configure the TOE UA CDF to blacklist the device and verify that the device is rejected through
+                      <li>Configure the TOE UA CDF to denylist the device and verify that the device is rejected through
                         real‐time device console and USB sniffer capture.</li>
-                      <li>Attempt to configure the TOE UA CDF to both whitelist and blacklist the device and verify that the
+                      <li>Attempt to configure the TOE UA CDF to both allowlist and denylist the device and verify that the
                         device is rejected through real‐time device console and USB sniffer capture.</li>                      
                     </ol>                  
                   </li>
