@@ -458,7 +458,7 @@ The following sections list Common Criteria and technology terms used in this do
                     connected computer.</li>
                     <li>Ensure the user authentication application and driver for the authorized user authentication
                     device used for testing is installed.</li>
-                    <li>[Conditional: if “external” is selected in FDP_PDC_EXT.4.1, then:] connect an authorized user
+                    <li>[Conditional: if “external” is selected in FDP_PDC_EXT.4.1/UA, then:] connect an authorized user
                     authentication device with a power LED and a connected DVM to each PSD UA peripheral device
                     interface.</li>
                   </ul>
@@ -472,16 +472,17 @@ The following sections list Common Criteria and technology terms used in this do
                       While performing this test, ensure that switching is always initiated through express user action.<ol>
                         <li>Turn on the TOE and ensure computer #1 is selected.</li>
                         <li>Verify that the real‐time hardware information console on computer #1 indicates the presence of
-                          the user authentication device. [Conditional: if “external” is selected in FDP_PDC_EXT.4.1, then:] verify
+                          the user authentication device. [Conditional: if “external” is selected in
+                          FDP_PDC_EXT.4.1/UA, then:] verify
                           the UA device power LED is illuminated and the DVM reads between 4.75 and 5.25 VDC.</li>
                         <li>Perform steps 4‐6 for each connected computer.</li>
                         <li>For each switching method selected in FDP_SWI_EXT.2.2, switch selected computers in accordance
                           with the operational guidance.</li>
-                        <li>[Conditional: if “external” is selected in FDP_PDC_EXT.4.1, then:] verify that the LED for the UA
+                        <li>[Conditional: if “external” is selected in FDP_PDC_EXT.4.1/UA, then:] verify that the LED for the UA
                           device is not illuminated for at least one second while the DVM reads 0.5 VDC or less for at least one
                           second.</li>
                         <li>Verify that the real‐time hardware console on the newly selected computer indicates the presence
-                          of the user authentication device. [Conditional: if “external” is selected in FDP_PDC_EXT.4.1, then:] verify
+                          of the user authentication device. [Conditional: if “external” is selected in FDP_PDC_EXT.4.1/UA, then:] verify
                           the UA device power LED is illuminated and the DVM reads between 4.75 and 5.25 VDC.</li>                                                
                       </ol>                      
                     </li>
@@ -500,7 +501,7 @@ The following sections list Common Criteria and technology terms used in this do
                           connected on the selected computer and that the expected traffic is sent and captured using the USB
                           analyzer
                           </li>
-                        [Conditional: Perform steps 5‐6 if “external” is selected in FDP_PDC_EXT.4.1.]
+                        [Conditional: Perform steps 5‐6 if “external” is selected in FDP_PDC_EXT.4.1/UA.]
                         <li>Disconnect the UA device and verify the session is terminated on the selected computer and that
                           the real‐time hardware console does not show the device and that no traffic is sent on the USB analyzer.</li>
                         <li>Reconnect the UA device. Reconnect an authentication session, verify that the session is connected
@@ -549,7 +550,7 @@ The following sections list Common Criteria and technology terms used in this do
                           Type‐B plug. Modulate the 5 volt supply manually at various speeds from approximately one cycle per five
                           seconds to one cycle per second. Verify that no new USB traffic is captured on the non‐selected USB
                           analyzers.</li>
-                        [Conditional: Perform steps 2‐4 if “external” is selected in FDP_PDC_EXT.4.1.]
+                        [Conditional: Perform steps 2‐4 if “external” is selected in FDP_PDC_EXT.4.1/UA.]
                         <li>Disconnect the power supply and replace it with the computer.</li>
                         <li>Connect the USB dummy load into the TOE UA peripheral device interface. Examine the USB
                           analyzers on all non‐selected computers and verify that no new USB traffic is captured.</li>
@@ -598,7 +599,7 @@ The following sections list Common Criteria and technology terms used in this do
                   <li class="test-"><a id="_t_5" class="defined" href="#_t_5">Test FDP_PDC_EXT.1:1</a>:
       
                     <b>Unauthorized Device Rejection</b><br/><br/>
-                    [Conditional: Perform this test if “external” is selected in FDP_PDC_EXT.4.1]<br/><br/>
+                    [Conditional: Perform this test if “external” is selected in FDP_PDC_EXT.4.1/UA]<br/><br/>
                     This test verifies that the TOE ports properly reject unauthorized devices and devices with unauthorized
                     protocols as per the unauthorized peripheral device connections.<br/><br/>
                     For this test, verify device rejection through TOE user indication in accordance with the operational user
@@ -627,7 +628,7 @@ The following sections list Common Criteria and technology terms used in this do
                   <li class="test-"><a id="_t_6" class="defined" href="#_t_6">Test FDP_PDC_EXT.1:2</a>:
       
                     <b>Authorized Device Acceptance</b><br/><br/>
-                    [Conditional: Perform this test if “external” is selected in FDP_PDC_EXT.4.1]<br/><br/>
+                    [Conditional: Perform this test if “external” is selected in FDP_PDC_EXT.4.1/UA]<br/><br/>
                     This test verifies that the TOE ports do not reject authorized devices and devices with authorized protocols
                     as per the Peripheral Device Connection Policy.<br/><br/>
                     Perform this test for a USB device identified as User Authentication and any device listed on the PSD UA
@@ -699,7 +700,7 @@ The following sections list Common Criteria and technology terms used in this do
                     connected computer.</li>
                     <li>Ensure the user authentication application and driver for the authorized user authentication
                     device used for testing is installed.</li>
-                    <li>[Conditional: if “external” is selected in FDP_PDC_EXT.4.1, then:] connect an authorized user
+                    <li>[Conditional: if “external” is selected in FDP_PDC_EXT.4.1/UA, then:] connect an authorized user
                     authentication device with a power LED and a connected DVM to each PSD UA peripheral device
                     interface.</li>
                   </ul>
@@ -713,16 +714,17 @@ The following sections list Common Criteria and technology terms used in this do
                       While performing this test, ensure that switching is always initiated through express user action.<ol>
                         <li>Turn on the TOE and ensure computer #1 is selected.</li>
                         <li>Verify that the real‐time hardware information console on computer #1 indicates the presence of
-                          the user authentication device. [Conditional: if “external” is selected in FDP_PDC_EXT.4.1, then:] verify
+                          the user authentication device. [Conditional: if “external” is selected in
+                          FDP_PDC_EXT.4.1/UA, then:] verify
                           the UA device power LED is illuminated and the DVM reads between 4.75 and 5.25 VDC.</li>
                         <li>Perform steps 4‐6 for each connected computer.</li>
                         <li>For each switching method selected in FDP_SWI_EXT.2.2, switch selected computers in accordance
                           with the operational guidance.</li>
-                        <li>[Conditional: if “external” is selected in FDP_PDC_EXT.4.1, then:] verify that the LED for the UA
+                        <li>[Conditional: if “external” is selected in FDP_PDC_EXT.4.1/UA, then:] verify that the LED for the UA
                           device is not illuminated for at least one second while the DVM reads 0.5 VDC or less for at least one
                           second.</li>
                         <li>Verify that the real‐time hardware console on the newly selected computer indicates the presence
-                          of the user authentication device. [Conditional: if “external” is selected in FDP_PDC_EXT.4.1, then:] verify
+                          of the user authentication device. [Conditional: if “external” is selected in FDP_PDC_EXT.4.1/UA, then:] verify
                           the UA device power LED is illuminated and the DVM reads between 4.75 and 5.25 VDC.</li>                                                
                       </ol>                      
                     </li>
@@ -741,7 +743,7 @@ The following sections list Common Criteria and technology terms used in this do
                           connected on the selected computer and that the expected traffic is sent and captured using the USB
                           analyzer
                           </li>
-                        [Conditional: Perform steps 5‐6 if “external” is selected in FDP_PDC_EXT.4.1.]
+                        [Conditional: Perform steps 5‐6 if “external” is selected in FDP_PDC_EXT.4.1/UA.]
                         <li>Disconnect the UA device and verify the session is terminated on the selected computer and that
                           the real‐time hardware console does not show the device and that no traffic is sent on the USB analyzer.</li>
                         <li>Reconnect the UA device. Reconnect an authentication session, verify that the session is connected
@@ -790,7 +792,7 @@ The following sections list Common Criteria and technology terms used in this do
                           Type‐B plug. Modulate the 5 volt supply manually at various speeds from approximately one cycle per five
                           seconds to one cycle per second. Verify that no new USB traffic is captured on the non‐selected USB
                           analyzers.</li>
-                        [Conditional: Perform steps 2‐4 if “external” is selected in FDP_PDC_EXT.4.1.]
+                        [Conditional: Perform steps 2‐4 if “external” is selected in FDP_PDC_EXT.4.1/UA.]
                         <li>Disconnect the power supply and replace it with the computer.</li>
                         <li>Connect the USB dummy load into the TOE UA peripheral device interface. Examine the USB
                           analyzers on all non‐selected computers and verify that no new USB traffic is captured.</li>
@@ -839,7 +841,7 @@ The following sections list Common Criteria and technology terms used in this do
                   <li class="test-"><a id="_t_5" class="defined" href="#_t_5">Test FDP_PDC_EXT.1:1</a>:
       
                     <b>Unauthorized Device Rejection</b><br/><br/>
-                    [Conditional: Perform this test if “external” is selected in FDP_PDC_EXT.4.1]<br/><br/>
+                    [Conditional: Perform this test if “external” is selected in FDP_PDC_EXT.4.1/UA]<br/><br/>
                     This test verifies that the TOE ports properly reject unauthorized devices and devices with unauthorized
                     protocols as per the unauthorized peripheral device connections.<br/><br/>
                     For this test, verify device rejection through TOE user indication in accordance with the operational user
@@ -868,7 +870,7 @@ The following sections list Common Criteria and technology terms used in this do
                   <li class="test-"><a id="_t_6" class="defined" href="#_t_6">Test FDP_PDC_EXT.1:2</a>:
       
                     <b>Authorized Device Acceptance</b><br/><br/>
-                    [Conditional: Perform this test if “external” is selected in FDP_PDC_EXT.4.1]<br/><br/>
+                    [Conditional: Perform this test if “external” is selected in FDP_PDC_EXT.4.1/UA]<br/><br/>
                     This test verifies that the TOE ports do not reject authorized devices and devices with authorized protocols
                     as per the Peripheral Device Connection Policy.<br/><br/>
                     Perform this test for a USB device identified as User Authentication and any device listed on the PSD UA
@@ -959,7 +961,7 @@ The following sections list Common Criteria and technology terms used in this do
                 </ul></span>
               </div></div></span></div><div class="comp" id="FDP-PDC-EXT-2-UA"><h4>FDP_PDC_EXT.2//UA Authorized Devices (User Authentication Devices)</h4><span class="activity_pane_body"><div class="component-activity-header">FDP_PDC_EXT.2//UA</div>
               The EAs for this SFR are performed as part of activities for FDP_PDC_EXT.1 above.
-            </span></div><div class="comp" id=""><h4>FDP_PDC_EXT.4 Supported Authentication Device</h4><span class="activity_pane_body"><div class="component-activity-header">FDP_PDC_EXT.4</div>
+            </span></div><div class="comp" id="FDP-PDC-EXT-4-UA"><h4>FDP_PDC_EXT.4/UA Supported Authentication Device</h4><span class="activity_pane_body"><div class="component-activity-header">FDP_PDC_EXT.4/UA</div>
               
               
               
@@ -1047,7 +1049,7 @@ The following sections list Common Criteria and technology terms used in this do
                       <li>Connect a USB sniffer to the TOE UA computer interface.</li>
                       <li>Exercise the functions of the peripheral device type(s) selected in FDP_PDC_EXT.3.1/KM in
                         MOD_KM_V1.0 and verify that no traffic is sent and captured on the USB sniffer.</li><br/><br/>
-                      [Conditional: Perform steps 4‐5 only if “external” is selected in FDP_PDC_EXT.4.1]
+                      [Conditional: Perform steps 4‐5 only if “external” is selected in FDP_PDC_EXT.4.1/UA]
                       <li>Disconnect the USB sniffer and connect it to the TOE UA peripheral device interface.</li>
                       <li>Exercise the functions of the peripheral device type(s) selected in FDP_PDC_EXT.3.1/KM in
                         MOD_KM_V1.0 and verify that no traffic is sent and captured on the USB sniffer.</li>
@@ -1067,7 +1069,7 @@ The following sections list Common Criteria and technology terms used in this do
                         sent and captured on the USB sniffer.</li>
                       <li>Play a video on the selected computer and verify that no traffic is sent and captured on the USB
                         sniffer.</li><br/><br/>
-                      [Conditional: Perform steps 4‐7 only if “external” is selected in FDP_PDC_EXT.4.1]
+                      [Conditional: Perform steps 4‐7 only if “external” is selected in FDP_PDC_EXT.4.1/UA]
                       <li>Disconnect the monitor.</li>
                       <li>Disconnect the USB sniffer and connect it to the TOE UA peripheral device interface.</li>
                       <li>Reconnect the monitor to the TOE USB type-C video peripheral interface

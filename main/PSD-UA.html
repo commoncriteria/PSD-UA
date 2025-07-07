@@ -908,7 +908,7 @@ The following sections list Common Criteria and technology terms used in this do
                     connected computer.</li>
                     <li>Ensure the user authentication application and driver for the authorized user authentication
                     device used for testing is installed.</li>
-                    <li>[Conditional: if “external” is selected in <a href="#FDP_PDC_EXT.4.1">FDP_PDC_EXT.4.1</a>, then:] connect an authorized user
+                    <li>[Conditional: if “external” is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>, then:] connect an authorized user
                     authentication device with a power LED and a connected DVM to each <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> UA peripheral device
                     interface.</li>
                   </ul>
@@ -922,16 +922,17 @@ The following sections list Common Criteria and technology terms used in this do
                       While performing this test, ensure that switching is always initiated through express user action.<ol>
                         <li>Turn on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and ensure computer #1 is selected.</li>
                         <li>Verify that the real‐time hardware information console on computer #1 indicates the presence of
-                          the user authentication device. [Conditional: if “external” is selected in <a href="#FDP_PDC_EXT.4.1">FDP_PDC_EXT.4.1</a>, then:] verify
+                          the user authentication device. [Conditional: if “external” is selected in
+                          <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>, then:] verify
                           the UA device power LED is illuminated and the DVM reads between 4.75 and 5.25 VDC.</li>
                         <li>Perform steps 4‐6 for each connected computer.</li>
                         <li>For each switching method selected in <a href="#FDP_SWI_EXT.2">FDP_SWI_EXT.2</a>.2, switch selected computers in accordance
                           with the operational guidance.</li>
-                        <li>[Conditional: if “external” is selected in <a href="#FDP_PDC_EXT.4.1">FDP_PDC_EXT.4.1</a>, then:] verify that the LED for the UA
+                        <li>[Conditional: if “external” is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>, then:] verify that the LED for the UA
                           device is not illuminated for at least one second while the DVM reads 0.5 VDC or less for at least one
                           second.</li>
                         <li>Verify that the real‐time hardware console on the newly selected computer indicates the presence
-                          of the user authentication device. [Conditional: if “external” is selected in <a href="#FDP_PDC_EXT.4.1">FDP_PDC_EXT.4.1</a>, then:] verify
+                          of the user authentication device. [Conditional: if “external” is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>, then:] verify
                           the UA device power LED is illuminated and the DVM reads between 4.75 and 5.25 VDC.</li>                                                
                       </ol>                      
                     </li>
@@ -950,7 +951,7 @@ The following sections list Common Criteria and technology terms used in this do
                           connected on the selected computer and that the expected traffic is sent and captured using the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
                           analyzer
                           </li>
-                        [Conditional: Perform steps 5‐6 if “external” is selected in <a href="#FDP_PDC_EXT.4.1">FDP_PDC_EXT.4.1</a>.]
+                        [Conditional: Perform steps 5‐6 if “external” is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>.]
                         <li>Disconnect the UA device and verify the session is terminated on the selected computer and that
                           the real‐time hardware console does not show the device and that no traffic is sent on the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> analyzer.</li>
                         <li>Reconnect the UA device. Reconnect an authentication session, verify that the session is connected
@@ -999,7 +1000,7 @@ The following sections list Common Criteria and technology terms used in this do
                           Type‐B plug. Modulate the 5 volt supply manually at various speeds from approximately one cycle per five
                           seconds to one cycle per second. Verify that no new <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> traffic is captured on the non‐selected <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
                           analyzers.</li>
-                        [Conditional: Perform steps 2‐4 if “external” is selected in <a href="#FDP_PDC_EXT.4.1">FDP_PDC_EXT.4.1</a>.]
+                        [Conditional: Perform steps 2‐4 if “external” is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>.]
                         <li>Disconnect the power supply and replace it with the computer.</li>
                         <li>Connect the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> dummy load into the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA peripheral device interface. Examine the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
                           analyzers on all non‐selected computers and verify that no new <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> traffic is captured.</li>
@@ -1044,7 +1045,7 @@ The following sections list Common Criteria and technology terms used in this do
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> may elect to enforce rejection of unauthorized devices connected to the
               <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> through a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> hub by considering <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> hubs as unauthorized devices, even
               though <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> hubs are authorized devices. If “internal” is the only selection made
-              in <a href="#FDP_PDC_EXT.4.1">FDP_PDC_EXT.4.1</a>, then the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> does not have to support <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> as an authorized
+              in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>, then the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> does not have to support <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> as an authorized
               interface unless the KM <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module is also claimed by the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author.
             </span></div>            
             
@@ -1065,7 +1066,7 @@ The following sections list Common Criteria and technology terms used in this do
                   <li class="test-"><a id="_t_5" class="defined" href="#_t_5"></a>:
       
                     <b>Unauthorized Device Rejection</b><br/><br/>
-                    [Conditional: Perform this test if “external” is selected in <a href="#FDP_PDC_EXT.4.1">FDP_PDC_EXT.4.1</a>]<br/><br/>
+                    [Conditional: Perform this test if “external” is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>]<br/><br/>
                     This test verifies that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> ports properly reject unauthorized devices and devices with unauthorized
                     protocols as per the unauthorized peripheral device connections.<br/><br/>
                     For this test, verify device rejection through <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> user indication in accordance with the operational user
@@ -1094,7 +1095,7 @@ The following sections list Common Criteria and technology terms used in this do
                   <li class="test-"><a id="_t_6" class="defined" href="#_t_6"></a>:
       
                     <b>Authorized Device Acceptance</b><br/><br/>
-                    [Conditional: Perform this test if “external” is selected in <a href="#FDP_PDC_EXT.4.1">FDP_PDC_EXT.4.1</a>]<br/><br/>
+                    [Conditional: Perform this test if “external” is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>]<br/><br/>
                     This test verifies that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> ports do not reject authorized devices and devices with authorized protocols
                     as per the Peripheral Device Connection Policy.<br/><br/>
                     Perform this test for a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> device identified as User Authentication and any device listed on the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> UA
@@ -1130,7 +1131,7 @@ The following sections list Common Criteria and technology terms used in this do
                   <li class="test-"><a id="_t_5" class="defined" href="#_t_5">Test FDP_PDC_EXT.1:1</a>:
       
                     <b>Unauthorized Device Rejection</b><br/><br/>
-                    [Conditional: Perform this test if “external” is selected in <a href="#FDP_PDC_EXT.4.1">FDP_PDC_EXT.4.1</a>]<br/><br/>
+                    [Conditional: Perform this test if “external” is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>]<br/><br/>
                     This test verifies that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> ports properly reject unauthorized devices and devices with unauthorized
                     protocols as per the unauthorized peripheral device connections.<br/><br/>
                     For this test, verify device rejection through <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> user indication in accordance with the operational user
@@ -1159,7 +1160,7 @@ The following sections list Common Criteria and technology terms used in this do
                   <li class="test-"><a id="_t_6" class="defined" href="#_t_6">Test FDP_PDC_EXT.1:2</a>:
       
                     <b>Authorized Device Acceptance</b><br/><br/>
-                    [Conditional: Perform this test if “external” is selected in <a href="#FDP_PDC_EXT.4.1">FDP_PDC_EXT.4.1</a>]<br/><br/>
+                    [Conditional: Perform this test if “external” is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>]<br/><br/>
                     This test verifies that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> ports do not reject authorized devices and devices with authorized protocols
                     as per the Peripheral Device Connection Policy.<br/><br/>
                     Perform this test for a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> device identified as User Authentication and any device listed on the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> UA
@@ -1379,7 +1380,7 @@ The following sections list Common Criteria and technology terms used in this do
               The EAs for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> are performed as part of activities for <a href="#FDP_PDC_EXT.1">FDP_PDC_EXT.1</a> above.
             </div></div></div>
         
-        <div class="comp" id="FDP_PDC_EXT.4"><h4>FDP_PDC_EXT.4 Supported Authentication Device</h4>
+        <div class="comp" id="FDP_PDC_EXT.4/UA"><h4>FDP_PDC_EXT.4/UA Supported Authentication Device</h4>
           
           
           
@@ -1387,7 +1388,7 @@ The following sections list Common Criteria and technology terms used in this do
           
           
           
-          <div class="element"><div class="reqid" id="FDP_PDC_EXT.4.1"><a href="#FDP_PDC_EXT.4.1" class="abbr">FDP_PDC_EXT.4.1</a></div><div class="reqdesc">
+          <div class="element"><div class="reqid" id="FDP_PDC_EXT.4.1/UA"><a href="#FDP_PDC_EXT.4.1/UA" class="abbr">FDP_PDC_EXT.4.1/UA</a></div><div class="reqdesc">
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall have an [<b>selection</b>: <span class="selectable-content" id="_s_15">internal</span>, <span class="selectable-content" id="_s_16">external</span>] user authentication device.
             <div class="appnote"><span class="note-header">Application
       Note:
@@ -1395,7 +1396,7 @@ The following sections list Common Criteria and technology terms used in this do
               The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author must make the selection for the device, whether the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> has internal,
               external, or both.
             </span></div></div></div>          
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FDP_PDC_EXT.4">FDP_PDC_EXT.4</a></div>
+        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FDP_PDC_EXT.4/UA">FDP_PDC_EXT.4/UA</a></div>
               
               
               
@@ -1528,7 +1529,7 @@ The following sections list Common Criteria and technology terms used in this do
                       <li>Connect a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA computer interface.</li>
                       <li>Exercise the functions of the peripheral device type(s) selected in FDP_PDC_EXT.3.1/KM in
                         MOD_KM_V1.0 and verify that no traffic is sent and captured on the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer.</li><br/><br/>
-                      [Conditional: Perform steps 4‐5 only if “external” is selected in <a href="#FDP_PDC_EXT.4.1">FDP_PDC_EXT.4.1</a>]
+                      [Conditional: Perform steps 4‐5 only if “external” is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>]
                       <li>Disconnect the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer and connect it to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA peripheral device interface.</li>
                       <li>Exercise the functions of the peripheral device type(s) selected in FDP_PDC_EXT.3.1/KM in
                         MOD_KM_V1.0 and verify that no traffic is sent and captured on the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer.</li>
@@ -1548,7 +1549,7 @@ The following sections list Common Criteria and technology terms used in this do
                         sent and captured on the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer.</li>
                       <li>Play a video on the selected computer and verify that no traffic is sent and captured on the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
                         sniffer.</li><br/><br/>
-                      [Conditional: Perform steps 4‐7 only if “external” is selected in <a href="#FDP_PDC_EXT.4.1">FDP_PDC_EXT.4.1</a>]
+                      [Conditional: Perform steps 4‐7 only if “external” is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>]
                       <li>Disconnect the monitor.</li>
                       <li>Disconnect the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer and connect it to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA peripheral device interface.</li>
                       <li>Reconnect the monitor to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> type-C video peripheral interface
@@ -1579,7 +1580,7 @@ The following sections list Common Criteria and technology terms used in this do
           <div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
-            This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> must be claimed if "external" is selected in <a href="#FDP_PDC_EXT.4.1">FDP_PDC_EXT.4.1</a>.
+            This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> must be claimed if "external" is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>.
           </span></div></div></div>
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FDP_TER-EXT.2">FDP_TER-EXT.2</a></div>
             
@@ -1675,12 +1676,12 @@ The following sections list Common Criteria and technology terms used in this do
                 [<b>assignment</b>: 
      <span class="assignable-content">denylist name</span>] denylist or otherwise unauthorized.
               </div></div><h3 id="ext-comp-FDP_PDC_EXT" class="indexable" data-level="4">B.2.1.2 FDP_PDC_EXT Peripheral Device Connection</h3><div style="margin-left: 1em;"><h4>Family Behavior</h4><div>This family is defined in the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>. This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module augments the extended family by adding two
-            additional components, FDP_PDC_EXT.2 and <a href="#FDP_PDC_EXT.4">FDP_PDC_EXT.4</a>. The new components and their impact on
+            additional components, FDP_PDC_EXT.2 and FDP_PDC_EXT.4. The new components and their impact on
             the extended family’s component leveling are shown below; reference the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> for all other definitions
-            for this family.</div><h4>Component Leveling</h4><svg style="max-height: 50px;"><text x="4" fill="black" font-size="15" y="44">FDP_PDC_EXT</text><rect x="2" y="31" width="150" height="16" fill="none" stroke="black"></rect><text x="234" fill="black" font-size="15" y="24">2//UA</text><rect x="232" y="11" width="60" height="16" fill="none" stroke="black"></rect><line x1="152" y1="37" x2="231" y2="17" stroke="black"></line><text x="234" fill="black" font-size="15" y="44">4</text><rect x="232" y="31" width="12" height="16" fill="none" stroke="black"></rect><line x1="152" y1="37" x2="231" y2="37" stroke="black"></line></svg><p><a href="#FDP_PDC_EXT.2//UA">FDP_PDC_EXT.2//UA</a>,
+            for this family.</div><h4>Component Leveling</h4><svg style="max-height: 50px;"><text x="4" fill="black" font-size="15" y="44">FDP_PDC_EXT</text><rect x="2" y="31" width="150" height="16" fill="none" stroke="black"></rect><text x="234" fill="black" font-size="15" y="24">2//UA</text><rect x="232" y="11" width="60" height="16" fill="none" stroke="black"></rect><line x1="152" y1="37" x2="231" y2="17" stroke="black"></line><text x="234" fill="black" font-size="15" y="44">4/UA</text><rect x="232" y="31" width="48" height="16" fill="none" stroke="black"></rect><line x1="152" y1="37" x2="231" y2="37" stroke="black"></line></svg><p><a href="#FDP_PDC_EXT.2//UA">FDP_PDC_EXT.2//UA</a>,
              Authorized Devices (User Authentication Devices),
              defines the types of physical devices that the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> will permit to
-            connect to it.</p><p><a href="#FDP_PDC_EXT.4">FDP_PDC_EXT.4</a>,
+            connect to it.</p><p><a href="#FDP_PDC_EXT.4/UA">FDP_PDC_EXT.4/UA</a>,
              Supported Authentication Device,
              defines whether the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> includes an internal or
             external authentication device.</p><h4>Management: FDP_PDC_EXT.2//UA</h4><p>No specific management functions are identified.</p><h4>Audit: FDP_PDC_EXT.2//UA</h4><p>There are no auditable events foreseen.</p><h4>FDP_PDC_EXT.2//UA Authorized Devices (User Authentication Devices)</h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components.</td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td><a href="#FDP_PDC_EXT.1">FDP_PDC_EXT.1</a> Peripheral Device Connection</td></tr></table><h4 id="ext-comp-FDP_PDC_EXT.2.1//UA">FDP_PDC_EXT.2.1//UA</h4>
@@ -1700,8 +1701,8 @@ The following sections list Common Criteria and technology terms used in this do
                 <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> or <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module that shares a <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Configuration with the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> or <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module in
                 which this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is defined</span>] upon <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> power up and upon connection of a
                 peripheral device to a powered‐on <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.
-              </div><h4>Management: FDP_PDC_EXT.4</h4><p>No specific management functions are identified</p><h4>Audit: FDP_PDC_EXT.4</h4><p>There are no auditable events foreseen.</p><h4>FDP_PDC_EXT.4 Supported Authentication Device</h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components.</td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td><a href="#FDP_PDC_EXT.1">FDP_PDC_EXT.1</a> Peripheral Device Connection<br/><br/>
-          FDP_PDC_EXT.2 Authorized Devices</td></tr></table><h4 id="ext-comp-FDP_PDC_EXT.4.1">FDP_PDC_EXT.4.1</h4>
+              </div><h4>Management: FDP_PDC_EXT.4/UA</h4><p>No specific management functions are identified</p><h4>Audit: FDP_PDC_EXT.4/UA</h4><p>There are no auditable events foreseen.</p><h4>FDP_PDC_EXT.4/UA Supported Authentication Device</h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components.</td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td><a href="#FDP_PDC_EXT.1">FDP_PDC_EXT.1</a> Peripheral Device Connection<br/><br/>
+          FDP_PDC_EXT.2 Authorized Devices</td></tr></table><h4 id="ext-comp-FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</h4>
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall have an [<b>selection</b>: <span class="selectable-content" id="_s_15">internal</span>, <span class="selectable-content" id="_s_16">external</span>] user authentication device.
             </div></div><h3 id="ext-comp-FDP_PWR_EXT" class="indexable" data-level="4">B.2.1.3 FDP_PWR_EXT Powered by Computer</h3><div style="margin-left: 1em;"><h4>Family Behavior</h4><div>Components in this family define the requirements for device powering.</div><h4>Component Leveling</h4><svg style="max-height: 30px;"><text x="4" fill="black" font-size="15" y="24">FDP_PWR_EXT</text><rect x="2" y="11" width="150" height="16" fill="none" stroke="black"></rect><text x="234" fill="black" font-size="15" y="24">1</text><rect x="232" y="11" width="12" height="16" fill="none" stroke="black"></rect><line x1="152" y1="17" x2="231" y2="17" stroke="black"></line></svg><p><a href="#FDP_PWR_EXT.1">FDP_PWR_EXT.1</a>,
              Powered By Computer,
