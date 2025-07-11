@@ -1033,17 +1033,17 @@ The following sections list Common Criteria and technology terms used in this do
                   
           
           <div class="element"><div class="reqid" id="FDP_PDC_EXT.2.1/UA"><a href="#FDP_PDC_EXT.2.1/UA" class="abbr">FDP_PDC_EXT.2.1/UA</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall allow connections with authorized devices as defined
-              in [<i>Appendix E</i>] and [<b>selection</b>: <span class="selectable-content" id="_s_7">authorized devices as defined in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module for Keyboard/Mouse Devices,</span>, <span class="selectable-content" id="_s_8">authorized devices as defined in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module for Audio Output
-                  Devices,</span>, <span class="selectable-content" id="_s_9">authorized devices as defined in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module for Video/Display
-                  Devices,</span>, <span class="selectable-content" id="_s_10">no other devices</span>]
+              in [<i>Appendix E</i>] and [<b>selection</b>: <span class="selectable-content" id="_s_7">authorized devices as defined in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module for Keyboard/Mouse Devices</span>, <span class="selectable-content" id="_s_8">authorized devices as defined in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module for Audio Output
+                  Devices</span>, <span class="selectable-content" id="_s_9">authorized devices as defined in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module for Video/Display
+                  Devices</span>, <span class="selectable-content" id="_s_10">no other devices</span>]
               upon <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> power up and connection of a peripheral device to a powered-on <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.          
             </div></div>
           
           <div class="element"><div class="reqid" id="FDP_PDC_EXT.2.2/UA"><a href="#FDP_PDC_EXT.2.2/UA" class="abbr">FDP_PDC_EXT.2.2/UA</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall allow connections with authorized devices presenting authorized
               interface protocols as defined in [<i>Appendix E</i>] and [<b>selection</b>: <span class="selectable-content" id="_s_11">authorized devices presenting authorized interface protocols as defined
-                  in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module for Keyboard/Mouse Devices,</span>, <span class="selectable-content" id="_s_12">authorized devices presenting authorized interface protocols as defined
-                  in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module for Audio Output Devices,</span>, <span class="selectable-content" id="_s_13">authorized devices presenting authorized interface protocols as defined
-                  in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module for Video/Display Devices,</span>, <span class="selectable-content" id="_s_14">no other devices</span>]
+                  in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module for Keyboard/Mouse Devices</span>, <span class="selectable-content" id="_s_12">authorized devices presenting authorized interface protocols as defined
+                  in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module for Audio Output Devices</span>, <span class="selectable-content" id="_s_13">authorized devices presenting authorized interface protocols as defined
+                  in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module for Video/Display Devices</span>, <span class="selectable-content" id="_s_14">no other devices</span>]
               upon <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> power up and connection of a peripheral device to a powered-on <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.              
             <div class="appnote"><span class="note-header">Application
       Note:
@@ -1161,7 +1161,7 @@ The following sections list Common Criteria and technology terms used in this do
             interfaces.</td></tr>
 <tr><td><a href="#FDP_PDC_EXT.2/UA">FDP_PDC_EXT.2/UA</a></td><td>Mitigates this threat by only
             allowing authorized device connections with authorized interface protocols.</td></tr>
-<tr><td>FDP_PDC_EXT.4</td><td>Mitigates this threat by requiring
+<tr><td><a href="#FDP_PDC_EXT.4/UA">FDP_PDC_EXT.4/UA</a></td><td>Mitigates this threat by requiring
             the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to have an authentication device.</td></tr>
 </table></p><h1 id="mod-conrat" class="indexable" data-level="1">6 Consistency Rationale</h1><h2 id="conrat-bpp-psd" class="indexable" data-level="2">6.1 
     Protection Profile for Peripheral Sharing Device</h2><h3 id="contoe-bpp-psd" class="indexable" data-level="3">6.1.1 
@@ -1217,7 +1217,10 @@ The following sections list Common Criteria and technology terms used in this do
             </td></tr><tr><td><a href="#FIA_UAU.2">FIA_UAU.2</a></td><td>
               This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is not modified, but is changed from optional to selection-based. it shall be
               included if "configurable" is selected in <a href="#FDP_FIL_EXT.1.1/UA">FDP_FIL_EXT.1.1/UA</a>.
-            </td></tr><tr><td><a href="#FIA_UID.2">FIA_UID.2</a></td><td></td></tr><tr><td><a href="#FMT_MOF.1">FMT_MOF.1</a></td><td>
+            </td></tr><tr><td><a href="#FIA_UID.2">FIA_UID.2</a></td><td>
+              This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is not modified, but is changed from optional to selection-based. it shall be
+              included if "configurable" is selected in <a href="#FDP_FIL_EXT.1.1/UA">FDP_FIL_EXT.1.1/UA</a>.
+            </td></tr><tr><td><a href="#FMT_MOF.1">FMT_MOF.1</a></td><td>
               This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is not modified, but is changed from optional to selection-based. it shall be
               included if "configurable" is selected in <a href="#FDP_FIL_EXT.1.1/UA">FDP_FIL_EXT.1.1/UA</a>.
             </td></tr><tr><td><a href="#FMT_SMF.1">FMT_SMF.1</a></td><td>
@@ -1277,6 +1280,7 @@ The following sections list Common Criteria and technology terms used in this do
       <h2 id="" class="indexable" data-level="2">B.1 User Data Protection (FDP)</h2>
         
         <div class="comp" id="FDP_TER_EXT.2"><h4>FDP_TER_EXT.2 Session Termination of Removed Devices</h4><div class="statustag"></div>
+          
           
           
           
