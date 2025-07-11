@@ -216,7 +216,7 @@
             interfaces.</rationale>
           <addressed-by>FDP_PDC_EXT.2/UA</addressed-by><rationale>Mitigates this threat by only
             allowing authorized device connections with authorized interface protocols.</rationale>
-          <addressed-by>FDP_PDC_EXT.4</addressed-by><rationale>Mitigates this threat by requiring
+          <addressed-by>FDP_PDC_EXT.4/UA</addressed-by><rationale>Mitigates this threat by requiring
             the TSF to have an authentication device.</rationale>
         </threat>
       </threats> 
@@ -562,7 +562,10 @@
           </f-component>
           
           <f-component cc-id="fia_uid.2" name="User Identification Before Any Action">
-            <consistency-rationale/>            
+            <consistency-rationale>
+              This SFR is not modified, but is changed from optional to selection-based. it shall be
+              included if "configurable" is selected in FDP_FIL_EXT.1.1/UA.
+            </consistency-rationale>            
             <description>There are no changes to the EAs for this SFR. MOD_UA_V1.0 changes this requirement from optional to
             selection‐based, but otherwise makes no changes to it.</description>
           </f-component>
@@ -845,11 +848,11 @@
           <f-element id="fdp-pdc-ext-2e1-ua">            
             <title>The TSF shall allow connections with authorized devices as defined
               in [<h:i>Appendix E</h:i>] and <selectables>
-                <selectable>authorized devices as defined in the PP‐Module for Keyboard/Mouse Devices,</selectable>
+                <selectable>authorized devices as defined in the PP‐Module for Keyboard/Mouse Devices</selectable>
                 <selectable>authorized devices as defined in the PP‐Module for Audio Output
-                  Devices,</selectable>                
+                  Devices</selectable>                
                 <selectable>authorized devices as defined in the PP‐Module for Video/Display
-                  Devices,</selectable>
+                  Devices</selectable>
                 <selectable>no other devices</selectable>
               </selectables>
               upon TOE power up and connection of a peripheral device to a powered-on TOE.          
@@ -860,11 +863,11 @@
             <title>The TSF shall allow connections with authorized devices presenting authorized
               interface protocols as defined in [<h:i>Appendix E</h:i>] and <selectables>
                 <selectable>authorized devices presenting authorized interface protocols as defined
-                  in the PP‐Module for Keyboard/Mouse Devices,</selectable>
+                  in the PP‐Module for Keyboard/Mouse Devices</selectable>
                 <selectable>authorized devices presenting authorized interface protocols as defined
-                  in the PP‐Module for Audio Output Devices,</selectable>                
+                  in the PP‐Module for Audio Output Devices</selectable>                
                 <selectable>authorized devices presenting authorized interface protocols as defined
-                  in the PP‐Module for Video/Display Devices,</selectable>
+                  in the PP‐Module for Video/Display Devices</selectable>
                 <selectable>no other devices</selectable>
               </selectables>
               upon TOE power up and connection of a peripheral device to a powered-on TOE.              
@@ -1108,8 +1111,9 @@
     <opt-sfrs/>
     <sel-sfrs>
       <section title="User Data Protection (FDP)">
-        <depends on-sel="fdp-pdc-ext-4e1-ua"/>
+        
         <f-component cc-id="fdp_ter_ext.2" name="Session Termination of Removed Devices">
+          <depends on-sel="fdp-pdc-ext-4e1-ua"/>
           <consistency-rationale>
             This SFR defines specific handling for user authentication devices. This does
             not prevent the enforcement of any PSD PP SFRs.
