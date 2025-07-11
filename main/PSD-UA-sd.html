@@ -294,7 +294,7 @@
       Technical Community members, with representatives from industry, government 
       agencies, Common Criteria Test Laboratories, and members of academia.
       </p></div><h1>Table of Contents</h1><div id="toc"><a href="#introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#scope" style="text-indent:10px">1.1<span>Technology Area and Scope of Supporting Document</span></a><a href="#structure" style="text-indent:10px">1.2<span>Structure of the Document</span></a><a href="#glossary" style="text-indent:10px">1.3<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.3.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.3.2<span>Technical Terms</span></a><a href="#sfr" style="text-indent:0px">2<span>Evaluation Activities for SFRs</span></a><a href="#aa-bpp-psd" style="text-indent:10px">2.1<span>Peripheral Sharing Device</span></a><a href="#qq-sfrs-bpp-psd-Modified" style="text-indent:20px">2.1.1<span>Modified SFRs
-        </span></a><a href="#mod_fau" style="text-indent:30px">2.1.1.1<span>Security Audit (FAU)</span></a><a href="#mod_fdp" style="text-indent:30px">2.1.1.2<span>User Data Protection (FDP)</span></a><a href="#mod_fia" style="text-indent:30px">2.1.1.3<span>Identification and Authentication (FIA)</span></a><a href="#mod_fmt" style="text-indent:30px">2.1.1.4<span>Security Management (FMT)</span></a><a href="#mod_fpt" style="text-indent:30px">2.1.1.5<span>Protection of the TSF (FPT)</span></a><a href="#man-sfrs" style="text-indent:10px">2.2<span>TOE SFR Evaluation Activities</span></a><a href="#FDP" style="text-indent:20px">2.2.1<span>User Data Protection (FDP)</span></a><a href="#opt-sfrs" style="text-indent:10px">2.3<span>Evaluation Activities for Optional SFRs</span></a><a href="#sel-sfrs" style="text-indent:10px">2.4<span>Evaluation Activities for Selection-Based SFRs</span></a><a href="#_sec_8" style="text-indent:20px">2.4.1<span>User Data Protection (FDP)</span></a><a href="#obj-sfrs" style="text-indent:10px">2.5<span>Evaluation Activities for Objective SFRs</span></a><a href="#impl-sfrs-" style="text-indent:10px">2.6<span>Evaluation Activities for Implementation-dependent SFRs</span></a><a href="#sar_aas" style="text-indent:0px">3<span>Evaluation Activities for SARs</span></a><a href="#sup-info" style="text-indent:0px">4<span>Required Supplementary Information</span></a><a href="#biblio" style="text-indent:0px">Appendix A - <span>References</span></a></div><h1 id="introduction" class="indexable" data-level="0">1 Introduction</h1><h2 id="scope" class="indexable" data-level="1">1.1 Technology Area and Scope of Supporting Document</h2><p>The scope of the 
+        </span></a><a href="#mod_fau" style="text-indent:30px">2.1.1.1<span>Security Audit (FAU)</span></a><a href="#mod_fdp" style="text-indent:30px">2.1.1.2<span>User Data Protection (FDP)</span></a><a href="#mod_fia" style="text-indent:30px">2.1.1.3<span>Identification and Authentication (FIA)</span></a><a href="#mod_fmt" style="text-indent:30px">2.1.1.4<span>Security Management (FMT)</span></a><a href="#mod_fpt" style="text-indent:30px">2.1.1.5<span>Protection of the TSF (FPT)</span></a><a href="#man-sfrs" style="text-indent:10px">2.2<span>TOE SFR Evaluation Activities</span></a><a href="#FDP" style="text-indent:20px">2.2.1<span>User Data Protection (FDP)</span></a><a href="#opt-sfrs" style="text-indent:10px">2.3<span>Evaluation Activities for Optional SFRs</span></a><a href="#sel-sfrs" style="text-indent:10px">2.4<span>Evaluation Activities for Selection-Based SFRs</span></a><a href="#_sec_7" style="text-indent:20px">2.4.1<span>User Data Protection (FDP)</span></a><a href="#obj-sfrs" style="text-indent:10px">2.5<span>Evaluation Activities for Objective SFRs</span></a><a href="#impl-sfrs-" style="text-indent:10px">2.6<span>Evaluation Activities for Implementation-dependent SFRs</span></a><a href="#sar_aas" style="text-indent:0px">3<span>Evaluation Activities for SARs</span></a><a href="#sup-info" style="text-indent:0px">4<span>Required Supplementary Information</span></a><a href="#biblio" style="text-indent:0px">Appendix A - <span>References</span></a></div><h1 id="introduction" class="indexable" data-level="0">1 Introduction</h1><h2 id="scope" class="indexable" data-level="1">1.1 Technology Area and Scope of Supporting Document</h2><p>The scope of the 
     PP-Module for User Authentication Device is
     to describe the security functionality of 
     User Authentication Device
@@ -405,7 +405,7 @@ The following sections list Common Criteria and technology terms used in this do
         The exchange of user credentials – typically a user token presented through a User
         Authentication Device – and the Selected Computer.
       </td></tr>
-<tr><td><div id="User_Authentiction_Session_Information">User Authentiction Session Information</div></td><td>
+<tr><td><div id="User_Authentication_Session_Information">User Authentication Session Information</div></td><td>
         User data for user authentication devices.
       </td></tr>
 </table></div><h1 id="sfr" class="indexable" data-level="0">2 Evaluation Activities for SFRs</h1><p>The EAs presented in this section capture the actions the evaluator performs 
@@ -454,7 +454,7 @@ The following sections list Common Criteria and technology terms used in this do
                   payloads other than any expected traffic, as well as USB NAK transactions or system messages. To avoid
                   clutter during USB traffic capture, the evaluator may filter NAK transactions and system messages.
                   <b>Test Setup</b><br/><br/>
-                  For each of the below tests, the evalutor shall perform the following test set
+                  For each of the below tests, the evaluator shall perform the following test set
                   up:<ul>
                     <li>Configure the TOE and the operational environment in accordance with the operational guidance.</li>
                     <li>Connect a computer to each TOE UA computer interface and a display to each connected
@@ -530,7 +530,8 @@ The following sections list Common Criteria and technology terms used in this do
                           Reboot the selected computer. Examine the USB analyzers on each of the non‐selected computers and
                           verify that no traffic is sent.</li>
                         <li>Reconnect an authentication session and verify that no traffic is sent on the other USB analyzers.
-                          Enter sleep or suspend mode in the selected computer. Examine the USB analyzers on each of the nonselected
+                          Enter sleep or suspend mode in the selected computer. Examine the USB
+                          analyzers on each of the non-selected
                           computers and verify that no traffic is sent.</li>
                         <li>Exit sleep or suspend mode in the selected computer. Examine the USB analyzers on each of the
                           non‐selected computers and verify that no traffic is sent.</li>
@@ -689,7 +690,10 @@ The following sections list Common Criteria and technology terms used in this do
                 device filtering.<br/><br/>
                 [Conditional – If “configurable” is selected in FDP_FIL_EXT.1.1/UA, then:] The evaluator shall examine the
                 TSS and verify that it describes the process of configuring the TOE for allowlisting and denylisting UA
-                peripheral devices, including information on how this function is restricted to administrators.
+                peripheral devices, including information on how this function is restricted to administrators.<br/><br/>
+                [Conditional - If the TOE includes an internal UA device with no administrative interface for inspection of a
+                fixed device filtering list, then:] The evaluator shall examine the TSS and verify that it specifies the devices
+                on the fixed device filtering list.
               </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
                 [Conditional – If “configurable” is selected in FDP_FIL_EXT.1.1/UA, then:] the evaluator shall examine the
                 guidance documentation and verify that it describes the process of configuring the TOE for allowlisting
@@ -720,7 +724,7 @@ The following sections list Common Criteria and technology terms used in this do
                   <li class="test-"><a id="_t_9" class="defined" href="#_t_9">Test FDP_FIL_EXT.1/UA:3</a>:
       
                     [Conditional - Perform this only if "fixed" is selected in
-                    FDP_FIL_EXT.1.1/UA]<br/><br/>
+                    FDP_FIL_EXT.1.1/UA and TOE does not include an internal UA device].<br/><br/>
                     The evaluator shall examine the PSD UA allowlist and verify that all devices are
                     authorized devices.
                   </li>
@@ -773,7 +777,7 @@ The following sections list Common Criteria and technology terms used in this do
                 terminates an open session upon removal of the authentication element.
               </div></div><div class="ea"><div class="eacategory">Isolation</div>
 			There are no Isolation evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                Testing for this component is performed as part of FDP_APc_EXT.1 test 2-UA.
+                Testing for this component is performed as part of FDP_APC_EXT.1 test 2-UA.
               </div></div></span></div><div class="comp" id=""><h4>FDP_UAI_EXT.1 User Authentication Isolation</h4><span class="activity_pane_body"><div class="component-activity-header">FDP_UAI_EXT.1</div>
               
               
@@ -820,11 +824,12 @@ The following sections list Common Criteria and technology terms used in this do
                       <li>Connect a KM device to the TOE KM peripheral interface.</li><br/><br/>
                       Perform steps 2‐3 for each TOE UA computer interface.
                       <li>Connect a USB sniffer to the TOE UA computer interface.</li>
-                      <li>Exercise the functions of the peripheral device type(s) selected in FDP_PDC_EXT.3.1/KM in
+                      <li>Exercise the functions of the peripheral device type(s) selected in
+                        FDP_PDC_EXT.3.1/UA in
                         MOD_KM_V1.0 and verify that no traffic is sent and captured on the USB sniffer.</li><br/><br/>
                       [Conditional: Perform steps 4‐5 only if “external” is selected in FDP_PDC_EXT.4.1/UA]
                       <li>Disconnect the USB sniffer and connect it to the TOE UA peripheral device interface.</li>
-                      <li>Exercise the functions of the peripheral device type(s) selected in FDP_PDC_EXT.3.1/KM in
+                      <li>Exercise the functions of the peripheral device type(s) selected in FDP_PDC_EXT.3.1/UA in
                         MOD_KM_V1.0 and verify that no traffic is sent and captured on the USB sniffer.</li>
                     </ol>
                   </li>
@@ -852,7 +857,7 @@ The following sections list Common Criteria and technology terms used in this do
                     </ol>
                   </li>
                 </ul></span>                
-              </div></div></span></div><h2 class="indexable" data-level="1" id="opt-sfrs">2.3 Evaluation Activities for Optional SFRs</h2>The PP-Module does not define any optional requirements.<h2 class="indexable" data-level="1" id="sel-sfrs">2.4 Evaluation Activities for Selection-Based SFRs</h2><h2 class="indexable" data-level="2" id="_sec_8">2.4.1 User Data Protection (FDP)</h2><div class="comp" id=""><h4>FDP_TER_EXT.2 Session Termination of Removed Devices</h4><span class="activity_pane_body"><div class="component-activity-header">FDP_TER_EXT.2</div>
+              </div></div></span></div><h2 class="indexable" data-level="1" id="opt-sfrs">2.3 Evaluation Activities for Optional SFRs</h2>The PP-Module does not define any optional requirements.<h2 class="indexable" data-level="1" id="sel-sfrs">2.4 Evaluation Activities for Selection-Based SFRs</h2><h2 class="indexable" data-level="2" id="_sec_7">2.4.1 User Data Protection (FDP)</h2><div class="comp" id=""><h4>FDP_TER_EXT.2 Session Termination of Removed Devices</h4><span class="activity_pane_body"><div class="component-activity-header">FDP_TER_EXT.2</div>
             
             
             
@@ -898,7 +903,7 @@ The following sections list Common Criteria and technology terms used in this do
     and supplement that evaluation with the necessary SFRs that are taken from the PP-Module.
     </p><h1 id="sup-info" class="indexable" data-level="0">4 Required Supplementary Information</h1><p>This Supporting Document has no required supplementary information beyond the ST, operational
 guidance, and testing.</p><h1 id="biblio" class="indexable" data-level="A">Appendix A -  References</h1><table><tr class="header"><th>Identifier</th><th>Title</th></tr>    
-    <tr><td><span id="base-pp"></span>[PP_PSD_V5.0 or PSD PP]</td><td><a href=""><span style="" class="comment " id="Comment-2-">Need to add URL once published.</span>Protection Profile for Peripheral Sharing Device, Version 5.0, 2025-07-11</a>
+    <tr><td><span id="base-pp"></span>[PP_PSD_V5.0 or PSD PP]</td><td><a href="https://www.niap-ccevs.org/protectionprofiles/412"><span style="" class="comment " id="Comment-2-">Need to add URL once published.</span>Protection Profile for Peripheral Sharing Device, Version 5.0, 2025-07-11</a>
       </td></tr>
 
   </table></body></html>
