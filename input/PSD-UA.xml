@@ -245,7 +245,7 @@
     <base-pp id="bpp-psd" name="Peripheral Sharing Device" product="Device" short="PSD" version="5.0">
       <git>
         <url>https://github.com/commoncriteria/PSD</url>
-        <branch>release-5.0</branch>
+        <branch>main</branch>
       </git>
       <url>https://commoncriteria.github.io/PSD/main/PSD-release.html</url>
       
@@ -1150,7 +1150,7 @@
           </f-element>
         </f-component>
         <f-component cc-id="fdp_ter_ext.3" name="Session Termination Upon Switching">
-          <depends on-sel="notisolator">
+          <depends on="notisolator">
             <external-doc ref="bpp-psd"/>
           </depends>
           <consistency-rationale>
