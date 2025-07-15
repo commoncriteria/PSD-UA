@@ -169,55 +169,49 @@
         <threat name="T.DATA_LEAK">
           <from base="bpp-psd"/>        
           <addressed-by>FDP_FIL_EXT.1/UA</addressed-by><rationale>Mitigates this threat
-            by ensuring device filtering for peripheral interfaces.</rationale>
+            by filtering unauthorized devices that could facilitate data leakage.</rationale>
           <addressed-by>FDP_PDC_EXT.2/UA</addressed-by><rationale>Mitigates this threat by only
-            allowing authorized device connections with authorized interface protocols.</rationale>
-          <addressed-by>FDP_PDC_EXT.4/UA</addressed-by><rationale>Mitigates this threat by requiring
-            the TSF to have an authentication device.</rationale>
-          <addressed-by>FDP_PWR_EXT.1</addressed-by><rationale>Mitigates this threat by not allowing
-          the TSF to be powered by a connecting computer.</rationale>
+            allowing device connections with authorized interface protocols.</rationale>
+
           <addressed-by>FDP_TER_EXT.1</addressed-by><rationale>Mitigates this threat by requiring
-            session termination when the authentication element is removed.</rationale>
-          <addressed-by>FDP_UAI_EXT.1</addressed-by><rationale>Mitigates this threat by isolating
-            the user authentication function from other USB functions.</rationale>
+            session termination on a connected computer when the authentication element is removed.</rationale>
+          <addressed-by>FDP_UAI_EXT.1</addressed-by><rationale>Mitigates this threat by enforcing isolation of the authentication peripheral interface communications from the rest of the TSF.</rationale>
           <addressed-by>FDP_TER_EXT.2 (selection-based)</addressed-by><rationale>Mitigates this
-            threat by requiring session termination when the authentication device is removed.</rationale>
+            threat by requiring session termination when an external authentication device is removed.</rationale>
           <addressed-by>FDP_TER_EXT.3 (selection-based)</addressed-by><rationale>Mitigates this
-            threat by requiring session termination when switching to a different computer and 
-            resetting the power.</rationale>          
+            threat by requiring session termination and power reset when switching to a different computer.</rationale>          
         </threat>
+        
+        <threat name="T.RESIDUAL_DATA">
+          <from base="bpp-psd"/>
+          <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
+          <addressed-by>FDP_TER_EXT.3 (selection-based)</addressed-by><rationale>If the TOE has the capability of switching between multiple computers, this SFR mitigates the threat by performing a power reset of the authentication interface when the selected computer is switched.</rationale>
+        </threat>
+        
         <threat name="T.SIGNAL_LEAK">
           <from base="bpp-psd"/>
           <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
           <addressed-by>FDP_FIL_EXT.1/UA</addressed-by><rationale>Mitigates this threat
-            by requiring device filtering and only allowing authorized device for peripheral
-            interfaces.</rationale>
+            by filtering unauthorized devices that could facilitate signal leakage.</rationale>
           <addressed-by>FDP_PDC_EXT.2/UA</addressed-by><rationale>Mitigates this threat by only
-            allowing authorized device connections with authorized interface protocols.</rationale>
-          <addressed-by>FDP_PDC_EXT.4/UA</addressed-by><rationale>Mitigates this threat by requiring
-            the TSF to have an authentication device.</rationale>
-          <addressed-by>FDP_PWR_EXT.1</addressed-by><rationale>Mitigates this threat by not allowing
-            the TSF to be powered by a connecting computer.</rationale>
+            allowing device connections with authorized interface protocols.</rationale>
+          
           <addressed-by>FDP_TER_EXT.1</addressed-by><rationale>Mitigates this threat by requiring
-            session termination when the authentication element is removed.</rationale>
-          <addressed-by>FDP_UAI_EXT.1</addressed-by><rationale>Mitigates this threat by isolating
-            the user authentication function from other USB functions.</rationale>
+            session termination on a connected computer when the authentication element is removed.</rationale>
+          <addressed-by>FDP_UAI_EXT.1</addressed-by><rationale>Mitigates this threat by enforcing isolation of the authentication peripheral interface communications from the rest of the TSF.</rationale>
           <addressed-by>FDP_TER_EXT.2 (selection-based)</addressed-by><rationale>Mitigates this
-          threat by requiring session termination when the authentication device is removed.</rationale>
+            threat by requiring session termination when an external authentication device is removed.</rationale>
           <addressed-by>FDP_TER_EXT.3 (selection-based)</addressed-by><rationale>Mitigates this
-            threat by requiring session termination when switching to a different computer and 
-            resetting the power.</rationale>
+            threat by requiring session termination and power reset when switching to a different computer.</rationale>     
         </threat>
         <threat name="T.UNAUTHORIZED_DEVICES">
           <from base="bpp-psd"/>      
           <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description> 
           <addressed-by>FDP_FIL_EXT.1/UA</addressed-by><rationale>Mitigates this threat
-            by requiring device filtering and only allowing authorized device for peripheral
-            interfaces.</rationale>
+            by limiting the devices that are authorized to interface with the TOE through device filtration.</rationale>
           <addressed-by>FDP_PDC_EXT.2/UA</addressed-by><rationale>Mitigates this threat by only
             allowing authorized device connections with authorized interface protocols.</rationale>
-          <addressed-by>FDP_PDC_EXT.4/UA</addressed-by><rationale>Mitigates this threat by requiring
-            the TSF to have an authentication device.</rationale>
+          <addressed-by>FDP_PDC_EXT.4/UA</addressed-by><rationale>Mitigates this threat by identifying whether the TSF supports (and therefore authorizes) an internal or external authentication device.</rationale>
         </threat>
       </threats> 
     </sec:Threats>
@@ -1025,7 +1019,7 @@
             </title>
             <note role="application">
               This SFR requires additional information for the Isolation Documentation and
-              Assessment. Refer to Appendix D for this information/
+              Assessment. Refer to Appendix D for this information.
             </note>
             <aactivity>
               <TSS>
