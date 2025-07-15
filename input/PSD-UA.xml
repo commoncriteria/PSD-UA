@@ -1150,7 +1150,7 @@
           </f-element>
         </f-component>
         <f-component cc-id="fdp_ter_ext.3" name="Session Termination Upon Switching">
-          <depends on-sel="notisolator">
+          <depends on="notisolator">
             <external-doc ref="bpp-psd"/>
           </depends>
           <consistency-rationale>
