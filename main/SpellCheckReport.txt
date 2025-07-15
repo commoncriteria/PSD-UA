@@ -1,4 +1,3 @@
-output/PSD-UA-release-linkable.html: AO
 output/PSD-UA-release-linkable.html: CEM
 output/PSD-UA-release-linkable.html: DVM
 output/PSD-UA-release-linkable.html: Denylist
@@ -14,7 +13,6 @@ output/PSD-UA-release-linkable.html: denylist
 output/PSD-UA-release-linkable.html: denylisted
 output/PSD-UA-release-linkable.html: denylisting
 output/PSD-UA-release-linkable.html: denylists
-output/PSD-UA-release.html: AO
 output/PSD-UA-release.html: Assessment’
 output/PSD-UA-release.html: CEM
 output/PSD-UA-release.html: Denylist
@@ -44,7 +42,6 @@ output/PSD-UA-sd.html: denylisting
 output/PSD-UA-sd.html: evaluator’s
 output/PSD-UA-sd.html: fail’
 output/PSD-UA-sd.html: pass’
-output/PSD-UA.html: AO
 output/PSD-UA.html: Assessment’
 output/PSD-UA.html: CEM
 output/PSD-UA.html: DVM

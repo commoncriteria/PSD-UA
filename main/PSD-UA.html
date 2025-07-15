@@ -936,7 +936,7 @@ The following sections list Common Criteria and technology terms used in this do
                     interface.</li>
                   </ul>
                   <span class="testlist-"><ul>
-                    <li class="test-"><a id="_t_1" class="defined" href="#_t_1">Test FDP_APC_EXT.1:1</a>:
+                    <li class="test-"><a id="APC_Test_1-UA" class="defined" href="#APC_Test_1-UA">Test FDP_APC_EXT.1:1</a>:
       
                       <b>UA Switching Methods</b><br/><br/>
                       [Conditional: Perform this test if “switching can be initiated only through express user action” is selected
@@ -960,7 +960,7 @@ The following sections list Common Criteria and technology terms used in this do
                       </ol>                      
                     </li>
                     
-                    <li class="test-"><a id="_t_2" class="defined" href="#_t_2">Test FDP_APC_EXT.1:2</a>:
+                    <li class="test-"><a id="APC_Test_2-UA" class="defined" href="#APC_Test_2-UA">Test FDP_APC_EXT.1:2</a>:
       
                       <b>Positive and Negative Keyboard and Mouse Data Flow Rules Testing</b><br/><br/>                      
                       This test verifies correct data flows of a UA device during different power states of the selected computer.
@@ -1010,7 +1010,7 @@ The following sections list Common Criteria and technology terms used in this do
                       </ol>
                     </li>
                     
-                    <li class="test-"><a id="_t_3" class="defined" href="#_t_3">Test FDP_APC_EXT.1:3</a>:
+                    <li class="test-"><a id="APC_Test_3-UA" class="defined" href="#APC_Test_3-UA">Test FDP_APC_EXT.1:3</a>:
       
                       <b>No Electrical Flow between Computer Interfaces</b><br/><br/>
                       [Conditional: Perform this test if “switching can be initiated only through express user action” is selected
@@ -1035,9 +1035,9 @@ The following sections list Common Criteria and technology terms used in this do
                       </ol>
                     </li>
                     
-                    <li class="test-"><a id="_t_4" class="defined" href="#_t_4">Test FDP_APC_EXT.1:4</a>:
+                    <li class="test-"><a id="APC_Test_4-UA" class="defined" href="#APC_Test_4-UA">Test FDP_APC_EXT.1:4</a>:
       
-                      <b>No Flow between Computer Computers over Time</b><br/><br/>
+                      <b>No Flow between Connected Computers over Time</b><br/><br/>
                       This test verifies that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> does not send data to different computers connected to the same interface
                       at different times. Repeat this test for each <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA computer port.<br/><br/>
                       Note that instead of the session ID, the evaluator may substitute authentication element or other unique
@@ -1414,7 +1414,7 @@ The following sections list Common Criteria and technology terms used in this do
                 terminates an open session upon removal of the authentication element.
               </div></div><div class="ea"><div class="eacategory">Isolation</div>
 			There are no Isolation evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                Testing for this component is performed as part of <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a> test 2-UA.
+                Testing for this component is performed as part of <a href="#APC_Test_2-UA" class="dynref">Test FDP_APC_EXT.1:2</a>.
               </div></div></div></div></div>
         
         <div class="comp" id="FDP_UAI_EXT.1"><h4>FDP_UAI_EXT.1 User Authentication Isolation</h4>
@@ -1700,7 +1700,7 @@ The following sections list Common Criteria and technology terms used in this do
               session upon removal of the authentication device.
             </div></div><div class="ea"><div class="eacategory">Isolation</div>
 			There are no Isolation evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-              Testing for this component performed as part of <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a> test 2‐UA.
+              Testing for this component performed as part of <a href="#APC_Test_2-UA" class="dynref">Test FDP_APC_EXT.1:2</a>.
             </div></div></div></div></div>
         <div class="comp" id="FDP_TER_EXT.3"><h4>FDP_TER_EXT.3 Session Termination Upon Switching</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
            
@@ -1744,7 +1744,7 @@ The following sections list Common Criteria and technology terms used in this do
                 The evaluator shall examine the isolation document and verify that it describes how power is reset to the
                 user authentication device upon switching.
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                Testing for this component is performed as part of <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a> test 2‐UA.
+                Testing for this component is performed as part of <a href="#APC_Test_2-UA" class="dynref">Test FDP_APC_EXT.1:2</a>.
               </div></div></div></div></div>
       
     <h1 id="ext-comp-defs" class="indexable" data-level="A">Appendix C -  Extended Component Definitions</h1>
@@ -1909,7 +1909,7 @@ The following sections list Common Criteria and technology terms used in this do
       the claimed iterations of FDP_PDC_EXT.2.<br/><br/>
       Power events at a user authentication interface for one connected computer cannot impact power events
       at an analog audio output interface for another connected computer and vice versa, as per
-      <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a>. This evaluation activity is tested in Test 3‐AO in the Supporting Document for Audio
+      <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a>. This evaluation activity is tested in <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a>:3 in the <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> for Audio
       Output.<br/><br/>
       Both <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Modules modify the Base‐<abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a> in ways that are specific to their respective
       peripheral types. The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author should make two iterations of this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>, <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a>/UA and
