@@ -807,7 +807,9 @@ The following sections list Common Criteria and technology terms used in this do
 		(from PSD PP)
 	</dt><dd>
 						This threat from the above Base <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> also applies to the functionality defined in this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.
-					</dd><dt class="threat defined" id="T.SIGNAL_LEAK">T.SIGNAL_LEAK
+					</dd><dt class="threat defined" id="T.RESIDUAL_DATA">T.RESIDUAL_DATA
+		(from PSD PP)
+	</dt><dd><span class="description">This threat from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> also applies to the functionality defined in this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.</span></dd><dt class="threat defined" id="T.SIGNAL_LEAK">T.SIGNAL_LEAK
 		(from PSD PP)
 	</dt><dd><span class="description">This threat from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> also applies to the functionality defined in this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.</span></dd><dt class="threat defined" id="T.UNAUTHORIZED_DEVICES">T.UNAUTHORIZED_DEVICES
 		(from PSD PP)
@@ -1430,7 +1432,7 @@ The following sections list Common Criteria and technology terms used in this do
       Note:
     </span><span class="note">
               This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> requires additional information for the Isolation Documentation and
-              Assessment. Refer to Appendix D for this information/
+              Assessment. Refer to Appendix D for this information.
             </span></div></div></div>
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FDP_UAI_EXT.1">FDP_UAI_EXT.1</a></div>
               
@@ -1514,54 +1516,42 @@ The following sections list Common Criteria and technology terms used in this do
               </div></div></div></div></div>
             
     <h2 id="obj-req-map" class="indexable" data-level="2">5.3 TOE Security Functional Requirements Rationale</h2><p>The following rationale provides justification for each <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, 
-    showing that the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are suitable to address the specified threats:<br/><table><caption><span class="ctr" data-myid="t-obj_map" data-counter-type="ct-Table" id="t-obj_map">Table <span class="counter">1</span></span>: <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> Rationale</caption><tr><th>Threat</th><th>Addressed by</th><th>Rationale</th></tr><tr class="major-row"><td rowspan="8"><a href="#T.DATA_LEAK">T.DATA_​LEAK</a>
+    showing that the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are suitable to address the specified threats:<br/><table><caption><span class="ctr" data-myid="t-obj_map" data-counter-type="ct-Table" id="t-obj_map">Table <span class="counter">1</span></span>: <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> Rationale</caption><tr><th>Threat</th><th>Addressed by</th><th>Rationale</th></tr><tr class="major-row"><td rowspan="6"><a href="#T.DATA_LEAK">T.DATA_​LEAK</a>
 		(from <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)
 	</td><td><a href="#FDP_FIL_EXT.1/UA">FDP_FIL_EXT.1/UA</a></td><td>Mitigates this threat
-            by ensuring device filtering for peripheral interfaces.</td></tr>
+            by filtering unauthorized devices that could facilitate data leakage.</td></tr>
 <tr><td><a href="#FDP_PDC_EXT.2/UA">FDP_PDC_EXT.2/UA</a></td><td>Mitigates this threat by only
-            allowing authorized device connections with authorized interface protocols.</td></tr>
-<tr><td><a href="#FDP_PDC_EXT.4/UA">FDP_PDC_EXT.4/UA</a></td><td>Mitigates this threat by requiring
-            the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to have an authentication device.</td></tr>
-<tr><td><a href="#FDP_PWR_EXT.1">FDP_PWR_EXT.1</a></td><td>Mitigates this threat by not allowing
-          the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to be powered by a connecting computer.</td></tr>
+            allowing device connections with authorized interface protocols.</td></tr>
 <tr><td><a href="#FDP_TER_EXT.1">FDP_TER_EXT.1</a></td><td>Mitigates this threat by requiring
-            session termination when the authentication element is removed.</td></tr>
-<tr><td><a href="#FDP_UAI_EXT.1">FDP_UAI_EXT.1</a></td><td>Mitigates this threat by isolating
-            the user authentication function from other <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> functions.</td></tr>
+            session termination on a connected computer when the authentication element is removed.</td></tr>
+<tr><td><a href="#FDP_UAI_EXT.1">FDP_UAI_EXT.1</a></td><td>Mitigates this threat by enforcing isolation of the authentication peripheral interface communications from the rest of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>.</td></tr>
 <tr><td><a href="#FDP_TER_EXT.2">FDP_TER_EXT.2</a> (selection-based)</td><td>Mitigates this
-            threat by requiring session termination when the authentication device is removed.</td></tr>
+            threat by requiring session termination when an external authentication device is removed.</td></tr>
 <tr><td><a href="#FDP_TER_EXT.3">FDP_TER_EXT.3</a> (selection-based)</td><td>Mitigates this
-            threat by requiring session termination when switching to a different computer and 
-            resetting the power.</td></tr>
-<tr class="major-row"><td rowspan="8"><a href="#T.SIGNAL_LEAK">T.SIGNAL_​LEAK</a>
+            threat by requiring session termination and power reset when switching to a different computer.</td></tr>
+<tr class="major-row"><td rowspan="1"><a href="#T.RESIDUAL_DATA">T.RESIDUAL_​DATA</a>
+		(from <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)
+	</td><td><a href="#FDP_TER_EXT.3">FDP_TER_EXT.3</a> (selection-based)</td><td>If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> has the capability of switching between multiple computers, this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> mitigates the threat by performing a power reset of the authentication interface when the selected computer is switched.</td></tr>
+<tr class="major-row"><td rowspan="6"><a href="#T.SIGNAL_LEAK">T.SIGNAL_​LEAK</a>
 		(from <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)
 	</td><td><a href="#FDP_FIL_EXT.1/UA">FDP_FIL_EXT.1/UA</a></td><td>Mitigates this threat
-            by requiring device filtering and only allowing authorized device for peripheral
-            interfaces.</td></tr>
+            by filtering unauthorized devices that could facilitate signal leakage.</td></tr>
 <tr><td><a href="#FDP_PDC_EXT.2/UA">FDP_PDC_EXT.2/UA</a></td><td>Mitigates this threat by only
-            allowing authorized device connections with authorized interface protocols.</td></tr>
-<tr><td><a href="#FDP_PDC_EXT.4/UA">FDP_PDC_EXT.4/UA</a></td><td>Mitigates this threat by requiring
-            the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to have an authentication device.</td></tr>
-<tr><td><a href="#FDP_PWR_EXT.1">FDP_PWR_EXT.1</a></td><td>Mitigates this threat by not allowing
-            the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to be powered by a connecting computer.</td></tr>
+            allowing device connections with authorized interface protocols.</td></tr>
 <tr><td><a href="#FDP_TER_EXT.1">FDP_TER_EXT.1</a></td><td>Mitigates this threat by requiring
-            session termination when the authentication element is removed.</td></tr>
-<tr><td><a href="#FDP_UAI_EXT.1">FDP_UAI_EXT.1</a></td><td>Mitigates this threat by isolating
-            the user authentication function from other <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> functions.</td></tr>
+            session termination on a connected computer when the authentication element is removed.</td></tr>
+<tr><td><a href="#FDP_UAI_EXT.1">FDP_UAI_EXT.1</a></td><td>Mitigates this threat by enforcing isolation of the authentication peripheral interface communications from the rest of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>.</td></tr>
 <tr><td><a href="#FDP_TER_EXT.2">FDP_TER_EXT.2</a> (selection-based)</td><td>Mitigates this
-          threat by requiring session termination when the authentication device is removed.</td></tr>
+            threat by requiring session termination when an external authentication device is removed.</td></tr>
 <tr><td><a href="#FDP_TER_EXT.3">FDP_TER_EXT.3</a> (selection-based)</td><td>Mitigates this
-            threat by requiring session termination when switching to a different computer and 
-            resetting the power.</td></tr>
+            threat by requiring session termination and power reset when switching to a different computer.</td></tr>
 <tr class="major-row"><td rowspan="3"><a href="#T.UNAUTHORIZED_DEVICES">T.UNAUTHORIZED_​DEVICES</a>
 		(from <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)
 	</td><td><a href="#FDP_FIL_EXT.1/UA">FDP_FIL_EXT.1/UA</a></td><td>Mitigates this threat
-            by requiring device filtering and only allowing authorized device for peripheral
-            interfaces.</td></tr>
+            by limiting the devices that are authorized to interface with the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> through device filtration.</td></tr>
 <tr><td><a href="#FDP_PDC_EXT.2/UA">FDP_PDC_EXT.2/UA</a></td><td>Mitigates this threat by only
             allowing authorized device connections with authorized interface protocols.</td></tr>
-<tr><td><a href="#FDP_PDC_EXT.4/UA">FDP_PDC_EXT.4/UA</a></td><td>Mitigates this threat by requiring
-            the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to have an authentication device.</td></tr>
+<tr><td><a href="#FDP_PDC_EXT.4/UA">FDP_PDC_EXT.4/UA</a></td><td>Mitigates this threat by identifying whether the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> supports (and therefore authorizes) an internal or external authentication device.</td></tr>
 </table></p><h1 id="mod-conrat" class="indexable" data-level="1">6 Consistency Rationale</h1><h2 id="conrat-bpp-psd" class="indexable" data-level="2">6.1 
     Protection Profile for Peripheral Sharing Device</h2><h3 id="contoe-bpp-psd" class="indexable" data-level="3">6.1.1 
 	Consistency of TOE Type
@@ -1575,7 +1565,7 @@ The following sections list Common Criteria and technology terms used in this do
 	Consistency of Security Problem Definition
       </h3>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module does not define additional threats beyond those the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines. Therefore, there is
         no inconsistency between this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module and the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> with respect to the security problem definition.<table><caption><span class="ctr" data-myid="t-con-sec-prob-def" data-counter-type="ct-Table" id="t-con-sec-prob-def">Table <span class="counter">2</span></span>: Consistency of Security Problem Definition (<abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> base)
-		</caption><tr><th><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> Threat, Assumption, <abbr class="dyn-abbr"><a href="#abbr_OSP">OSP</a></abbr></th><th>Consistency Rationale</th></tr><tr><td><a href="#T.SIGNAL_LEAK">T.SIGNAL_LEAK</a></td><td>
+		</caption><tr><th><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> Threat, Assumption, <abbr class="dyn-abbr"><a href="#abbr_OSP">OSP</a></abbr></th><th>Consistency Rationale</th></tr><tr><td><a href="#T.RESIDUAL_DATA">T.RESIDUAL_DATA</a></td><td></td></tr><tr><td><a href="#T.SIGNAL_LEAK">T.SIGNAL_LEAK</a></td><td>
         This threat is from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, thus no conflict exists.
       </td></tr><tr><td><a href="#T.UNAUTHORIZED_DEVICES">T.UNAUTHORIZED_DEVICES</a></td><td>
         This threat is from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, thus no conflict exists.
