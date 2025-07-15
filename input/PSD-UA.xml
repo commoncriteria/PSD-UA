@@ -318,7 +318,7 @@
                     interface.</h:li>
                   </h:ul>
                   <testlist>
-                    <test>
+                    <test id="APC_Test_1-UA">
                       <h:b>UA Switching Methods</h:b><h:br/><h:br/>
                       [Conditional: Perform this test if “switching can be initiated only through express user action” is selected
                       in FDP_SWI_EXT.1.1 in the PSD PP]<h:br/><h:br/>
@@ -341,7 +341,7 @@
                       </h:ol>                      
                     </test>
                     
-                    <test>
+                    <test id="APC_Test_2-UA">
                       <h:b>Positive and Negative Keyboard and Mouse Data Flow Rules Testing</h:b><h:br/><h:br/>                      
                       This test verifies correct data flows of a UA device during different power states of the selected computer.
                       <h:ol>
@@ -390,7 +390,7 @@
                       </h:ol>
                     </test>
                     
-                    <test>
+                    <test id="APC_Test_3-UA">
                       <h:b>No Electrical Flow between Computer Interfaces</h:b><h:br/><h:br/>
                       [Conditional: Perform this test if “switching can be initiated only through express user action” is selected
                       in FDP_SWI_EXT.1.1 in the PSD PP]<h:br/><h:br/>
@@ -414,8 +414,8 @@
                       </h:ol>
                     </test>
                     
-                    <test>
-                      <h:b>No Flow between Computer Computers over Time</h:b><h:br/><h:br/>
+                    <test id="APC_Test_4-UA">
+                      <h:b>No Flow between Connected Computers over Time</h:b><h:br/><h:br/>
                       This test verifies that the TOE does not send data to different computers connected to the same interface
                       at different times. Repeat this test for each TOE UA computer port.<h:br/><h:br/>
                       Note that instead of the session ID, the evaluator may substitute authentication element or other unique
@@ -994,7 +994,7 @@
               </Guidance>
               <CustomEA name="Isolation"/>
               <Tests>
-                Testing for this component is performed as part of FDP_APC_EXT.1 test 2-UA.
+                Testing for this component is performed as part of <xref to="APC_Test_2-UA"/>.
               </Tests>
             </aactivity>
           </f-element>
@@ -1138,7 +1138,7 @@
             </Guidance>
             <CustomEA name="Isolation"/>
             <Tests>
-              Testing for this component performed as part of FDP_APC_EXT.1 test 2‐UA.
+              Testing for this component performed as part of <xref to="APC_Test_2-UA"/>.
             </Tests>
           </aactivity>
           </f-element>
@@ -1188,7 +1188,7 @@
                 user authentication device upon switching.
               </CustomEA>
               <Tests>
-                Testing for this component is performed as part of FDP_APC_EXT.1 test 2‐UA.
+                Testing for this component is performed as part of <xref to="APC_Test_2-UA"/>.
               </Tests>
             </aactivity>
           </f-element>
@@ -1279,7 +1279,7 @@
       the claimed iterations of FDP_PDC_EXT.2.<h:br/><h:br/>
       Power events at a user authentication interface for one connected computer cannot impact power events
       at an analog audio output interface for another connected computer and vice versa, as per
-      FDP_APC_EXT.1. This evaluation activity is tested in Test 3‐AO in the Supporting Document for Audio
+      FDP_APC_EXT.1. This evaluation activity is tested in FDP_APC_EXT.1:3 in the PP-Module for Audio
       Output.<h:br/><h:br/>
       Both PP‐Modules modify the Base‐PP SFR FDP_APC_EXT.1 in ways that are specific to their respective
       peripheral types. The ST author should make two iterations of this SFR, FDP_APC_EXT.1/UA and
