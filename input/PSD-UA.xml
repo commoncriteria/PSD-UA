@@ -217,7 +217,7 @@
             threat by requiring session termination and power reset when switching to a different computer.</rationale>          
         </threat>
         
-        <threat name="T.RESIDUAL_DATA">
+        <threat name="T.RESIDUAL_LEAK">
           <from base="bpp-psd"/>
           <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
           <addressed-by>FDP_TER_EXT.3 (selection-based)</addressed-by><rationale>If the TOE has the capability of switching between multiple computers, this SFR mitigates the threat by performing a power reset of the authentication interface when the selected computer is switched.</rationale>
@@ -275,7 +275,7 @@
     <comment>Need to add URLs once created</comment>
     <base-pp id="bpp-psd" name="Peripheral Sharing Device" product="Device" short="PSD" version="5.0">
       <git>
-        <url>https://github.com/commoncriteria/PSD</url>
+        <url>https://github.com/commoncriteria/UA</url>
         <branch>main</branch>
       </git>
       <url>https://commoncriteria.github.io/PSD/main/PSD-release.html</url>
