@@ -48,7 +48,10 @@
       PSD products but more specific requirements and assurance activities apply depending on the types of
       physical and logical interfaces provided by a PSD. Therefore, additional Security Functional Requirements
       (SFRs) have been defined in this PP‐Module to define security functionality that is unique to a PSD that
-      provides the ability to support user authentication devices.      
+      provides the ability to support user authentication devices. <h:br/><h:br/>
+      This PP-Module is intended for use with the following Base-PPs:<h:ul>
+        <h:li>Peripheral Sharing Devices Protection Profile, Version 5.0</h:li>
+      </h:ul>      
     </section>
     
     <tech-terms>      
@@ -198,7 +201,8 @@
     <sec:Threats>      
       <threats>
         <threat name="T.DATA_LEAK">
-          <from base="bpp-psd"/>        
+          <from base="bpp-psd"/>
+          <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
           <addressed-by>FDP_FIL_EXT.1/UA</addressed-by><rationale>Mitigates this threat
             by filtering unauthorized devices that could facilitate data leakage.</rationale>
           <addressed-by>FDP_PDC_EXT.2/UA</addressed-by><rationale>Mitigates this threat by only
@@ -671,7 +675,11 @@
       
       <con-op-en/>
       
+      
       <con-mod ref="T.DATA_LEAK">
+        This threat is from the PSD PP, thus no conflict exists.
+      </con-mod>
+      <con-mod ref="T.RESIDUAL_LEAK">
         This threat is from the PSD PP, thus no conflict exists.
       </con-mod>
       <con-mod ref="T.SIGNAL_LEAK">
@@ -701,6 +709,11 @@
                 
         <ext-comp-def fam-id="FDP_TER_EXT" title="Session Termination">
           <fam-behavior>Components in this family define the requirements for termination of open sessions.</fam-behavior>
+        </ext-comp-def>
+        
+        <ext-comp-def title="User Authentication Isolation" fam-id="FDP_UAI_EXT">
+          <fam-behavior>Components in this family define the requirements for user authentication
+            isolation.</fam-behavior>
         </ext-comp-def>
         
         <f-component name="Device Filtering" cc-id="fdp_fil_ext.1" status="invisible">
