@@ -839,7 +839,7 @@ The following sections list Common Criteria and technology terms used in this do
     <h2 class="indexable" data-level="2" id="Threats">3.1 Threats</h2>      
       <dl><dt class="threat defined" id="T.DATA_LEAK">T.DATA_LEAK
 		(from PSD PP)
-	</dt><dd><span class="description">This threat from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> also applies to the functionality defined in this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.</span></dd><dt class="threat defined" id="T.RESIDUAL_DATA">T.RESIDUAL_DATA
+	</dt><dd><span class="description">This threat from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> also applies to the functionality defined in this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.</span></dd><dt class="threat defined" id="T.RESIDUAL_LEAK">T.RESIDUAL_LEAK
 		(from PSD PP)
 	</dt><dd><span class="description">This threat from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> also applies to the functionality defined in this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.</span></dd><dt class="threat defined" id="T.SIGNAL_LEAK">T.SIGNAL_LEAK
 		(from PSD PP)
@@ -1563,7 +1563,7 @@ The following sections list Common Criteria and technology terms used in this do
             threat by requiring session termination when an external authentication device is removed.</td></tr>
 <tr><td><a href="#FDP_TER_EXT.3">FDP_TER_EXT.3</a> (selection-based)</td><td>Mitigates this
             threat by requiring session termination and power reset when switching to a different computer.</td></tr>
-<tr class="major-row"><td rowspan="1"><a href="#T.RESIDUAL_DATA">T.RESIDUAL_​DATA</a>
+<tr class="major-row"><td rowspan="1"><a href="#T.RESIDUAL_LEAK">T.RESIDUAL_​LEAK</a>
 		(from <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)
 	</td><td><a href="#FDP_TER_EXT.3">FDP_TER_EXT.3</a> (selection-based)</td><td>If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> has the capability of switching between multiple computers, this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> mitigates the threat by performing a power reset of the authentication interface when the selected computer is switched.</td></tr>
 <tr class="major-row"><td rowspan="6"><a href="#T.SIGNAL_LEAK">T.SIGNAL_​LEAK</a>
@@ -1603,7 +1603,9 @@ The following sections list Common Criteria and technology terms used in this do
         no inconsistency between this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module and the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> with respect to the security problem definition.<table><caption><span class="ctr" data-myid="t-con-sec-prob-def" data-counter-type="ct-Table" id="t-con-sec-prob-def">Table <span class="counter">2</span></span>: Consistency of Security Problem Definition (<abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> base)
 		</caption><tr><th><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> Threat, Assumption, <abbr class="dyn-abbr"><a href="#abbr_OSP">OSP</a></abbr></th><th>Consistency Rationale</th></tr><tr><td><a href="#T.DATA_LEAK">T.DATA_LEAK</a></td><td>
         This threat is from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, thus no conflict exists.
-      </td></tr><tr><td><a href="#T.RESIDUAL_DATA">T.RESIDUAL_DATA</a></td><td></td></tr><tr><td><a href="#T.SIGNAL_LEAK">T.SIGNAL_LEAK</a></td><td>
+      </td></tr><tr><td><a href="#T.RESIDUAL_LEAK">T.RESIDUAL_LEAK</a></td><td>
+        This threat is from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, thus no conflict exists.
+      </td></tr><tr><td><a href="#T.SIGNAL_LEAK">T.SIGNAL_LEAK</a></td><td>
         This threat is from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, thus no conflict exists.
       </td></tr><tr><td><a href="#T.UNAUTHORIZED_DEVICES">T.UNAUTHORIZED_DEVICES</a></td><td>
         This threat is from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, thus no conflict exists.
