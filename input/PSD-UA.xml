@@ -135,6 +135,37 @@
       cases as defined by the PSD PP. The functionality defined by this PP‐Module is implementation-dependent
       (i.e. not tied to any specific use cases) and is related entirely to the specific security
       requirements related to security of the physical and logical interfaces for user authentication devices.
+    </section>
+    <section title="Test Environment for Evaluation Activities">
+      In order to ensure that the TOE demonstrates the functionality required by the EAs, it is necessary for
+      the evaluator to ensure that they have appropriate equipment to conduct the required testing. The
+      following is a list of the additional equipment needed to perform the testing described in this
+      Supplementary Document along with the purpose of each piece of equipment:<h:ul>
+        <h:li><h:b>Digital voltmeter</h:b> – Used to verify power flow to the user authentication device; must have a time
+          lapse feature</h:li>
+        <h:li><h:b>Switchable 5 volt power supply with a USB Type‐B plug</h:b> – Used to verify electrical signals are not
+          sent to non‐selected computers</h:li>        
+        <h:li><h:b>USB audio headset</h:b> – Used to verify the peripheral device connections</h:li>
+        <h:li><h:b>USB camera</h:b> – Used to verify the peripheral device connections</h:li>
+        <h:li><h:b>USB composite device evaluation board</h:b> – Used to verify the peripheral device connections</h:li>
+        <h:li><h:b>USB dummy load</h:b> – Used to verify electrical signals are not sent to non‐selected computers</h:li>        
+        <h:li><h:b>USB hub</h:b> – Used to verify the peripheral device connections</h:li>
+        <h:li><h:b>USB keyboard</h:b> – Used to verify the peripheral device connections and that the user authentication
+          function is isolated from other USB functions</h:li>        
+        <h:li><h:b>USB printer</h:b> – Used to verify the peripheral device connections</h:li>
+        <h:li><h:b>USB protocol analyzer software</h:b> – Used to verify the presence or absence of USB traffic</h:li>        
+        <h:li><h:b>USB sniffer</h:b> – Used to verify the presence or absence of USB traffic; may be used in place of the
+          USB analyzer</h:li>
+        <h:li><h:b>USB Type-C with DisplayPort as alternate function monitor</h:b> – Used to verify the user authentication
+          function is isolated from other USB functions</h:li>
+        <h:li><h:b>USB user authentication device with power LED</h:b> – Used to connect authenticate sessions</h:li>
+        <h:li><h:b>USB wireless LAN dongle</h:b> – Used to verify the peripheral device connections</h:li>        
+      </h:ul>      
+      When conducting testing, the evaluator must ensure that all device configuration combinations are
+      tested. For example, if testing a device with two peripheral device interfaces and eight computer
+      interfaces, the evaluator may use two connected computers, but must change the selected peripheral
+      several times to ensure that each of the possible device configuration permutations is tested. Some
+      equivalency arguments between ports are allowed.
     </section>    
   </sec:Introduction>
 
@@ -212,6 +243,8 @@
           <addressed-by>FDP_PDC_EXT.2/UA</addressed-by><rationale>Mitigates this threat by only
             allowing authorized device connections with authorized interface protocols.</rationale>
           <addressed-by>FDP_PDC_EXT.4/UA</addressed-by><rationale>Mitigates this threat by identifying whether the TSF supports (and therefore authorizes) an internal or external authentication device.</rationale>
+          <addressed-by>FPD_PWR_EXT.1</addressed-by><rationale>Mitigates this threat by preventing
+            connected computers from powering the TSF.</rationale>
         </threat>
       </threats> 
     </sec:Threats>
