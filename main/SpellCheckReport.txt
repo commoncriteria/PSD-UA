@@ -2,6 +2,7 @@ output/PSD-UA-release-linkable.html: CEM
 output/PSD-UA-release-linkable.html: DVM
 output/PSD-UA-release-linkable.html: Denylist
 output/PSD-UA-release-linkable.html: DisplayPort
+output/PSD-UA-release-linkable.html: FPD
 output/PSD-UA-release-linkable.html: NAK
 output/PSD-UA-release-linkable.html: SPD
 output/PSD-UA-release-linkable.html: V1
@@ -16,6 +17,8 @@ output/PSD-UA-release-linkable.html: denylists
 output/PSD-UA-release.html: Assessment’
 output/PSD-UA-release.html: CEM
 output/PSD-UA-release.html: Denylist
+output/PSD-UA-release.html: DisplayPort
+output/PSD-UA-release.html: FPD
 output/PSD-UA-release.html: SPD
 output/PSD-UA-release.html: V1
 output/PSD-UA-release.html: V5
@@ -47,6 +50,7 @@ output/PSD-UA.html: CEM
 output/PSD-UA.html: DVM
 output/PSD-UA.html: Denylist
 output/PSD-UA.html: DisplayPort
+output/PSD-UA.html: FPD
 output/PSD-UA.html: NAK
 output/PSD-UA.html: SPD
 output/PSD-UA.html: V1
