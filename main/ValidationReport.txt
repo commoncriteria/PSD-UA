@@ -1,1 +1,0 @@
-/home/runner/work/PSD-UA/PSD-UA/input/PSD-UA.xml:679:34: error: element "con-mod" not allowed yet; missing required element "con-op-en"
