@@ -673,7 +673,10 @@
       
       <!-- 6.1.3 Consistency of Objectives -->
       
-<!--      <con-op-en/>  -->
+	  <con-op-en>
+			This PP-Module defines no environmental security objectives because the TOE's security environment 
+			is identical to that specified by the PSD PP.
+	  </con-op-en>
       
       
       <con-mod ref="T.DATA_LEAK">
