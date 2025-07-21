@@ -673,7 +673,7 @@
       
       <!-- 6.1.3 Consistency of Objectives -->
       
-      <con-op-en/>
+<!--      <con-op-en/>  -->
       
       
       <con-mod ref="T.DATA_LEAK">
