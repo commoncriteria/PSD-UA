@@ -653,14 +653,14 @@ function showTarget(id){
       The scope of this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module is to describe the security functionality of a specific type of Peripheral Sharing
       Device (<abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr>) product in terms of [<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>] and to define functional and assurance requirements for such
       products. A <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> that claims conformance to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module must also claim conformance to the
-      Peripheral Sharing Device Protection Profile (<abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>), Version 4.0. This is because the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> is a generic
+      Protection Profile for Peripheral Sharing Devices (<abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>), Version 4.0. This is because the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> is a generic
       Protection Profile aimed at defining baseline requirements and assurance activities for a wide variety of
       <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> products but more specific requirements and assurance activities apply depending on the types of
       physical and logical interfaces provided by a <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr>. Therefore, additional Security Functional Requirements
       (<abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>) have been defined in this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module to define security functionality that is unique to a <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> that
       provides the ability to support user authentication devices. <br/><br/>
       This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> is intended for use with the following <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PPs</a></abbr>:<ul>
-        <li>Peripheral Sharing Devices Protection Profile, Version 5.0</li>
+        <li>Protection Profile for Peripheral Sharing Devices, Version 5.0</li>
       </ul>      
     
     
@@ -827,7 +827,7 @@ The following sections list Common Criteria and technology terms used in this do
 					any Protection Profile.
 				</dd><p></p><dd>The following <abbr class="dyn-abbr"><a href="#abbr_PP">PPs</a></abbr> and <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>-Modules are allowed to be specified in a 
 					<abbr class="dyn-abbr"><a href="#abbr_PP-Configuration">PP-Configuration</a></abbr> with this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>:
-					<ul><li>Protection Profile for Peripheral Sharing Device, Version 5.0</li><li><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> for Analog Audio Output Devices, Version 2.0</li><li><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> for Keyboard/Mouse Devices, Version 2.0</li><li><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> for Video/Display Devices, Version 2.0</li></ul></dd><dt>Package Claim</dt><p></p><dd>This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> is not conformant to any 
+					<ul><li>Protection Profile for Peripheral Sharing Devices, Version 5.0</li><li><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> for Analog Audio Output Devices, Version 2.0</li><li><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> for Keyboard/Mouse Devices, Version 2.0</li><li><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> for Video/Display Devices, Version 2.0</li></ul></dd><dt>Package Claim</dt><p></p><dd>This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> is not conformant to any 
 						Functional or Assurance Packages.</dd></dl>
   <h1 class="indexable" data-level="1" id="Security_Problem_Definition">3 Security Problem Definition</h1>    
     The security problem is described in terms of the threats that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is expected to address, assumptions
@@ -1104,7 +1104,7 @@ The following sections list Common Criteria and technology terms used in this do
               <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> through a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> hub by considering <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> hubs as unauthorized devices, even
               though <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> hubs are authorized devices. If “internal” is the only selection made
               in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>, then the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> does not have to support <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> as an authorized
-              interface unless the KM <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module is also claimed by the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author.
+              interface unless the KM Module is also claimed by the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author.
             </span></div></div></div>
           <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FDP_PDC_EXT.1">FDP_PDC_EXT.1</a></div>
               
@@ -1516,17 +1516,18 @@ The following sections list Common Criteria and technology terms used in this do
                       <li>Connect a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA computer interface.</li>
                       <li>Exercise the functions of the peripheral device type(s) selected in
                         FDP_PDC_EXT.3.1/UA in
-                        MOD_KM_V1.0 and verify that no traffic is sent and captured on the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer.</li><br/><br/>
+                        MOD_KM_V2.0 and verify that no traffic is sent and captured on the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer.</li><br/><br/>
                       [Conditional: Perform steps 4‐5 only if “external” is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>]
                       <li>Disconnect the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer and connect it to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA peripheral device interface.</li>
                       <li>Exercise the functions of the peripheral device type(s) selected in FDP_PDC_EXT.3.1/UA in
-                        MOD_KM_V1.0 and verify that no traffic is sent and captured on the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer.</li>
+                        MOD_KM_V2.0 and verify that no traffic is sent and captured on the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer.</li>
                     </ol>
                   </li>
                   <li class="test-"><a id="_t_12" class="defined" href="#_t_12">Test FDP_UAI_EXT.1:3</a>:
       
                     [Conditional: Perform this test only if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> supports video functionality and “<abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> Type‐C with
-                    DisplayPort as alternate function” is selected in FDP_PDC_EXT.3.1/VI in MOD_VI_V1.0.]<br/><br/>
+                    DisplayPort as alternate function” is selected in FDP_PDC_EXT.3.1/VI in
+                    MOD_VI_V2.0.]<br/><br/>
                     This test verifies that <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> video functionality is not sent to UA interfaces.<br/><br/>
                     Perform this test while the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is powered on and powered off.<br/><br/>
                     Perform steps 1-3 for each <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA computer interface and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> type-C video
@@ -2026,5 +2027,6 @@ The following sections list Common Criteria and technology terms used in this do
           </ul></span></td></tr><tr><td><span id="bibCEM">[<abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr>]</span></td><td><span class="description">Common Methodology for Information Technology Security Evaluation - <ul>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CEM2022R1.pdf">
                  Evaluation methodology</a>, CCMB-2022-11-006, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022.</li>
-          </ul></span></td></tr><tr><td><span id="base-pp">[PP_PSD_V5.0 or <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>]</span></td><td><span class="description"><a href="https://www.niap-ccevs.org/protectionprofiles/412"><span style="" class="comment " id="Comment-2-">Need to add URL once published.</span>Protection Profile for Peripheral Sharing Device, Version 5.0, 2025-07-11</a>
+          </ul></span></td></tr><tr><td><span id="base-pp">[PP_PSD_V5.0 or <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>]</span></td><td><span class="description"><a href="https://www.niap-ccevs.org/protectionprofiles/412"><span style="" class="comment " id="Comment-2-">Need to
+        add URL and adjust date once published.</span>Protection Profile for Peripheral Sharing Device, Version 5.0, 2025-07-11</a>
       </span></td></tr></table></body></html>

@@ -6,6 +6,7 @@ output/PSD-UA-release-linkable.html: FPD
 output/PSD-UA-release-linkable.html: NAK
 output/PSD-UA-release-linkable.html: SPD
 output/PSD-UA-release-linkable.html: V1
+output/PSD-UA-release-linkable.html: V2
 output/PSD-UA-release-linkable.html: V5
 output/PSD-UA-release-linkable.html: VDC
 output/PSD-UA-release-linkable.html: allowlisted
@@ -35,7 +36,7 @@ output/PSD-UA-sd.html: Denylist
 output/PSD-UA-sd.html: DisplayPort
 output/PSD-UA-sd.html: NAK
 output/PSD-UA-sd.html: SPD
-output/PSD-UA-sd.html: V1
+output/PSD-UA-sd.html: V2
 output/PSD-UA-sd.html: V5
 output/PSD-UA-sd.html: VDC
 output/PSD-UA-sd.html: allowlisted
@@ -54,6 +55,7 @@ output/PSD-UA.html: FPD
 output/PSD-UA.html: NAK
 output/PSD-UA.html: SPD
 output/PSD-UA.html: V1
+output/PSD-UA.html: V2
 output/PSD-UA.html: V5
 output/PSD-UA.html: VDC
 output/PSD-UA.html: allowlisted
