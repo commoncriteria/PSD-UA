@@ -291,7 +291,7 @@
         <sec:mod_fau title="Security Audit (FAU)">
           <f-component cc-id="fau_gen.1" name="Audit Data Generation">
             <consistency-rationale>
-              This SFR is not modified, but is changed from optional to selection-based. it shall be
+              This SFR is not modified, but is changed from optional to selection-based. It shall be
               included if "configurable" is selected in FDP_FIL_EXT.1.1/UA.
             </consistency-rationale>
             <description>
@@ -585,7 +585,7 @@
         <sec:mod_fia title="Identification and Authentication (FIA)">
           <f-component cc-id="fia_uau.2" name="User Authentication Before Any Action">            
             <consistency-rationale>
-              This SFR is not modified, but is changed from optional to selection-based. it shall be
+              This SFR is not modified, but is changed from optional to selection-based. It shall be
               included if "configurable" is selected in FDP_FIL_EXT.1.1/UA.
             </consistency-rationale>
             <description>There are no changes to the EAs for this SFR. MOD_UA_V1.0 changes this requirement from optional to
@@ -594,7 +594,7 @@
           
           <f-component cc-id="fia_uid.2" name="User Identification Before Any Action">
             <consistency-rationale>
-              This SFR is not modified, but is changed from optional to selection-based. it shall be
+              This SFR is not modified, but is changed from optional to selection-based. It shall be
               included if "configurable" is selected in FDP_FIL_EXT.1.1/UA.
             </consistency-rationale>            
             <description>There are no changes to the EAs for this SFR. MOD_UA_V1.0 changes this requirement from optional to
@@ -605,7 +605,7 @@
         <sec:mod_fmt title="Security Management (FMT)">
           <f-component cc-id="fmt_mof.1" name="Management of Security Functions Behavior"> 
             <consistency-rationale>
-              This SFR is not modified, but is changed from optional to selection-based. it shall be
+              This SFR is not modified, but is changed from optional to selection-based. It shall be
               included if "configurable" is selected in FDP_FIL_EXT.1.1/UA.
             </consistency-rationale>
         <description>This SFR is unchanged when the TOE claim includes this PP‐Module. However, this SFR is an optional
@@ -617,7 +617,7 @@
       </f-component>
           <f-component cc-id="fmt_smf.1" name="Specification of Management Functions">
             <consistency-rationale>
-              This SFR is not modified, but is changed from optional to selection-based. it shall be
+              This SFR is not modified, but is changed from optional to selection-based. It shall be
               included if "configurable" is selected in FDP_FIL_EXT.1.1/UA.
             </consistency-rationale>
             <description>
@@ -629,7 +629,7 @@
           </f-component>
           <f-component cc-id="fmt_smr.1" name="Security Roles">
             <consistency-rationale>
-              This SFR is not modified, but is changed from optional to selection-based. it shall be
+              This SFR is not modified, but is changed from optional to selection-based. It shall be
               included if "configurable" is selected in FDP_FIL_EXT.1.1/UA.
             </consistency-rationale>
             <description>
@@ -644,7 +644,7 @@
         <sec:mod_fpt title="Protection of the TSF (FPT)">
           <f-component cc-id="fpt_stm.1" name="Reliable Time Stamps">
             <consistency-rationale>
-              This SFR is not modified, but is changed from optional to selection-based. it shall be
+              This SFR is not modified, but is changed from optional to selection-based. It shall be
               included if "configurable" is selected in FDP_FIL_EXT.1.1/UA.
             </consistency-rationale>
             <description>
