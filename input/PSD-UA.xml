@@ -59,7 +59,7 @@
         List containing one or more device attributes that will cause the TOE to accept the
         devices having that attribute.
       </term>
-      <term abbr="CDF" full="Configurable Device Filtration (CDF)">
+      <term abbr="CDF" full="Configurable Device Filtration">
         PSD function that accepts or rejects peripheral devices based on field‐configurable
         parameters or allowlist and denylist.
       </term>
@@ -74,7 +74,7 @@
       <term full="External Authentication Device">
         An authentication device that has an exposed USB interface.
       </term>
-      <term abbr="FDF" full="Fixed Device Filtration (FDF)">
+      <term abbr="FDF" full="Fixed Device Filtration">
         PSD function that accepts or rejects peripheral devices based on fixed parameters
         loaded during production.
       </term>
@@ -146,7 +146,7 @@
       Supplementary Document along with the purpose of each piece of equipment:<h:ul>
         <h:li><h:b>Digital voltmeter</h:b> – Used to verify power flow to the user authentication device; must have a time
           lapse feature</h:li>
-        <h:li><h:b>Switchable 5 volt power supply with a USB Type‐B plug</h:b> – Used to verify electrical signals are not
+        <h:li><h:b>Switchable 5 volt power supply with any compatible USB plug</h:b> – Used to verify electrical signals are not
           sent to non‐selected computers</h:li>        
         <h:li><h:b>USB audio headset</h:b> – Used to verify the peripheral device connections</h:li>
         <h:li><h:b>USB camera</h:b> – Used to verify the peripheral device connections</h:li>
@@ -379,7 +379,7 @@
                     </test>
                     
                     <test id="APC_Test_2-UA">
-                      <h:b>Positive and Negative Keyboard and Mouse Data Flow Rules Testing</h:b><h:br/><h:br/>                      
+                      <h:b>Positive and Negative UA Data Flow Rules Testing</h:b><h:br/><h:br/>                      
                       This test verifies correct data flows of a UA device during different power states of the selected computer.
                       <h:ol>
                         <h:li>For each connected computer, connect a USB sniffer between it and the TOE or ensure the USB
@@ -583,14 +583,6 @@
         </sec:mod_fdp>
         
         <sec:mod_fia title="Identification and Authentication (FIA)">
-          <f-component cc-id="fia_uau.2" name="User Authentication Before Any Action">            
-            <consistency-rationale>
-              This SFR is not modified, but is changed from optional to selection-based. It shall be
-              included if "configurable" is selected in FDP_FIL_EXT.1.1/UA.
-            </consistency-rationale>
-            <description>There are no changes to the EAs for this SFR. MOD_UA_V1.0 changes this requirement from optional to
-            selection‐based, but otherwise makes no changes to it.</description>
-          </f-component>
           
           <f-component cc-id="fia_uid.2" name="User Identification Before Any Action">
             <consistency-rationale>
@@ -772,6 +764,10 @@
                 <selectable>fixed</selectable>
               </selectables> device filtering for [<h:i>user authentication device</h:i>] interfaces.
             </title>
+             <note role="application">
+              The ST author must make the selection for the device which the TOE has: configurable,
+              fixed, or both.
+            </note> 
           </f-element>
           
           <f-element id="fdp-fil-ext-1e2-ua">
@@ -782,12 +778,6 @@
                 <selectable>mouse</selectable>
               </selectables> [<h:i>user authentication device</h:i>] interfaces in peripheral device connections.
             </title>
-            
-            <note role="application">
-              The ST author must make the selection for the device which the TOE has: configurable,
-              fixed, or both.
-            </note>           
-            
           </f-element>
           
           <f-element id="fdp-fil-ext-1e3-ua">
