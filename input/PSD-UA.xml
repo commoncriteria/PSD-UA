@@ -584,6 +584,15 @@
         
         <sec:mod_fia title="Identification and Authentication (FIA)">
           
+          <f-component cc-id="fia_uau.2" name="User Authentication Before Any Action">            
+            <consistency-rationale>
+              This SFR is not modified, but is changed from optional to selection-based. It shall be
+              included if "configurable" is selected in FDP_FIL_EXT.1.1/UA.
+            </consistency-rationale>
+            <description>There are no changes to the EAs for this SFR. MOD_UA_V1.0 changes this requirement from optional to
+              selection‐based, but otherwise makes no changes to it.</description>
+          </f-component>
+          
           <f-component cc-id="fia_uid.2" name="User Identification Before Any Action">
             <consistency-rationale>
               This SFR is not modified, but is changed from optional to selection-based. It shall be
