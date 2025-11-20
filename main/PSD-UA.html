@@ -701,7 +701,7 @@ The following sections list Common Criteria and technology terms used in this do
         List containing one or more device attributes that will cause the TOE to accept the
         devices having that attribute.
       </td></tr>
-<tr><td><div id="Configurable_Device_Filtration_(CDF)">Configurable Device Filtration (CDF) (CDF)</div></td><td>
+<tr><td><div id="Configurable_Device_Filtration">Configurable Device Filtration (CDF)</div></td><td>
         PSD function that accepts or rejects peripheral devices based on field‐configurable
         parameters or allowlist and denylist.
       </td></tr>
@@ -716,7 +716,7 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><div id="External_Authentication_Device">External Authentication Device</div></td><td>
         An authentication device that has an exposed USB interface.
       </td></tr>
-<tr><td><div id="Fixed_Device_Filtration_(FDF)">Fixed Device Filtration (FDF) (FDF)</div></td><td>
+<tr><td><div id="Fixed_Device_Filtration">Fixed Device Filtration (FDF)</div></td><td>
         PSD function that accepts or rejects peripheral devices based on fixed parameters
         loaded during production.
       </td></tr>
@@ -783,7 +783,7 @@ The following sections list Common Criteria and technology terms used in this do
       Supplementary Document along with the purpose of each piece of equipment:<ul>
         <li><b>Digital voltmeter</b> – Used to verify power flow to the user authentication device; must have a time
           lapse feature</li>
-        <li><b>Switchable 5 volt power supply with a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> Type‐B plug</b> – Used to verify electrical signals are not
+        <li><b>Switchable 5 volt power supply with any compatible <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> plug</b> – Used to verify electrical signals are not
           sent to non‐selected computers</li>        
         <li><b><abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> audio headset</b> – Used to verify the peripheral device connections</li>
         <li><b><abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> camera</b> – Used to verify the peripheral device connections</li>
@@ -994,7 +994,7 @@ The following sections list Common Criteria and technology terms used in this do
                     
                     <li class="test-"><a id="APC_Test_2-UA" class="defined" href="#APC_Test_2-UA">Test FDP_APC_EXT.1:2</a>:
       
-                      <b>Positive and Negative Keyboard and Mouse Data Flow Rules Testing</b><br/><br/>                      
+                      <b>Positive and Negative UA Data Flow Rules Testing</b><br/><br/>                      
                       This test verifies correct data flows of a UA device during different power states of the selected computer.
                       <ol>
                         <li>For each connected computer, connect a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer between it and the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> or ensure the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
@@ -1186,11 +1186,6 @@ The following sections list Common Criteria and technology terms used in this do
         
         
         <h4 id="mod_fia" class="indexable" data-level="4">5.1.1.3 Identification and Authentication (FIA)</h4>
-          <div class="comp" id="FIA_UAU.2"><h4>FIA_UAU.2 User Authentication Before Any Action</h4>            
-            
-            <span class="description">There are no changes to the EAs for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. MOD_UA_V1.0 changes this requirement from optional to
-            selection‐based, but otherwise makes no changes to it.</span>
-          </div>
           
           <div class="comp" id="FIA_UID.2"><h4>FIA_UID.2 User Identification Before Any Action</h4>
                         
@@ -1262,17 +1257,17 @@ The following sections list Common Criteria and technology terms used in this do
           
           <div class="element"><div class="reqid" id="FDP_FIL_EXT.1.1/UA"><a href="#FDP_FIL_EXT.1.1/UA" class="abbr">FDP_FIL_EXT.1.1/UA</a></div><div class="reqdesc">
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall have [<b>selection</b>: <span class="selectable-content" id="_s_3">configurable</span>, <span class="selectable-content" id="_s_4">fixed</span>] device filtering for [<i>user authentication device</i>] interfaces.
-            </div></div>
-          
-          <div class="element"><div class="reqid" id="FDP_FIL_EXT.1.2/UA"><a href="#FDP_FIL_EXT.1.2/UA" class="abbr">FDP_FIL_EXT.1.2/UA</a></div><div class="reqdesc">
-              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall consider all [<i><abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> UA</i>] denylisted devices as
-              unauthorized devices for [<b>selection</b>: <span class="selectable-content" id="_s_5">keyboard</span>, <span class="selectable-content" id="_s_6">mouse</span>] [<i>user authentication device</i>] interfaces in peripheral device connections.
             <div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
               The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author must make the selection for the device which the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> has: configurable,
               fixed, or both.
             </span></div></div></div>
+          
+          <div class="element"><div class="reqid" id="FDP_FIL_EXT.1.2/UA"><a href="#FDP_FIL_EXT.1.2/UA" class="abbr">FDP_FIL_EXT.1.2/UA</a></div><div class="reqdesc">
+              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall consider all [<i><abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> UA</i>] denylisted devices as
+              unauthorized devices for [<b>selection</b>: <span class="selectable-content" id="_s_5">keyboard</span>, <span class="selectable-content" id="_s_6">mouse</span>] [<i>user authentication device</i>] interfaces in peripheral device connections.
+            </div></div>
           
           <div class="element"><div class="reqid" id="FDP_FIL_EXT.1.3/UA"><a href="#FDP_FIL_EXT.1.3/UA" class="abbr">FDP_FIL_EXT.1.3/UA</a></div><div class="reqdesc">
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall consider all [<i><abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> UA</i>] allowlisted devices as
@@ -1647,9 +1642,6 @@ The following sections list Common Criteria and technology terms used in this do
               This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is not modified by the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module. It adds evaluation activities that
               are specific to this technology type but does not alter anything that the
               Base‐<abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> requires.
-            </td></tr><tr><td><a href="#FIA_UAU.2">FIA_UAU.2</a></td><td>
-              This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is not modified, but is changed from optional to selection-based. It shall be
-              included if "configurable" is selected in <a href="#FDP_FIL_EXT.1.1/UA">FDP_FIL_EXT.1.1/UA</a>.
             </td></tr><tr><td><a href="#FIA_UID.2">FIA_UID.2</a></td><td>
               This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is not modified, but is changed from optional to selection-based. It shall be
               included if "configurable" is selected in <a href="#FDP_FIL_EXT.1.1/UA">FDP_FIL_EXT.1.1/UA</a>.
@@ -1991,11 +1983,11 @@ The following sections list Common Criteria and technology terms used in this do
   <h1 id="acronyms" class="indexable" data-level="A">Appendix G -  Acronyms</h1><table><caption><span class="ctr" data-myid="t-acronyms" data-counter-type="ct-Table" id="t-acronyms">Table <span class="counter">5</span></span>: Acronyms
 		</caption><tr class="header"><th>Acronym</th><th>Meaning</th></tr><tr><td><span class="term" id="abbr_Base-PP" data-plural="Base-PPs"><abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr></span></td><td><span id="long_abbr_Base-PP">Base Protection Profile</span></td></tr>
 <tr><td><span class="term" id="abbr_CC"><abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr></span></td><td><span id="long_abbr_CC">Common Criteria</span></td></tr>
-<tr><td><span class="term" id="abbr_CDF"><abbr class="dyn-abbr"><a href="#abbr_CDF">CDF</a></abbr></span></td><td><span id="long_abbr_CDF">Configurable Device Filtration (<abbr class="dyn-abbr"><a href="#abbr_CDF">CDF</a></abbr>)</span></td></tr>
+<tr><td><span class="term" id="abbr_CDF"><abbr class="dyn-abbr"><a href="#abbr_CDF">CDF</a></abbr></span></td><td><span id="long_abbr_CDF">Configurable Device Filtration</span></td></tr>
 <tr><td><span class="term" id="abbr_CEM"><abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr></span></td><td><span id="long_abbr_CEM">Common Evaluation Methodology</span></td></tr>
 <tr><td><span class="term" id="abbr_cPP" data-plural="cPPs"><abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr></span></td><td><span id="long_abbr_cPP">Collaborative Protection Profile</span></td></tr>
 <tr><td><span class="term" id="abbr_EP"><abbr class="dyn-abbr"><a href="#abbr_EP">EP</a></abbr></span></td><td><span id="long_abbr_EP">Extended Package</span></td></tr>
-<tr><td><span class="term" id="abbr_FDF"><abbr class="dyn-abbr"><a href="#abbr_FDF">FDF</a></abbr></span></td><td><span id="long_abbr_FDF">Fixed Device Filtration (<abbr class="dyn-abbr"><a href="#abbr_FDF">FDF</a></abbr>)</span></td></tr>
+<tr><td><span class="term" id="abbr_FDF"><abbr class="dyn-abbr"><a href="#abbr_FDF">FDF</a></abbr></span></td><td><span id="long_abbr_FDF">Fixed Device Filtration</span></td></tr>
 <tr><td><span class="term" id="abbr_FP"><abbr class="dyn-abbr"><a href="#abbr_FP">FP</a></abbr></span></td><td><span id="long_abbr_FP">Functional Package</span></td></tr>
 <tr><td><span class="term" id="abbr_OE"><abbr class="dyn-abbr"><a href="#abbr_OE">OE</a></abbr></span></td><td><span id="long_abbr_OE">Operational Environment</span></td></tr>
 <tr><td><span class="term" id="abbr_OSP"><abbr class="dyn-abbr"><a href="#abbr_OSP">OSP</a></abbr></span></td><td><span id="long_abbr_OSP">Organizational Security Policies</span></td></tr>
