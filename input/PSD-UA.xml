@@ -1358,7 +1358,12 @@
     </section>
   </appendix>    
   
-  <bibliography/>    
-    
   
+  <bibliography>    
+    <entry id="base-pp">
+      <tag>PP_PSD_V5.0 or PSD PP</tag>
+      <description>Protection Profile for Peripheral Sharing Device, Version 5.0
+      </description>    
+    </entry>
+  </bibliography>
 </Module>
