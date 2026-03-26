@@ -303,7 +303,7 @@
           </f-component>
         </sec:mod_fau>
         
-        <sec:mod_fdp title="Class FDP: User Data Protection (FDP)">
+        <sec:mod_fdp title="Class FDP: User Data Protection">
           <f-component cc-id="fdp_apc_ext.1" name="Active PSD Connections">
             <consistency-rationale>
               This SFR adds a requirement to block electrical signals that strengthens but
