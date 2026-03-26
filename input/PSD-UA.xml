@@ -288,7 +288,7 @@
       </sec-func-req-dir>
       
       <modified-sfrs>
-        <sec:mod_fau title="Security Audit (FAU)">
+        <sec:mod_fau title="Class FAU: Security Audit">
           <f-component cc-id="fau_gen.1" name="Audit Data Generation">
             <consistency-rationale>
               This SFR is not modified, but is changed from optional to selection-based. It shall be
@@ -303,7 +303,7 @@
           </f-component>
         </sec:mod_fau>
         
-        <sec:mod_fdp title="User Data Protection (FDP)">
+        <sec:mod_fdp title="Class FDP: User Data Protection (FDP)">
           <f-component cc-id="fdp_apc_ext.1" name="Active PSD Connections">
             <consistency-rationale>
               This SFR adds a requirement to block electrical signals that strengthens but
@@ -582,7 +582,7 @@
           </f-component>
         </sec:mod_fdp>
         
-        <sec:mod_fia title="Identification and Authentication (FIA)">
+        <sec:mod_fia title="Class FIA: Identification and Authentication">
           
           <f-component cc-id="fia_uau.2" name="User Authentication Before Any Action">            
             <consistency-rationale>
@@ -603,7 +603,7 @@
           </f-component>
         </sec:mod_fia>
         
-        <sec:mod_fmt title="Security Management (FMT)">
+        <sec:mod_fmt title="Class FMT: Security Management">
           <f-component cc-id="fmt_mof.1" name="Management of Security Functions Behavior"> 
             <consistency-rationale>
               This SFR is not modified, but is changed from optional to selection-based. It shall be
@@ -642,7 +642,7 @@
           </f-component>
           </sec:mod_fmt>
         
-        <sec:mod_fpt title="Protection of the TSF (FPT)">
+        <sec:mod_fpt title="Class FPT: Protection of the TSF">
           <f-component cc-id="fpt_stm.1" name="Reliable Time Stamps">
             <consistency-rationale>
               This SFR is not modified, but is changed from optional to selection-based. It shall be
@@ -695,7 +695,7 @@
     </base-pp>
     
     <man-sfrs>
-      <section title="User Data Protection (FDP)" id="FDP">
+      <section title="Class FDP: User Data Protection" id="FDP">
         <ext-comp-def fam-id="FDP_FIL_EXT" title="Device Filtering">
           <fam-behavior>Components in this family define the requirements for device filtering.</fam-behavior>
         </ext-comp-def>
@@ -1153,7 +1153,7 @@
     </man-sfrs>  
     <opt-sfrs/>
     <sel-sfrs>
-      <section title="User Data Protection (FDP)">
+      <section title="Class FDP: User Data Protection">
         
         <f-component cc-id="fdp_ter_ext.2" name="Session Termination of Removed Devices">
           <depends on-sel="externalauthdevice"/>
