@@ -1153,7 +1153,7 @@
     </man-sfrs>  
     <opt-sfrs/>
     <sel-sfrs>
-      <section title="Class FDP: User Data Protection">
+      <section title="Class FDP: User Data Protection" id="FDP">
         
         <f-component cc-id="fdp_ter_ext.2" name="Session Termination of Removed Devices">
           <depends on-sel="externalauthdevice"/>
