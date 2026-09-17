@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html><head><title>Supporting Document - 
-    PP-Module for User Authentication Device</title><style type="text/css">
+<html><head><title>Supporting Document - PP-Module for User Authentication Devices</title><style type="text/css">
     #toc a{
         display: block;
     }
@@ -272,8 +271,7 @@
     }    
    
    </style></head><body><div style="text-align: center; margin-left: auto; margin-right: auto;"><h1 class="title" style="page-break-before:auto;">Supporting Document<br/>
-        Mandatory Technical Document</h1><img src="images/niaplogo.png" alt="NIAP Logo"></img><hr width="50%"></hr><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><br/>
-    PP-Module for User Authentication Device<br/>
+        Mandatory Technical Document</h1><img src="images/niaplogo.png" alt="NIAP Logo"></img><hr width="50%"></hr><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><br/>PP-Module for User Authentication Devices<br/>
       Version: 2.0<br/>2025-07-11<br/><b>National Information Assurance Partnership</b></div><div class="foreword"><h1 style="text-align: center">Foreword</h1><p>This is a Supporting Document (SD), intended to complement the Common Criteria version 3
       and the associated Common Evaluation Methodology for
       Information Technology Security Evaluation.</p><p>SDs may be “Guidance Documents”, that highlight specific approaches 
@@ -293,20 +291,19 @@
       User Authentication Device
       Technical Community members, with representatives from industry, government 
       agencies, Common Criteria Test Laboratories, and members of academia.
-      </p></div><h1>Table of Contents</h1><div id="toc"><a href="#introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#scope" style="text-indent:10px">1.1<span>Technology Area and Scope of Supporting Document</span></a><a href="#structure" style="text-indent:10px">1.2<span>Structure of the Document</span></a><a href="#glossary" style="text-indent:10px">1.3<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.3.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.3.2<span>Technical Terms</span></a><a href="#sfr" style="text-indent:0px">2<span>Evaluation Activities for SFRs</span></a><a href="#aa-bpp-psd" style="text-indent:10px">2.1<span>Peripheral Sharing Devices</span></a><a href="#qq-sfrs-bpp-psd-Modified" style="text-indent:20px">2.1.1<span>Modified SFRs
-        </span></a><a href="#mod_fau" style="text-indent:30px">2.1.1.1<span>Class FAU: Security Audit</span></a><a href="#mod_fdp" style="text-indent:30px">2.1.1.2<span>Class FDP: User Data Protection</span></a><a href="#mod_fia" style="text-indent:30px">2.1.1.3<span>Class FIA: Identification and Authentication</span></a><a href="#mod_fmt" style="text-indent:30px">2.1.1.4<span>Class FMT: Security Management</span></a><a href="#mod_fpt" style="text-indent:30px">2.1.1.5<span>Class FPT: Protection of the TSF</span></a><a href="#man-sfrs" style="text-indent:10px">2.2<span>TOE SFR Evaluation Activities</span></a><a href="#FDP" style="text-indent:20px">2.2.1<span>Class FDP: User Data Protection</span></a><a href="#opt-sfrs" style="text-indent:10px">2.3<span>Evaluation Activities for Optional SFRs</span></a><a href="#sel-sfrs" style="text-indent:10px">2.4<span>Evaluation Activities for Selection-Based SFRs</span></a><a href="#FDP" style="text-indent:20px">2.4.1<span>Class FDP: User Data Protection</span></a><a href="#obj-sfrs" style="text-indent:10px">2.5<span>Evaluation Activities for Objective SFRs</span></a><a href="#impl-sfrs-" style="text-indent:10px">2.6<span>Evaluation Activities for Implementation-dependent SFRs</span></a><a href="#sar_aas" style="text-indent:0px">3<span>Evaluation Activities for SARs</span></a><a href="#sup-info" style="text-indent:0px">4<span>Required Supplementary Information</span></a><a href="#biblio" style="text-indent:0px">Appendix A - <span>References</span></a></div><h1 id="introduction" class="indexable" data-level="0">1 Introduction</h1><h2 id="scope" class="indexable" data-level="1">1.1 Technology Area and Scope of Supporting Document</h2><p>The scope of the 
-    PP-Module for User Authentication Device is
+      </p></div><h1>Table of Contents</h1><div id="toc"><a href="#introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#scope" style="text-indent:10px">1.1<span>Technology Area and Scope of Supporting Document</span></a><a href="#structure" style="text-indent:10px">1.2<span>Structure of the Document</span></a><a href="#glossary" style="text-indent:10px">1.3<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.3.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.3.2<span>Technical Terms</span></a><a href="#sfr" style="text-indent:0px">2<span>Evaluation Activities for SFRs</span></a><a href="#aa-PSD" style="text-indent:10px">2.1<span>Protection Profile for Peripheral Sharing Devices</span></a><a href="#qq-sfrs-PSD-Modified" style="text-indent:20px">2.1.1<span>Modified SFRs
+        </span></a><a href="#mod_fau" style="text-indent:30px">2.1.1.1<span>Class FAU: Security Audit</span></a><a href="#mod_fdp" style="text-indent:30px">2.1.1.2<span>Class FDP: User Data Protection</span></a><a href="#mod_fia" style="text-indent:30px">2.1.1.3<span>Class FIA: Identification and Authentication</span></a><a href="#mod_fmt" style="text-indent:30px">2.1.1.4<span>Class FMT: Security Management</span></a><a href="#mod_fpt" style="text-indent:30px">2.1.1.5<span>Class FPT: Protection of the TSF</span></a><a href="#man-sfrs" style="text-indent:10px">2.2<span>TOE SFR Evaluation Activities</span></a><a href="#FDP" style="text-indent:20px">2.2.1<span>Class FDP: User Data Protection</span></a><a href="#opt-sfrs" style="text-indent:10px">2.3<span>Evaluation Activities for Optional SFRs</span></a><a href="#sel-sfrs" style="text-indent:10px">2.4<span>Evaluation Activities for Selection-Based SFRs</span></a><a href="#FDP" style="text-indent:20px">2.4.1<span>Class FDP: User Data Protection</span></a><a href="#obj-sfrs" style="text-indent:10px">2.5<span>Evaluation Activities for Objective SFRs</span></a><a href="#impl-sfrs-" style="text-indent:10px">2.6<span>Evaluation Activities for Implementation-dependent SFRs</span></a><a href="#sar_aas" style="text-indent:0px">3<span>Evaluation Activities for SARs</span></a><a href="#sup-info" style="text-indent:0px">4<span>Required Supplementary Information</span></a><a href="#biblio" style="text-indent:0px">Appendix A - <span>References</span></a></div><h1 id="introduction" class="indexable" data-level="0">1 Introduction</h1><h2 id="scope" class="indexable" data-level="1">1.1 Technology Area and Scope of Supporting Document</h2><p>The scope of the PP-Module for User Authentication Devices is
     to describe the security functionality of 
     User Authentication Device
     products in terms of 
     [CC] and to define functional and assurance requirements for them.
 
     
-    The PP-Module is intended for use with the following Base-PP:
-        <ul><li>Peripheral Sharing Devices, version 5.0.</li></ul><br/>
+    The PP-Module is intended for use with the following base PP:
+        <ul><li></li></ul><br/>
     This SD is mandatory for evaluations of TOEs that claim conformance to a PP-Configuration that includes the PP-Module for :
     <ul><li>User Authentication Device, Version 2.0</li></ul>
-    As such it defines Evaluation Activities for the functionality described in the PP-Module as well as any impacts to the Evaluation Activities to the Base-PP(s) it modifies.
+    As such it defines Evaluation Activities for the functionality described in the PP-Module as well as any impacts to the Evaluation Activities to the base PP(s) it modifies.
     </p><p> 
 Although Evaluation Activities are defined mainly for the evaluators to follow, in general they also help developers to prepare for evaluation by identifying specific requirements for their TOE.
     The specific requirements in Evaluation Activities may in some cases clarify the meaning of Security
@@ -333,7 +330,7 @@ Although Evaluation Activities are defined mainly for the evaluators to follow, 
     </p><div class="no-link"><h2 id="glossary" class="indexable" data-level="1">1.3 Terms</h2>
 The following sections list Common Criteria and technology terms used in this document.
     <h3 id="cc-terms" class="indexable" data-level="2">1.3.1 Common Criteria Terms</h3><table><tr><td><div id="Assurance">Assurance</div></td><td>Grounds for confidence that a TOE meets the SFRs <span href="#bibCC">[CC]</span>.</td></tr>
-<tr><td><div id="Base_Protection_Profile">Base Protection Profile (Base-PP)</div></td><td>Protection Profile used as a basis to build a PP-Configuration.</td></tr>
+<tr><td><div id="Base_Protection_Profile">Base Protection Profile (base PP)</div></td><td>Protection Profile used as a basis to build a PP-Configuration.</td></tr>
 <tr><td><div id="Collaborative_Protection_Profile">Collaborative Protection Profile (cPP)</div></td><td>A Protection Profile developed by
     international technical communities and approved by multiple schemes.</td></tr>
 <tr><td><div id="Common_Criteria">Common Criteria (CC)</div></td><td>Common Criteria for Information Technology Security Evaluation (International Standard ISO/IEC 15408).</td></tr>
@@ -355,8 +352,8 @@ The following sections list Common Criteria and technology terms used in this do
 	    or functionality.</td></tr>
 <tr><td><div id="Operational_Environment">Operational Environment (OE)</div></td><td>Hardware and software that are outside the TOE boundary that support the TOE functionality and security policy.</td></tr>
 <tr><td><div id="Protection_Profile">Protection Profile (PP)</div></td><td>An implementation-independent set of security requirements for a category of products.</td></tr>
-<tr><td><div id="Protection_Profile_Configuration">Protection Profile Configuration (PP-Configuration)</div></td><td>A comprehensive set of security requirements for a product type that consists of at least one Base-PP and at least one PP-Module.</td></tr>
-<tr><td><div id="Protection_Profile_Module">Protection Profile Module (PP-Module)</div></td><td>An implementation-independent statement of security needs for a TOE type complementary to one or more Base-PPs.</td></tr>
+<tr><td><div id="Protection_Profile_Configuration">Protection Profile Configuration (PP-Configuration)</div></td><td>A comprehensive set of security requirements for a product type that consists of at least one base PP and at least one PP-Module.</td></tr>
+<tr><td><div id="Protection_Profile_Module">Protection Profile Module (PP-Module)</div></td><td>An implementation-independent statement of security needs for a TOE type complementary to one or more base PPs.</td></tr>
 <tr><td><div id="Security_Assurance_Requirement">Security Assurance Requirement (SAR)</div></td><td>A requirement to assure the security of the TOE.</td></tr>
 <tr><td><div id="Security_Functional_Requirement">Security Functional Requirement (SFR)</div></td><td>A requirement for security enforcement by the TOE.</td></tr>
 <tr><td><div id="Security_Target">Security Target (ST)</div></td><td>A set of implementation-dependent security requirements for a specific product.</td></tr>
@@ -430,13 +427,13 @@ The following sections list Common Criteria and technology terms used in this do
     In this case, the evaluator must ensure the developer’s tests are executing both 
     in the manner declared by the developer and as mandated by the EA. 
     The CEM workunits that are associated with the EAs specified in this section 
-    are: ATE_IND.1-3, ATE_IND.1-4, ATE_IND.1-5, ATE_IND.1-6, and ATE_IND.1-7.</p><h2 class="indexable" data-level="1" id="aa-bpp-psd">2.1 Peripheral Sharing Devices</h2>
+    are: ATE_IND.1-3, ATE_IND.1-4, ATE_IND.1-5, ATE_IND.1-6, and ATE_IND.1-7.</p><h2 class="indexable" data-level="1" id="aa-PSD">2.1 Protection Profile for Peripheral Sharing Devices</h2>
       The EAs defined in this section are only applicable in cases where the TOE claims conformance
-      to a PP-Configuration that includes the PSD PP.
-     <h3 class="indexable" data-level="2" id="qq-sfrs-bpp-psd-Modified">2.1.1 Modified SFRs
+      to a PP-Configuration that includes the PSD.
+     <h3 class="indexable" data-level="2" id="qq-sfrs-PSD-Modified">2.1.1 Modified SFRs
         </h3>
         <h3 class="indexable" data-level="3" id="mod_fau">2.1.1.1 Class FAU: Security Audit</h3><div class="comp" id=""><h4>FAU_GEN.1 Audit Data Generation</h4>
-	There is no change to the Base-PP EAs for this SFR when this PP-Module is claimed.
+	There is no change to the base PP EAs for this SFR when this PP-Module is claimed.
       <span class="activity_pane_body"></span></div>
         
         <h3 class="indexable" data-level="3" id="mod_fdp">2.1.1.2 Class FDP: User Data Protection</h3><div class="comp" id=""><h4>FDP_APC_EXT.1 Active PSD Connections</h4><span class="activity_pane_body"><div class="component-activity-header">FDP_APC_EXT.1</div>                
@@ -467,8 +464,7 @@ The following sections list Common Criteria and technology terms used in this do
                     authentication device with a power LED and a connected DVM to each PSD UA peripheral device
                     interface.</li>
                   </ul>
-                  <span class="testlist-"><ul><li class="test-"><a id="APC_Test_1-UA" class="defined" href="#APC_Test_1-UA">Test FDP_APC_EXT.1:1</a>:
-      
+                  <span class="testlist-"><ul><li class="test-"><a id="APC_Test_1-UA" class="defined" href="#APC_Test_1-UA">Test FDP_APC_EXT.1:1</a>
                       <b>UA Switching Methods</b><br/><br/>
                       [Conditional: Perform this test if “switching can be initiated only through express user action” is selected
                       in FDP_SWI_EXT.1.1 in the PSD PP]<br/><br/>
@@ -489,8 +485,7 @@ The following sections list Common Criteria and technology terms used in this do
                           of the user authentication device. [Conditional: if “external” is selected in FDP_PDC_EXT.4.1/UA, then:] verify
                           the UA device power LED is illuminated and the DVM reads between 4.75 and 5.25 VDC.</li>                                                
                       </ol>                      
-                    </li><li class="test-"><a id="APC_Test_2-UA" class="defined" href="#APC_Test_2-UA">Test FDP_APC_EXT.1:2</a>:
-      
+                    </li><li class="test-"><a id="APC_Test_2-UA" class="defined" href="#APC_Test_2-UA">Test FDP_APC_EXT.1:2</a>
                       <b>Positive and Negative UA Data Flow Rules Testing</b><br/><br/>                      
                       This test verifies correct data flows of a UA device during different power states of the selected computer.
                       <ol>
@@ -537,8 +532,7 @@ The following sections list Common Criteria and technology terms used in this do
                           no traffic is sent on the USB analyzer.</li>
                         <li>Verify the authentication session is terminated on the selected computer.</li>                        
                       </ol>
-                    </li><li class="test-"><a id="APC_Test_3-UA" class="defined" href="#APC_Test_3-UA">Test FDP_APC_EXT.1:3</a>:
-      
+                    </li><li class="test-"><a id="APC_Test_3-UA" class="defined" href="#APC_Test_3-UA">Test FDP_APC_EXT.1:3</a>
                       <b>No Electrical Flow between Computer Interfaces</b><br/><br/>
                       [Conditional: Perform this test if “switching can be initiated only through express user action” is selected
                       in FDP_SWI_EXT.1.1 in the PSD PP]<br/><br/>
@@ -560,8 +554,7 @@ The following sections list Common Criteria and technology terms used in this do
                           seconds to one cycle per second. Verify that no new USB traffic is captured on the non‐selected USB
                           analyzers.</li>                        
                       </ol>
-                    </li><li class="test-"><a id="APC_Test_4-UA" class="defined" href="#APC_Test_4-UA">Test FDP_APC_EXT.1:4</a>:
-      
+                    </li><li class="test-"><a id="APC_Test_4-UA" class="defined" href="#APC_Test_4-UA">Test FDP_APC_EXT.1:4</a>
                       <b>No Flow between Connected Computers over Time</b><br/><br/>
                       This test verifies that the TOE does not send data to different computers connected to the same interface
                       at different times. Repeat this test for each TOE UA computer port.<br/><br/>
@@ -595,8 +588,7 @@ The following sections list Common Criteria and technology terms used in this do
                 connections.
               </div></div><div class="ea"><div class="eacategory">Isolation</div>
 			There are no Isolation evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <span class="testlist-"><ul><li class="test-"><a id="_t_5" class="defined" href="#_t_5">Test FDP_PDC_EXT.1:1</a>:
-      
+                <span class="testlist-"><ul><li class="test-"><a id="_t_5" class="defined" href="#_t_5">Test FDP_PDC_EXT.1:1</a>
                     <b>Unauthorized Device Rejection</b><br/><br/>
                     [Conditional: Perform this test if “external” is selected in FDP_PDC_EXT.4.1/UA]<br/><br/>
                     This test verifies that the TOE ports properly reject unauthorized devices and devices with unauthorized
@@ -623,8 +615,7 @@ The following sections list Common Criteria and technology terms used in this do
                       <li>Repeat steps 1‐5 with a USB hub connected between the USB device and the USB sniffer and
                         observe that the results are identical.</li>
                     </ol>
-                  </li><li class="test-"><a id="_t_6" class="defined" href="#_t_6">Test FDP_PDC_EXT.1:2</a>:
-      
+                  </li><li class="test-"><a id="_t_6" class="defined" href="#_t_6">Test FDP_PDC_EXT.1:2</a>
                     <b>Authorized Device Acceptance</b><br/><br/>
                     [Conditional: Perform this test if “external” is selected in FDP_PDC_EXT.4.1/UA]<br/><br/>
                     This test verifies that the TOE ports do not reject authorized devices and devices with authorized protocols
@@ -649,21 +640,21 @@ The following sections list Common Criteria and technology terms used in this do
             </span></div>
         
         <h3 class="indexable" data-level="3" id="mod_fia">2.1.1.3 Class FIA: Identification and Authentication</h3><div class="comp" id=""><h4>FIA_UAU.2 User Authentication Before Any Action</h4>
-	There is no change to the Base-PP EAs for this SFR when this PP-Module is claimed.
+	There is no change to the base PP EAs for this SFR when this PP-Module is claimed.
       <span class="activity_pane_body"></span></div><div class="comp" id=""><h4>FIA_UID.2 User Identification Before Any Action</h4>
-	There is no change to the Base-PP EAs for this SFR when this PP-Module is claimed.
+	There is no change to the base PP EAs for this SFR when this PP-Module is claimed.
       <span class="activity_pane_body"></span></div>
         
         <h3 class="indexable" data-level="3" id="mod_fmt">2.1.1.4 Class FMT: Security Management</h3><div class="comp" id=""><h4>FMT_MOF.1 Management of Security Functions Behavior</h4>
-	There is no change to the Base-PP EAs for this SFR when this PP-Module is claimed.
+	There is no change to the base PP EAs for this SFR when this PP-Module is claimed.
       <span class="activity_pane_body"></span></div><div class="comp" id=""><h4>FMT_SMF.1 Specification of Management Functions</h4>
-	There is no change to the Base-PP EAs for this SFR when this PP-Module is claimed.
+	There is no change to the base PP EAs for this SFR when this PP-Module is claimed.
       <span class="activity_pane_body"></span></div><div class="comp" id=""><h4>FMT_SMR.1 Security Roles</h4>
-	There is no change to the Base-PP EAs for this SFR when this PP-Module is claimed.
+	There is no change to the base PP EAs for this SFR when this PP-Module is claimed.
       <span class="activity_pane_body"></span></div>
         
         <h3 class="indexable" data-level="3" id="mod_fpt">2.1.1.5 Class FPT: Protection of the TSF</h3><div class="comp" id=""><h4>FPT_STM.1 Reliable Time Stamps</h4>
-	There is no change to the Base-PP EAs for this SFR when this PP-Module is claimed.
+	There is no change to the base PP EAs for this SFR when this PP-Module is claimed.
       <span class="activity_pane_body"></span></div>
       <h2 class="indexable" data-level="1" id="man-sfrs">2.2 TOE SFR Evaluation Activities</h2><h2 class="indexable" data-level="2" id="FDP">2.2.1 Class FDP: User Data Protection</h2><div class="comp" id="FDP-FIL-EXT-1-UA"><h4>FDP_FIL_EXT.1/UA Device Filtering (User Authentication Devices)</h4><span class="activity_pane_body"><div class="component-activity-header">FDP_FIL_EXT.1/UA</div>
               Note: if “configurable” is selected in FDP_FIL_EXT.1.1/UA, the evaluator shall perform these activities in
@@ -689,12 +680,10 @@ The following sections list Common Criteria and technology terms used in this do
                 and denylisting UA peripheral devices and the administrative privileges required to do this.
               </div></div><div class="ea"><div class="eacategory">Isolation</div>
 			There are no Isolation evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <span class="testlist-"><ul><li class="test-"><a id="_t_7" class="defined" href="#_t_7">Test FDP_FIL_EXT.1/UA:1</a>:
-      
+                <span class="testlist-"><ul><li class="test-"><a id="_t_7" class="defined" href="#_t_7">Test FDP_FIL_EXT.1/UA:1</a>
                     Perform the test steps in FDP_PDC_EXT.1 with all devices on the PSD UA denylist and verify that they are
                     rejected as expected.
-                  </li><li class="test-"><a id="_t_8" class="defined" href="#_t_8">Test FDP_FIL_EXT.1/UA:2</a>:
-      
+                  </li><li class="test-"><a id="_t_8" class="defined" href="#_t_8">Test FDP_FIL_EXT.1/UA:2</a>
                     [Conditional: Perform this only if “configurable” is selected in FDP_FIL_EXT.1.1/UA]<br/><br/>
                     In the following steps the evaluator shall verify that allowlisted and denylisted devices are treated
                     correctly.<ol>
@@ -706,8 +695,7 @@ The following sections list Common Criteria and technology terms used in this do
                       <li>Attempt to configure the TOE UA CDF to both allowlist and denylist the device and verify that the
                         device is rejected through real‐time device console and USB sniffer capture.</li>                      
                     </ol>                  
-                  </li><li class="test-"><a id="_t_9" class="defined" href="#_t_9">Test FDP_FIL_EXT.1/UA:3</a>:
-      
+                  </li><li class="test-"><a id="_t_9" class="defined" href="#_t_9">Test FDP_FIL_EXT.1/UA:3</a>
                     [Conditional - Perform this only if "fixed" is selected in
                     FDP_FIL_EXT.1.1/UA and TOE does not include an internal UA device].<br/><br/>
                     The evaluator shall examine the PSD UA allowlist and verify that all devices are
@@ -777,8 +765,7 @@ The following sections list Common Criteria and technology terms used in this do
                 The evaluator shall examine the Isolation Documentation and verify that it describes how the TOE
                 enforces user authentication isolation from other TOE USB functions.
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <span class="testlist-"><ul><li class="test-"><a id="_t_10" class="defined" href="#_t_10">Test FDP_UAI_EXT.1:1</a>:
-      
+                <span class="testlist-"><ul><li class="test-"><a id="_t_10" class="defined" href="#_t_10">Test FDP_UAI_EXT.1:1</a>
                 This test verifies that UA functionality is not sent to other USB
                 interfaces.<br/><br/>
                 Perform this test for each computer interface.<ol>
@@ -798,8 +785,7 @@ The following sections list Common Criteria and technology terms used in this do
                   <li>For each TOE USB interface (peripheral device and computer) other than UA, connect the USB
                     sniffer and verify no traffic is captured.</li>                  
                 </ol>
-                  </li><li class="test-"><a id="_t_11" class="defined" href="#_t_11">Test FDP_UAI_EXT.1:2</a>:
-      
+                  </li><li class="test-"><a id="_t_11" class="defined" href="#_t_11">Test FDP_UAI_EXT.1:2</a>
                     [Conditional: Perform this test only if the TOE supports KM functionality.]<br/><br/>
                     This test verifies that KM functionality is not sent to UA interfaces.<br/><br/>
                     Perform this test while the TOE is powered on and powered off.<ol>
@@ -814,8 +800,7 @@ The following sections list Common Criteria and technology terms used in this do
                       <li>Exercise the functions of the peripheral device type(s) selected in FDP_PDC_EXT.3.1/UA in
                         MOD_KM_V2.0 and verify that no traffic is sent and captured on the USB sniffer.</li>
                     </ol>
-                  </li><li class="test-"><a id="_t_12" class="defined" href="#_t_12">Test FDP_UAI_EXT.1:3</a>:
-      
+                  </li><li class="test-"><a id="_t_12" class="defined" href="#_t_12">Test FDP_UAI_EXT.1:3</a>
                     [Conditional: Perform this test only if the TOE supports video functionality and “USB Type‐C with
                     DisplayPort as alternate function” is selected in FDP_PDC_EXT.3.1/VI in
                     MOD_VI_V2.0.]<br/><br/>
@@ -872,14 +857,14 @@ The following sections list Common Criteria and technology terms used in this do
                 Testing for this component is performed as part of <a href="#APC_Test_2-UA" class="dynref">Test FDP_APC_EXT.1:2</a>.
               </div></div></span></div><h2 class="indexable" data-level="1" id="obj-sfrs">2.5 Evaluation Activities for Objective SFRs</h2>The PP-Module does not define any objective requirements.<h2 class="indexable" data-level="1" id="impl-sfrs-">2.6 Evaluation Activities for Implementation-dependent SFRs</h2>The PP-Module does not define any implementation-dependent requirements.<h1 id="sar_aas" class="indexable" data-level="0">3 Evaluation Activities for SARs</h1><p>The PP-Module does not define any SARs beyond those defined within the
     
-	base PSD PP to which it must claim conformance.
+	base PSD to which it must claim conformance.
 	It is important to note that a TOE that is evaluated against the PP-Module is
-	inherently evaluated against this Base-PP as well. 
-	The PSD PP 
+	inherently evaluated against this base PP as well. 
+	The PSD 
         includes a number of Evaluation Activities associated with both SFRs and SARs.
 	Additionally, the PP-Module includes a number of SFR-based Evaluation Activities 
-	that similarly refine the SARs of the Base-PPs.
-	The evaluation laboratory will evaluate the TOE against the Base-PP
+	that similarly refine the SARs of the base PPs.
+	The evaluation laboratory will evaluate the TOE against the base PP
       
     and supplement that evaluation with the necessary SFRs that are taken from the PP-Module.
     </p><h1 id="sup-info" class="indexable" data-level="0">4 Required Supplementary Information</h1><p>This Supporting Document has no required supplementary information beyond the ST, operational

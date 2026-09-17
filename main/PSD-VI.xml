@@ -1,0 +1,1481 @@
+<Module xmlns="https://niap-ccevs.org/cc/v1" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:sec="https://niap-ccevs.org/cc/v1/section" name="Video/Display Devices" target-product="Video/Display Device" target-products="Video/Display Devices" boilerplate="yes" short="VI">  
+  <!-- <inline-comment color='green'>Initial PSD-VI Template on 5/8.</inline-comment> -->
+  <!-- <inline-comment color='blue' linebreak='yes'> Hello World QQQQ </inline-comment> -->
+ 
+  <PPReference>
+    <ReferenceTable>      
+      <PPTitle>PP-Module for Video/Display Devices</PPTitle>
+      <PPVersion>2.0</PPVersion>
+      <PPAuthor>National Information Assurance Partnership</PPAuthor>
+      <PPPubDate>2025-07-11</PPPubDate>
+      <Keywords>PSD, VI</Keywords>      
+    </ReferenceTable>
+  </PPReference>
+  
+  <RevisionHistory>
+    <entry>
+      <version>1.0</version>
+      <date>2019-07-19</date>
+      <subject>Initial draft</subject>
+    </entry>
+  </RevisionHistory>
+  <release-notes><h:h3>TDs Applied</h:h3></release-notes><RevisionHistory>
+    <entry>
+      <version>2.0</version>
+      <date>2025-07-11</date>
+      <subject>Updates for CC:2022</subject>
+    </entry>
+  </RevisionHistory>
+
+  <sec:Introduction>
+    <section title="Overview" id="ppoverview">
+      The scope of this Protection Profile (PP)‐Module is to describe the security functionality of a specific type
+      of Peripheral Sharing Device (PSD) product in terms of Common Criteria for Information Technology
+      Security Evaluation, version 3.1, Release 5 [CC] and to define functional and assurance requirements for
+      such products.<h:br/><h:br/>
+      A Target of Evaluation (TOE) claiming conformance to this PP‐Module must also claim conformance to the
+      Protection Profile for Peripheral Sharing Devices (PSD PP) as its Base‐PP. This is because the PSD PP is a generic
+      Protection Profile aimed at defining baseline requirements and Evaluation Activities for a wide variety of
+      PSD products, but additional specific requirements and Evaluation Activities apply depending on the types
+      of physical and logical interfaces a PSD includes. Therefore, this PP‐Module defines additional Security
+      Functional Requirements (SFRs) for security functionality unique to a PSD that includes the ability to
+      manipulate or assign video source inputs to video or display output devices. <h:br/><h:br/>
+      This PP-Module is intended for use with the following Base-PPs:<h:ul>
+        <h:li>Peripheral Sharing Devices Protection Profile, Version 5.0</h:li>
+      </h:ul>      
+    </section>
+    
+    <tech-terms>
+      <term full="Audio Return Channel" abbr="ARC"/>
+      <term full="Consumer Electronics Control" abbr="CEC"/>      
+      <term full="Combiner/Multi-viewer">
+        A PSD that can integrate video output from multiple connected systems and output
+        on a single display.
+      </term>
+      <term full="Display">
+        A device such as a monitor, projector, or touchscreen, which visually outputs user
+        data.
+      </term>
+      <term full="Digital Visual Interface (standard)" abbr="DVI"/>
+      <term full="Extended Display Identification Data" abbr="EDID"/>
+      
+      <term full="Guard">
+        A PSD function that requires multiple express user actions in order to switch between
+        Connected Computers using Connected Peripherals.
+      </term>
+      <term full="High-bandwidth Digital Content Protection" abbr="HDCP"/>
+      <term full="High-Definition Multimedia Interface (standard)" abbr="HDMI"/>
+      <term full="HDMI Ethernet and Audio Return Channel" abbr="HEAC"/>
+      <term full="HDMI Ethernet Channel" abbr="HEC"/>
+      <term full="Hot Plug Detect" abbr="HPD"/>
+      <term full="Keyboard, video, mouse" abbr="KVM"/>
+      <term full="Monitor Control Command Set" abbr="MCCS"/>
+      <term full="Organizational Security Policies" abbr="OSP"/>
+      <term full="Protection Profile" abbr="PP"/>
+      <term full="Peripheral Sharing Device" abbr="PSD"/>
+      <term full="Protocol">
+        A set of rules or procedures for transmitting data between electronic devices.
+      </term>
+      <term full="Security Assurance Requirement" abbr="SAR"/>
+      <term full="Security Functional Requirement" abbr="SFR"/>
+      <term full="Sub-Protocol">
+        A set of common commands flowing within a protocol.
+      </term>
+      <term full="TOE Computer Video Interface">
+        TOE port used to connect the computer or other video source.
+      </term>
+      <term full="Universal Serial Bus" abbr="USB"/>
+      <term full="USB Type-C">
+        Universal Serial Bus (USB) interface that supports DisplayPort video output as an
+        alternate mode.
+      </term>
+      <term full="Video Graphics Array (standard)" abbr="VGA"/>
+      <term full="Video Data">
+        Visual and audio information presented to the user through the display device
+      </term>
+      <term full="Video Wall">
+        A tiled or overlapping set of displays that allow the video output from a single
+        selected computer to be spanned across multiple individual displays.
+      </term>
+    </tech-terms>    
+    
+    <section title="Compliant Targets of Evaluation" id="TOEdescription">
+      A compliant Target of Evaluation (TOE) for this PP‐Module is any PSD that supports connectivity for one or
+      more video output peripheral devices. All of the requirements and restrictions that the PSD PP defines
+      apply to a conformant TOE. A conformant TOE satisfies all of the specific data protection/isolation
+      capabilities that the PSD PP requires. A conformant TOE embodies one or more of the use cases defined
+      in the PSD PP.<h:br/><h:br/>
+      A candidate TOE for claiming conformance to this PP‐Module is any TOE that conforms to the PSD PP and
+      includes video and display functionality as connected peripherals. In particular, a conformant TOE should
+      support one or more video sources and one or more video display devices.<h:br/><h:br/>
+      The TOE may include functionality for additional types of computer interfaces (e.g. keyboard/mouse, user
+      authentication device). When this is the case, the TOE will claim conformance to all applicable PP‐Modules
+      that extend the PSD PP.
+    </section>      
+      <section title="TOE Boundary" id="TOEboundary">
+        The TOE boundary is a PSD. Refer to the PSD PP for an outline of the TOE boundary. When claiming
+        conformance to this PP‐Module, the TOE boundary will include one or more each of peripheral and
+        computer interfaces that can be used to transmit video signals. It is permissible to use this PP‐Module in
+        conjunction with other PP‐Modules that also extend the PSD PP by claiming conformance to a
+        PP-Configuration
+        that includes all applicable PP‐Modules. In this manner, a single TOE may support multiple
+        different types of peripherals.<h:br/><h:br/>
+        A conformant TOE may simultaneously present the video output of one or more computers per peripheral
+        port; it is not required to be a one‐to‐one relationship. Section 1.5 defines specific methods of
+        supported video display.
+      </section>      
+    <section title="Use Cases" id="usecases">
+      This PP‐Module does not define additional use cases beyond what the PSD PP defines. The TOE should
+      embody one or more use cases from the PSD PP. This PP‐Module’s functionality defines
+      implementation-independent
+      functionality (i.e., not tied to any specific use cases) and relates entirely to the specific
+      security requirements related to security of the physical and logical interfaces for assigning video and
+      display devices. Specifically, the TOE may perform any of the following functions:<h:ul>
+        <h:li>Display PSD – Output from one or more connected computers to be presented on a single display</h:li>
+        <h:li>Keyboard, video, and mouse (KVM) PSD – Output from one or more connected computers to be
+      presented on one or more displays along with keyboard and mouse user interaction—in this case,
+      the TOE boundary would also include the requirements of the PP‐Module for Keyboard/Mouse
+      (KM) Input Devices</h:li>
+        <h:li>Combiner/Multi‐viewer – Output from multiple computers to be shown simultaneously on one or
+      more displays along with keyboard and mouse user interaction</h:li>
+        <h:li>Video Wall – Output from one or more computers to be shown across multiple displays</h:li>
+    </h:ul>
+    </section>    
+    <section title="Test Environment for Evaluation Activities">
+      In order to ensure that the TOE demonstrates the functionality required by the EAs, it is necessary for
+      the evaluator to ensure that they have appropriate equipment to conduct the required testing. In
+      addition to the equipment that is relevant for testing any PSD as defined in the PSD PP, the following
+      additional equipment should be used in testing:<h:ul>
+        <h:li>Display devices encompassing all display protocols the TOE supports (Video Graphics Array (VGA),
+          High‐Definition Multimedia Interface (HDMI), Digital Visual Interface (DVI)‐I/D, DisplayPort, and
+          USB Type‐C with DisplayPort as alternate function)</h:li>
+        <h:li>Oscilloscope capable of sampling at least one single‐ended signal or one differential signal at 400
+          MHz or above</h:li>
+        <h:li>3.3v power supply</h:li>
+        <h:li>100 Ohm resistor</h:li>
+        <h:li>Multi‐meter capable of measuring voltage in millivolts and resistance above 2 Mega‐Ohms</h:li>
+        <h:li>Monitor Control Command Set (MCCS) Control Console Software</h:li>
+        <h:li>I2C Programmer</h:li>
+        <h:li>Conditional – If the TOE supports DisplayPort video interfaces:<h:ul>
+          <h:li>DisplayPort AUX Channel Analyzer</h:li>
+          <h:li>DisplayPort Source generator device or Peripheral Component Interconnect (PCI) card</h:li>
+        </h:ul></h:li>
+        <h:li>Conditional – If the TOE supports HDMI or DVI video interfaces:<h:ul>
+          <h:li>HDMI sink test device</h:li>
+          <h:li>HDMI source generator or PCI card</h:li>
+        </h:ul></h:li>        
+        <h:li>Conditional – If the TOE supports VGA video interfaces:<h:ul>
+          <h:li>VGA sink test device</h:li>
+          <h:li>VGA source generator or PCI card</h:li>
+        </h:ul></h:li>        
+        <h:li>Conditional – If the TOE supports USB‐Type C with DisplayPort as alternate function video
+          interfaces<h:ul>
+            <h:li>USB sniffer</h:li>
+            <h:li>UB source generator or PCI card</h:li>
+          </h:ul></h:li>        
+        <h:li>Optional: Spectrum analyzer with single‐ended and differential probes. Spectrum analyzer
+          bandwidth should be at least 20% higher than the highest video bandwidth the TOE supports</h:li>
+        <h:li>Optional: Video breakout device compatible with TOE display interfaces</h:li>            
+      </h:ul>      
+      When conducting testing, each TOE interface must be tested but not all interfaces must be tested
+      simultaneously. For example, if testing a 16‐port device, the evaluator may use four connected computers,
+      but must change the connected ports several times to ensure all TOE display interfaces and all TOE
+      computer video interfaces are tested. Some equivalency arguments between ports are allowed.
+    </section> 
+  </sec:Introduction>
+
+  <section title="Conformance Claims" id="sec-cclaims" boilerplate="no">
+    <CClaimsInfo cc-version="cc-2022r1" cc-approach="direct-rationale" display="yes">
+      <cc-st-conf>exact</cc-st-conf>
+      <cc-pt2-conf>extended</cc-pt2-conf>           
+      <cc-pt3-conf>conformant</cc-pt3-conf> 
+      <cc-pp-conf/>
+      <cc-pp-config-with>
+        <PP-cc-ref>Protection Profile for Peripheral Sharing Devices, Version 5.0</PP-cc-ref>
+        <Mod-cc-ref>PP-Module for Analog Audio Output Devices, Version 2.0</Mod-cc-ref>
+        <Mod-cc-ref>PP-Module for Keyboard/Mouse Devices, Version 2.0</Mod-cc-ref>
+        <Mod-cc-ref>PP-Module for User Authentication Devices, Version 2.0</Mod-cc-ref>
+      </cc-pp-config-with>        
+      <cc-pkg-claim/>
+    </CClaimsInfo>
+  </section>
+  
+  <sec:Security_Problem_Definition>    
+    This PP‐Module describes the security problem in terms of the threats the TOE is expected to address,
+    assumptions about its operational environment, and any organizational security policies (OSPs) that the
+    TOE is expected to enforce.<h:br/><h:br/>
+    Note that as a PP‐Module of the PSD PP, all threats, assumptions, and OSPs defined in the PSD PP also
+    apply to the TOE, its usage and deployment, and its operational environment unless otherwise specified.
+    
+    <sec:Threats>      
+      <threats>
+        <threat name="T.DATA_LEAK">
+          <from base="bpp-psd"/>
+          <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
+          <addressed-by>FDP_PDC_EXT.2/VI</addressed-by><rationale>Mitigates this threat by only
+            allowing authorized device connections with authorized interface protocols.</rationale>
+          <addressed-by>FDP_SPR_EXT.1/DP (selection-based)</addressed-by><rationale>Mitigates this
+            threat by ensuring the TSF applies the specified rules for the DP protocol.</rationale>
+          <addressed-by>FDP_SPR_EXT.1/DVID (selection-based)</addressed-by><rationale>Mitigates
+            this threat by ensuring the TSF applies the specified rules for the DVI-D protocol.</rationale>
+          <addressed-by>FDP_SPR_EXT.1/DVII (selection-based)</addressed-by><rationale>Mitigates
+            this threat by ensuring the TSF applies the specified rules for the DVI-I protocol.</rationale>
+          <addressed-by>FDP_SPR_EXT.1/HDMI (selection-based)</addressed-by><rationale>Mitigates this
+            threat by ensuring the TSF applies the specified rules for the HDMI protocol.</rationale>
+          <addressed-by>FDP_SPR_EXT.1/USBC (selection-based)</addressed-by><rationale>Mitigates this
+            threat by ensuring the TSF applies the specified rules for the USB protocol.</rationale>
+          <addressed-by>FDP_SPR_EXT.1/VGA (selection-based)</addressed-by><rationale>Mitigates this
+            threat by ensuring the TSF applies the specified rules for the VGA protocol.</rationale>
+          <addressed-by>FDP_UDF_EXT.1/VI</addressed-by><rationale>Mitigates this threat by ensuring
+            video data transits unidirectionally between interfaces.</rationale>
+        </threat>
+        <threat name="T.RESIDUAL_LEAK">
+          <from base="bpp-psd"/>
+          <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
+          <addressed-by>FDP_PDC_EXT.2/VI</addressed-by><rationale>Mitigates this threat by only
+            allowing authorized device connections with authorized interface protocols.</rationale>
+          <addressed-by>FDP_SPR_EXT.1/DP (selection-based)</addressed-by><rationale>Mitigates this
+            threat by ensuring the TSF applies the specified rules for the DP protocol.</rationale>
+          <addressed-by>FDP_SPR_EXT.1/DVID (selection-based)</addressed-by><rationale>Mitigates
+            this threat by ensuring the TSF applies the specified rules for the DVI-D protocol.</rationale>
+          <addressed-by>FDP_SPR_EXT.1/DVII (selection-based)</addressed-by><rationale>Mitigates
+            this threat by ensuring the TSF applies the specified rules for the DVI-I protocol.</rationale>
+          <addressed-by>FDP_SPR_EXT.1/HDMI (selection-based)</addressed-by><rationale>Mitigates this
+            threat by ensuring the TSF applies the specified rules for the HDMI protocol.</rationale>
+          <addressed-by>FDP_SPR_EXT.1/USBC (selection-based)</addressed-by><rationale>Mitigates this
+            threat by ensuring the TSF applies the specified rules for the USB protocol.</rationale>
+          <addressed-by>FDP_SPR_EXT.1/VGA (selection-based)</addressed-by><rationale>Mitigates this
+            threat by ensuring the TSF applies the specified rules for the VGA protocol.</rationale>          
+        </threat>
+        <threat name="T.SIGNAL_LEAK">
+          <from base="bpp-psd"/>
+          <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
+          <addressed-by>FDP_PDC_EXT.2/VI</addressed-by><rationale>Mitigates this threat by only
+            allowing authorized device connections with authorized interface protocols.</rationale>
+          <addressed-by>FDP_SPR_EXT.1/DP (selection-based)</addressed-by><rationale>Mitigates this
+            threat by ensuring the TSF applies the specified rules for the DP protocol.</rationale>
+          <addressed-by>FDP_SPR_EXT.1/DVID (selection-based)</addressed-by><rationale>Mitigates
+            this threat by ensuring the TSF applies the specified rules for the DVI-D protocol.</rationale>
+          <addressed-by>FDP_SPR_EXT.1/DVII (selection-based)</addressed-by><rationale>Mitigates
+            this threat by ensuring the TSF applies the specified rules for the DVI-I protocol.</rationale>
+          <addressed-by>FDP_SPR_EXT.1/HDMI (selection-based)</addressed-by><rationale>Mitigates this
+            threat by ensuring the TSF applies the specified rules for the HDMI protocol.</rationale>
+          <addressed-by>FDP_SPR_EXT.1/USBC (selection-based)</addressed-by><rationale>Mitigates this
+            threat by ensuring the TSF applies the specified rules for the USB protocol.</rationale>
+          <addressed-by>FDP_SPR_EXT.1/VGA (selection-based)</addressed-by><rationale>Mitigates this
+            threat by ensuring the TSF applies the specified rules for the VGA protocol.</rationale>
+          <addressed-by>FDP_UDF_EXT.1/VI</addressed-by><rationale>Mitigates this threat by ensuring
+            video data transits unidirectionally between interfaces.</rationale>
+        </threat>
+        <threat name="T.UNAUTHORIZED_DEVICES">
+          <from base="bpp-psd"/>
+          <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
+          <addressed-by>FDP_PDC_EXT.2/VI</addressed-by><rationale>Mitigates this threat by only
+            allowing authorized device connections with authorized interface protocols.</rationale>
+          <addressed-by>FDP_PDC_EXT.3/VI</addressed-by><rationale>Mitigates this
+            threat by applying rules to supported protocols.</rationale>
+          <addressed-by>FDP_IPC_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this
+            threat by converting protocols internally.</rationale>
+          <addressed-by>FDP_SPR_EXT.1/DP (selection-based)</addressed-by><rationale>Mitigates this
+            threat by ensuring the TSF applies the specified rules for the DP protocol.</rationale>
+          <addressed-by>FDP_SPR_EXT.1/DVID (selection-based)</addressed-by><rationale>Mitigates
+            this threat by ensuring the TSF applies the specified rules for the DVI-D protocol.</rationale>
+          <addressed-by>FDP_SPR_EXT.1/DVII (selection-based)</addressed-by><rationale>Mitigates
+            this threat by ensuring the TSF applies the specified rules for the DVI-I protocol.</rationale>
+          <addressed-by>FDP_SPR_EXT.1/HDMI (selection-based)</addressed-by><rationale>Mitigates this
+            threat by ensuring the TSF applies the specified rules for the HDMI protocol.</rationale>
+          <addressed-by>FDP_SPR_EXT.1/USBC (selection-based)</addressed-by><rationale>Mitigates this
+            threat by ensuring the TSF applies the specified rules for the USB protocol.</rationale>
+          <addressed-by>FDP_SPR_EXT.1/VGA (selection-based)</addressed-by><rationale>Mitigates this
+            threat by ensuring the TSF applies the specified rules for the VGA protocol.</rationale>
+          <addressed-by>FDP_UDF_EXT.1/VI</addressed-by><rationale>Mitigates this threat by ensuring
+            video data transits unidirectionally between interfaces.</rationale>
+        </threat>
+      <threat name="T.UNINTENDED_USE">
+        <from base="bpp-psd"/>
+        <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
+        <addressed-by>FDP_CDS_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat
+          by specifying whether multiple displays are supported as a trigger for the TOE needing to apply on-screen display labeling for video feeds.</rationale>
+        
+      </threat>
+      </threats> 
+    </sec:Threats>
+    
+    <sec:Assumptions>
+      This PP‐Module defines the following additional assumption beyond those defined in the PSD PP
+      <assumptions>
+        <assumption name="A.NO_SPECIAL_ANALOG_CAPABILITIES">
+          <description>
+            The computers connected to the TOE are not equipped with special analog data collection cards or
+            peripherals such as analog to digital interface, high performance audio interface, digital signal
+            processing function, or analog video capture function.       
+          </description>
+          
+          <consistency-rationale>
+            If administrators in the TOE’s operational environment take care to ensure that computers with special
+            analog data collection interfaces are not connected to the TOE, then the assumption that such components
+            are not present is satisfied.
+          </consistency-rationale>
+          
+          <objective-refer ref="OE.NO_SPECIAL_ANALOG_CAPABILITIES">
+            <rationale>If administrators in the TOE’s operational environment take care to ensure that computers with special
+              analog data collection interfaces are not connected to the TOE, then the assumption that such components
+              are not present is satisfied.</rationale>
+          </objective-refer>
+        </assumption>
+      </assumptions>
+    </sec:Assumptions>
+      
+    <sec:Organizational_Security_Policies>
+      <OSPs/>
+    </sec:Organizational_Security_Policies>
+  </sec:Security_Problem_Definition>
+
+  <sec:Security_Objectives>
+    
+    <sec:Security_Objectives_for_the_Operational_Environment>
+      <SOEs>
+        <SOE name="OE.NO_SPECIAL_ANALOG_CAPABILITIES">
+          <description>The operational environment will not have special analog data collection cards or peripherals such as
+            analog to digital interface, high performance audio interface, or a component with digital signal
+            processing or analog video capture functions.</description>          
+        </SOE>
+      </SOEs>
+    </sec:Security_Objectives_for_the_Operational_Environment>
+<sec:Security_Objectives_Rationale/>    
+    
+  </sec:Security_Objectives>
+
+  <sec:Security_Requirements>
+    <comment>Need to add URLs once created</comment>
+    <base-pp id="bpp-psd" name="Peripheral Sharing Devices" product="Device" short="PSD" version="5.0">
+      <git>
+        <url>https://github.com/commoncriteria/VI</url>
+        <branch>main</branch>
+      </git>
+      <url>https://commoncriteria.github.io/PSD/main/PSD-release.html</url>
+      
+      <sec-func-req-dir>
+        When a TOE claims conformance to this PP‐Module, it is necessary to make claims in the PSD PP
+        requirements consistent with the functionality in the PP‐Module. The following sections describe any PSD
+        PP claims that must be made and any additional evaluation activities that must be performed when the
+        TOE boundary includes the functionality this PP‐Module describes.
+      </sec-func-req-dir>
+      
+      <modified-sfrs>
+        
+        <sec:mod_fdp title="Class FDP: User Data Protection">
+          <f-component cc-id="fdp_apc_ext.1" name="Active PSD Connections">
+            <consistency-rationale>
+              This SFR adds a requirement to block electrical signals that strengthens but
+              does not conflict with the requirement in the PSD PP.
+            </consistency-rationale>
+            <f-element id="fdp-apc-ext-1e1">
+              <title> The TSF shall route user data only <h:s>to or</h:s> from the interfaces selected by the
+                user. 
+              </title>
+            </f-element>
+            <f-element id="fdp-apc-ext-1e2">
+              <title>The TSF shall ensure that no data <h:b>or electrical signals</h:b> flow between connected computers whether the
+                TOE is powered on or powered off.
+              </title>
+              <note role="application">
+                This SFR is refined from the PSD PP for this PP‐Module to include further
+                restrictions for electrical signals. It is unlikely that this element can be satisfied
+                unless video/display peripheral device interfaces are electrically and logically
+                isolated from the connected computer interfaces or through other methods.<h:br/><h:br/>
+                If the TOE claims conformance to multiple PP‐Modules, each PP‐Module modifies
+                this SFR in a different manner for the interfaces that are unique to that module. In
+                this case, the ST author should reference this modification of the SFR as
+                “FDP_APC_EXT.1/VI” for uniqueness. Note that all elements of FDP_APC_EXT.1
+                must be included in this iteration, not just the ones that are modified by this PP-Module.                
+              </note>        
+              
+              <aactivity>         
+                <TSS/>                  
+                <Guidance/>
+                <CustomEA name="Isolation">
+                  The evaluator shall examine the Isolation Document and verify it describes how the TOE ensures that no
+                  data or electrical signals flow between connected computers in both cases (powered on, powered off).
+                </CustomEA>
+                <Tests>                  
+                  The evaluator shall perform the following tests.
+                  
+                  <testlist>
+                    <test id="APC_Test_1-VI">
+                      <h:b>Video Source Selection and Identification, TOE Off and Failure States</h:b><h:br/><h:br/>
+                      This test verifies the TOE switching function operates properly and will stop the video output display when
+                      in an OFF or FAILURE state.<h:ol>
+                        <h:li>Configure the TOE and the Operational Environment in accordance with the operational guidance.</h:li>
+                        <h:li>Play a different video with embedded audio on a number of computers for each TOE computer
+                          video interface.</h:li>
+                        <h:li>Connect each computer to a TOE computer video interface.</h:li>
+                        <h:li>Connect a display to each TOE display interface.</h:li>
+                        <h:li>Turn on the TOE.</h:li>
+                        <h:li>For each connected computer, ensure it is selected and verify that the video and its accompanying
+                          audio from the selected computer(s) are received on the proper display(s).</h:li>
+                        <h:li>[Conditional: if the TOE has Combiner functionality to display multiple video feeds on a single monitor] verify that
+                          video generated by the TOE has clear identification marking or text to properly identify the source
+                          computer shown.</h:li>
+                        <h:li>Turn off the TOE and verify that no video appears on any connected display.</h:li>
+                        <h:li>Power on the TOE and cause the TOE to enter a failure state. Verify that the TOE provides the user
+                          with a visual indication of failure and that no usable video appears on any connected display.</h:li>
+                        <h:li>Repeat steps 3 to 9 for each unique display protocol and port type supported by the TOE.</h:li>
+                       </h:ol>                  
+                  </test>
+                    <test id="APC_Test_2-VI">
+                      <h:b>Computer Video Interface Isolation</h:b><h:br/><h:br/>
+                      [Conditional: perform this test if “switching can be initiated only through express user action” is selected
+                      in FDP_SWI_EXT.1.1 in the PSD PP.]<h:br/><h:br/>
+                      This test verifies that the TOE does not transfer data to any non‐selected computer video interface.<h:ol>
+                        <h:li>Configure the TOE and the Operational Environment in accordance with the operational guidance.
+                          Connect only the first computer interface cable to one computer. Turn on the TOE.</h:li>
+                        <h:li>Switch the TOE primary display to computer #1.</h:li>
+                        <h:li>Observe the primary display to verify that the selected computer is the one that is shown.</h:li>
+                        <h:li>Remove the non‐selected computer video interface cables from the TOE and connect the
+                          oscilloscope probe to the TOE #2 computer video interface to verify that no SYNC signal is passed through
+                          the TOE. Based on the connection interface protocol, this is performed as
+                          follows.<h:ol>
+                            <h:li>Video Graphics Array (VGA) – single ended probe on pins 13 and then 14</h:li>
+                            <h:li>High‐Definition Multimedia Interface (HDMI) – connect pin 19 to a 3.3V power supply via a 100
+                              Ohm resistor to provide Hot Plug Detect (HPD) signal; Check for signals ‐ differential probe
+                              between pins 10 (+) and 12 (‐)</h:li>
+                            <h:li>Digital Visual Interface (DVI)‐I – connect pin 16 to a 3.3V power supply via a 100 Ohm resistor to
+                              provide HPD signal; Check for signals ‐ single ended probe on pins 8 and C4. Differential probe
+                              between pins 23 (+) and 24 (‐)</h:li>
+                            <h:li>DVI‐D ‐ connect pin 16 to a 3.3V power supply via a 100 Ohm resistor to provide HPD signal; Check
+                              for signals ‐ Differential probe between pins 23 (+) and 24 (‐)</h:li>
+                            <h:li>DisplayPort ‐ connect pin 18 to a 3.3V power supply via 100 Ohm resistor to provide HPD signal;
+                              Check for signals ‐ Differential probe between pins 3 (‐) and 1 (+) and between 10 (‐) and 12 (+)</h:li>
+                            <h:li>USB Type‐C with DisplayPort as Alternate Function – connect pin A8 to a 3.3V power supply via a
+                              100 Ohm resistor to provide HPD signal; Check for signals – Differential probe between pins A2
+                              and A3, A10 and A11; B2 and B3, and B10 and B11</h:li>
+                          </h:ol></h:li>
+                        <h:li>Repeat steps 3 and 4 while selecting other TOE connected computers. Verify that no SYNC signal
+                          is present.</h:li>
+                        <h:li>Repeat steps 3 to 5 with the TOE unpowered. Verify that no SYNC signal is present.</h:li>
+                        <h:li>With the probe connected to the TOE computer #2 video interface, disconnect / reconnect the
+                          computer #1 video cable. Power up the TOE and select computer #1. Attempt to detect the change in the
+                          oscilloscope at each one of the TOE #2 computer video interface pins. No changes shall be detected.</h:li>
+                        <h:li>Repeat step 7 for each one of the other TOE computer video interfaces.</h:li>
+                        <h:li>Repeat steps 7 and 8, but instead of disconnecting / reconnecting the computer, disconnect and
+                          reconnect the display.</h:li>
+                        <h:li>Repeat steps 7 and 8, but instead of disconnecting / reconnecting the computer, reboot the
+                          selected computer.</h:li>
+                        <h:li>Repeat steps 2 to 10 with each connected computer.</h:li>
+                        <h:li>[Conditional: if “multiple connected displays” is selected in FDP_CDS_EXT.1.1 then] repeat steps
+                          3 to 10 with each other display connected to the TOE.</h:li>
+                        <h:li>Repeat this test for each unique display protocol and port type supported by the TOE.</h:li>
+                      </h:ol>                      
+                    </test>
+                    
+                    <test id="APC_Test_3-VI">
+                      <h:b>Unauthorized Sub-Protocols</h:b><h:br/><h:br/>                      
+                      Note that in the following steps only native video protocol cables shall be used. No conversion from other
+                      video protocols is allowed in these tests except as directed in FDP_IPC_EXT.1.1.<h:br/><h:br/>
+                      This test verifies that unauthorized sub‐protocols are blocked.<h:br/><h:br/>
+                      Perform this test for each of the selections in FDP_PDC_EXT.3.1/VI and FDP_IPC_EXT.1.1.<h:br/><h:br/>
+                      <h:b>In the following steps the evaluator shall establish a verified test setup that passes video signals across
+                      the TOE.</h:b>
+                      <h:ol>
+                        <h:li>Connect at least one computer with a native video protocol output to the TOE computer #1 video
+                          input interface.</h:li>
+                        <h:li>Connect at least one display with native video protocol to the TOE display output.</h:li>
+                        <h:li>Power up the TOE and ensure the connected computer is selected.</h:li>
+                        <h:li>Verify that the video image is visible and stable on the user display.</h:li>
+                      
+                      <h:b>In the following steps the evaluator shall verify that the test setup properly blocks the unauthorized
+                        video sub‐protocol traffic.</h:b><h:br/><h:br/>
+                      
+                        <h:li>Open the Monitor Control Command Set (MCCS) control console program on the computer and
+                          attempt to change the display contrast and brightness. Verify that the display does not change its contrast
+                          and brightness accordingly.</h:li>
+                        <h:li>Disconnect the video cable connecting the display and the TOE and connect the display directly to
+                          the computer. Verify that the video image is visible and stable on the user display.</h:li>
+                        <h:li>Attempt to change the display contrast and brightness. Verify that the display does change its
+                          contrast and brightness accordingly.</h:li>
+                        <h:li>Connect the following testing device based on the display video protocol being tested at the
+                          peripheral display interface.<h:ol>
+                            <h:li>DisplayPort – DisplayPort AUX channel analyzer in series between the display and the TOE</h:li>
+                            <h:li>HDMI – HDMI sink test device</h:li>
+                            <h:li>USB Type‐C with DisplayPort as Alternate Function – USB sniffer in series between the display and
+                              the TOE</h:li>
+                            <h:li>VGA – VGA sink test device</h:li>
+                            <h:li>DVI-I/DVI-D - DVI sink test device</h:li>                            
+                          </h:ol></h:li>
+                            <h:li>Attempt to change the display contrast and brightness. Verify that the testing device does not
+                              capture any MCCS commands.</h:li>
+                            <h:li>Replace the computer with a source generator for each selected protocol at the computer video
+                              interface. If DVI‐I or DVI‐D is selected, use an HDMI source generator.</h:li>
+                            <h:li>Run an EDID write transaction at the generator and verify in the testing device that no EDID traffic
+                              is captured.</h:li>
+                            <h:li>[Conditional, if DisplayPort (DP++ - Dual Mode Only), HDMI, or USB Type‐C is the selected protocol being
+                              tested at the computer video interface, then] run Consumer Electronics Control (CEC) and High‐bandwidth
+                              Digital Content Protection (HDCP) tests or commands at the generator and verify in the testing device that
+                              no CEC or HDCP traffic is captured for HDMI or USB-C, or check for an absence of power on pin 14 (CONFIG2)
+                              using an oscilloscope for DisplayPort DP++ Dual Mode.</h:li>
+                            <h:li>[Conditional, if DVI‐D, DVI‐I, or HDMI is the selected protocol being tested at the computer video
+                              interface, then] run Audio Return Channel (ARC), HDMI Ethernet and Audio Return Channel (HEAC), and
+                              HDMI Ethernet Channel (HEC) tests or commands at the generator and verify in the testing device that no
+                              ARC, HEAC, or HEC traffic is captured.</h:li>
+                            <h:li>[Conditional: If “[HDMI] protocol” is selected in FDP_IPC_EXT.1.2, then] perform steps 15 and 16
+                              for both pin 13 (CEC) and 14 (UTILITY).</h:li>
+                            <h:li>Turn off the TOE. Use a multi‐meter to measure the resistance‐to‐ground of the pin at the TOE
+                              HDMI peripheral interface and verify it is greater than 2 Mega‐ohms.</h:li>
+                            <h:li>Attach a single ended oscilloscope probe between the pin and the ground, turn on the TOE, and
+                              verify that no changes between 0.0v and 0.2v and between 3.0v and 3.3v are detected.</h:li>
+                            <h:li>[Conditional: if VGA is not the selected protocol being tested, then] disconnect all devices.
+                              Connect the display to a TOE computer video interface and the oscilloscope to the TOE display interface
+                              in order to verify that no HPD signal is passed by measuring a signal voltage of less than 1.0V. Based on
+                              the selected protocol being tested, this is performed as follows<h:ol>
+                                <h:li>HDMI – connect scope to pin 19 and verify no HPD signal is detected</h:li>
+                                <h:li>DVI‐D/DVI‐I – connect scope to pin 16 and verify no HPD signal is detected</h:li>
+                                <h:li>DisplayPort ‐ connect scope to pin 18 and verify no HPD signal is detected</h:li>
+                                <h:li>USB Type‐C with DisplayPort as Alternate Function – connect scope to pin A8 and B8 and verify
+                                  no HPD signal is detected.</h:li>
+                              </h:ol></h:li>
+                            <h:li>Repeat this test for each of the selections in FDP_PDC_EXT.3.1/VI and FDP_IPC_EXT.1.2.</h:li>
+                      </h:ol></test>
+                    <test id="APC_Test_4-VI">
+                      <h:b>Video and EDID Channel Unidirectional Rule</h:b><h:br/><h:br/>
+                      This test verifies that the TOE video path is unidirectional from the computer video interface to the display
+                      interface with the exception of EDID, which may be read from the display once at power up and then may
+                      be read by the connected computers. The evaluator should have at least two
+                      high‐resolution displays of different models and
+                      one low‐resolution display for each TOE‐supported video protocol.<h:br/><h:br/>
+                      <h:b>In the following steps the evaluator should attempt to read display EDID after the TOE completed its
+                      self‐test / power up. The TOE should not read the new display EDID.</h:b><h:ol>
+                        <h:li>Configure the TOE and the Operational Environment in accordance with the operational guidance.
+                          Connect a computer and a high‐resolution display to the TOE.</h:li>
+                        <h:li>Ensure the TOE is on, computer #1 is selected, and verify that the display shows video from
+                          computer #1 as expected.</h:li>
+                        <h:li>Turn off the TOE. Disconnect the user display from the TOE.</h:li>
+                        <h:li>Connect the low‐resolution display to the TOE and turn on the TOE. After the video is shown on
+                          the display, turn off the TOE and disconnect the low-resolution display.</h:li>
+                        <h:li>Turn on the TOE. After the TOE has completed the self‐test connect the
+                          second high-resolution display of a different model to the TOE. The TOE may fail to generate video on
+                          the user display (i.e., no EDID is read at the TOE power up). If the display is showing video, then run the
+                          EDID reading and parsing software on computer #1 and check that there is no active EDID (i.e., the
+                          computer is using a default generic display or reading older display settings from the registry).</h:li>
+                        <h:b>In the following steps the evaluator shall validate that the TOE video path is unidirectional from the
+                          computer video interface to the display interface.</h:b>
+                        <h:li>Perform steps 7‐11 for each TOE computer video interface.</h:li>
+                        <h:li>Power off the TOE and disconnect the computer #1 video output and the display. Connect the
+                          display cable to the TOE computer #1 video interface. Connect the computer #1 video cable to the TOE
+                          display interface. This configuration will attempt to force video data through the TOE in the reverse
+                          direction.</h:li>
+                        <h:li>Power up the TOE again.</h:li>
+                        <h:li>Check that the video is not visible in the display.</h:li>
+                        <h:li>Perform steps 11 while the TOE is powered on and powered off.</h:li>
+                        <h:li>Remove the display cable from the TOE and connect the oscilloscope to verify that no SYNC signal
+                          is passed through the TOE. Based on the video protocols supported, this is
+                          performed as follows.<h:ol>
+                            <h:li>VGA – single ended probe on pins 13 and 14</h:li>
+                            <h:li>HDMI – connect pin 19 to a 3.3V power supply via a 100 Ohm resistor to provide HPD signal; Check
+                              for signals ‐ differential probe between pins 10 (+) and 12 (‐)</h:li>
+                            <h:li>DVI‐I – connect pin 16 to a 3.3V power supply via a 100 Ohm resistor to provide HPD signal; Check
+                              for signals ‐ single ended probe on pins 8 and C4. Differential probe between pins 23 (+) and 24 (‐
+                              )</h:li>
+                            <h:li>DVI‐D ‐ connect pin 16 to a 3.3V power supply via a 100 Ohm resistor to provide HPD signal; Check
+                              for signals ‐ Differential probe between pins 23 (+) and 24 (‐)</h:li>
+                            <h:li>DisplayPort ‐ connect pin 18 to a 3.3V power supply via a 100 Ohm resistor to provide HPD signal;
+                              Check for signals ‐ Differential probe between pins 3 (‐) and 1 (+) and between 10 (‐) and 12 (+)</h:li>
+                            <h:li>USB Type‐C with DisplayPort as Alternate Function – connect pin A8 to a 3.3V power supply via a
+                              100 Ohm resistor to provide HPD signal; Check for signals – Differential probe between pins A2
+                              and A3, A10 and A11; B2 and B3, and B10 and B11</h:li>
+                          </h:ol></h:li>                        
+                      </h:ol>
+                    </test>
+                    <test id="APC_Test_5-VI">
+                      <h:b>No Flow between Connected Computers Over Time</h:b><h:br/><h:br/>
+                      This test verifies that the TOE does not send data to different computers connected to the same TOE video
+                      interface over time. Repeat this test for each TOE Video port.<h:ol>
+                        <h:li>Configure the TOE and the Operational Environment in accordance with the operational guidance.
+                          Run EDID reading and parsing software on two computers and connect a display to the TOE.</h:li>
+                        <h:li>Connect computer #1 to the TOE, ensure the TOE is on, computer #1 is selected, no other
+                          computers are connected, and verify that the display shows video from computer #1 as expected.</h:li>
+                        <h:li>Capture the TOE EDID content in the software on computer #1 and save as a file with a name that
+                          indicates capture time.</h:li>
+                        <h:li>Disconnect computer #1 and connect an I2C programmer to the same port. Attempt to write the
+                          characters “FFFF” over the entire EDID address range.</h:li>
+                        <h:li>Disconnect the I2C programmer, reconnect computer #1 to the same port, and repeat step 3.</h:li>
+                        <h:li>Reboot the TOE and repeat step 3.</h:li>
+                        <h:li>Turn off the TOE and repeat step 3.</h:li>
+                        <h:li>Restart the TOE and repeat step 3.</h:li>
+                        <h:li>Disconnect computer #1 and repeat steps 2 to 8 with computer #2 on the same port.</h:li>
+                        <h:li>Repeat steps 2 to 9 for a total of 20 EDID file captures.</h:li>
+                        <h:li>Collect all 20 captured EDID files, compare them bit‐by‐bit, and
+                          verify that they are identical excluding null captures recorded in Step 7.</h:li>
+                      </h:ol>
+                    </test>
+                  </testlist>
+                </Tests>
+              </aactivity>              
+            </f-element>
+          </f-component>
+          
+          <f-component cc-id="fdp_pdc_ext.1" name="Peripheral Device Connection" id="fdp-pdc-ext-1">
+            <consistency-rationale>
+              This SFR is not changed by this PP‐Module and only defines existing Evaluation
+              Activities for video/display devices, which does not conflict with the PSD PP.
+            </consistency-rationale>
+            <f-element>
+              <title>
+                There is no modification to this SFR in this PP‐Module. However, there are additions to the Peripheral
+              Device Connections Policy (see Appendix E) associated with this SFR and additional Evaluation Activities.
+              </title>
+            <aactivity>
+              <TSS/>                
+              <Guidance>
+                The evaluator shall verify that the operational user guidance describes devices authorized for use with the
+                TOE in accordance with the authorized peripheral device connections.
+              </Guidance>                
+              <CustomEA name="Isolation"/>
+              <Tests>
+                <testlist>
+                  <test>
+                    The evaluator shall verify that the TOE ports do not reject authorized devices and devices with
+                    authorized protocols as per the Peripheral Device Connections appendix in MOD_VI_V1.0.<h:br/><h:br/>
+                    Repeat this test for each of the selected protocols in FDP_PDC_EXT.3.1/VI.<h:ol>
+                      <h:li>Connect the authorized device with an authorized protocol directly to a computer. Display any
+                        image on the device. Disconnect the device from the computer.</h:li>
+                      <h:li>Configure the TOE and the Operational Environment in accordance with the operational guidance.</h:li>
+                      <h:li>Ensure the TOE is powered off.</h:li>
+                      <h:li>Connect the authorized device with an authorized protocol to the TOE peripheral interface.</h:li>
+                      <h:li>Power on the TOE and verify the TOE user indication described in the operational user guidance is
+                        not present.</h:li>
+                      <h:li>Ensure the connected computer is selected and verify that the device displays the same image as
+                        in step 1.</h:li>
+                      <h:li>Disconnect the authorized device, then reconnect it to the TOE peripheral interface.</h:li>
+                      <h:li>Verify the TOE user indication described in the operational user guidance is not present.</h:li>
+                      <h:li>Verify that the device displays the same image as in step 1 and 6 or that it displays a blank 
+                        screen. If it displays a blank screen, reboot the TOE, select the channel that was selected prior
+                        to reboot, and verify that the device now displays the same image as in step 1 and 6.</h:li>
+                    </h:ol>
+                  </test>                                  
+                </testlist>
+              </Tests>
+            </aactivity>
+            </f-element>
+          </f-component>
+        </sec:mod_fdp>
+        
+        <sec:mod_fta title="Class FTA: TOE Access">          
+          <f-component cc-id="fta_cin_ext.1" name="Continuous Indications">
+            <consistency-rationale>
+              This PP‐Module adds a new display mechanism that is unique to video/display
+              peripherals and a new trigger for when the SFR applies. Neither of these
+              changes conflict with the original SFR definition in the PSD PP.
+            </consistency-rationale>
+            <description>This SFR is selection‐based in the PSD PP depending on whether the TOE has a switching capability (i.e., if the TOE is an isolator and only has one connected computer, no indication of the active computer is necessary). It remains selection‐based when
+              the TOE conforms to this PP-Module. When the TOE is a Combiner (i.e., it may display a combination of multiple video feeds on a single monitor), it is required to have a visual indicator of each source computer on the active video feeds. This is also required if the TOE implements a function where a monitor may display a selectable video feed that is separate from the computer that is active for other peripherals; for example, a 4-port TOE may support keyboard, mouse, and monitor peripherals that are selectable to any of the connected computers, while an independent monitor may have an active video feed from one or more computers that is set independently of the active peripherals. In this case, the primary active computer may be indicated by a light or other indication on the chassis, while the "video feed" monitor is required to have a label in the feed itself so that there are no ambiguous or conflicting indicators. A refinement has been added to FTA_CIN_EXT.1.2 to define the on-screen display behavior expected when the Combiner use case applies.
+              </description>
+            <f-element id="fta-cin-ext-1e2">
+              <title>
+                The TSF shall implement the visible indication using the following mechanism:
+                <h:b>easily visible graphical and/or textual markings of each source video on the
+                display,</h:b> <selectables>
+                  <selectable>a button</selectable>
+                  <selectable>a panel with lights</selectable>
+                  <selectable>a screen with dimming function</selectable>
+                  <selectable>a screen with no dimming function</selectable>
+                  <selectable><assignable>description of visible
+                indication</assignable></selectable>
+                </selectables>
+              </title>            
+            <aactivity>
+              <no-tests>Additional testing for this component is performed in <xref to="APC_Test_1-VI"/>.</no-tests>
+            </aactivity>
+            </f-element>
+          </f-component>
+        </sec:mod_fta>
+      </modified-sfrs>
+      
+      <additional-sfrs/>
+      
+      <!-- 6.1.1 Consistency of TOE Type -->
+      <con-toe>
+        The PSD PP defines the boundaries of a PSD—a device that provides a mechanism for securely connecting
+        a set of peripherals to one or more attached computers. This PP‐Module builds on this by defining
+        functional capabilities that are specific to devices that can share video or display peripherals. The
+        requirements of this PP do not prevent a conformant TOE from implementing mandatory requirements of
+        the PSD PP.
+      </con-toe>
+      
+      <!-- 6.1.2 Consistency of Security Problem Definition -->
+      <con-sec-prob>This PP‐Module does not define additional threats beyond those the PSD PP defines. Therefore, there is
+        no inconsistency between this PP‐Module and the PSD with respect to the security problem definition.</con-sec-prob>
+      
+      <!-- 6.1.3 Consistency of Objectives -->
+      
+      <con-op-en/>
+      
+      <con-mod ref="T.DATA_LEAK">
+        This threat is from the PSD PP, thus no conflict exists.
+      </con-mod>
+      <con-mod ref="T.RESIDUAL_LEAK">
+        This threat is from the PSD PP, thus no conflict exists.
+      </con-mod>
+      <con-mod ref="T.SIGNAL_LEAK">
+        This threat is from the PSD PP, thus no conflict exists.
+      </con-mod>
+      <con-mod ref="T.UNAUTHORIZED_DEVICES">
+        This threat is from the PSD PP, thus no conflict exists.
+      </con-mod>
+      <con-mod ref="T.UNINTENDED_USE">
+        This threat is from the PSD PP, thus no conflict exists.
+      </con-mod>
+    </base-pp>
+    
+    <man-sfrs>
+      <section title="Class FDP: User Data Protection" id="FDP">        
+        <ext-comp-def fam-id="FDP_PDC_EXT" title="Peripheral Device Connection">
+          <fam-behavior>This family is defined in the PSD PP. This PP‐Module augments the extended family by adding two
+            additional components, FDP_PDC_EXT.2 and FDP_PDC_EXT.3. These new components and their impact
+            on the extended family’s component leveling are shown below; reference the PSD PP for all other
+            definitions for this family.</fam-behavior>
+        </ext-comp-def>
+        
+        <ext-comp-def fam-id="FDP_UDF_EXT" title="Unidirectional Data Flow (Video Output)">
+          <fam-behavior>Components in this family define unidirectional transmission of user data.</fam-behavior>
+        </ext-comp-def>
+        
+        <f-component name="Peripheral Device Connection" cc-id="fdp_pdc_ext.2" status="invisible">
+          <comp-lev>defines the types of physical devices that the TSF will permit to
+            connect to it.</comp-lev>
+          <management>No specific management functions are identified.
+          </management>
+          <audit>There are no specific auditable events foreseen.</audit>
+          <dependencies>FDP_PDC_EXT.1 Peripheral Device Connection</dependencies>
+          
+          <f-element id="fdp-pdc-ext-2e1-vi">
+            <title>
+              The TSF shall allow connections with authorized devices as defined in
+                <assignable> devices specified in the PP or PP‐Module in which this SFR is defined</assignable>
+                and <assignable> devices specified in another PP or PP‐Module that shares a PP-Configuration
+                with the PP or PP‐Module in which this SFR is defined</assignable> upon TOE
+                power up and upon connection of a peripheral device to a powered‐on TOE.
+            </title>
+          </f-element>
+          
+          <f-element id="fdp-pdc-ext-2e2-vi">
+            <title>
+              The TSF shall allow connections with authorized devices presenting authorized
+              interface protocols as defined in <assignable> devices specified in the PP or PP-Module
+                in which this SFR is defined</assignable> and <assignable> devices specified in another
+                  PP or PP‐Module that shares a PP‐Configuration with the PP or PP‐Module in
+                  which this SFR is defined</assignable> upon TOE power up and upon connection of a
+              peripheral device to a powered‐on TOE.
+            </title>
+          </f-element>
+        </f-component>
+        
+        
+        <f-component cc-id="fdp_pdc_ext.2" name="Peripheral Device Connection (Video Output)" iteration="VI" id="fdp-pdc-ext-2-vi">
+          <consistency-rationale>This SFR defines the devices that are authorized by this PP‐Module. This is
+            dependent on the other PP‐Modules that are claimed in the TOE’s ST. The
+            Base‐PP is written specifically not to discuss the supported device types,
+            instead leaving it to the various PP‐Modules to define what they support.
+          </consistency-rationale>
+          
+          <f-element id="fdp-pdc-ext-2e1-vi">
+            <title>
+              The TSF shall allow connections with authorized devices as defined in [Appendix
+              E] and <selectables>
+                <selectable>authorized devices as defined in the PP‐Module for Audio Output
+                  Devices</selectable>
+                <selectable>authorized devices and functions as defined in the PP‐Module for
+                  Keyboard/Mouse Devices</selectable>
+                <selectable>authorized devices as defined in the PP‐Module for User Authentication
+                  Devices</selectable>
+                <selectable>no other devices</selectable>
+              </selectables> upon TOE power up and connection of a peripheral device to a powered-on
+              TOE.
+            </title>
+          </f-element>       
+          
+          <f-element id="fdp-pdc-ext-2e2-vi">
+            <title>
+              The TSF shall allow connections with authorized devices presenting authorized
+              interface protocols as defined in [Appendix E] and <selectables>
+                <selectable>authorized devices presenting authorized interface protocols as defined in the PP‐Module for Audio Output
+                  Devices</selectable>
+                <selectable>authorized devices presenting authorized interface protocols as defined in the PP‐Module for
+                  Keyboard/Mouse Devices</selectable>
+                <selectable>authorized devices presenting authorized interface protocols as defined in the PP‐Module for User Authentication
+                  Devices</selectable>
+                <selectable>no other devices</selectable>
+              </selectables> upon TOE power up and connection of a peripheral device to a powered-on
+              TOE.
+            </title>
+            
+            <note role="application">
+              The TSF must claim conformance to a PP‐Configuration that includes each PP-Module
+              contained in any selections. The ST author should select all devices and
+              interfaces supported by the TOE.<h:br/><h:br/>
+              If “authorized devices presenting authorized interface protocols as defined in the
+              PP‐Module for Keyboard/Mouse” is selected and “USB Type‐C with DisplayPort as
+              alternate function” is selected in FDP_PDC_EXT.3.1/VI, then video devices that use
+              USB Type‐C with DisplayPort as alternate function may not be used in conjunction
+              with touch screen devices.
+            </note>           
+            
+            <aactivity>
+              <no-tests>Evaluation Activities for this component are performed through evaluation of
+                <xref to="fdp-pdc-ext-1"/>.</no-tests>
+            </aactivity>
+          </f-element>
+        </f-component>
+        
+        <f-component name="Authorized Connection Protocols" cc-id="fdp_pdc_ext.3" status="invisible">
+          <comp-lev>defines the protocols that the TSF will authorize over
+            its physical/logical interfaces, as well as any rules that are applicable to these interfaces.</comp-lev>
+          <management>No specific management functions are identified.</management>
+          <audit>There are no auditable events foreseen.</audit>
+          <dependencies>FDP_PDC_EXT.1 Peripheral Device Connection</dependencies>
+          <f-element>
+            <title>
+              The TSF shall have interfaces for the <assignable> list of supported protocols
+                associated with physical or logical TSF interfaces</assignable> protocols.
+            </title>
+          </f-element>
+          
+          <f-element>
+            <title>
+              The TSF shall apply the following rules to the supported protocols: <assignable>
+                rules defining the handling for communications over this protocol (e.g., any
+                processing that must be done by the TSF prior to transmitting it through the TOE,
+                circumstances or frequency with which the protocol is invoked)</assignable>.
+            </title>
+          </f-element>
+          
+        </f-component>
+        <f-component cc-id="fdp_pdc_ext.3" name="Authorized Connection Protocols (Video Output)" iteration="VI" id="fdp-pdc-ext-3-vi">
+          <consistency-rationale>
+            This SFR defines the protocols that are authorized specifically by this PP-Module
+            and the rules for handling of
+          </consistency-rationale>
+          
+          <f-element id="fdp-pdc-ext-3e1-vi">            
+            <title>
+              The TSF shall have interfaces for the <selectables>
+                <selectable id="supportsvga">VGA</selectable>
+                <selectable id="supportsdvid">DVI‐D</selectable>
+                <selectable id="supportsdvii">DVI‐I</selectable>
+                <selectable id="supportshdmi">HDMI</selectable>
+                <selectable id="supportsdp">DisplayPort</selectable>
+                <selectable id="supportsusbc">USB Type‐C with DisplayPort as alternate function</selectable>
+              </selectables> protocols.
+            </title>            
+          </f-element>
+          
+          <f-element id="fdp-pdc-ext-3e2-vi">            
+            <title>
+              The TSF shall apply the following rules to the supported protocols: [<h:i>the TSF shall
+              read the connected display EDID information once during power‐on or reboot <selectables>
+                <selectable>automatically</selectable>
+                <selectable>when prompted by user intervention</selectable>
+              </selectables></h:i>].
+            </title>
+            
+            <note role="application">
+              It is expected that the ST author will make all selections in FDP_PDC_EXT.3.1/VI
+              for which the TOE has an interface; the TOE boundary should encompass the
+              entire device where possible.<h:br/><h:br/>
+              If the KM PP‐Module is also claimed by the ST, “USB Type‐C with DisplayPort as
+              alternate function” may not be selected in conjunction with a touchscreen
+              peripheral device.<h:br/><h:br/>
+              If “DisplayPort” is selected, the ST must include the selection‐based requirement
+              FDP_IPC_EXT.1.<h:br/><h:br/>
+              This PP‐Module defines several iterations of FDP_SPR_EXT.1. Depending on the
+              selections made in FDP_PDC_EXT.3.1/VI, the evaluator must include the relevant
+              iterations.<h:br/><h:br/>
+              If the TOE can read the connected display EDID information during power-on or 
+              reboot without human intervention, the first selection item for FDP_PDC_EXT.3.2/VI
+              is selected. If the TOE requires human intervention to read the connected display 
+              EDID during power-on or reboot, the second selection item is selected.
+            </note>            
+            <aactivity>
+              <no-tests>Evaluation Activities for this component are performed through evaluation of
+                <xref to="fdp-pdc-ext-1"/>.</no-tests>
+            </aactivity>
+          </f-element>          
+        </f-component>
+        
+        <f-component name="Unidirectional Data Flow" cc-id="fdp_udf_ext.1" status="invisible">
+          <comp-lev>requires the TSF to provide unidirectional (one‐way)
+            communications between a given pair of interface types.</comp-lev>
+          <management>No specific management functions are identified.</management>
+          <audit>There are no auditable events foreseen.</audit>
+          <dependencies>FDP_APC_EXT.1 Active PSD Connections</dependencies>
+          
+          <f-element id="fdp-udf-ext-1e1">
+            <title>
+              The TSF shall ensure <assignable>type of data</assignable> data transits the TOE
+              unidirectionally from the <assignable>origin point of data</assignable> interface to the
+              <assignable>destination point of data</assignable> interface.
+            </title>
+          </f-element>
+          
+        </f-component>
+        
+        <f-component cc-id="fdp_udf_ext.1" name="Unidirectional Data Flow (Video Output)" iteration="VI" id="fdp-udf-ext-1-vi">
+          <consistency-rationale>
+            This SFR requires the specific types of peripheral data defined in this PP-Module
+            to flow unidirectionally. This does not prevent the enforcement of any
+            PSD PP SFRs.
+          </consistency-rationale>
+          
+          <f-element id="fdp-udf-ext-1e1">
+            <title>
+              The TSF shall ensure [<h:i>video</h:i>] data transits the TOE unidirectionally from
+              the [<h:i>TOE computer video</h:i>] interface to the [<h:i>TOE peripheral device display</h:i>] interface.
+            </title>
+            
+            <aactivity>
+              <no-tests>Evaluation Activities for this component are performed through evaluation of
+                <xref to="fdp-pdc-ext-1"/>.</no-tests>
+            </aactivity>
+          </f-element>
+        </f-component>
+      </section>
+    </man-sfrs> 
+    
+    <opt-sfrs/>
+    
+    <sel-sfrs>
+      <section title="Class FDP: User Data Protection" id="FDP">
+        
+        <ext-comp-def title="Connected Displays Supported" fam-id="FDP_CDS_EXT">
+          <fam-behavior>
+            Components in this family define requirements for the number of display interfaces contained within the
+            TOE.
+          </fam-behavior>
+        </ext-comp-def>
+        
+        <ext-comp-def title="Internal Protocol Conversion" fam-id="FDP_IPC_EXT">
+          <fam-behavior>
+            Components in this family define requirements for the TOE’s ability to convert one protocol into another
+            for internal processing.
+          </fam-behavior>
+        </ext-comp-def>
+        
+        <ext-comp-def title="Sub-Protocol Rules" fam-id="FDP_SPR_EXT">
+          <fam-behavior>
+            Components in this family define the sub‐protocols that the TSF allows or blocks depending on the
+            protocols it supports.
+          </fam-behavior>
+        </ext-comp-def>
+        
+        <f-component cc-id="fdp_cds_ext.1" name="Connected Displays Supported">
+          <depends on="notisolator">
+            <external-doc ref="bpp-psd"/>
+          </depends>
+          <consistency-rationale>
+            This SFR adds support for one or multiple connected displays. It is not in the
+            PSD PP.
+          </consistency-rationale>
+          
+          <comp-lev>requires the TSF to define whether it supports one
+            connected display at a time or multiple connected displays simultaneously.</comp-lev>
+          <management>There are no specific management functions identified.</management>
+          <audit>There are no auditable events foreseen.</audit>
+          <dependencies>No dependencies</dependencies>
+          
+          <f-element id="fdp-cds-ext-1e1">
+            <title>The TSF shall support <selectables>
+                <selectable>one connected display</selectable>
+                <selectable>multiple connected displays</selectable>
+              </selectables> at a time.
+            </title>
+            
+            <note role="application">
+
+              This SFR must be claimed if “switching can be initiated only through express user
+              action” is chosen as a selection for FDP_SWI_EXT.1 in the PSD PP.<h:br/><h:br/>
+              If “peripheral devices using a guard” is selected in FDP_SWI_EXT.2.2 (from the PSD
+              PP), then “multiple connected displays” must be selected in FDP_CDS_EXT.1.1.
+            </note>
+            
+          <aactivity>
+            <TSS>
+              The evaluator shall examine the TSS and verify that it describes how many connected displays may be
+              supported at a time.
+            </TSS>
+            <Guidance>
+              The evaluator shall examine the operational user guidance and verify that it describes how many displays
+              are supported by the TOE.
+            </Guidance>
+            <CustomEA name="Isolation"/>
+            <Tests/>              
+          </aactivity>
+          </f-element>
+        </f-component>
+        
+        <f-component cc-id="fdp_ipc_ext.1" name="Internal Protocol Conversion">
+          <depends on-sel="supportsdp"/>
+          <consistency-rationale>
+            This SFR allows for the conversion of video protocols. It is not in the PSD PP.
+          </consistency-rationale>
+          
+          <comp-lev>requires the TSF to specify an input protocol that the TOE
+            receives, the protocol that the TSF converts it to, and whether the data is output from the TOE as the
+            original protocol or as the converted one.</comp-lev>
+          <management>No specific management functions are identified.</management>
+          <audit>There are no auditable events foreseen.</audit>
+          <dependencies>FDP_PDC_EXT.2 Authorized Devices</dependencies>
+          
+          <f-element id="fdp-ipc-ext-1e1">
+            <title>
+              The TSF shall convert the [<h:i>DisplayPort</h:i>] protocol at the <selectables>
+                <selectable>DisplayPort peripheral display interfaces</selectable>
+                <selectable>DisplayPort computer video interface</selectable>
+              </selectables>
+              into the <selectables>
+                <selectable>HDMI</selectable>
+                <selectable>YCbCr</selectable>
+              </selectables> protocol within the TOE.
+            </title>
+            
+            <ext-comp-def-title>
+              <title>The TSF shall convert the <assignable>original protocol</assignable> protocol at the
+                <assignable>TOE external interfaces</assignable> into the <assignable>converted
+                  protocol</assignable> protocol within the TOE.</title>
+            </ext-comp-def-title>
+          </f-element>
+          
+          <f-element id="fdp-ipc-ext-1e2">
+            <title>
+              The TSF shall output the <selectables>
+                <selectable>HDMI</selectable>
+                <selectable>YCbCr</selectable>
+              </selectables> protocol from inside the TOE to <selectables>
+                <selectable>computer video interface</selectable>
+                <selectable>peripheral display interfaces</selectable>
+              </selectables> as <selectables>
+                  <selectable>[<h:i>DisplayPort</h:i>] protocol</selectable>
+                  <selectable>[<h:i>HDMI</h:i>] protocol</selectable>
+                </selectables>.
+            </title>
+          
+          <ext-comp-def-title>
+            <title>
+              The TSF shall output the <assignable>converted protocol</assignable> protocol from inside
+              the TOE to <assignable>TOE external interfaces</assignable> as <selectables>
+                <selectable><assignable>original protocol</assignable></selectable>
+                <selectable>protocol</selectable>
+              </selectables>, <assignable>converted protocol</assignable> protocol.
+            </title>
+          </ext-comp-def-title>
+            
+          <note role="application">
+              This SFR must be claimed if "DisplayPort" is chosen as a selection for
+              FDP_PDC_EXT.3.1/VI. The intent of this requirement is to ensure HDMI is used in place of DisplayPort 
+              while within the TOE, whether the DisplayPort interface is at the peripheral display interface, 
+              computer video interface, or both.<h:br/><h:br/>              
+              The first selection in FDP_IPC_EXT.1.2 should match the second selection of FDP_IPC_EXT.1.1.
+            </note>
+            
+            <aactivity>
+              <TSS>
+                The evaluator shall examine the TSS and verify that it describes how data DisplayPort data is converted.
+              </TSS>
+              <Guidance/>
+              <CustomEA name="Isolation"/>
+              <Tests>
+                Testing for this SFR is covered under <xref to="APC_Test_3-VI"/>.
+              </Tests>
+            </aactivity>
+          </f-element>
+        </f-component>
+        
+        <f-component name="Sub-Protocol Rules" cc-id="fdp_spr_ext.1" status="invisible">
+          <comp-lev>requires the TSF to specify the allowed and blocked sub‐protocols
+            based on the protocol it supports.</comp-lev>
+          <management>No specific management functions are identified.</management>
+          <audit>There are no auditable events foreseen.</audit>
+          <dependencies>FDP_PDC_EXT.3 Authorized Connection Protocols</dependencies>
+          
+        <f-element>
+          <title>
+            The TSF shall apply the following rules for the <assignable>supported protocol</assignable>
+                protocol:<h:ul>
+                  <h:li>block the following video/display sub‐protocols:<h:ul>
+                    <h:li><assignable>list of blocked sub‐protocols</assignable></h:li>
+                  </h:ul></h:li>
+                  <h:li>allow the following video/display sub‐protocols:<h:ul>
+                    <h:li>list of allowed sub‐protocols</h:li>
+                  </h:ul></h:li>                  
+                </h:ul>
+          </title>
+                  
+          
+          </f-element>
+        </f-component>
+        
+        <f-component cc-id="fdp_spr_ext.1" name="Sub-Protocol Rules (DisplayPort Protocol)" iteration="DP" id="fdp-spr-ext-1-dp">
+          <depends on-sel="supportsdp"/>
+          <consistency-rationale>
+            This SFR describes how the TSF handles specific video sub‐protocols, which is
+            beyond the scope of the behavior described in the Base‐PP.
+          </consistency-rationale>
+          
+          <f-element id="fdp-spr-ext-1e1-dp">
+            <title>
+              The TSF shall apply the following rules for the [<h:i>DisplayPort</h:i>]
+              protocol.<h:ul>
+                <h:li>block the following video/display sub‐protocols:<h:ul>[<h:i>
+                  <h:li>CEC</h:li>
+                  <h:li>EDID from computer to display</h:li>
+                  <h:li>HDCP</h:li>
+                  <h:li>MCCS</h:li></h:i>]
+                </h:ul></h:li>
+                <h:li>allow the following video/display sub-protocols:<h:ul>[<h:i>
+                  <h:li>EDID from display to computer</h:li>
+                  <h:li>HPD from display to computer</h:li>
+                  <h:li>Link Training</h:li></h:i>]                  
+                </h:ul></h:li>
+              </h:ul>
+            </title>
+            
+            <note role="application">
+              The ST author must include this SFR if “DisplayPort” is selected in
+              FDP_PDC_EXT.3.1/VI.
+            </note>
+            <aactivity>
+              <TSS>
+                The evaluator shall examine the TSS and verify that it describes that the various sub‐protocols are allowed
+                or blocked by the TOE as described by the SFR.
+              </TSS>
+              <Guidance/>
+              <CustomEA name="Isolation"/>
+              <Tests>
+                Testing for this SFR is covered under <xref to="APC_Test_3-VI"/> and <xref to="APC_Test_4-VI"/>.
+              </Tests>
+            </aactivity>
+          </f-element>
+        </f-component>
+        
+        <f-component cc-id="fdp_spr_ext.1" name="Sub-Protocol Rules (DVI-D Protocol)" iteration="DVID" id="fdp-spr-ext-1-dvi-d">
+          <depends on-sel="supportsdvid"/>
+          <consistency-rationale>
+            This SFR describes how the TSF handles specific video sub‐protocols, which is
+            beyond the scope of the behavior described in the Base‐PP.
+          </consistency-rationale>
+          
+          <f-element id="fdp-spr-ext-1e1-dvi-d">
+            <title>
+              The TSF shall apply the following rules for the [<h:i>DVI-D</h:i>]
+              protocol.<h:ul>
+                <h:li>block the following video/display sub‐protocols:<h:ul>[<h:i>
+                  <h:li>ARC</h:li>
+                  <h:li>CEC</h:li>
+                  <h:li>EDID from computer to display</h:li>
+                  <h:li>HDCP</h:li>
+                  <h:li>HEAC</h:li>
+                  <h:li>HEC</h:li>
+                  <h:li>MCCS</h:li></h:i>]
+                </h:ul></h:li>
+                <h:li>allow the following video/display sub-protocols:<h:ul>[<h:i>
+                  <h:li>EDID from display to computer</h:li>
+                  <h:li>HPD from display to computer</h:li></h:i>]                                    
+                </h:ul></h:li>
+              </h:ul>
+            </title>
+            
+            <note role="application">
+              The ST author must include this SFR if “DVI‐D” is selected in
+              FDP_PDC_EXT.3.1/VI.
+            </note>
+            <aactivity>
+              <TSS>
+                The evaluator shall examine the TSS and verify that it describes that the various sub‐protocols are allowed
+                or blocked by the TOE as described by the SFR.
+              </TSS>
+              <Guidance/>
+              <CustomEA name="Isolation"/>
+              <Tests>
+                Testing for this SFR is covered under <xref to="APC_Test_3-VI"/> and <xref to="APC_Test_4-VI"/>.
+              </Tests>
+            </aactivity>
+          </f-element>
+        </f-component>
+        
+        <f-component cc-id="fdp_spr_ext.1" name="Sub-Protocol Rules (DVI-I Protocol)" iteration="DVII" id="fdp-spr-ext-1-dvi-i">
+          <depends on-sel="supportsdvii"/>
+          <consistency-rationale>
+            This SFR describes how the TSF handles specific video sub‐protocols, which is
+            beyond the scope of the behavior described in the Base‐PP.
+          </consistency-rationale>
+          
+          <f-element id="fdp-spr-ext-1e1-dvi-i">
+            <title>
+              The TSF shall apply the following rules for the [<h:i>DVI-I</h:i>]
+              protocol.<h:ul>
+                <h:li>block the following video/display sub‐protocols:<h:ul>[<h:i>
+                  <h:li>ARC</h:li>
+                  <h:li>CEC</h:li>
+                  <h:li>EDID from computer to display</h:li>
+                  <h:li>HDCP</h:li>
+                  <h:li>HEAC</h:li>
+                  <h:li>HEC</h:li>
+                  <h:li>MCCS</h:li></h:i>]
+                </h:ul></h:li>
+                <h:li>allow the following video/display sub-protocols:<h:ul>[<h:i>
+                  <h:li>EDID from display to computer</h:li>
+                  <h:li>HPD from display to computer</h:li></h:i>]                                    
+                </h:ul></h:li>
+              </h:ul>
+            </title>
+            
+            <note role="application">
+              The ST author must include this SFR if “DVI‐I” is selected in
+              FDP_PDC_EXT.3.1/VI.
+            </note>
+            <aactivity>
+              <TSS>
+                The evaluator shall examine the TSS and verify that it describes that the various sub‐protocols are allowed
+                or blocked by the TOE as described by the SFR.
+              </TSS>
+              <Guidance/>
+              <CustomEA name="Isolation"/>
+              <Tests>
+                Testing for this SFR is covered under <xref to="APC_Test_3-VI"/> and <xref to="APC_Test_4-VI"/>.
+              </Tests>
+            </aactivity>
+          </f-element>
+        </f-component>
+        
+        <f-component cc-id="fdp_spr_ext.1" name="Sub-Protocol Rules (HDMI Protocol)" iteration="HDMI" id="fdp-spr-ext-1-hdmi">
+          <depends on-sel="supportshdmi"/>
+          <consistency-rationale>
+            This SFR describes how the TSF handles specific video sub‐protocols, which is
+            beyond the scope of the behavior described in the Base‐PP.
+          </consistency-rationale>
+          
+          <f-element id="fdp-spr-ext-1e1-hdmi">
+            <title>
+              The TSF shall apply the following rules for the [<h:i>HDMI</h:i>]
+              protocol.<h:ul>
+                <h:li>block the following video/display sub‐protocols:<h:ul>[<h:i>
+                  <h:li>ARC</h:li>
+                  <h:li>CEC</h:li>
+                  <h:li>EDID from computer to display</h:li>
+                  <h:li>HDCP</h:li>
+                  <h:li>HEAC</h:li>
+                  <h:li>HEC</h:li>
+                  <h:li>MCCS</h:li></h:i>]
+                </h:ul></h:li>
+                <h:li>allow the following video/display sub-protocols:<h:ul>[<h:i>
+                  <h:li>EDID from display to computer</h:li>
+                  <h:li>HPD from display to computer</h:li></h:i>]                                    
+                </h:ul></h:li>
+              </h:ul>
+            </title>
+            
+            <note role="application">
+              The ST author must include this SFR if “HDMI” is selected in
+              FDP_PDC_EXT.3.1/VI.
+            </note>
+            <aactivity>
+              <TSS>
+                The evaluator shall examine the TSS and verify that it describes that the various sub‐protocols are allowed
+                or blocked by the TOE as described by the SFR.
+              </TSS>
+              <Guidance/>
+              <CustomEA name="Isolation"/>
+              <Tests>
+                Testing for this SFR is covered under <xref to="APC_Test_3-VI"/> and <xref to="APC_Test_4-VI"/>.
+              </Tests>
+            </aactivity>
+          </f-element>
+        </f-component>
+        
+        <f-component cc-id="fdp_spr_ext.1" name="Sub-Protocol Rules (USB-C Protocol)" iteration="USBC" id="fdp-spr-ext-1-usb-c">
+          <depends on-sel="supportsusbc"/>
+          <consistency-rationale>
+            This SFR describes how the TSF handles specific video sub‐protocols, which is
+            beyond the scope of the behavior described in the Base‐PP.
+          </consistency-rationale>
+          
+          <f-element id="fdp-spr-ext-1e1-usb-c">
+            <title>
+              The TSF shall apply the following rules for the [<h:i>USB Type-C with DisplayPort as
+                alternate function</h:i>]
+              protocol.<h:ul>
+                <h:li>block the following video/display sub‐protocols:<h:ul>[<h:i>
+                  <h:li>CEC</h:li>
+                  <h:li>EDID from computer to display</h:li>
+                  <h:li>HDCP</h:li>
+                  <h:li>MCCS</h:li></h:i>]
+                </h:ul></h:li>
+                <h:li>allow the following video/display sub-protocols:<h:ul>[<h:i>
+                  <h:li>EDID from display to computer</h:li>
+                  <h:li>HPD from display to computer</h:li>
+                  <h:li>Link Training</h:li></h:i>]                                    
+                </h:ul></h:li>
+              </h:ul>
+            </title>
+            
+            <note role="application">
+              The ST author must include this SFR if “USB Type-C with DisplayPort as alternate
+              function” is selected in
+              FDP_PDC_EXT.3.1/VI.
+            </note>
+            <aactivity>
+              <TSS>
+                The evaluator shall examine the TSS and verify that it describes that the various sub‐protocols are allowed
+                or blocked by the TOE as described by the SFR.
+              </TSS>
+              <Guidance/>
+              <CustomEA name="Isolation"/>
+              <Tests>
+                Testing for this SFR is covered under <xref to="APC_Test_3-VI"/> and <xref to="APC_Test_4-VI"/>.
+              </Tests>
+            </aactivity>
+          </f-element>
+        </f-component>
+        
+        <f-component cc-id="fdp_spr_ext.1" name="Sub-Protocol Rules (VGA Protocol)" iteration="VGA" id="fdp-spr-ext-1-vga">
+          <depends on-sel="supportsvga"/>
+          <consistency-rationale>
+            This SFR describes how the TSF handles specific video sub‐protocols, which is
+            beyond the scope of the behavior described in the Base‐PP.
+          </consistency-rationale>
+          
+          <f-element id="fdp-spr-ext-1e1-vga">
+            <title>
+              The TSF shall apply the following rules for the [<h:i>VGA</h:i>]
+              protocol.<h:ul>
+                <h:li>block the following video/display sub‐protocols:<h:ul>[<h:i>                
+                  <h:li>EDID from computer to display</h:li>                  
+                  <h:li>MCCS</h:li></h:i>]
+                </h:ul></h:li>
+                <h:li>allow the following video/display sub-protocols:<h:ul>[<h:i>
+                  <h:li>EDID from display to computer</h:li></h:i>]                                    
+                </h:ul></h:li>
+              </h:ul>
+            </title>
+            
+            <note role="application">
+              The ST author must include this SFR if “VGA” is selected in
+              FDP_PDC_EXT.3.1/VI.
+            </note>
+            <aactivity>
+              <TSS>
+                The evaluator shall examine the TSS and verify that it describes that the various sub‐protocols are allowed
+                or blocked by the TOE as described by the SFR.
+              </TSS>
+              <Guidance/>
+              <CustomEA name="Isolation"/>
+              <Tests>
+                Testing for this SFR is covered under <xref to="APC_Test_3-VI"/> and <xref to="APC_Test_4-VI"/>.
+              </Tests>
+            </aactivity>
+          </f-element>
+        </f-component>        
+      </section>
+    </sel-sfrs>
+    <obj-sfrs/>
+    <impl-dep-sfrs/>    
+        
+  </sec:Security_Requirements>
+    
+  <appendix title="Isolation Documentation and Assessment" id="iso-doc-assess">
+    The TOE does not require any additional supplementary information to describe its isolation concepts
+    beyond the requirements outlined in the ‘Isolation Documentation and Assessment’ sections in Appendix
+    D of the PSD PP. As with other PSD PP requirements, the only additional requirement is that the isolation
+    documentation also applies to the specific isolation and data flow SFRs in this PP‐module in addition to
+    the functionality the PSD PP requires.    
+  </appendix>
+  
+  <appendix title="Peripheral Device Connections" id="perdevcon">
+    <section title="General">
+      This appendix expands the PSD PP Peripheral Device Connections appendix, and offers additional direction
+      on peripheral devices and interface protocols with TOEs claiming compliance with this PP‐Module. This
+      appendix is in conjunction with the PSD PP’s appendix and does not replace it.
+    </section>
+    
+    <section title="Unauthorized Peripheral Devices">
+      The following are unauthorized devices:<h:ul>        
+        <h:li>Any device not specifically authorized</h:li>
+      </h:ul>     
+    </section>
+    
+    <section title="Unauthorized Interface Protocols">
+      The following are unauthorized interface protocols:<h:ul>
+        <h:li>Any interface protocol not specifically authorized</h:li>        
+      </h:ul>
+    </section>
+    <section title="Authorized Peripheral Devices">
+      The following are authorized devices<h:ul>
+        <h:li>Display device</h:li>
+      </h:ul>
+    </section>
+    
+    <section title="Authorized Interface Protocols">
+      The following are authorized interface protocols:<h:ul>
+        <h:li>DisplayPort</h:li>
+        <h:li>DVI-D</h:li>
+        <h:li>DVI-I</h:li>
+        <h:li>HDMI</h:li>
+        <h:li>USB Type‐C with DisplayPort as alternate function</h:li>
+        <h:li>VGA</h:li>
+      </h:ul>
+    </section>
+  </appendix> 
+  
+  <appendix title="Interactions between PP-Modules" id="interbetmod">
+    This appendix provides any additional guidance required to address interactions between multiple
+    PP-Modules when they are both contained within a PP‐Configuration.
+    <section title="PP-Module for Audio Output Devices">
+      Unauthorized devices identified in both PP‐Modules are considered unauthorized devices for the TOE as
+      per FDP_PDC_EXT.1.<h:br/><h:br/>
+      Authorized devices identified in both PP‐Modules are considered authorized devices for the TOE as per
+      the claimed iterations of FDP_PDC_EXT.2.<h:br/><h:br/>
+      Power events at a user authentication interface for one connected computer cannot impact power events
+      at an analog audio output interface for another connected computer and vice versa, as per
+      FDP_APC_EXT.1. This evaluation activity is tested in FDP_APC_EXT.1:3 in the PP-Module for Audio
+      Output.<h:br/><h:br/>
+      Both PP‐Modules modify the Base‐PP SFR FDP_APC_EXT.1 in ways that are specific to their respective
+      peripheral types. The ST author should make two iterations of this SFR, FDP_APC_EXT.1/UA and
+      FDP_APC_EXT.1/AO, to show the different modifications made for each specific peripheral type.
+    </section>
+    <section title="PP-Module for Keyboard/Mouse Devices">
+      Unauthorized devices identified in both PP‐Modules are considered unauthorized devices for the TOE as
+      per FDP_PDC_EXT.1.<h:br/><h:br/>
+      Authorized devices identified in both PP‐Modules are considered authorized devices for the TOE as per
+      the claimed iterations of FDP_PDC_EXT.2.<h:br/><h:br/>
+      Video devices with an interface for USB Type‐C with DisplayPort as alternate function may not be
+      connected to a KM interface, and KM devices may not be connected to a video interface for USB Type‐C
+      with DisplayPort as alternate function, even though both devices are authorized devices.<h:br/><h:br/>
+      Video devices with an interface for USB Type‐C with DisplayPort as alternate function may not be used in
+      conjunction with a touchscreen peripheral device, as per FDP_PDC_EXT.2/KM and
+      FDP_PDC_EXT.3.1/VI.<h:br/><h:br/>
+      KM devices may be used with a guard in conjunction with multiple video devices, as per FDP_CDS_EXT.1
+      and FDP_SWI_EXT.2.<h:br/><h:br/>
+      Both PP‐Modules modify the Base‐PP SFR FDP_APC_EXT.1 in ways that are specific to their respective
+      peripheral types. The ST author should make two iterations of this SFR, FDP_APC_EXT.1/VI and
+      FDP_APC_EXT.1/KM, to show the different modifications made for each specific peripheral type.
+    </section>
+    <section title="PP-Module for User Authentication Devices">
+      Unauthorized devices identified in both PP‐Modules are considered unauthorized devices for the TOE as
+      per FDP_PDC_EXT.1.<h:br/><h:br/>
+      Authorized devices identified in both PP‐Modules are considered authorized devices for the TOE as per
+      the claimed iterations of FDP_PDC_EXT.2.<h:br/><h:br/>
+      Any USB‐C functionality that is supported by the TOE must be isolated from user authentication
+      functionality and vice versa as per FDP_UAI_EXT.1.<h:br/><h:br/>      
+      Both PP‐Modules modify the Base‐PP SFR FDP_APC_EXT.1 in ways that are specific to their respective
+      peripheral types. The ST author should make two iterations of this SFR, FDP_APC_EXT.1/VI and
+      FDP_APC_EXT.1/UA, to show the different modifications made for each specific peripheral type.
+    </section>
+  </appendix>    
+  
+  <bibliography>    
+    <entry id="base-pp">
+      <tag>PP_PSD_V5.0 or PSD PP</tag>
+      <description>Protection Profile for Peripheral Sharing Device, Version 5.0
+      </description>    
+    </entry>
+  </bibliography>
+</Module>

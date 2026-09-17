@@ -632,17 +632,15 @@ function showTarget(id){
     </style></head><body onLoad="init()"><div id="commmentbox-"><a href="#Comment-1-">Comment: Comment-1-</a><br/></div><h1 class="title" style="page-break-before:auto;">PP-Module for User Authentication Devices</h1><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><div class="center"><img src="images/niaplogo.png" alt="NIAP Logo"></img><br/>
       Version: 2.0<br/>2025-07-11<br/><b>National Information Assurance Partnership</b><br/></div><h2 style="page-break-before:always;">Revision History</h2><table><tr class="header"><th>Version</th><th>Date</th><th>Comment</th></tr><tr><td>1.0</td><td>2019-07-19</td><td>Initial draft</td></tr>
 <tr><td>2.0</td><td>2025-07-11</td><td>Updates for <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022</td></tr>
-</table><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#ppoverview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#TOEdescription" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#TOEboundary" style="text-indent:10px">1.4<span>TOE Boundary</span></a><a href="#usecases" style="text-indent:10px">1.5<span>Use Cases</span></a><a href="#_sec_5" style="text-indent:10px">1.6<span>Test Environment for Evaluation Activities</span></a><a href="#sec-cclaims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#Security_Problem_Definition" style="text-indent:0px">3<span>Security Problem Definition</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#Assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#Organizational_Security_Policies" style="text-indent:10px">3.3<span>Organizational Security Policies</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#Security_Objectives_for_the_Operational_Environment" style="text-indent:10px">4.1<span>Security Objectives for the Operational Environment</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#secreq-bpp-psd" style="text-indent:10px">5.1<span>
-    Protection Profile for Peripheral Sharing Devices
+</table><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#ppoverview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#TOEdescription" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#TOEboundary" style="text-indent:10px">1.4<span>TOE Boundary</span></a><a href="#usecases" style="text-indent:10px">1.5<span>Use Cases</span></a><a href="#_sec_5" style="text-indent:10px">1.6<span>Test Environment for Evaluation Activities</span></a><a href="#sec-cclaims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#Security_Problem_Definition" style="text-indent:0px">3<span>Security Problem Definition</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#Assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#Organizational_Security_Policies" style="text-indent:10px">3.3<span>Organizational Security Policies</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#Security_Objectives_for_the_Operational_Environment" style="text-indent:10px">4.1<span>Security Objectives for the Operational Environment</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#secreq-PSD" style="text-indent:10px">5.1<span>Protection Profile for Peripheral Sharing Devices
        Security Functional Requirements Direction
-    </span></a><a href="#modsfr-bpp-psd" style="text-indent:20px">5.1.1<span> Modified SFRs </span></a><a href="#mod_fau" style="text-indent:30px">5.1.1.1<span>Class FAU: Security Audit</span></a><a href="#mod_fdp" style="text-indent:30px">5.1.1.2<span>Class FDP: User Data Protection</span></a><a href="#mod_fia" style="text-indent:30px">5.1.1.3<span>Class FIA: Identification and Authentication</span></a><a href="#mod_fmt" style="text-indent:30px">5.1.1.4<span>Class FMT: Security Management</span></a><a href="#mod_fpt" style="text-indent:30px">5.1.1.5<span>Class FPT: Protection of the TSF</span></a><a href="#man-sfrs" style="text-indent:10px">5.2<span>TOE Security Functional Requirements</span></a><a href="#FDP" style="text-indent:20px">5.2.1<span>Class FDP: User Data Protection</span></a><a href="#obj-req-map" style="text-indent:10px">5.3<span>TOE Security Functional Requirements Rationale</span></a><a href="#mod-conrat" style="text-indent:0px">6<span>Consistency Rationale</span></a><a href="#conrat-bpp-psd" style="text-indent:10px">6.1<span>
-    Protection Profile for Peripheral Sharing Devices</span></a><a href="#contoe-bpp-psd" style="text-indent:20px">6.1.1<span>
+    </span></a><a href="#modsfr-PSD" style="text-indent:20px">5.1.1<span> Modified SFRs </span></a><a href="#mod_fau" style="text-indent:30px">5.1.1.1<span>Class FAU: Security Audit</span></a><a href="#mod_fdp" style="text-indent:30px">5.1.1.2<span>Class FDP: User Data Protection</span></a><a href="#mod_fia" style="text-indent:30px">5.1.1.3<span>Class FIA: Identification and Authentication</span></a><a href="#mod_fmt" style="text-indent:30px">5.1.1.4<span>Class FMT: Security Management</span></a><a href="#mod_fpt" style="text-indent:30px">5.1.1.5<span>Class FPT: Protection of the TSF</span></a><a href="#man-sfrs" style="text-indent:10px">5.2<span>TOE Security Functional Requirements</span></a><a href="#FDP" style="text-indent:20px">5.2.1<span>Class FDP: User Data Protection</span></a><a href="#obj-req-map" style="text-indent:10px">5.3<span>TOE Security Functional Requirements Rationale</span></a><a href="#mod-conrat" style="text-indent:0px">6<span>Consistency Rationale</span></a><a href="#conrat-PSD" style="text-indent:10px">6.1<span>Protection Profile for Peripheral Sharing Devices</span></a><a href="#contoe-PSD" style="text-indent:20px">6.1.1<span>
 	Consistency of TOE Type
-      </span></a><a href="#consecprob-bpp-psd" style="text-indent:20px">6.1.2<span>
+      </span></a><a href="#consecprob-PSD" style="text-indent:20px">6.1.2<span>
 	Consistency of Security Problem Definition
-      </span></a><a href="#conobj-bpp-psd" style="text-indent:20px">6.1.3<span>
+      </span></a><a href="#conobj-" style="text-indent:20px">6.1.3<span>
 			Consistency of OE Objectives
-		</span></a><a href="#conreq-bpp-psd" style="text-indent:20px">6.1.4<span>
+		</span></a><a href="#conreq-" style="text-indent:20px">6.1.4<span>
 	Consistency of Requirements
       </span></a><a href="#opt-sfrs" style="text-indent:0px">Appendix A - <span>Optional SFRs</span></a><a href="#opt-sfrs" style="text-indent:10px">A.1<span>Strictly Optional Requirements
     </span></a><a href="#obj-sfrs" style="text-indent:10px">A.2<span>Objective Requirements
@@ -659,7 +657,7 @@ function showTarget(id){
       physical and logical interfaces provided by a <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr>. Therefore, additional Security Functional Requirements
       (<abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>) have been defined in this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module to define security functionality that is unique to a <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> that
       provides the ability to support user authentication devices. <br/><br/>
-      This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> is intended for use with the following <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PPs</a></abbr>:<ul>
+      This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> is intended for use with the following Base-PPs:<ul>
         <li>Protection Profile for Peripheral Sharing Devices, Version 5.0</li>
       </ul>      
     
@@ -667,7 +665,7 @@ function showTarget(id){
     <div class="no-link"><h2 id="glossary" class="indexable" data-level="2">1.2 Terms</h2>
 The following sections list Common Criteria and technology terms used in this document.
     <h3 id="cc-terms" class="indexable" data-level="3">1.2.1 Common Criteria Terms</h3><table><tr><td><div id="Assurance">Assurance</div></td><td>Grounds for confidence that a TOE meets the SFRs <a href="#bibCC">[CC]</a>.</td></tr>
-<tr><td><div id="Base_Protection_Profile">Base Protection Profile (Base-PP)</div></td><td>Protection Profile used as a basis to build a PP-Configuration.</td></tr>
+<tr><td><div id="Base_Protection_Profile">Base Protection Profile (base PP)</div></td><td>Protection Profile used as a basis to build a PP-Configuration.</td></tr>
 <tr><td><div id="Collaborative_Protection_Profile">Collaborative Protection Profile (cPP)</div></td><td>A Protection Profile developed by
     international technical communities and approved by multiple schemes.</td></tr>
 <tr><td><div id="Common_Criteria">Common Criteria (CC)</div></td><td>Common Criteria for Information Technology Security Evaluation (International Standard ISO/IEC 15408).</td></tr>
@@ -689,8 +687,8 @@ The following sections list Common Criteria and technology terms used in this do
 	    or functionality.</td></tr>
 <tr><td><div id="Operational_Environment">Operational Environment (OE)</div></td><td>Hardware and software that are outside the TOE boundary that support the TOE functionality and security policy.</td></tr>
 <tr><td><div id="Protection_Profile">Protection Profile (PP)</div></td><td>An implementation-independent set of security requirements for a category of products.</td></tr>
-<tr><td><div id="Protection_Profile_Configuration">Protection Profile Configuration (PP-Configuration)</div></td><td>A comprehensive set of security requirements for a product type that consists of at least one Base-PP and at least one PP-Module.</td></tr>
-<tr><td><div id="Protection_Profile_Module">Protection Profile Module (PP-Module)</div></td><td>An implementation-independent statement of security needs for a TOE type complementary to one or more Base-PPs.</td></tr>
+<tr><td><div id="Protection_Profile_Configuration">Protection Profile Configuration (PP-Configuration)</div></td><td>A comprehensive set of security requirements for a product type that consists of at least one base PP and at least one PP-Module.</td></tr>
+<tr><td><div id="Protection_Profile_Module">Protection Profile Module (PP-Module)</div></td><td>An implementation-independent statement of security needs for a TOE type complementary to one or more base PPs.</td></tr>
 <tr><td><div id="Security_Assurance_Requirement">Security Assurance Requirement (SAR)</div></td><td>A requirement to assure the security of the TOE.</td></tr>
 <tr><td><div id="Security_Functional_Requirement">Security Functional Requirement (SFR)</div></td><td>A requirement for security enforcement by the TOE.</td></tr>
 <tr><td><div id="Security_Target">Security Target (ST)</div></td><td>A set of implementation-dependent security requirements for a specific product.</td></tr>
@@ -827,7 +825,15 @@ The following sections list Common Criteria and technology terms used in this do
 					any Protection Profile.
 				</dd><p></p><dd>The following <abbr class="dyn-abbr"><a href="#abbr_PP">PPs</a></abbr> and <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>-Modules are allowed to be specified in a 
 					<abbr class="dyn-abbr"><a href="#abbr_PP-Configuration">PP-Configuration</a></abbr> with this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>:
-					<ul><li>Protection Profile for Peripheral Sharing Devices, Version 5.0</li><li><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> for Analog Audio Output Devices, Version 2.0</li><li><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> for Keyboard/Mouse Devices, Version 2.0</li><li><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> for Video/Display Devices, Version 2.0</li></ul></dd><dt>Package Claim</dt><p></p><dd>This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> is not conformant to any 
+					<ul><li><a href="https://www.niap-ccevs.org/protectionprofiles/412">Protection Profile for Peripheral Sharing Devices
+        Version 
+        5.0</a>.</li><li><a href="https://niap-ccevs.org/protectionprofiles/433">PP-Module for Analog Audio Output Devices
+        Version 
+        2.0</a>.</li><li><a href="https://niap-ccevs.org/protectionprofiles/435">PP-Module for Keyboard/Mouse Devices
+        Version 
+        2.0</a>.</li><li><a href="https://niap-ccevs.org/protectionprofiles/436">PP-Module for Video/Display Devices
+        Version 
+        2.0</a>.</li></ul></dd><dt>Package Claim</dt><p></p><dd>This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> is not conformant to any 
 						Functional or Assurance Packages.</dd></dl>
   <h1 class="indexable" data-level="1" id="Security_Problem_Definition">3 Security Problem Definition</h1>    
     The security problem is described in terms of the threats that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is expected to address, assumptions
@@ -838,21 +844,21 @@ The following sections list Common Criteria and technology terms used in this do
     
     <h2 class="indexable" data-level="2" id="Threats">3.1 Threats</h2>      
       <dl><dt class="threat defined" id="T.DATA_LEAK">T.DATA_LEAK
-		(from PSD PP)
+		(from PSDPP)
 	</dt><dd><span class="description">This threat from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> also applies to the functionality defined in this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.</span></dd><dt class="threat defined" id="T.RESIDUAL_LEAK">T.RESIDUAL_LEAK
-		(from PSD PP)
+		(from PSDPP)
 	</dt><dd><span class="description">This threat from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> also applies to the functionality defined in this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.</span></dd><dt class="threat defined" id="T.SIGNAL_LEAK">T.SIGNAL_LEAK
-		(from PSD PP)
+		(from PSDPP)
 	</dt><dd><span class="description">This threat from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> also applies to the functionality defined in this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.</span></dd><dt class="threat defined" id="T.UNAUTHORIZED_DEVICES">T.UNAUTHORIZED_DEVICES
-		(from PSD PP)
+		(from PSDPP)
 	</dt><dd><span class="description">This threat from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> also applies to the functionality defined in this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.</span></dd></dl> 
     
     
-    <h2 class="indexable" data-level="2" id="Assumptions">3.2 Assumptions</h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines no Assumptions beyond those defined in the claimed <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr>(s).</p>
+    <h2 class="indexable" data-level="2" id="Assumptions">3.2 Assumptions</h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines no Assumptions beyond those defined in the claimed <abbr class="dyn-abbr"><a href="#abbr_base PP">base PP</a></abbr>(s).</p>
       
     
       
-    <h2 class="indexable" data-level="2" id="Organizational_Security_Policies">3.3 Organizational Security Policies</h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines no Organizational Security Policies beyond those defined in the claimed <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr>(s).</p>
+    <h2 class="indexable" data-level="2" id="Organizational_Security_Policies">3.3 Organizational Security Policies</h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines no Organizational Security Policies beyond those defined in the claimed <abbr class="dyn-abbr"><a href="#abbr_base PP">base PP</a></abbr>(s).</p>
       
     
   <h1 class="indexable" data-level="1" id="Security_Objectives">4 Security Objectives</h1>
@@ -886,17 +892,16 @@ The following sections list Common Criteria and technology terms used in this do
             suggesting the purpose of the operation, e.g. "/EXAMPLE1."
        </li>
      </ul>
-   <h2 id="secreq-bpp-psd" class="indexable" data-level="2">5.1 
-    Protection Profile for Peripheral Sharing Devices
+   <h2 id="secreq-PSD" class="indexable" data-level="2">5.1 Protection Profile for Peripheral Sharing Devices
        Security Functional Requirements Direction
     </h2>
         When a <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> claims conformance to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module, it is necessary to make claims in the Base‐<abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>
         requirements that are consistent with the functionality provided by the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module. The following sections
         describe any Base‐<abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> claims that must be made and any additional evaluation activities that must be
         performed when the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary includes the functionality described by this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module.
-      <h3 id="modsfr-bpp-psd" class="indexable" data-level="3">5.1.1  Modified SFRs </h3>
+      <h3 id="modsfr-PSD" class="indexable" data-level="3">5.1.1  Modified SFRs </h3>
 
-		The <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> listed in this section are defined in the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> and 
+		The <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> listed in this section are defined in the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> and 
 		relevant to the secure operation of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.
 		
         <h4 id="mod_fau" class="indexable" data-level="4">5.1.1.1 Class FAU: Security Audit</h4>
@@ -961,8 +966,7 @@ The following sections list Common Criteria and technology terms used in this do
                     authentication device with a power LED and a connected DVM to each <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> UA peripheral device
                     interface.</li>
                   </ul>
-                  <span class="testlist-"><ul><li class="test-"><a id="APC_Test_1-UA" class="defined" href="#APC_Test_1-UA">Test FDP_APC_EXT.1:1</a>:
-      
+                  <span class="testlist-"><ul><li class="test-"><a id="APC_Test_1-UA" class="defined" href="#APC_Test_1-UA">Test FDP_APC_EXT.1:1</a>
                       <b>UA Switching Methods</b><br/><br/>
                       [Conditional: Perform this test if “switching can be initiated only through express user action” is selected
                       in FDP_SWI_EXT.1.1 in the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>]<br/><br/>
@@ -983,8 +987,7 @@ The following sections list Common Criteria and technology terms used in this do
                           of the user authentication device. [Conditional: if “external” is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>, then:] verify
                           the UA device power LED is illuminated and the DVM reads between 4.75 and 5.25 VDC.</li>                                                
                       </ol>                      
-                    </li><li class="test-"><a id="APC_Test_2-UA" class="defined" href="#APC_Test_2-UA">Test FDP_APC_EXT.1:2</a>:
-      
+                    </li><li class="test-"><a id="APC_Test_2-UA" class="defined" href="#APC_Test_2-UA">Test FDP_APC_EXT.1:2</a>
                       <b>Positive and Negative UA Data Flow Rules Testing</b><br/><br/>                      
                       This test verifies correct data flows of a UA device during different power states of the selected computer.
                       <ol>
@@ -1031,8 +1034,7 @@ The following sections list Common Criteria and technology terms used in this do
                           no traffic is sent on the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> analyzer.</li>
                         <li>Verify the authentication session is terminated on the selected computer.</li>                        
                       </ol>
-                    </li><li class="test-"><a id="APC_Test_3-UA" class="defined" href="#APC_Test_3-UA">Test FDP_APC_EXT.1:3</a>:
-      
+                    </li><li class="test-"><a id="APC_Test_3-UA" class="defined" href="#APC_Test_3-UA">Test FDP_APC_EXT.1:3</a>
                       <b>No Electrical Flow between Computer Interfaces</b><br/><br/>
                       [Conditional: Perform this test if “switching can be initiated only through express user action” is selected
                       in FDP_SWI_EXT.1.1 in the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>]<br/><br/>
@@ -1054,8 +1056,7 @@ The following sections list Common Criteria and technology terms used in this do
                           seconds to one cycle per second. Verify that no new <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> traffic is captured on the non‐selected <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
                           analyzers.</li>                        
                       </ol>
-                    </li><li class="test-"><a id="APC_Test_4-UA" class="defined" href="#APC_Test_4-UA">Test FDP_APC_EXT.1:4</a>:
-      
+                    </li><li class="test-"><a id="APC_Test_4-UA" class="defined" href="#APC_Test_4-UA">Test FDP_APC_EXT.1:4</a>
                       <b>No Flow between Connected Computers over Time</b><br/><br/>
                       This test verifies that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> does not send data to different computers connected to the same interface
                       at different times. Repeat this test for each <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA computer port.<br/><br/>
@@ -1105,8 +1106,7 @@ The following sections list Common Criteria and technology terms used in this do
                 connections.
               </div></div><div class="ea"><div class="eacategory">Isolation</div>
 			There are no Isolation evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <span class="testlist-"><ul><li class="test-"><a id="_t_5" class="defined" href="#_t_5">Test FDP_PDC_EXT.1:1</a>:
-      
+                <span class="testlist-"><ul><li class="test-"><a id="_t_5" class="defined" href="#_t_5">Test FDP_PDC_EXT.1:1</a>
                     <b>Unauthorized Device Rejection</b><br/><br/>
                     [Conditional: Perform this test if “external” is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>]<br/><br/>
                     This test verifies that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> ports properly reject unauthorized devices and devices with unauthorized
@@ -1133,8 +1133,7 @@ The following sections list Common Criteria and technology terms used in this do
                       <li>Repeat steps 1‐5 with a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> hub connected between the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> device and the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer and
                         observe that the results are identical.</li>
                     </ol>
-                  </li><li class="test-"><a id="_t_6" class="defined" href="#_t_6">Test FDP_PDC_EXT.1:2</a>:
-      
+                  </li><li class="test-"><a id="_t_6" class="defined" href="#_t_6">Test FDP_PDC_EXT.1:2</a>
                     <b>Authorized Device Acceptance</b><br/><br/>
                     [Conditional: Perform this test if “external” is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>]<br/><br/>
                     This test verifies that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> ports do not reject authorized devices and devices with authorized protocols
@@ -1287,12 +1286,10 @@ The following sections list Common Criteria and technology terms used in this do
                 and denylisting UA peripheral devices and the administrative privileges required to do this.
               </div></div><div class="ea"><div class="eacategory">Isolation</div>
 			There are no Isolation evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <span class="testlist-"><ul><li class="test-"><a id="_t_7" class="defined" href="#_t_7">Test FDP_FIL_EXT.1/UA:1</a>:
-      
+                <span class="testlist-"><ul><li class="test-"><a id="_t_7" class="defined" href="#_t_7">Test FDP_FIL_EXT.1/UA:1</a>
                     Perform the test steps in <a href="#FDP_PDC_EXT.1">FDP_PDC_EXT.1</a> with all devices on the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> UA denylist and verify that they are
                     rejected as expected.
-                  </li><li class="test-"><a id="_t_8" class="defined" href="#_t_8">Test FDP_FIL_EXT.1/UA:2</a>:
-      
+                  </li><li class="test-"><a id="_t_8" class="defined" href="#_t_8">Test FDP_FIL_EXT.1/UA:2</a>
                     [Conditional: Perform this only if “configurable” is selected in <a href="#FDP_FIL_EXT.1.1/UA">FDP_FIL_EXT.1.1/UA</a>]<br/><br/>
                     In the following steps the evaluator shall verify that allowlisted and denylisted devices are treated
                     correctly.<ol>
@@ -1304,8 +1301,7 @@ The following sections list Common Criteria and technology terms used in this do
                       <li>Attempt to configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA <abbr class="dyn-abbr"><a href="#abbr_CDF">CDF</a></abbr> to both allowlist and denylist the device and verify that the
                         device is rejected through real‐time device console and <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer capture.</li>                      
                     </ol>                  
-                  </li><li class="test-"><a id="_t_9" class="defined" href="#_t_9">Test FDP_FIL_EXT.1/UA:3</a>:
-      
+                  </li><li class="test-"><a id="_t_9" class="defined" href="#_t_9">Test FDP_FIL_EXT.1/UA:3</a>
                     [Conditional - Perform this only if "fixed" is selected in
                     <a href="#FDP_FIL_EXT.1.1/UA">FDP_FIL_EXT.1.1/UA</a> and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> does not include an internal UA device].<br/><br/>
                     The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> UA allowlist and verify that all devices are
@@ -1462,8 +1458,7 @@ The following sections list Common Criteria and technology terms used in this do
                 The evaluator shall examine the Isolation Documentation and verify that it describes how the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>
                 enforces user authentication isolation from other <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> functions.
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <span class="testlist-"><ul><li class="test-"><a id="_t_10" class="defined" href="#_t_10">Test FDP_UAI_EXT.1:1</a>:
-      
+                <span class="testlist-"><ul><li class="test-"><a id="_t_10" class="defined" href="#_t_10">Test FDP_UAI_EXT.1:1</a>
                 This test verifies that UA functionality is not sent to other <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
                 interfaces.<br/><br/>
                 Perform this test for each computer interface.<ol>
@@ -1483,8 +1478,7 @@ The following sections list Common Criteria and technology terms used in this do
                   <li>For each <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> interface (peripheral device and computer) other than UA, connect the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
                     sniffer and verify no traffic is captured.</li>                  
                 </ol>
-                  </li><li class="test-"><a id="_t_11" class="defined" href="#_t_11">Test FDP_UAI_EXT.1:2</a>:
-      
+                  </li><li class="test-"><a id="_t_11" class="defined" href="#_t_11">Test FDP_UAI_EXT.1:2</a>
                     [Conditional: Perform this test only if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> supports KM functionality.]<br/><br/>
                     This test verifies that KM functionality is not sent to UA interfaces.<br/><br/>
                     Perform this test while the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is powered on and powered off.<ol>
@@ -1499,8 +1493,7 @@ The following sections list Common Criteria and technology terms used in this do
                       <li>Exercise the functions of the peripheral device type(s) selected in FDP_PDC_EXT.3.1/UA in
                         MOD_KM_V2.0 and verify that no traffic is sent and captured on the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer.</li>
                     </ol>
-                  </li><li class="test-"><a id="_t_12" class="defined" href="#_t_12">Test FDP_UAI_EXT.1:3</a>:
-      
+                  </li><li class="test-"><a id="_t_12" class="defined" href="#_t_12">Test FDP_UAI_EXT.1:3</a>
                     [Conditional: Perform this test only if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> supports video functionality and “<abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> Type‐C with
                     DisplayPort as alternate function” is selected in FDP_PDC_EXT.3.1/VI in
                     MOD_VI_V2.0.]<br/><br/>
@@ -1527,7 +1520,7 @@ The following sections list Common Criteria and technology terms used in this do
             
     <h2 id="obj-req-map" class="indexable" data-level="2">5.3 TOE Security Functional Requirements Rationale</h2><p>The following rationale provides justification for each <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, 
     showing that the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are suitable to address the specified threats:<br/><table><caption><span class="ctr" data-myid="t-obj_map" data-counter-type="ct-Table" id="t-obj_map">Table <span class="counter">1</span></span>: <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> Rationale</caption><tr><th>Threat</th><th>Addressed by</th><th>Rationale</th></tr><tr class="major-row"><td rowspan="6"><a href="#T.DATA_LEAK">T.DATA_​LEAK</a>
-		(from <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)
+		(from PSDPP)
 	</td><td><a href="#FDP_FIL_EXT.1/UA">FDP_FIL_EXT.1/UA</a></td><td>Mitigates this threat
             by filtering unauthorized devices that could facilitate data leakage.</td></tr>
 <tr><td><a href="#FDP_PDC_EXT.2/UA">FDP_PDC_EXT.2/UA</a></td><td>Mitigates this threat by only
@@ -1540,10 +1533,10 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><a href="#FDP_TER_EXT.3">FDP_TER_EXT.3</a> (selection-based)</td><td>Mitigates this
             threat by requiring session termination and power reset when switching to a different computer.</td></tr>
 <tr class="major-row"><td rowspan="1"><a href="#T.RESIDUAL_LEAK">T.RESIDUAL_​LEAK</a>
-		(from <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)
+		(from PSDPP)
 	</td><td><a href="#FDP_TER_EXT.3">FDP_TER_EXT.3</a> (selection-based)</td><td>If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> has the capability of switching between multiple computers, this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> mitigates the threat by performing a power reset of the authentication interface when the selected computer is switched.</td></tr>
 <tr class="major-row"><td rowspan="6"><a href="#T.SIGNAL_LEAK">T.SIGNAL_​LEAK</a>
-		(from <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)
+		(from PSDPP)
 	</td><td><a href="#FDP_FIL_EXT.1/UA">FDP_FIL_EXT.1/UA</a></td><td>Mitigates this threat
             by filtering unauthorized devices that could facilitate signal leakage.</td></tr>
 <tr><td><a href="#FDP_PDC_EXT.2/UA">FDP_PDC_EXT.2/UA</a></td><td>Mitigates this threat by only
@@ -1556,7 +1549,7 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><a href="#FDP_TER_EXT.3">FDP_TER_EXT.3</a> (selection-based)</td><td>Mitigates this
             threat by requiring session termination and power reset when switching to a different computer.</td></tr>
 <tr class="major-row"><td rowspan="4"><a href="#T.UNAUTHORIZED_DEVICES">T.UNAUTHORIZED_​DEVICES</a>
-		(from <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)
+		(from PSDPP)
 	</td><td><a href="#FDP_FIL_EXT.1/UA">FDP_FIL_EXT.1/UA</a></td><td>Mitigates this threat
             by limiting the devices that are authorized to interface with the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> through device filtration.</td></tr>
 <tr><td><a href="#FDP_PDC_EXT.2/UA">FDP_PDC_EXT.2/UA</a></td><td>Mitigates this threat by only
@@ -1564,8 +1557,7 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><a href="#FDP_PDC_EXT.4/UA">FDP_PDC_EXT.4/UA</a></td><td>Mitigates this threat by identifying whether the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> supports (and therefore authorizes) an internal or external authentication device.</td></tr>
 <tr><td>FPD_PWR_EXT.1</td><td>Mitigates this threat by preventing
             connected computers from powering the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>.</td></tr>
-</table></p><h1 id="mod-conrat" class="indexable" data-level="1">6 Consistency Rationale</h1><h2 id="conrat-bpp-psd" class="indexable" data-level="2">6.1 
-    Protection Profile for Peripheral Sharing Devices</h2><h3 id="contoe-bpp-psd" class="indexable" data-level="3">6.1.1 
+</table></p><h1 id="mod-conrat" class="indexable" data-level="1">6 Consistency Rationale</h1><h2 id="conrat-PSD" class="indexable" data-level="2">6.1 Protection Profile for Peripheral Sharing Devices</h2><h3 id="contoe-PSD" class="indexable" data-level="3">6.1.1 
 	Consistency of TOE Type
       </h3>
         The <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines the boundaries of a <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> – a device that offers a mechanism for securely connecting a
@@ -1573,10 +1565,10 @@ The following sections list Common Criteria and technology terms used in this do
         capabilities specific to user authentication devices. One of the functions of the device must be the ability
         for it to support user authentication devices. The requirements of this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module do not prevent a
         conformant <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> from implementing mandatory requirements of the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.
-      <h3 id="consecprob-bpp-psd" class="indexable" data-level="3">6.1.2 
+      <h3 id="consecprob-PSD" class="indexable" data-level="3">6.1.2 
 	Consistency of Security Problem Definition
       </h3>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module does not define additional threats beyond those the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines. Therefore, there is
-        no inconsistency between this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module and the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> with respect to the security problem definition.<table><caption><span class="ctr" data-myid="t-con-sec-prob-def" data-counter-type="ct-Table" id="t-con-sec-prob-def">Table <span class="counter">2</span></span>: Consistency of Security Problem Definition (<abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> base)
+        no inconsistency between this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module and the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> with respect to the security problem definition.<table><caption><span class="ctr" data-myid="t-con-sec-prob-def" data-counter-type="ct-Table" id="t-con-sec-prob-def">Table <span class="counter">2</span></span>: Consistency of Security Problem Definition (<abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> base)
 		</caption><tr><th><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> Threat, Assumption, <abbr class="dyn-abbr"><a href="#abbr_OSP">OSP</a></abbr></th><th>Consistency Rationale</th></tr><tr><td><a href="#T.DATA_LEAK">T.DATA_LEAK</a></td><td>
         This threat is from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, thus no conflict exists.
       </td></tr><tr><td><a href="#T.RESIDUAL_LEAK">T.RESIDUAL_LEAK</a></td><td>
@@ -1585,29 +1577,29 @@ The following sections list Common Criteria and technology terms used in this do
         This threat is from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, thus no conflict exists.
       </td></tr><tr><td><a href="#T.UNAUTHORIZED_DEVICES">T.UNAUTHORIZED_DEVICES</a></td><td>
         This threat is from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, thus no conflict exists.
-      </td></tr></table><h3 id="conobj-bpp-psd" class="indexable" data-level="3">6.1.3 
+      </td></tr></table><h3 id="conobj-" class="indexable" data-level="3">6.1.3 
 			Consistency of OE Objectives
 		</h3><p>
 			This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> defines no environmental security objectives because the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>'s security environment 
 			is identical to that specified by the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.
-	  </p><h3 id="conreq-bpp-psd" class="indexable" data-level="3">6.1.4 
+	  </p><h3 id="conreq-" class="indexable" data-level="3">6.1.4 
 	Consistency of Requirements
       </h3>
       This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> identifies several <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> from the
-      <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> that are needed to support
+      <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> that are needed to support
       User Authentication Device functionality.
       This is considered to be consistent because the functionality provided by the
-      <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> is being used for its intended purpose.
+      <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> is being used for its intended purpose.
       
           The <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> also identifies a number of modified <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> from the
-          <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>
+          <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr>
           that are used entirely to provide functionality for
 	  User Authentication Device.
         
           The rationale for why this does not conflict with the claims
       defined by the
-      <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> are as follows:
-      <table><caption><span class="ctr" data-myid="t-con-reqs" data-counter-type="ct-Table" id="t-con-reqs">Table <span class="counter">3</span></span>: Consistency of Requirements (<abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> base)
+      <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> are as follows:
+      <table><caption><span class="ctr" data-myid="t-con-reqs" data-counter-type="ct-Table" id="t-con-reqs">Table <span class="counter">3</span></span>: Consistency of Requirements (<abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> base)
 		</caption><tr><th><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> Requirement</th><th>Consistency Rationale</th></tr><tr><th colspan="2"> Modified <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th></tr><tr><td><a href="#FAU_GEN.1">FAU_GEN.1</a></td><td>
               This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is not modified, but is changed from optional to selection-based. It shall be
               included if "configurable" is selected in <a href="#FDP_FIL_EXT.1.1/UA">FDP_FIL_EXT.1.1/UA</a>.
@@ -1642,7 +1634,7 @@ The following sections list Common Criteria and technology terms used in this do
               included if "configurable" is selected in <a href="#FDP_FIL_EXT.1.1/UA">FDP_FIL_EXT.1.1/UA</a>.
             </td></tr><tr><th colspan="2"> Additional <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th></tr><tr><td colspan="2" style="text-align:center">
 	      This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not add any requirements when the
-	      <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> is the base.
+	      <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> is the base.
 	    </td></tr><tr><th colspan="2"> Mandatory <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr></th><tr><td><a href="#FDP_FIL_EXT.1/UA">FDP_FIL_EXT.1/UA</a></td><td>This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> defines device filtering specific to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module. This does not
             prevent the enforcement of any <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>.
           </td></tr><tr><td><a href="#FDP_PDC_EXT.2/UA">FDP_PDC_EXT.2/UA</a></td><td>
@@ -1719,10 +1711,10 @@ The following sections list Common Criteria and technology terms used in this do
 			There are no Isolation evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
               Testing for this component performed as part of <a href="#APC_Test_2-UA" class="dynref">Test FDP_APC_EXT.1:2</a>.
             </div></div></div></div></div>
-        <div class="comp" id="FDP_TER_EXT.3"><h4>FDP_TER_EXT.3 Session Termination Upon Switching</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i>
-					from <a href="https://commoncriteria.github.io/PSD/main/PSD-release.html">,
-        version 
-        </a></i></b></li></ul></div>
+        <div class="comp" id="FDP_TER_EXT.3"><h4>FDP_TER_EXT.3 Session Termination Upon Switching</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i>FDP_SWI_EXT.1.1
+					from <a href="https://www.niap-ccevs.org/protectionprofiles/412">Protection Profile for Peripheral Sharing Devices
+        Version 
+        5.0</a></i></b></li></ul></div>
           
           
           
@@ -1960,7 +1952,7 @@ The following sections list Common Criteria and technology terms used in this do
       <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a>/VI, to show the different modifications made for each specific peripheral type.
     
   <h1 id="acronyms" class="indexable" data-level="A">Appendix G -  Acronyms</h1><table><caption><span class="ctr" data-myid="t-acronyms" data-counter-type="ct-Table" id="t-acronyms">Table <span class="counter">5</span></span>: Acronyms
-		</caption><tr class="header"><th>Acronym</th><th>Meaning</th></tr><tr><td><span class="term" id="abbr_Base-PP" data-plural="Base-PPs"><abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr></span></td><td><span id="long_abbr_Base-PP">Base Protection Profile</span></td></tr>
+		</caption><tr class="header"><th>Acronym</th><th>Meaning</th></tr><tr><td><span class="term" id="abbr_base PP" data-plural="base PPs"><abbr class="dyn-abbr"><a href="#abbr_base PP">base PP</a></abbr></span></td><td><span id="long_abbr_base PP">Base Protection Profile</span></td></tr>
 <tr><td><span class="term" id="abbr_CC"><abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr></span></td><td><span id="long_abbr_CC">Common Criteria</span></td></tr>
 <tr><td><span class="term" id="abbr_CDF"><abbr class="dyn-abbr"><a href="#abbr_CDF">CDF</a></abbr></span></td><td><span id="long_abbr_CDF">Configurable Device Filtration</span></td></tr>
 <tr><td><span class="term" id="abbr_CEM"><abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr></span></td><td><span id="long_abbr_CEM">Common Evaluation Methodology</span></td></tr>
@@ -1998,5 +1990,8 @@ The following sections list Common Criteria and technology terms used in this do
           </ul></span></td></tr><tr><td><span id="bibCEM">[<abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr>]</span></td><td><span class="description">Common Methodology for Information Technology Security Evaluation - <ul>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CEM2022R1.pdf">
                  Evaluation methodology</a>, CCMB-2022-11-006, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022.</li>
-          </ul></span></td></tr><tr><td><span id="base-pp">[PP_PSD_V5.0 or <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>]</span></td><td><span class="description">Protection Profile for Peripheral Sharing Device, Version 5.0
+          </ul></span></td></tr><tr><td><span id="bibERRv12">[ERR]</span></td><td><span class="description"><a href="https://www.commoncriteriaportal.org/files/ccfiles/CCMB-2025-001-v1_2-Errata_Interpretation_CC_CEM_2022.pdf">
+              Errata and Interpretation for CC:2022 (Release 1) and CEM:2022 (Release 1), Version 1.2</a>, 
+			  CCMB-2025-02-001, 15 October 2025.
+        </span></td></tr><tr><td><span id="base-pp">[PP_PSD_V5.0 or <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>]</span></td><td><span class="description">Protection Profile for Peripheral Sharing Device, Version 5.0
       </span></td></tr></table></body></html>
