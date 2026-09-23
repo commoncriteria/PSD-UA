@@ -932,7 +932,7 @@ The following sections list Common Criteria and technology terms used in this do
                     authentication device with a power LED and a connected DVM to each <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> UA peripheral device
                     interface<a id="period_111" href="#period_111">. </a></li>
                   </ul>
-                  <span class="testlist-"><ul><li class="test-"><a id="APC_Test_1-UA" class="defined" href="#APC_Test_1-UA">Test FDP_APC_EXT.1:1</a>
+                  <span class="testlist-"><ul><li class="test-"><a id="APC_Test_1-UA" class="defined" href="#APC_Test_1-UA">Test FDP_APC_EXT.1:1</a>:<br>
                       <b>UA Switching Methods</b><br><br>
                       [Conditional: Perform this test if &#8220;switching can be initiated only through express user action&#8221; is selected
                       in FDP_SWI_EXT.1.1 in the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>]<br><br>
@@ -953,7 +953,7 @@ The following sections list Common Criteria and technology terms used in this do
                           of the user authentication device<a id="period_120" href="#period_120">. </a>[Conditional: if &#8220;external&#8221; is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>, then:] verify
                           the UA device power LED is illuminated and the DVM reads between 4.75 and 5.25 VDC<a id="period_121" href="#period_121">. </a></li>                                                
                       </ol>                      
-                    </li><li class="test-"><a id="APC_Test_2-UA" class="defined" href="#APC_Test_2-UA">Test FDP_APC_EXT.1:2</a>
+                    </li><li class="test-"><a id="APC_Test_2-UA" class="defined" href="#APC_Test_2-UA">Test FDP_APC_EXT.1:2</a>:<br>
                       <b>Positive and Negative UA Data Flow Rules Testing</b><br><br>                      
                       This test verifies correct data flows of a UA device during different power states of the selected computer<a id="period_122" href="#period_122">. </a>                      <ol>
                         <li>For each connected computer, connect a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer between it and the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> or ensure the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
@@ -996,7 +996,7 @@ The following sections list Common Criteria and technology terms used in this do
                           no traffic is sent on the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> analyzer<a id="period_149" href="#period_149">. </a></li>
                         <li>Verify the authentication session is terminated on the selected computer<a id="period_150" href="#period_150">. </a></li>                        
                       </ol>
-                    </li><li class="test-"><a id="APC_Test_3-UA" class="defined" href="#APC_Test_3-UA">Test FDP_APC_EXT.1:3</a>
+                    </li><li class="test-"><a id="APC_Test_3-UA" class="defined" href="#APC_Test_3-UA">Test FDP_APC_EXT.1:3</a>:<br>
                       <b>No Electrical Flow between Computer Interfaces</b><br><br>
                       [Conditional: Perform this test if &#8220;switching can be initiated only through express user action&#8221; is selected
                       in FDP_SWI_EXT.1.1 in the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>]<br><br>
@@ -1017,7 +1017,7 @@ The following sections list Common Criteria and technology terms used in this do
                           seconds to one cycle per second<a id="period_161" href="#period_161">. </a>Verify that no new <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> traffic is captured on the non&#8208;selected <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
                           analyzers<a id="period_162" href="#period_162">. </a></li>                        
                       </ol>
-                    </li><li class="test-"><a id="APC_Test_4-UA" class="defined" href="#APC_Test_4-UA">Test FDP_APC_EXT.1:4</a>
+                    </li><li class="test-"><a id="APC_Test_4-UA" class="defined" href="#APC_Test_4-UA">Test FDP_APC_EXT.1:4</a>:<br>
                       <b>No Flow between Connected Computers over Time</b><br><br>
                       This test verifies that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> does not send data to different computers connected to the same interface
                       at different times<a id="period_163" href="#period_163">. </a>Repeat this test for each <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA computer port<a id="period_164" href="#period_164">. </a><br><br>
@@ -1063,7 +1063,7 @@ The following sections list Common Criteria and technology terms used in this do
                 authorized for use with the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> in accordance with the authorized peripheral device
                 connections<a id="period_176" href="#period_176">. </a>              </div></div><div class="ea"><div class="eacategory">Isolation</div>
 			There are no Isolation evaluation activities for this component<a id="period_177" href="#period_177">. </a><br></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <span class="testlist-"><ul><li class="test-"><a id="_t_5" class="defined" href="#_t_5">Test FDP_PDC_EXT.1:1</a>
+                <span class="testlist-"><ul><li class="test-"><a id="_t_5" class="defined" href="#_t_5">Test FDP_PDC_EXT.1:1</a>:<br>
                     <b>Unauthorized Device Rejection</b><br><br>
                     [Conditional: Perform this test if &#8220;external&#8221; is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>]<br><br>
                     This test verifies that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> ports properly reject unauthorized devices and devices with unauthorized
@@ -1090,7 +1090,7 @@ The following sections list Common Criteria and technology terms used in this do
                       <li>Repeat steps 1&#8208;5 with a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> hub connected between the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> device and the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer and
                         observe that the results are identical<a id="period_190" href="#period_190">. </a></li>
                     </ol>
-                  </li><li class="test-"><a id="_t_6" class="defined" href="#_t_6">Test FDP_PDC_EXT.1:2</a>
+                  </li><li class="test-"><a id="_t_6" class="defined" href="#_t_6">Test FDP_PDC_EXT.1:2</a>:<br>
                     <b>Authorized Device Acceptance</b><br><br>
                     [Conditional: Perform this test if &#8220;external&#8221; is selected in <a href="#FDP_PDC_EXT.4.1/UA">FDP_PDC_EXT.4.1/UA</a>]<br><br>
                     This test verifies that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> ports do not reject authorized devices and devices with authorized protocols
@@ -1232,9 +1232,9 @@ The following sections list Common Criteria and technology terms used in this do
                 guidance documentation and verify that it describes the process of configuring the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> for allowlisting
                 and denylisting UA peripheral devices and the administrative privileges required to do this<a id="period_239" href="#period_239">. </a>              </div></div><div class="ea"><div class="eacategory">Isolation</div>
 			There are no Isolation evaluation activities for this component<a id="period_240" href="#period_240">. </a><br></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <span class="testlist-"><ul><li class="test-"><a id="_t_7" class="defined" href="#_t_7">Test FDP_FIL_EXT.1/UA:1</a>
+                <span class="testlist-"><ul><li class="test-"><a id="_t_7" class="defined" href="#_t_7">Test FDP_FIL_EXT.1/UA:1</a>:<br>
                     Perform the test steps in <a href="#FDP_PDC_EXT.1">FDP_PDC_EXT.1</a> with all devices on the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> UA denylist and verify that they are
-                    rejected as expected<a id="period_241" href="#period_241">. </a>                  </li><li class="test-"><a id="_t_8" class="defined" href="#_t_8">Test FDP_FIL_EXT.1/UA:2</a>
+                    rejected as expected<a id="period_241" href="#period_241">. </a>                  </li><li class="test-"><a id="_t_8" class="defined" href="#_t_8">Test FDP_FIL_EXT.1/UA:2</a>:<br>
                     [Conditional: Perform this only if &#8220;configurable&#8221; is selected in <a href="#FDP_FIL_EXT.1.1/UA">FDP_FIL_EXT.1.1/UA</a>]<br><br>
                     In the following steps the evaluator shall verify that allowlisted and denylisted devices are treated
                     correctly<a id="period_242" href="#period_242">. </a><ol>
@@ -1246,7 +1246,7 @@ The following sections list Common Criteria and technology terms used in this do
                       <li>Attempt to configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> UA <abbr class="dyn-abbr"><a href="#abbr_CDF">CDF</a></abbr> to both allowlist and denylist the device and verify that the
                         device is rejected through real&#8208;time device console and <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer capture<a id="period_245" href="#period_245">. </a></li>                      
                     </ol>                  
-                  </li><li class="test-"><a id="_t_9" class="defined" href="#_t_9">Test FDP_FIL_EXT.1/UA:3</a>
+                  </li><li class="test-"><a id="_t_9" class="defined" href="#_t_9">Test FDP_FIL_EXT.1/UA:3</a>:<br>
                     [Conditional - Perform this only if "fixed" is selected in
                     <a href="#FDP_FIL_EXT.1.1/UA">FDP_FIL_EXT.1.1/UA</a> and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> does not include an internal UA device]<a id="period_246" href="#period_246">. </a><br><br>
                     The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> UA allowlist and verify that all devices are
@@ -1387,7 +1387,7 @@ The following sections list Common Criteria and technology terms used in this do
                 connections for user authentication functions and any other <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> functions<a id="period_275" href="#period_275">. </a>              </div></div><div class="ea"><div class="eacategory">Isolation</div><div class="ea">
                 The evaluator shall examine the Isolation Documentation and verify that it describes how the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>
                 enforces user authentication isolation from other <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> functions<a id="period_276" href="#period_276">. </a>              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <span class="testlist-"><ul><li class="test-"><a id="_t_10" class="defined" href="#_t_10">Test FDP_UAI_EXT.1:1</a>
+                <span class="testlist-"><ul><li class="test-"><a id="_t_10" class="defined" href="#_t_10">Test FDP_UAI_EXT.1:1</a>:<br>
                 This test verifies that UA functionality is not sent to other <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
                 interfaces<a id="period_277" href="#period_277">. </a><br><br>
                 Perform this test for each computer interface<a id="period_278" href="#period_278">. </a><ol>
@@ -1404,7 +1404,7 @@ The following sections list Common Criteria and technology terms used in this do
                   <li>For each <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> interface (peripheral device and computer) other than UA, connect the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
                     sniffer and verify no traffic is captured<a id="period_292" href="#period_292">. </a></li>                  
                 </ol>
-                  </li><li class="test-"><a id="_t_11" class="defined" href="#_t_11">Test FDP_UAI_EXT.1:2</a>
+                  </li><li class="test-"><a id="_t_11" class="defined" href="#_t_11">Test FDP_UAI_EXT.1:2</a>:<br>
                     [Conditional: Perform this test only if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> supports KM functionality.]<br><br>
                     This test verifies that KM functionality is not sent to UA interfaces<a id="period_293" href="#period_293">. </a><br><br>
                     Perform this test while the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is powered on and powered off<a id="period_294" href="#period_294">. </a><ol>
@@ -1418,7 +1418,7 @@ The following sections list Common Criteria and technology terms used in this do
                       <li>Exercise the functions of the peripheral device type(s) selected in FDP_PDC_EXT.3.1/UA in
                         MOD_KM_V2.0 and verify that no traffic is sent and captured on the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer<a id="period_300" href="#period_300">. </a></li>
                     </ol>
-                  </li><li class="test-"><a id="_t_12" class="defined" href="#_t_12">Test FDP_UAI_EXT.1:3</a>
+                  </li><li class="test-"><a id="_t_12" class="defined" href="#_t_12">Test FDP_UAI_EXT.1:3</a>:<br>
                     [Conditional: Perform this test only if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> supports video functionality and &#8220;<abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> Type&#8208;C with
                     DisplayPort as alternate function&#8221; is selected in FDP_PDC_EXT.3.1/VI in
                     MOD_VI_V2.0.]<br><br>
